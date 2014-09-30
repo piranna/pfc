@@ -1,14 +1,17 @@
 # Agradecimientos
 
 A Daniel, por decir que mi idea original no tenia viabilidad comercial pero que
-me haría ganar el Concurso Universitario de Software Libre “de calle”,
-permitiéndome tener una visión mas amplia y alcanzar unos resultados que no
-podía ni imaginar.
+sin embargo me haría ganar el [Concurso Universitario de Software
+Libre](http://www.concursosoftwarelibre.org/) “de calle”, permitiéndome tener
+una visión mas amplia de lo que estaba creando y alcanzar unos resultados que no
+habria podído ni imaginar.
 
-A Rich Jones y su prueba-de-concepto DirtyShare con la que tuve algo de código
-sobre la que poder empezar, y por hacerme descubrir una tecnología que en un
-principio pense que "sera una chorrada sin importancia si nunca he oído hablar
-de ella" llamada WebRTC y que literalmente cambió mi vida.
+A [Rich Jones](https://github.com/Miserlou) y su "prueba de concepto"
+[DirtyShare](https://github.com/Miserlou/DirtyShare) con la que tuve algo de
+código sobre la que poder empezar, y por hacerme descubrir una tecnología que en
+un principio pense que "sera una chorrada sin importancia si nunca he oído
+hablar de ella" llamada [WebRTC](http://www.webrtc.org/) y que despues me cambió
+la vida.
 
 Y finalmente, a Jennifer, porque a pesar de las duras y de las maduras, de haber
 jugado sucio o defendernos mutuamente, de hacernos daño y apoyarnos, siempre ha
