@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/piranna/shareit-project_pfc",
   "devDependencies": {
-    "gitbook": "^1.1.0",
+    "gitbook": "^1.1.1",
     "gitbook-plugin-autocover": "^1.2.0"
   },
   "dependencies": {

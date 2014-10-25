@@ -1,11 +1,19 @@
 # Summary
 
+* [Acerca de este libro](README.md)
 * [Dedicatoria](1. dedicatoria/README.md)
 * [Agradecimientos](2. agradecimientos/README.md)
 * [Introducción](3. introducción/README.md)
 * [Objetivos](4. objetivos/README.md)
+  * [Descripción del problema](4. objetivos/Descripción del problema.md)
+  * [Estudio de alternativas](4. objetivos/Estudio de alternativas.md)
+  * [Metodología empleada](4. objetivos/Metodología empleada.md)
 * [Descripción](5. descripción/README.md)
+  * [Especificación](5. descripción/Especificación.md)
+  * [Diseño](5. descripción/Diseño.md)
+  * [Implementación](5. descripción/Implementación.md)
 * [Conclusiones](6. conclusiones/README.md)
+  * [Logros principales alcanzados](6. conclusiones/Logros principales alcanzados.md)
+  * [Posibles trabajos futuros](6. conclusiones/Posibles trabajos futuros.md)
 * [Bibliografia](7. bibliografia/README.md)
 * [Apéndices](8. apéndices/README.md)
-
