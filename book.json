@@ -1,19 +1,23 @@
 {
-  "plugins": ["anchors", "autocover"],
+  "language": "es",
+  "plugins": ["anchors", "autocover", "image-captions"],
   "pluginsConfig": {
     "autocover": {
+      "subtitle": "Sistema operativo ligero usando Node.js como espacio de usuario",
       "author": "Jesús Leganés Combarro 'piranna'",
+      "tutor": "Enrique Soriano",
+      "academicYear": "2015/2016",
       "font": {
-        "size": null,
         "family": "Impact",
         "color": "#FFF"
       },
       "background": {
         "color": "#09F"
-      }
+      },
+      "template": "asdfcover.svg"
     }
   },
   "pdf": {
-    "pageNumbers": false
+    "pageNumbers": true
   }
 }

@@ -1,25 +1,25 @@
 {
-  "name": "shareit-project_pfc",
-  "description": "Framework para desarrollo de aplicaciones P2P en Javascript",
+  "name": "pfc",
   "author": "Jesús Leganés Combarro 'piranna' <piranna@gmail.com>",
   "version": "0.0.0",
   "scripts": {
-    "build": "gitbook build . --format=ebook",
+    "build": "gitbook pdf .",
     "serve": "gitbook serve ."
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/piranna/shareit-project_pfc.git"
+    "url": "https://github.com/piranna/pfc.git"
   },
   "bugs": {
-    "url": "https://github.com/piranna/shareit-project_pfc/issues"
+    "url": "https://github.com/piranna/pfc/issues"
   },
-  "homepage": "https://github.com/piranna/shareit-project_pfc",
+  "homepage": "https://github.com/piranna/pfc",
   "devDependencies": {
-    "gitbook": "^1.1.1",
-    "gitbook-plugin-autocover": "^1.2.0"
+    "gitbook-cli": "^0.3.4",
+    "svgexport": "^0.2.5"
   },
   "dependencies": {
-    "gitbook-plugin-anchors": "^0.3.0"
+    "gitbook-plugin-anchors": "^0.4.0",
+    "gitbook-plugin-autocover": "GitbookIO/plugin-autocover"
   }
 }

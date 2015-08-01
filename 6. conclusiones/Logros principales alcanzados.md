@@ -1,1 +1,0 @@
-## Logros principales alcanzados
