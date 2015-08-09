@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg
-  width="<%= size.w %>" height="<%= size.h %>"
-  viewBox="0 0 <%= size.w %> <%= size.h %>"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+ width="<%= size.w %>" height="<%= size.h %>"
+ viewBox="0 0 <%= size.w %> <%= size.h %>"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
 
   <rect width="100%" height="100%" fill="<%= background.color %>"/>
 
   <image
-    xlink:href="./img/urjc.png"
-    y="-3.125%" x="50%" w="82%" width="50%" height="50%"
-    transform="translate(-420, -188)"/>
+   xlink:href="./img/urjc.png"
+   y="-3.125%" x="50%" w="82%" width="50%" height="50%"
+   transform="translate(-420, -188)"/>
 
   <text
-    y="25%"
-    text-anchor="middle"
-    fill="<%= font.color %>"
-    font-family="<%= font.family %>"
-    font-size="<%= size.author / 2 %>">
+   y="25%"
+   text-anchor="middle"
+   fill="<%= font.color %>"
+   font-family="<%= font.family %>"
+   font-size="<%= size.author / 2 %>">
     <tspan x="50%" dy="<%= size.author / 2 %>">Escuela Superior de Ingeniería Informática</tspan>
     <tspan x="50%" dy="<%= size.author / 2 %>">Ingeniería Informática</tspan>
     <tspan x="50%" dy="<%= size.author / 2 %>">Curso academico: <%= academicYear %></tspan>
@@ -25,12 +25,12 @@
   </text>
 
   <text
-    y="40%"
-    width="<%= size.author / 2 %>"
-    text-anchor="middle"
-    fill="<%= font.color %>"
-    font-family="<%= font.family %>"
-    font-size="<%= size.title %>">
+   y="40%"
+   width="<%= size.author / 2 %>"
+   text-anchor="middle"
+   fill="<%= font.color %>"
+   font-family="<%= font.family %>"
+   font-size="<%= size.title %>">
     <% _.forEach(title, function(part){ %>
       <tspan x="50%" dy="<%= size.title %>"><%= part %></tspan>
     <% }); %>
@@ -38,10 +38,10 @@
   </text>
 
   <text
-    text-anchor="middle"
-    fill="<%= font.color %>"
-    font-family="<%= font.family %>"
-    font-size="<%= size.author / 2 %>">
+   text-anchor="middle"
+   fill="<%= font.color %>"
+   font-family="<%= font.family %>"
+   font-size="<%= size.author / 2 %>">
     <tspan x="50%" dy="83.3%">Autor: <%= author %></tspan>
     <tspan x="50%" dy="87.5%>">Tutores: <%= tutor %></tspan>
   </text>

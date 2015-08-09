@@ -1,9 +1,10 @@
 {
   "language": "es",
-  "plugins": ["anchors", "autocover", "image-captions"],
+  "plugins": ["anchors", "autocover", "image-captions", "mermaid"],
   "pluginsConfig": {
     "autocover": {
-      "subtitle": "Sistema operativo ligero usando Node.js como espacio de usuario",
+      "title": "NodeOS",
+      "subtitle": "Sistema operativo ligero basado en Node.js",
       "author": "Jesús Leganés Combarro 'piranna'",
       "tutor": "Enrique Soriano",
       "academicYear": "2015/2016",
@@ -15,9 +16,13 @@
         "color": "#09F"
       },
       "template": "asdfcover.svg"
+    },
+    "image-captions": {
+      "caption": "_CAPTION_"
     }
   },
   "pdf": {
+    "fontSize": 15,
     "pageNumbers": true
   }
 }

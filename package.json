@@ -3,7 +3,7 @@
   "author": "Jesús Leganés Combarro 'piranna' <piranna@gmail.com>",
   "version": "0.0.0",
   "scripts": {
-    "build": "gitbook pdf .",
+    "build": "gitbook pdf . NodeOS.pdf",
     "serve": "gitbook serve ."
   },
   "repository": {
