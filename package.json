@@ -3,7 +3,8 @@
   "author": "Jesús Leganés Combarro 'piranna' <piranna@gmail.com>",
   "version": "0.0.0",
   "scripts": {
-    "build": "gitbook pdf . NodeOS.pdf",
+    "pdf": "gitbook pdf . NodeOS.pdf",
+    "postinstall": "gitbook install",
     "serve": "gitbook serve ."
   },
   "repository": {
@@ -19,7 +20,6 @@
     "svgexport": "^0.2.5"
   },
   "dependencies": {
-    "gitbook-plugin-anchors": "^0.4.0",
     "gitbook-plugin-autocover": "GitbookIO/plugin-autocover"
   }
 }

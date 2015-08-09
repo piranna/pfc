@@ -4,7 +4,7 @@
   "pluginsConfig": {
     "autocover": {
       "title": "NodeOS",
-      "subtitle": "Sistema operativo ligero basado en Node.js",
+      "subtitle": "Sistema operativo ligero para Node.js",
       "author": "Jesús Leganés Combarro 'piranna'",
       "tutor": "Enrique Soriano",
       "academicYear": "2015/2016",
@@ -15,14 +15,14 @@
       "background": {
         "color": "#09F"
       },
-      "template": "asdfcover.svg"
+      "template": "cover.svg"
     },
     "image-captions": {
       "caption": "_CAPTION_"
     }
   },
   "pdf": {
-    "fontSize": 15,
+    "fontSize": 16,
     "pageNumbers": true
   }
 }

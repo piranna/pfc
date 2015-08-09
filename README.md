@@ -1,4 +1,4 @@
-[![NodeOS](img/NodeOS.svg)](http://node-os.com) Sistema operativo ligero basado en Node.js
+[![NodeOS](img/NodeOS.svg)](http://node-os.com) Sistema operativo ligero para Node.js
 ======
 
 [![Build Status](https://www.gitbook.com/button/status/book/piranna/pfc)](https://www.gitbook.com/book/piranna/pfc/activity)
@@ -38,8 +38,8 @@ fallos que impiden su uso con GitBook, por lo que es preciso instalarse la
 la pagina del proyecto ejecutando
 
 ```bash
-URL=https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py
-SCRIPT="import sys; main=lambda:sys.stderr.write('Failed\n'); exec(sys.stdin.read()); main()"
+URL=http://raw.github.com/kovidgoyal/calibre/master/setup/linux-installer.py
+SCRIPT="import sys; exec(sys.stdin.read()); sys.stderr.write('Failed\n')"
 
 wget -nv -O- $URL | sudo python -c $SCRIPT
 ```
@@ -55,10 +55,13 @@ generar el libro en formato PDF preparado para impresión o como un sitio web:
 
 * **PDF**: el libro generado estara ubicado en el directorio del proyecto como
   `NodeOS.pdf`
+
   ```bash
-  npm run build
+  npm run pdf
   ```
+
 * **sitio web**: el sitio web estara accesible desde la URL http://localhost:4000
+
   ```bash
   npm run serve
   ```
