@@ -1,5 +1,6 @@
 {
-  "name": "pfc",
+  "name": "NodeOS",
+  "description": "Sistema operativo ligero para Node.js",
   "author": "Jesús Leganés Combarro 'piranna' <piranna@gmail.com>",
   "version": "0.0.0",
   "scripts": {
@@ -16,7 +17,7 @@
   },
   "homepage": "https://github.com/piranna/pfc",
   "devDependencies": {
-    "gitbook-cli": "^0.3.4",
+    "gitbook-cli": "^0.3.6",
     "svgexport": "^0.2.5"
   },
   "dependencies": {

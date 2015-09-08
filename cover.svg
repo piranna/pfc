@@ -34,7 +34,7 @@
     <% _.forEach(title, function(part){ %>
       <tspan x="50%" dy="<%= size.title %>"><%= part %></tspan>
     <% }); %>
-    <tspan x="50%" dy="<%= size.title %>" font-size="<%= size.title / 2 %>"><%= subtitle %></tspan>
+    <tspan x="50%" dy="<%= size.title %>" font-size="<%= size.title / 2 %>"><%= description %></tspan>
   </text>
 
   <text

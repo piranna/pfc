@@ -1,3 +1,10 @@
+# API
+*Application Programming Interface* (*Interfaz de Programación de Aplicaciones*)
+Conjunto de subrutinas, funciones y procedimientos ofrecidos por una libreria o
+programa para ser usados externamente. Tambien se puede referir a los protocolos
+usados por un servidor para poder hacer uso remotamente de su funcionalidad,
+como es en el caso de los WebService o servicios web.
+
 # firewall
 Aplicación que administra y filtra las conexiones de red entrantes y salientes
 
@@ -5,7 +12,19 @@ Aplicación que administra y filtra las conexiones de red entrantes y salientes
 Dirección IP accesible de forma directa desde cualquier punto de Internet
 
 # Linux
-Kernel de sistema operativo con licencia libre desarrollado por Linux Tordvalds
+Kernel de sistema operativo con licencia libre desarrollado originalmente por
+[Linus Tordvalds](https://es.wikipedia.org/wiki/Linus_Torvalds) para PCs con
+microprocesador 386 inspirandose en el sistema [Minix](http://www.minix3.org)
+de [Andrew S. Tanenbaum](https://es.wikipedia.org/wiki/Andrew_S._Tanenbaum) y
+actualmente portado y en uso en multitud de sistemas y plataformas, desde los
+telefonos con sistema operativo [Android](https://www.android.com) hasta
+supercomputadores, pasando por equipos de escritorio o sistemas embebido. Su
+codigo fuente esta disponible en http://kernel.org.
+
+# Kernel
+Componente software encargada del control central de un sistema operativo.
+Algunos ejemplos son el kernel Linux o [XNU](https://es.wikipedia.org/wiki/XNU)
+en MacOS X.
 
 # CUSL
 Vease Concurso Universitario de Software Libre
@@ -117,6 +136,13 @@ y del estado del microprocesador para su posterior depuración. El termino se
 utiliza tanto para designar a dicho archivo como al error que lo provoco.
 
 # puntero
+Variable cuyo contenido es una posicion de memoria, usada para referenciar
+indirectamente a otras variables. A pesar de la potencia y flexibilidad que
+otorgan al permitir manipular directamente la memoria del programa, en los
+lenguajes de alto nivel y en las ultimas revisiones de los lenguajes de bajo
+nivel se proporcionan estructuras alternativas para los casos de uso mas
+habituales debido a que su mal uso suelen provocar errores dificiles de detectar
+que en muchos casos derivan en un memory leak o incluso en un core dump.
 
 # bindings
 Conjunto de funciones que actuan de interfaz para poder usar una libreria dentro
@@ -129,3 +155,9 @@ sistema operativo.
 Consorcio encargado de definir los estandares y protocolos que deben seguir los
 distintos navegadores web y demas servicios basados en Internet para garantizar
 la interoperatibilidad.
+
+# memory leak
+Fallo de programacion en el que se mantienen en uso regiones de memoria sin
+referencias a ellas y por tanto sin poder ser utilizadas, provocando que el
+proceso consuma cada vez mas memoria inutilmente afectando al rendimiento del
+sistema hasta que este se queda sin memoria libre.

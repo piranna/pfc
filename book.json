@@ -1,10 +1,18 @@
 {
   "language": "es",
-  "plugins": ["anchors", "autocover", "image-captions", "mermaid"],
+  "plugins":
+  [
+    "anchors",
+    "autocover",
+    "image-captions",
+    "include-highlight",
+    "mermaid",
+    "printlinks"
+  ],
   "pluginsConfig": {
     "autocover": {
       "title": "NodeOS",
-      "subtitle": "Sistema operativo ligero para Node.js",
+      "description": "Sistema operativo ligero para Node.js",
       "author": "Jesús Leganés Combarro 'piranna'",
       "tutor": "Enrique Soriano",
       "academicYear": "2015/2016",
