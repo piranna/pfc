@@ -1,6 +1,6 @@
 ## Módulos
 
-1. [Módulos propios](1. módulos propios/README.html)
+1. [Módulos propios](1. módulos propios/index.html)
   1. [coreutils.js](1. módulos propios/1. coreutils.js.html)
   2. [forever starter](1. módulos propios/2. forever starter.html)
   3. [gitbook-plugin-printlinks](1. módulos propios/3. gitbook-plugin-printlinks.html)
@@ -9,7 +9,7 @@
   6. [nodeos-mount](1. módulos propios/6. nodeos-mount.html)
   7. [nodeos-mount-filesystems](1. módulos propios/7. nodeos-mount-filesystems.html)
   8. [nodeos-mount-utils](1. módulos propios/8. nodeos-mount-utils.html)
-2. [Colaboraciones con módulos externos](2. Colaboraciones con módulos externos/README.html)
-  1. [GitBlog](2. Colaboraciones con módulos externos/1. GitBlog.html)
-  2. [node-bin-getty](2. Colaboraciones con módulos externos/1. node-bin-getty.html)
-  3. [node-canvas](2. Colaboraciones con módulos externos/2. node-canvas.html)
+2. [Colaboraciones con módulos externos](2. colaboraciones con módulos externos/index.html)
+  1. [GitBlog](2. colaboraciones con módulos externos/1. GitBlog.html)
+  2. [node-bin-getty](2. colaboraciones con módulos externos/2. node-bin-getty.html)
+  3. [node-canvas](3. colaboraciones con módulos externos/2. node-canvas.html)
