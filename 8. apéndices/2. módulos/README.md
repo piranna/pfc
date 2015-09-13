@@ -14,4 +14,4 @@
   1. [fuse-bindings](2. colaboraciones con módulos externos/1. fuse-bindings.html)
   2. [GitBlog](2. colaboraciones con módulos externos/2. GitBlog.html)
   3. [node-bin-getty](2. colaboraciones con módulos externos/3. node-bin-getty.html)
-  4. [node-canvas](3. colaboraciones con módulos externos/4. node-canvas.html)
+  4. [node-canvas](2. colaboraciones con módulos externos/4. node-canvas.html)
