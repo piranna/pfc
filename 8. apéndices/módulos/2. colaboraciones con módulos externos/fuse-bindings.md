@@ -44,16 +44,15 @@ embargo a pesar de haber buscado información al respecto no he sido capaz de qu
 use la version correcta. Desconozco si este error esta relaccionado con el uso
 de Código Independiente de la Posicion para solucionar el error anterior ya que
 en *node-canvas* no ha sido necesario emplearlo, por lo que llegados a este
-punto me encuentro con dos alternativas:
-
-1. **incluir la libreria dinamica dentro del initramfs**. Esto iria en contra de
-   la regla de no incluir elementos indispensables para el funcionamiento del
-   sistema para mantenerlo en un tamaño minimo, pero por otro lado tendria
-   sentido ya que `libfuse` es fundamental para poder hacer uso de FUSE en el
-   kernel, por lo que se podria hacer que se incluyese `libfuse` dentro de la
-   imagen final de initramfs solo en el caso de que FUSE se hubiese habilitado
-   en el kernel.
-2. **generar un archivo de configuracion GYP completo**. Esto haria que fuese en
-   consonancia como se ha hecho con las dependencias estaticas de *node-canvas*
-   y tendria mas posibilidades de exito al estar todo el proceso de construcción
-   administrado por GYP.
+punto decidi generar un archivo de configuracion GYP completo exclusivo para
+`libfuse` del mismo modo que *node-canvas* ha hecho con las dependencias
+estaticas ya que se tendria mas posibilidades de exito al estar todo el proceso
+de construcción administrado por GYP. Sin embargo esto tampoco ha funcionado
+dando igualmente el error de que no encuentra la versión del nodo para el
+símbolo fuse_setup@FUSE_2.2, por lo que la única alternativa disponible consiste
+en incluir la libreria dinamica dentro del initramfs. Esto iria en contra de la
+regla de no incluir elementos indispensables para el funcionamiento del sistema
+para mantenerlo en un tamaño minimo, pero por otro lado tendria sentido ya que
+`libfuse` es fundamental para poder hacer uso de FUSE en el kernel, por lo que
+se podria hacer que se compilase e incluyese dentro de la imagen final de
+initramfs solo en el caso de que FUSE se hubiese habilitado en el kernel.

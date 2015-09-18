@@ -1,4 +1,4 @@
-### GitBlog
+#### GitBlog
 
 Uno de los requisitos del CUSL es la necesidad de usar un blog donde se expongan
 los progresos que se van aconteciendo durante el desarrollo del proyectos, por

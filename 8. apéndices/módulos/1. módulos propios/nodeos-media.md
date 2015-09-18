@@ -1,4 +1,4 @@
-### nodeos-media
+#### nodeos-media
 
 Las imagenes y logotipos originales de NodeOS solo estaban disponibles en
 formato PNG. Esto imposibilita el poder crear contenidos nuevos como por ejemplo

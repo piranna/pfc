@@ -1,15 +1,15 @@
-### gitbook-plugin-printlinks
+#### gitbook-plugin-printlinks
 
 GitBook esta orientado principalmente a su uso en medios electronicos incluso en
 el caso de usar la exportación a PDF. Esto tiene el problema de que al imprimir
 no hay posibilidad de conservar los enlaces a otros documentos, pero tampoco las
 referencias dentro del propio libro ya que estas estan hechas mediante el uso de
 hiperenlaces. Para paliar esta situacion propuse el añadir soporte para mostrar
-los [enlaces]() dentro de la funcionalidad de GitBook, pero al no haberse
-producido avances al respecto, decidi desarrollar un
-[plugin](https://github.com/piranna/gitbook-plugin-printlinks) que añadiera
-dicho soporte mostrando los enlaces a modo de notas al pie de pagina
-([footnotes]()).
+los [enlaces](https://github.com/GitbookIO/gitbook/issues/571) dentro de la
+funcionalidad de GitBook, pero al no haberse producido avances al respecto, he
+desarrollado un [plugin](https://github.com/piranna/gitbook-plugin-printlinks)
+para añadier dicho soporte mostrando los enlaces a modo de notas al pie de pagina
+([footnotes](http://www.plagiarism.org/citing-sources/what-are-footnotes)).
 
 El plugin se ejecuta en cada uno de los capitulos antes de ser convertido a HTML
 para su posterior generación como archivo PDF, y busca todos los enlaces que
@@ -41,7 +41,7 @@ y comprobando si este es relativo si no esta definido su host. En tal caso, se
 extraen los indices de seccion de cada uno de los componentes de la ruta del
 enlace y se unifican, y despues se crea la referencia a la seccion teniendo en
 cuenta el idioma del libro mediante un sencillo mecanismo inspirado en
-[gettext]() consistente en un objeto JSON donde las claves son el identificador
-del idioma y sus valores son cadenas de texto localizadas con el texto `__REF__`
-en la ubicacion donde despues se insertara la referencia a la seccion mediante
-una simple sustitucion de texto.
+[gettext](https://www.gnu.org/software/gettext) consistente en un objeto JSON
+donde las claves son el identificador del idioma y sus valores son cadenas de
+texto localizadas con el texto `__REF__` en la ubicacion donde despues se
+insertara la referencia a la seccion mediante una simple sustitucion de texto.
