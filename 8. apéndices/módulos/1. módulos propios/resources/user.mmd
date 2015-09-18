@@ -1,0 +1,39 @@
+graph BT
+  subgraph initramfs
+    ibin[bin]
+    ilib[lib]
+
+    iDEV((dev))
+    iproc((proc))
+
+    iusr[usr]
+  end
+
+  subgraph usersfs
+    nodeos === ubin[bin]
+    nodeos === ulib[lib]
+  end
+
+  subgraph nodeos
+    / === bin
+    / === lib
+
+    / === etc
+    / -.- tmp((tmp))
+
+    / -.- DEV((dev))
+    / -.- proc((proc))
+    / --- usr[usr]
+  end
+
+  ibin --- ubin
+  ubin --- bin
+
+  iDEV -.- DEV
+
+  ilib --- ulib
+  ulib --- lib
+
+  iproc -.- proc
+
+  iusr --- usr

@@ -1,0 +1,53 @@
+graph BT
+subgraph initramfs
+  ibin[bin]
+  ilib[lib]
+
+  iDEV((dev))
+  iproc((proc))
+
+  iusr[usr]
+end
+
+subgraph usersfs
+  root === ubin[bin]
+  root === ulib[lib]
+end
+
+subgraph root
+  / === bin
+  / === lib
+
+  / === etc
+  / === home((home))
+  / -.- tmp((tmp))
+
+  / -.- DEV((dev))
+  / -.- proc((proc))
+  / --- usr[usr]
+end
+
+subgraph usersfs
+  home === workdirs(.workdirs)
+  home === hnodeos[nodeos]
+  home === hroot[root]
+end
+
+subgraph nodeos
+  hnodeos --- nbin[bin]
+  hnodeos === netc[etc]
+  hnodeos --- nlib[lib]
+  hnodeos --- ntmp((tmp))
+end
+
+ibin --- ubin
+ubin --- bin
+
+iDEV -.- DEV
+
+ilib --- ulib
+ulib --- lib
+
+iproc -.- proc
+
+iusr --- usr

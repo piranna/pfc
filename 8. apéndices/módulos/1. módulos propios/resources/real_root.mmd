@@ -1,0 +1,28 @@
+graph BT
+  subgraph initramfs
+    / === ibin[bin]
+    / --- DEV((dev))
+    / === ilib[lib]
+    / --- proc((proc))
+    / === tmp
+    / === usr
+  end
+
+  subgraph root
+    tmp --- bin
+    tmp --- etc
+    tmp --- home((home))
+    tmp --- lib
+    tmp --- rtmp((tmp))
+  end
+
+  subgraph usersfs
+    home === workdirs(.workdirs)
+    home === nodeos
+    home === uroot[root]
+
+    nodeos --- nbin[bin]
+    nodeos === netc[etc]
+    nodeos --- nlib[lib]
+    nodeos --- ntmp((tmp))
+  end

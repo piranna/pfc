@@ -5,7 +5,7 @@
   "version": "0.0.0",
   "scripts": {
     "pdf": "gitbook pdf . NodeOS.pdf",
-    "postinstall": "gitbook install",
+    "postinstall": "gitbook install && npm install piranna/gitbook-plugin-mermaid#patch-1",
     "serve": "gitbook serve ."
   },
   "repository": {
@@ -21,6 +21,7 @@
     "svgexport": "^0.2.5"
   },
   "dependencies": {
-    "gitbook-plugin-autocover": "GitbookIO/plugin-autocover"
+    "gitbook-plugin-autocover": "GitbookIO/plugin-autocover",
+    "gitbook-plugin-mermaid": "piranna/gitbook-plugin-mermaid#patch-1"
   }
 }

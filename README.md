@@ -19,36 +19,16 @@ Se pueden descargar sus fuentes originales desde su repositorio en
 lectura online y su descarga en formato ebook y PDF desde su pagina web en
 [gitbooks.io](http://piranna.gitbooks.io/pfc).
 
-Para la creación de este libro se ha colaborado aportando mejoras a los
-siguientes proyectos:
-
-* [Gitbook autocover](https://github.com/GitbookIO/plugin-autocover): usar
-  plantillas SVG en vez de un layout predefinido para la portada del libro
-* [node-canvg](https://github.com/yetzt/node-canvg): cargar imagenes desde disco
-  al usar URLs relativas
-
-Ademas tambien se ha creado el plugin para gitbook
-[printlinks](8. apéndices/2. módulos/2. gitbook-plugin-printlinks.html) para
-mostrar las direcciones URL de los hiperenlaces incluidos en el texto como notas
-al pie de pagina al final de cada seccion, y tambien se ha usado una hoja de
-estilos propia para justificar el texto a los margenes en su version impresa y
-mejorar su aspecto visual.
-
-Para la gráfica con la evolución del número de Stargazers del proyecto se ha
-desarrollado un script especifico haciendo uso de las APIs de
-[GitHub para desarrolladores](https://developer.github.com/v3) y de
-[Google Image Charts](https://developers.google.com/chart/image). Puede
-encontrar mas información sobre el en su [apendice](8. apéndices/Stargazers.html).
-
 Generación del libro
 --------------------
 
 Para generar el libro a partir de sus fuentes, necesitara tener instalados en su
 sistema [Calibre](http://calibre-ebook.com) (necesario para la generacion del
-libro en formato PDF) y Node.js. La version de Calibre incorporada en Ubuntu
-15.04 "Vivid Velvet" (2.20) contiene algunos errores que impiden su uso con
-GitBook, por lo que se recomienda usar la version 2.30 o superior, o tambien la
-[ultima version disponible](https://github.com/GitbookIO/gitbook/issues/790)
+libro en formato PDF), [PhantomJS](http://phantomjs.org) (necesario para la
+generación de los diagramas) y Node.js. La version de Calibre incorporada en
+Ubuntu 15.04 "Vivid Velvet" (2.20) contiene algunos errores que impiden su uso
+con GitBook, por lo que se recomienda usar la version 2.30 o superior, o tambien
+la [ultima version disponible](https://github.com/GitbookIO/gitbook/issues/790)
 directamente desde la pagina del proyecto ejecutando
 
 ```bash
@@ -56,6 +36,12 @@ URL=http://raw.github.com/kovidgoyal/calibre/master/setup/linux-installer.py
 SCRIPT="import sys; exec(sys.stdin.read()); sys.stderr.write('Failed\n')"
 
 wget -nv -O- $URL | sudo python -c $SCRIPT
+```
+
+Para instalar PhantomJS en Ubuntu, basta con ejecutar
+
+```bash
+sudo apt-get install phantomjs
 ```
 
 Despues, podra instalar las dependencias de desarrollo del libro:

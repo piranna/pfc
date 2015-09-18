@@ -22,6 +22,7 @@
   * [Posibles trabajos futuros](6. conclusiones/2. Posibles trabajos futuros.md)
 * [Bibliografia](7. bibliografia.md)
 * [Apéndices](8. apéndices/README.md)
+  * [Desarrollo del libro](8. apéndices/desarrollo del libro.md)
   * [Stargazers](8. apéndices/Stargazers.md)
   * [Módulos](8. apéndices/2. módulos/README.md)
     * [Módulos propios](8. apéndices/2. módulos/1. módulos propios/README.md)
