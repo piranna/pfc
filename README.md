@@ -24,11 +24,10 @@ Generación del libro
 
 Para generar el libro a partir de sus fuentes, necesitara tener instalados en su
 sistema [Calibre](http://calibre-ebook.com) (necesario para la generacion del
-libro en formato PDF), [PhantomJS](http://phantomjs.org) (necesario para la
-generación de los diagramas) y Node.js. La version de Calibre incorporada en
-Ubuntu 15.04 "Vivid Velvet" (2.20) contiene algunos errores que impiden su uso
-con GitBook, por lo que se recomienda usar la version 2.30 o superior, o tambien
-la [ultima version disponible](https://github.com/GitbookIO/gitbook/issues/790)
+libro en formato PDF) y Node.js. La version de Calibre incorporada en Ubuntu
+15.04 "Vivid Velvet" (2.20) contiene algunos errores que impiden su uso con
+GitBook, por lo que se recomienda usar la version 2.30 o superior, o bien la
+[ultima version disponible](https://github.com/GitbookIO/gitbook/issues/790)
 directamente desde la pagina del proyecto ejecutando
 
 ```bash
@@ -36,12 +35,6 @@ URL=http://raw.github.com/kovidgoyal/calibre/master/setup/linux-installer.py
 SCRIPT="import sys; exec(sys.stdin.read()); sys.stderr.write('Failed\n')"
 
 wget -nv -O- $URL | sudo python -c $SCRIPT
-```
-
-Para instalar PhantomJS en Ubuntu, basta con ejecutar
-
-```bash
-sudo apt-get install phantomjs
 ```
 
 Despues, podra instalar las dependencias de desarrollo del libro:
