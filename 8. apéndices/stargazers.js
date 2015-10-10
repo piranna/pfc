@@ -146,6 +146,44 @@ function accumulate(data)
   })
 }
 
+function getChx(begin, end)
+{
+  begin = new Date(begin)
+
+  var months = []
+  var years  = []
+
+  while(begin <= end)
+  {
+    if(begin.getDate() === 1)
+    {
+      months.push(begin.getMonth()+1)
+      years.push(begin.getMonth() === 0 ? begin.getFullYear() : '')
+    }
+    else
+      months.push('')
+
+    begin.setDate(begin.getDate()+1)
+  }
+
+  var result =
+  {
+    chxl: '0:|'+months.join('|'),
+    chxt: 'x,y'
+  }
+
+  // Show years axis if data spawns for over more than a natural year
+  for(var year in years)
+    if(year !== '')
+    {
+      result.chxl += '|2:|'+years.join('|')
+      result.chxt += ',x'
+      break
+    }
+
+  return result
+}
+
 
 var options =
 {
@@ -163,33 +201,15 @@ stargazers(USER, REPO, options, function(error, data)
 
   // Craft data to generate chart with Google Charts API
   var days       = []
-  var months     = []
-  var years      = []
   var stargazers = []
   var events     = []
 
   data.forEach(function(entry, index)
   {
-    var month = parseInt(entry.date.substr(5, 2))
-    if(month != months[months.length-1])
-    {
-      var year = entry.date.substr(0, 4)
-      year = (year !== years[years.length-1] && month === 1) ? year : ''
-
-      if(months.length)
-        while(months[months.length-1] < 12 && months[months.length-1]+1 != month)
-        {
-          months.push(months[months.length-1]+1)
-          years.push('')
-        }
-
-      months.push(month)
-      years.push(year)
-    }
-
     days.push(new Date(entry.date))
     stargazers.push(entry.stargazers)
 
+    // [ToDo] Allow to add events on days without data
     if(dates[0] <= entry.date)
     {
       dates.shift()
@@ -202,36 +222,35 @@ stargazers(USER, REPO, options, function(error, data)
     }
   })
 
-  months.push(months[months.length-1]+1)
-  years.push('')
+  // Simplify dates
+  var daysBegin = new Date(days[0])
+  var daysEnd   = new Date(days[days.length-1])
 
-  // Simplify days
-  var offsetDays = days[0].setDate(1)  // First day of month of the stargazer
+  daysBegin.setDate(1)  // First day of month of the first stargazer
+  if(daysEnd.getDate() !== 1)
+    daysEnd.setMonth(daysEnd.getMonth()+1, 1)  // First day of next month of the last stargazer
+
+  // Generate months and years
+  var chx = getChx(daysBegin, daysEnd)
+
+  // Get days from beginning of data
   days = days.map(function(day)
   {
-    return (day.getTime() - offsetDays)/MILLISECONDS_PER_DAY
+    return (day.getTime() - daysBegin)/MILLISECONDS_PER_DAY
   })
 
   // Request chart
+  var lastDay = days[days.length-1]
   var postData =
   {
     chd:  't:'+days.join(',')+'|'+stargazers.join(','),
     chds: 'a',
     chm:  'o,000000,0,-1,2'+'|'+events.join('|'),
-    chs:  '800x375',
+    chs:  lastDay+'x'+Math.floor(300000/lastDay),
     cht:  'lxy',
-    chxl: '0:|'+months.join('|'),
-    chxt: 'x,y'
+    chxl: chx.chxl,
+    chxt: chx.chxt
   }
-
-  // Show years axis if data spawns for over more than a natural year
-  for(var year in years)
-    if(year !== '')
-    {
-      postData.chxl += '|2:|'+years.join('|')
-      postData.chxt += ',x'
-      break
-    }
 
   postData = stringify(postData)
 
@@ -249,6 +268,8 @@ stargazers(USER, REPO, options, function(error, data)
 
   var req = request(options, function(res)
   {
+    if(res.statusCode !== 200) throw res.statusCode+': '+res.statusMessage
+
     res.pipe(createWriteStream('stargazers.png'))
   })
 
