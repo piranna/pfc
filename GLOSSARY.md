@@ -161,3 +161,7 @@ Fallo de programacion en el que se mantienen en uso regiones de memoria sin
 referencias a ellas y por tanto sin poder ser utilizadas, provocando que el
 proceso consuma cada vez mas memoria inutilmente afectando al rendimiento del
 sistema hasta que este se queda sin memoria libre.
+
+# padding
+Datos nulos o de "basura" usados para ajustar un texto o estructura de forma que
+los datos queden alineados y sean mas faciles de tratar.
