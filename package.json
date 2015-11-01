@@ -17,11 +17,10 @@
   },
   "homepage": "https://github.com/piranna/pfc",
   "devDependencies": {
-    "gitbook-cli": "^0.3.6",
-    "svgexport": "^0.2.5"
+    "gitbook-cli": "^1.0.0",
+    "svgexport": "^0.2.7"
   },
   "dependencies": {
-    "gitbook-plugin-autocover": "GitbookIO/plugin-autocover",
-    "gitbook-plugin-mermaid": "piranna/gitbook-plugin-mermaid#patch-1"
+    "gitbook-plugin-autocover": "GitbookIO/plugin-autocover"
   }
 }
