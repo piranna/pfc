@@ -40,6 +40,7 @@
       * [cpio-stream](8. apéndices/módulos/2. colaboraciones con proyectos externos/cpio-stream.md)
       * [fuse-bindings](8. apéndices/módulos/2. colaboraciones con proyectos externos/fuse-bindings.md)
       * [GitBlog](8. apéndices/módulos/2. colaboraciones con proyectos externos/GitBlog.md)
+      * [jsdiff](8. apéndices/módulos/2. colaboraciones con proyectos externos/jsdiff.md)
       * [node-bin-getty](8. apéndices/módulos/2. colaboraciones con proyectos externos/node-bin-getty.md)
       * [node-canvas](8. apéndices/módulos/2. colaboraciones con proyectos externos/node-canvas.md)
       * [tar-stream](8. apéndices/módulos/2. colaboraciones con proyectos externos/tar-stream.md)

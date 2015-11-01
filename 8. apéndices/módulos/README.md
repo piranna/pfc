@@ -15,8 +15,11 @@
   1. [cpio-stream](2. colaboraciones con proyectos externos/cpio-stream.html)
   2. [fuse-bindings](2. colaboraciones con proyectos externos/fuse-bindings.html)
   3. [GitBlog](2. colaboraciones con proyectos externos/GitBlog.html)
-  4. [node-bin-getty](2. colaboraciones con proyectos externos/node-bin-getty.html)
-  5. [node-canvas](2. colaboraciones con proyectos externos/node-canvas.html)
-  6. [tar-stream](2. colaboraciones con proyectos externos/tar-stream.html)
-  7. [vagga](2. colaboraciones con proyectos externos/vagga.html)
-  8. [vinyl-fs](2. colaboraciones con proyectos externos/vinyl-fs.html)
+  4. [jsdiff](2. colaboraciones con proyectos externos/jsdiff.html)
+  5. [node-bin-getty](2. colaboraciones con proyectos externos/node-bin-getty.html)
+  6. [node-canvas](2. colaboraciones con proyectos externos/node-canvas.html)
+  7. [tar-stream](2. colaboraciones con proyectos externos/tar-stream.html)
+  8. [vagga](2. colaboraciones con proyectos externos/vagga.html)
+  9. [vinyl-fs](2. colaboraciones con proyectos externos/vinyl-fs.html)
+
+{% mermaid src="dependencies.mmd" %}{% endmermaid %}
