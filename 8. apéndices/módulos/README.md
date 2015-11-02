@@ -22,4 +22,6 @@
   8. [vagga](2. colaboraciones con proyectos externos/vagga.html)
   9. [vinyl-fs](2. colaboraciones con proyectos externos/vinyl-fs.html)
 
-{% mermaid src="dependencies.mmd" %}{% endmermaid %}
+{% mermaid src="dependencies_build.mmd" %}{% endmermaid %}
+{% mermaid src="dependencies_initramfs.mmd" %}{% endmermaid %}
+{% mermaid src="dependencies_usersfs.mmd" %}{% endmermaid %}

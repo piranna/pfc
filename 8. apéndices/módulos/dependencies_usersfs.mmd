@@ -1,0 +1,19 @@
+graph LR
+  nodeos-usersfs === nodeos{nodeos}
+  nodeos-usersfs === root{root}
+
+  root --- bin-getty
+  root === logon
+  root --- forever
+  root --- forever-monitor
+
+  bin-getty --- src-termios
+  bin-getty --- src-unistd
+
+  logon --- posix
+  logon --- prompt
+
+  src-termios --- nan
+  src-unistd --- nan
+
+  posix --- nan

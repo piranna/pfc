@@ -1,0 +1,38 @@
+graph LR
+  NodeOS === nodeos-barebones
+  NodeOS === nodeos-initramfs
+  NodeOS === nodeos-rootfs
+  NodeOS === nodeos-usersfs
+  NodeOS --- publish-release
+
+  nodeos-barebones --- Node.js((Node.js))
+  nodeos-barebones --- Linux
+  nodeos-barebones --- suppose
+  nodeos-barebones === download-manager
+  nodeos-barebones === nodeos-cross-toolchain
+
+  nodeos-initramfs === nodeos-cross-toolchain
+
+  nodeos-rootfs === download-manager
+  nodeos-rootfs === nodeos-cross-toolchain
+  nodeos-rootfs --- genfatfs((genfatfs))
+  nodeos-rootfs --- syslinux((syslinux))
+
+  nodeos-usersfs === nodeos-cross-toolchain
+  nodeos-usersfs === download-manager
+  nodeos-usersfs --- genext2fs((genext2fs))
+
+  nodeos-cross-toolchain --- Linux
+  nodeos-cross-toolchain --- fs-extra
+  nodeos-cross-toolchain === download-manager
+  nodeos-cross-toolchain --- binutils((binutils))
+  nodeos-cross-toolchain --- gcc((gcc))
+  nodeos-cross-toolchain --- musl((musl))
+
+  download-manager --- async
+  download-manager --- diff
+  download-manager --- download
+  download-manager --- download-status
+  download-manager --- got
+
+  Linux((Linux))

@@ -1,0 +1,34 @@
+graph LR
+  nodeos-initramfs --- century
+  nodeos-initramfs === nodeos-mount-filesystems
+  nodeos-initramfs === nodeos-mount-utils
+  nodeos-initramfs === ube[usrbinenv]
+  nodeos-initramfs === ExclFS
+  nodeos-initramfs --- fuse((fuse))
+
+  century --- minimist
+  century --- nan
+
+  ExclFS --- async
+  ExclFS --- fuse-bindings
+
+  nodeos-mount-filesystems --- prompt
+  nodeos-mount-filesystems --- rimraf
+  nodeos-mount-filesystems --- async
+  nodeos-mount-filesystems --- mkdirp
+  nodeos-mount-filesystems --- nodeos-mount-utils
+
+  nodeos-mount-utils --- mkdirp
+  nodeos-mount-utils --- nodeos-mount
+  nodeos-mount-utils --- posix
+
+  ube --- kexec
+
+  fuse-bindings -.- fuse
+
+  mkdirp --- minimist
+
+  nodeos-mount --- nan
+  nodeos-mount --- async
+
+  posix --- nan
