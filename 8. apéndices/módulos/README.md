@@ -2,8 +2,9 @@
 
 1. [Módulos propios](1. módulos propios/index.html)
   1. [coreutils.js](1. módulos propios/coreutils.js.html)
-  2. [ExclFS](1. módulos propios/ExclFS.html)
   3. [forever starter](1. módulos propios/forever starter.html)
+  2. [download-manager](1. módulos propios/download-manager.html)
+  3. [ExclFS](1. módulos propios/ExclFS.html)
   4. [gitbook-plugin-printlinks](1. módulos propios/gitbook-plugin-printlinks.html)
   5. [logon](1. módulos propios/logon.html)
   6. [nodeos-media](1. módulos propios/nodeos-media.html)

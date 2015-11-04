@@ -3,8 +3,8 @@
 GitBook esta orientado principalmente a su uso en medios electronicos incluso en
 el caso de usar la exportación a PDF. Esto tiene el problema de que al imprimir
 no hay posibilidad de conservar los enlaces a otros documentos, pero tampoco las
-referencias dentro del propio libro ya que estas estan hechas mediante el uso de
-hiperenlaces. Para paliar esta situacion propuse el añadir soporte para mostrar
+referencias dentro del propio libro ya que éstas están hechas mediante el uso de
+hiperenlaces. Para paliar esta situación propuse el añadir soporte para mostrar
 los [enlaces](https://github.com/GitbookIO/gitbook/issues/571) dentro de la
 funcionalidad de GitBook, pero al no haberse producido avances al respecto, he
 desarrollado un [plugin](https://github.com/piranna/gitbook-plugin-printlinks)
@@ -23,7 +23,7 @@ sus indices y provocar referencias invalidas.
 
 El principal problema que he encontrado al desarrollar el plugin ha sido en la
 identificacion de los links que no deben ser convertidos en footnotes (imagenes
-e tablas de contenidos) debido al formato que tienen en Markdown (las imagenes
+y tablas de contenidos) debido al formato que tienen en Markdown (las imagenes
 precedidas por un signo de admiración, y los tablas de contenidos por su indice).
 En un principio intente filtrar dichos enlaces directamente en la expresion
 regular que los detecta mediante el uso de una coincidencia negativa, pero el
@@ -33,15 +33,16 @@ decidi considerar que el formato de los enlaces tenia "prefijos" (el signo de
 admiración y el indice) y solo procesar los enlaces que no tuvieran ninguno
 (enlaces cuyo "prefijo" fuera la cadena vacia). Despues dentro del texto se
 inserta una referencia al footnote a continuacion del propio enlace para que
-pueda ubicarse este cuando se imprima el libro, y al final de la pagina el
-propio footnote con la ruta del enlace.
+este pueda ubicarse cuando se imprima el libro, y al final de la página el
+propio *footnote* con la ruta del enlace.
 
 Los enlaces a otras secciones del libro se realizan parseando la URL del enlace
-y comprobando si este es relativo si no esta definido su host. En tal caso, se
+y se comprueba si este es relativo si no esta definido su host. En tal caso, se
 extraen los indices de seccion de cada uno de los componentes de la ruta del
 enlace y se unifican, y despues se crea la referencia a la seccion teniendo en
 cuenta el idioma del libro mediante un sencillo mecanismo inspirado en
 [gettext](https://www.gnu.org/software/gettext) consistente en un objeto JSON
 donde las claves son el identificador del idioma y sus valores son cadenas de
-texto localizadas con el texto `__REF__` en la ubicacion donde despues se
-insertara la referencia a la seccion mediante una simple sustitucion de texto.
+texto [localizadas](https://es.wikipedia.org/wiki/Internacionalización_y_localización)
+con el texto `__REF__` en la ubicación donde despues se insertara la referencia
+a la sección mediante una simple sustitución de texto.

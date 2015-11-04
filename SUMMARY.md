@@ -27,6 +27,7 @@
   * [Módulos](8. apéndices/módulos/README.md)
     * [Módulos propios](8. apéndices/módulos/1. módulos propios/README.md)
       * [coreutils.js](8. apéndices/módulos/1. módulos propios/coreutils.js.md)
+      * [download-manager](8. apéndices/módulos/1. módulos propios/download-manager.md)
       * [ExclFS](8. apéndices/módulos/1. módulos propios/ExclFS.md)
       * [forever starter](8. apéndices/módulos/1. módulos propios/forever starter.md)
       * [gitbook-plugin-printlinks](8. apéndices/módulos/1. módulos propios/gitbook-plugin-printlinks.md)
