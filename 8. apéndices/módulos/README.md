@@ -20,10 +20,11 @@
   6. [node-bin-getty](2. colaboraciones con proyectos externos/node-bin-getty.html)
   7. [node-canvas](2. colaboraciones con proyectos externos/node-canvas.html)
   8. [node-century](2. colaboraciones con proyectos externos/node-century.html)
-  9. [nodeos-mount](2. colaboraciones con proyectos externos//nodeos-mount.html)
-  10. [tar-stream](2. colaboraciones con proyectos externos/tar-stream.html)
-  11. [vagga](2. colaboraciones con proyectos externos/vagga.html)
-  12. [vinyl-fs](2. colaboraciones con proyectos externos/vinyl-fs.html)
+  9. [node-suppose](2. colaboraciones con proyectos externos/node-suppose.html)
+  10. [nodeos-mount](2. colaboraciones con proyectos externos//nodeos-mount.html)
+  11. [tar-stream](2. colaboraciones con proyectos externos/tar-stream.html)
+  12. [vagga](2. colaboraciones con proyectos externos/vagga.html)
+  13. [vinyl-fs](2. colaboraciones con proyectos externos/vinyl-fs.html)
 
 {% mermaid src="dependencies_build.mmd" %}{% endmermaid %}
 {% mermaid src="dependencies_initramfs.mmd" %}{% endmermaid %}

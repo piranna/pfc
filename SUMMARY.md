@@ -45,6 +45,7 @@
       * [node-bin-getty](8. apéndices/módulos/2. colaboraciones con proyectos externos/node-bin-getty.md)
       * [node-canvas](8. apéndices/módulos/2. colaboraciones con proyectos externos/node-canvas.md)
       * [node-century](8. apéndices/módulos/2. colaboraciones con proyectos externos/node-century.md)
+      * [node-suppose](8. apéndices/módulos/2. colaboraciones con proyectos externos/node-suppose.md)
       * [nodeos-mount](8. apéndices/módulos/2. colaboraciones con proyectos externos/nodeos-mount.md)
       * [tar-stream](8. apéndices/módulos/2. colaboraciones con proyectos externos/tar-stream.md)
       * [vagga](8. apéndices/módulos/2. colaboraciones con proyectos externos/vagga.md)
