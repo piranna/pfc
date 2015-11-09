@@ -259,10 +259,4 @@ despues en el mismo espacio de memoria, por lo que seria factible el cargar los
 modulos de las dependencias antes que el propio modulo, de tal forma que puedan
 estar disponibles todos sus simbolos en memoria y funcionar correctamente.
 
-[^1]: La unica razon por la que dichos errores no se detectaron antes al
-      ejecutar los tests solo es posible porque estos no sean lo suficientemente
-      exhaustivos, por lo que he abierto un
-      [issue](https://github.com/Automattic/node-canvas/issues/577) en el
-      proyecto notificandolo y solicitanto que se compruebe cual es el
-      porcentaje de cobertura de los tests para evitar problemas similares en el
-      futuro.
+[^1]: La unica razon por la que dichos errores no se detectaron antes al ejecutar los tests solo es posible porque estos no sean lo suficientemente exhaustivos, por lo que he abierto un [issue](https://github.com/Automattic/node-canvas/issues/577) en el proyecto notificandolo y solicitanto que se compruebe cual es el porcentaje de cobertura de los tests para evitar problemas similares en el futuro.
