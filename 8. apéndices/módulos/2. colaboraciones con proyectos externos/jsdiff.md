@@ -40,14 +40,14 @@ de ellos, por lo que no es una fuente fiable que tener en cuenta. La solucion
 que empleé en un principio fue utilizar el número de revision como identificador
 único, aunque igual que en el caso de `Index` tampoco es una solucion completa
 ya que hay casos en los que no se incluye ningun metadato que pueda utilizarse,
-por lo que finalmente he adaptado `jsdiff` para que parsee
+por lo que finalmente he adaptado *jsdiff* para que parsee
 [correctamente](https://github.com/kpdecker/jsdiff/pull/88) las cabeceras de los
 archivos para posteriormente poder extraer de ellas las rutas correctas a los
 mismos. Esto era especialmente importante para poder usar el módulo
 [download-manager](../1. módulos propios/download-manager.html) pudiendo aplicar
 todos los parches sin necesitar tener en cuenta casos de uso concretos.
 
-Por ultimo y mas importante, *jsdiff* no tenia soporte para aplicar parches cuya
+Por último y mas importante, *jsdiff* no tenia soporte para aplicar parches cuya
 localizacion no coincidiera exactamente con la
 [indicada en los mismos](https://github.com/kpdecker/jsdiff/issues/84)
 (*offset*), por lo que le he añadido dicho

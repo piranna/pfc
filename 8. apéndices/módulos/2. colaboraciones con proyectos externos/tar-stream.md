@@ -2,9 +2,9 @@
 
 El kernel de Linux utiliza el formato `cpio` para empaquetar el sistema de
 archivos de *initramfs*, sin embargo tanto *Docker* como *vagga* solo soportan
-archivos `tar`. Para poder usar el mismo proceso de generación es preciso
-convertir entre ambos formatos, para lo cual decidi usar el modulo
-[tar-stream](https://github.com/mafintosh/tar-stream) para poder hacer la
+archivos `tar`. Para poder usar el mismo proceso de generación para ambos
+entornos es preciso convertir entre ambos formatos, para lo cual decidi usar el
+modulo [tar-stream](https://github.com/mafintosh/tar-stream) para poder hacer la
 conversion dinamicamente usando la API de streams de Node.js. Sin embargo, al
 hacer la conversión descubri que los link simbolicos se habian convertido en
 archivos regulares dentro del paquete `tar`, y por tanto el binario de Node.js
@@ -80,4 +80,10 @@ Una vez hecho esto los link simbolicos se generaron correctamente dentro del
 archivo `tar` y pudieron ser cargados por el binario de Node.js, No obstante,
 cuando el paquete generado contiene link simbolicos hay un problema por el cual
 [Docker no puede procesarlos](https://github.com/mafintosh/tar-stream/issues/44)
-a diferencia de *vagga*, por lo que de momento dichos paquetes no son usables.
+a diferencia de *vagga*, por lo que de momento los paquetes no son usables en
+dicho entorno.
+
+Por último, aparte de estos problemas tambien estaba el hecho de que el codigo
+de `Linux`, `gcc` y Node.js estaban empaquetados con la extensión `@LongLink`
+que *tar-stream* [no soportaba](https://github.com/mafintosh/tar-stream/issues/35),
+haciendo que no pudieses desempaquetarse correctamente.

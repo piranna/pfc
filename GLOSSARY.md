@@ -162,6 +162,11 @@ referencias a ellas y por tanto sin poder ser utilizadas, provocando que el
 proceso consuma cada vez mas memoria inutilmente afectando al rendimiento del
 sistema hasta que este se queda sin memoria libre.
 
+# out-of-tree
+Tipo de compilación en la que los objetos temporales y los productos finales son
+generados fuera del arbol del archivos del código fuente. Esto proporciona una
+mayor limpieza y la posibilidad de eliminar los archvios compilados facilmente.
+
 # padding
 Datos nulos o de "basura" usados para ajustar un texto o estructura de forma que
 los datos queden alineados y sean mas faciles de tratar.

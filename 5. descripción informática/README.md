@@ -6,7 +6,7 @@
   2. [Módulos](2. Diseño.html#Módulos)
   3. [Sistema de archivos por usuario](2. Diseño.html#sistema-de-archivos-por-usuario)
 3. [Implementación](3. Implementación/index.html)
-  0. [cross-toolchain](3. Implementación/0. cross-toolchain.html)
+  1. [cross-toolchain](3. Implementación/1. cross-toolchain.html)
   1. [barebones](3. Implementación/1. barebones.html)
   2. [initramfs](3. Implementación/2. initramfs.html)
   3. [rootfs](3. Implementación/3. rootfs.html)

@@ -12,7 +12,7 @@
   * [Especificación](5. descripción informática/1. Especificación.md)
   * [Diseño](5. descripción informática/2. Diseño.md)
   * [Implementación](5. descripción informática/3. Implementación/README.md)
-    * [cross-toolchain](5. descripción informática/3. Implementación/0. cross-toolchain.md)
+    * [cross-toolchain](5. descripción informática/3. Implementación/1. cross-toolchain.md)
     * [barebones](5. descripción informática/3. Implementación/1. barebones.md)
     * [initramfs](5. descripción informática/3. Implementación/2. initramfs.md)
     * [rootfs](5. descripción informática/3. Implementación/3. rootfs.md)
