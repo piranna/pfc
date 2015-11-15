@@ -94,13 +94,17 @@ que se eliminan de los permisos que le aplica un usuario por defecto al crear
 un nuevo archivo o directorio.
 
 # VFAT
-Conjunto de sistemas de archivos desarrollados por Microsoft originalmente para
-MS-DOS y que por su sencillez de estructuras internas e implementacion esta muy
-difundido en todo tipo de componentes y sistemas operativos, siendo por tanto el
-formato estandar "de-facto" para almacenar datos en discos duros y pendrives que
-tengan que ser accedidos por distintos equipos. Sin embargo debido a su
-antigüedad posee algunas limitaciones tecnicas como es el no poder almacenar
-archivos de mas de 4GB o la velocidad de acceso aleatorio a archivos muy grandes
+[Sistemas de archivos](https://technet.microsoft.com/en-us/library/cc938438.aspx)
+desarrollados por Microsoft originalmente para MS-DOS y que por su sencillez de
+estructuras internas e implementacion estan muy difundidos en todo tipo de
+componentes y sistemas operativos, siendo por tanto el formato estandar
+"de-facto" para almacenar datos en discos duros y pendrives que tengan que ser
+accedidos por distintos equipos. Sin embargo debido a su antigüedad posee
+algunas limitaciones técnicas como es el no poder almacenar archivos de mas de
+4GB o la velocidad de acceso aleatorio a archivos muy grandes. Algunas de estas
+limitaciones estan solventadas por el mas reciente formato ExFAT (principalmente
+el tamaño de los archivos) pero al estar protegido por patentes su adopción es
+algo mas limitada.
 
 # Live CD
 Metodo por el que un sistema operativo se distribuye como un CD autoarrancable,
