@@ -32,6 +32,7 @@
       * [ExclFS](8. apéndices/módulos/1. módulos propios/ExclFS.md)
       * [gitbook-plugin-printlinks](8. apéndices/módulos/1. módulos propios/gitbook-plugin-printlinks.md)
       * [logon](8. apéndices/módulos/1. módulos propios/logon.md)
+      * [nodeos-console-font](8. apéndices/módulos/1. módulos propios/nodeos-console-font.md)
       * [nodeos-media](8. apéndices/módulos/1. módulos propios/nodeos-media.md)
       * [nodeos-mount-filesystems](8. apéndices/módulos/1. módulos propios/nodeos-mount-filesystems.md)
       * [nodeos-mount-utils](8. apéndices/módulos/1. módulos propios/nodeos-mount-utils.md)
