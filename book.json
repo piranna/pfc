@@ -6,7 +6,6 @@
     "anchors",
     "autocover",
     "image-captions",
-    "include-highlight",
     "mermaid",
     "printlinks"
   ],
