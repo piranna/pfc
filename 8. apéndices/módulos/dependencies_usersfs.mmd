@@ -1,6 +1,6 @@
 graph LR
-  nodeos-usersfs === nodeos{nodeos}
   nodeos-usersfs === root{root}
+  nodeos-usersfs === nodeos{nodeos}
 
   root --- bin-getty
   root === logon
@@ -11,6 +11,7 @@ graph LR
   bin-getty --- src-unistd
 
   logon --- posix
+  logon --- kexec
   logon --- prompt
 
   src-termios --- nan

@@ -20,6 +20,7 @@ graph LR
 
   nodeos-usersfs === nodeos-cross-toolchain
   nodeos-usersfs === download-manager
+  nodeos-usersfs === DebugFS
   nodeos-usersfs --- genext2fs((genext2fs))
 
   nodeos-cross-toolchain --- Linux
@@ -29,10 +30,12 @@ graph LR
   nodeos-cross-toolchain --- gcc((gcc))
   nodeos-cross-toolchain --- musl((musl))
 
-  download-manager --- async
+  DebugFS --- async
+
   download-manager --- diff
   download-manager --- download
   download-manager --- download-status
   download-manager --- got
+  download-manager --- async
 
   Linux((Linux))
