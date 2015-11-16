@@ -1,5 +1,14 @@
 ## Implementación
 
+1. [cross-toolchain](1. cross-toolchain.html)
+2. [barebones](2. barebones.html)
+3. [initramfs](3. initramfs.html)
+4. [rootfs](4. rootfs.html)
+  1. [Generación del sistema raiz](4. rootfs.html#generación-del-sistema-raiz)
+5. [usersfs](5. usersfs.html)
+  1. [root](5. usersfs.html#root)
+  2. [nodeos](5. usersfs.html#nodeos)
+6. [NodeOS](6. NodeOS.html)
 El proceso de construcción esta integrado en el ciclo de vida tipico del gestor
 de paquetes npm, de forma que resulte familiar a los desarrolladores de Node.js.
 En este sentido, se han reutilizado las etapas tipicas de un paquete npm
