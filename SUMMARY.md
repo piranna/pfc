@@ -27,6 +27,7 @@
   * [Módulos](8. apéndices/módulos/README.md)
     * [Módulos propios](8. apéndices/módulos/1. módulos propios/README.md)
       * [coreutils.js](8. apéndices/módulos/1. módulos propios/coreutils.js.md)
+      * [DebugFS](8. apéndices/módulos/1. módulos propios/DebugFS.md)
       * [download-checksum](8. apéndices/módulos/1. módulos propios/download-checksum.md)
       * [download-manager](8. apéndices/módulos/1. módulos propios/download-manager.md)
       * [ExclFS](8. apéndices/módulos/1. módulos propios/ExclFS.md)
