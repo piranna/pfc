@@ -174,3 +174,8 @@ mayor limpieza y la posibilidad de eliminar los archvios compilados facilmente.
 # padding
 Datos nulos o de "basura" usados para ajustar un texto o estructura de forma que
 los datos queden alineados y sean mas faciles de tratar.
+
+# Rolling Release
+Politica de publicación de versiones en la que no hay versiones propiamente como
+tales y en el que el último código publicado es válido en todo momento para ser
+usado.
