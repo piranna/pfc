@@ -18,7 +18,7 @@
   "homepage": "https://github.com/piranna/pfc",
   "devDependencies": {
     "gitbook-cli": "^1.0.0",
-    "svgexport": "^0.2.7"
+    "svgexport": "^0.2.8"
   },
   "dependencies": {
     "gitbook-plugin-autocover": "GitbookIO/plugin-autocover"

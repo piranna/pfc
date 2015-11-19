@@ -179,3 +179,14 @@ los datos queden alineados y sean mas faciles de tratar.
 Politica de publicación de versiones en la que no hay versiones propiamente como
 tales y en el que el último código publicado es válido en todo momento para ser
 usado.
+
+# Internet de las Cosas
+Conjunto de tecnologias que permiten que pequeños dispositivos electronicos y
+autonomos como lamparas, relojes, frigorificos, sensores termostaticos... se
+conecten a Internet y puedan realizar tareas cooperativamente entre ellos.
+
+# npm
+Gestor de paquetes oficial de Node.js, y el mas activo y con mayor cremiendo de
+la historia para cualquier lenguaje. Su rico ecosistema ha influido la forma de
+trabajar no solo con Node.js o Javascript en la web sino tambien en otros
+lenguajes como C++ o PHP donde han surgido gestores de paquetes basados en él.
