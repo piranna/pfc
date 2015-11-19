@@ -14,11 +14,11 @@ dicha tarea haciendo uso de la API pública de
 [Google Image Charts](https://developers.google.com/chart/image) para la
 generación de la gráfica, la cual a pesar de estar deprecada en beneficio de
 [Google Charts](https://developers.google.com/chart) ofrece una interfaz mas
-sencilla para la generación de imagenes estaticas al estar basada en peticiones
+sencilla para la generación de imagenes estáticas al estar basada en peticiones
 HTTP `GET` y `POST`.
 
 El funcionamiento del script se divide en dos partes: obtención de los datos y
-generación de la grafica.
+generación de la gráfica.
 
 ### Obtención de los datos
 
@@ -41,25 +41,33 @@ devuelva las fechas en que se genero cada stargazer, ya que es realmente el
 
 ### Generación de la gráfica
 
-Una vez obtenidos los datos de todos los stargazers del proyecto, estos se
-procesan para que puedan ser usados convenientemente por la API de Google Image
-Charts. El motivo de usar dicho servicio es porque no hay ningun módulo de
-generación de gráficas para Node.js lo suficiente potente estando la mayoria de
-ellos desarrollados para solucionar casos especificos, o bien orientados para su
-uso en el navegador de forma interactiva (y sin apenas opciones de configuración)
-y por tanto no siendo validos para la generación de graficos estáticos. Me
-planteé la posibilidad de usar el servicio de Google Image Charts mediante el
-modulo [quiche](https://github.com/ryanrolds/quiche), el cual de forma similar a
-*node-github* proporciona una API de alto nivel, sin embargo debido a que dicho
-modulo esta sin mantenimiento desde hace 4 años y el querer tambien indicar los
-distintos eventos acontecidos durante el proyecto y su repercusión en el número
-de seguidores, finalmente decidi usar directamente la API REST de Google Image
-Charts. Esta circunstancia tambien me han hecho plantearme desarrollar en el
+Una vez obtenidos los datos de todos los stargazers del proyecto, éstos se
+procesan para que puedan ser usados convenientemente por la API de *Google Image
+Charts*. El motivo de usar dicho servicio es porque en el momento de desarrollar
+el script no habia ningun módulo de generación de gráficas para Node.js lo
+suficiente potente, estando la mayoria de ellos desarrollados para solucionar
+casos específicos u orientados para su uso en el navegador de forma interactiva
+(y sin apenas opciones de configuración al respecto) y por tanto no siendo
+válidos para la generación de gráficos estáticos. Me planteé la posibilidad de
+usar el modulo [quiche](https://github.com/ryanrolds/quiche), el cual de forma
+similar a *node-github* proporciona una API de alto nivel para el servicio de
+*Google Image Charts*, sin embargo debido a que dicho módulo esta sin
+mantenimiento desde hace 4 años y el querer también indicar los distintos
+eventos acontecidos durante el proyecto y su repercusión en el número de
+seguidores, finalmente decidí usar directamente la API REST de *Google Image
+Charts*. Esta circunstancia tambien me han hecho plantearme desarrollar en el
 futuro un módulo de gráficas (quizas usando como base alguno de los ya existentes
 para Node.js como [line-graph](https://github.com/dominictarr/line-graph) y
 basado en una API similar a la *quiche*) además de crear un plugin para GitBook
 de forma que puedan generarse automaticamente a partir de datos contenidos en
-formato Markdown.
+formato Markdown. No obstante, el 17 de Noviembre de 2015 se liberó el código
+fuente de [Plotly.js](https://plot.ly/javascript/open-source-announcement), el
+cual proporciona una libreria Javascript para la realización de gráficos y
+diagramas de alta calidad para el ambito academico que ademas permite que sean
+definidos tanto los datos como el diseño de los diagramas a partir de archivos
+JSON, por lo que estoy estudiando la posibilidad de desarrollar un plugin para
+GitBook que permita renderizarlos directamente desde las fuentes de los datos
+contenidas en el propio libro.
 
 El primer paso para generar la gráfica es calcular un histograma con el número
 de stargazers cada dia, para despues calcular su valor acumulado. Con estos
@@ -68,10 +76,10 @@ los dias en los que se han producido, los eventos relaccionados con el proyecto,
 y dos listas auxiliares con los meses y los años en los que se distribuyen los
 datos para mostrarlos correctamente en el eje de ordenadas.
 
-Por último, estos datos se envian al WebService de Google Image Charts y el
+Por último, estos datos se envian al WebService de *Google Image Charts* y el
 resultado se escribe en un archivo en el disco duro. Debido a la cantidad de
-datos generados estos se envian mediante una peticion POST en vez de mediante su
-API basada en peticiones GET para evitar la limitacion que impone la API de
-Google Image Charts en cuanto al tamaño de las peticiones GET (2040 caracteres)
-debido a las limitaciones impuestas por los actuales navegadores web para la
+datos generados estos se envian mediante una petición POST en vez de mediante su
+API basada en peticiones GET para evitar el limite que impone la API de *Google
+Image Charts* en cuanto al tamaño de las peticiones GET (2040 caracteres) debido
+a las limitaciones impuestas por los actuales navegadores web para la
 [longitud de las URLs](http://stackoverflow.com/a/417184).

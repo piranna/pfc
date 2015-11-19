@@ -2,6 +2,8 @@
 
 1. [gitbook-plugin-printlinks](gitbook-plugin-printlinks.html)
 2. [Stargazers](Stargazers.html)
+  1. [Obtención de los datos](Stargazers.html#obtención-de-los-datos)
+  2. [Generación de la gráfica](Stargazers.html#generación-de-la-gráfica)
 
 Para la creación de este libro se ha colaborado aportando mejoras a los
 siguientes proyectos:
