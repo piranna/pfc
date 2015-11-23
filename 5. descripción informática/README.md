@@ -10,7 +10,7 @@
   2. [barebones](3. Implementación/2. barebones.html)
   3. [initramfs](3. Implementación/3. initramfs.html)
   4. [rootfs](3. Implementación/4. rootfs.html)
-    1. [Generación del sistema raiz](3. Implementación/4. rootfs.html#generación-del-sistema-raiz)
+    1. [Generación del sistema raíz](3. Implementación/4. rootfs.html#generación-del-sistema-raíz)
   5. [usersfs](3. Implementación/5. usersfs.html)
     1. [root](3. Implementación/5. usersfs.html#root)
     2. [nodeos](3. Implementación/5. usersfs.html#nodeos)
