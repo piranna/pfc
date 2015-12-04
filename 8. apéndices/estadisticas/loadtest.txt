@@ -1,0 +1,1946 @@
+Linksys WRT54GL v1.1, firmware v4.30.7, Jun. 20, 2006
+
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 10
+[Fri Nov 13 2015 16:36:03 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 16:36:08 GMT+0100 (CET)] INFO Requests: 9248, requests per second: 1849, mean latency: 10 ms
+[Fri Nov 13 2015 16:36:13 GMT+0100 (CET)] INFO Requests: 18091, requests per second: 1769, mean latency: 10 ms
+[Fri Nov 13 2015 16:36:18 GMT+0100 (CET)] INFO Requests: 27158, requests per second: 1815, mean latency: 10 ms
+[Fri Nov 13 2015 16:36:23 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:36:23 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 16:36:23 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 16:36:23 GMT+0100 (CET)] INFO Concurrency level:   10
+[Fri Nov 13 2015 16:36:23 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 16:36:23 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:36:23 GMT+0100 (CET)] INFO Completed requests:  35932
+[Fri Nov 13 2015 16:36:23 GMT+0100 (CET)] INFO Total errors:        0
+[Fri Nov 13 2015 16:36:23 GMT+0100 (CET)] INFO Total time:          20.000545824 s
+[Fri Nov 13 2015 16:36:23 GMT+0100 (CET)] INFO Requests per second: 1797
+[Fri Nov 13 2015 16:36:23 GMT+0100 (CET)] INFO Total time:          20.000545824 s
+[Fri Nov 13 2015 16:36:23 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:36:23 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 16:36:23 GMT+0100 (CET)] INFO   50%      4 ms
+[Fri Nov 13 2015 16:36:23 GMT+0100 (CET)] INFO   90%      8 ms
+[Fri Nov 13 2015 16:36:23 GMT+0100 (CET)] INFO   95%      9 ms
+[Fri Nov 13 2015 16:36:23 GMT+0100 (CET)] INFO   99%      18 ms
+[Fri Nov 13 2015 16:36:23 GMT+0100 (CET)] INFO  100%      43 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 10 --rps 1000
+[Fri Nov 13 2015 16:39:04 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 16:39:09 GMT+0100 (CET)] INFO Requests: 4523, requests per second: 905, mean latency: 0 ms
+[Fri Nov 13 2015 16:39:14 GMT+0100 (CET)] INFO Requests: 9510, requests per second: 996, mean latency: 0 ms
+[Fri Nov 13 2015 16:39:19 GMT+0100 (CET)] INFO Requests: 14520, requests per second: 1005, mean latency: 0 ms
+[Fri Nov 13 2015 16:39:24 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:39:24 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 16:39:24 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 16:39:24 GMT+0100 (CET)] INFO Concurrency level:   10
+[Fri Nov 13 2015 16:39:24 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 16:39:24 GMT+0100 (CET)] INFO Requests per second: 1000
+[Fri Nov 13 2015 16:39:24 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:39:24 GMT+0100 (CET)] INFO Completed requests:  19517
+[Fri Nov 13 2015 16:39:24 GMT+0100 (CET)] INFO Total errors:        0
+[Fri Nov 13 2015 16:39:24 GMT+0100 (CET)] INFO Total time:          20.001542523 s
+[Fri Nov 13 2015 16:39:24 GMT+0100 (CET)] INFO Requests per second: 976
+[Fri Nov 13 2015 16:39:24 GMT+0100 (CET)] INFO Total time:          20.001542523 s
+[Fri Nov 13 2015 16:39:24 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:39:24 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 16:39:24 GMT+0100 (CET)] INFO   50%      2 ms
+[Fri Nov 13 2015 16:39:24 GMT+0100 (CET)] INFO   90%      7 ms
+[Fri Nov 13 2015 16:39:24 GMT+0100 (CET)] INFO   95%      10 ms
+[Fri Nov 13 2015 16:39:24 GMT+0100 (CET)] INFO   99%      18 ms
+[Fri Nov 13 2015 16:39:24 GMT+0100 (CET)] INFO  100%      45 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 100
+[Fri Nov 13 2015 16:41:03 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 16:41:08 GMT+0100 (CET)] INFO Requests: 8787, requests per second: 1756, mean latency: 60 ms
+[Fri Nov 13 2015 16:41:13 GMT+0100 (CET)] INFO Requests: 17942, requests per second: 1832, mean latency: 50 ms
+[Fri Nov 13 2015 16:41:18 GMT+0100 (CET)] INFO Requests: 28003, requests per second: 2011, mean latency: 50 ms
+[Fri Nov 13 2015 16:41:23 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:41:23 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 16:41:23 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 16:41:23 GMT+0100 (CET)] INFO Concurrency level:   100
+[Fri Nov 13 2015 16:41:23 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 16:41:23 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:41:23 GMT+0100 (CET)] INFO Completed requests:  37842
+[Fri Nov 13 2015 16:41:23 GMT+0100 (CET)] INFO Total errors:        0
+[Fri Nov 13 2015 16:41:23 GMT+0100 (CET)] INFO Total time:          20.000563973000002 s
+[Fri Nov 13 2015 16:41:23 GMT+0100 (CET)] INFO Requests per second: 1892
+[Fri Nov 13 2015 16:41:23 GMT+0100 (CET)] INFO Total time:          20.000563973000002 s
+[Fri Nov 13 2015 16:41:23 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:41:23 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 16:41:23 GMT+0100 (CET)] INFO   50%      46 ms
+[Fri Nov 13 2015 16:41:23 GMT+0100 (CET)] INFO   90%      81 ms
+[Fri Nov 13 2015 16:41:23 GMT+0100 (CET)] INFO   95%      88 ms
+[Fri Nov 13 2015 16:41:23 GMT+0100 (CET)] INFO   99%      105 ms
+[Fri Nov 13 2015 16:41:23 GMT+0100 (CET)] INFO  100%      122 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 1000
+[Fri Nov 13 2015 16:42:45 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 16:42:50 GMT+0100 (CET)] INFO Requests: 9251, requests per second: 1825, mean latency: 520 ms
+[Fri Nov 13 2015 16:42:55 GMT+0100 (CET)] INFO Requests: 19234, requests per second: 1988, mean latency: 490 ms
+[Fri Nov 13 2015 16:43:00 GMT+0100 (CET)] INFO Requests: 29437, requests per second: 2015, mean latency: 500 ms
+[Fri Nov 13 2015 16:43:05 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:43:05 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 16:43:05 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 16:43:05 GMT+0100 (CET)] INFO Concurrency level:   1000
+[Fri Nov 13 2015 16:43:05 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 16:43:05 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:43:05 GMT+0100 (CET)] INFO Completed requests:  38612
+[Fri Nov 13 2015 16:43:05 GMT+0100 (CET)] INFO Total errors:        0
+[Fri Nov 13 2015 16:43:05 GMT+0100 (CET)] INFO Total time:          20.000515963999998 s
+[Fri Nov 13 2015 16:43:05 GMT+0100 (CET)] INFO Requests per second: 1931
+[Fri Nov 13 2015 16:43:05 GMT+0100 (CET)] INFO Total time:          20.000515963999998 s
+[Fri Nov 13 2015 16:43:05 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:43:05 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 16:43:05 GMT+0100 (CET)] INFO   50%      396 ms
+[Fri Nov 13 2015 16:43:05 GMT+0100 (CET)] INFO   90%      817 ms
+[Fri Nov 13 2015 16:43:05 GMT+0100 (CET)] INFO   95%      1273 ms
+[Fri Nov 13 2015 16:43:05 GMT+0100 (CET)] INFO   99%      3137 ms
+[Fri Nov 13 2015 16:43:05 GMT+0100 (CET)] INFO  100%      7264 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 10000
+[Fri Nov 13 2015 16:44:16 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 16:44:21 GMT+0100 (CET)] INFO Requests: 5601, requests per second: 1119, mean latency: 3670 ms
+[Fri Nov 13 2015 16:44:21 GMT+0100 (CET)] INFO Errors: 128, accumulated errors: 128, 2.3% of total requests
+[Fri Nov 13 2015 16:44:27 GMT+0100 (CET)] INFO Requests: 15451, requests per second: 1832, mean latency: 4380 ms
+[Fri Nov 13 2015 16:44:27 GMT+0100 (CET)] INFO Errors: 128, accumulated errors: 256, 1.7% of total requests
+[Fri Nov 13 2015 16:44:31 GMT+0100 (CET)] INFO Requests: 24716, requests per second: 1910, mean latency: 3010 ms
+[Fri Nov 13 2015 16:44:31 GMT+0100 (CET)] INFO Errors: 0, accumulated errors: 256, 1% of total requests
+[Fri Nov 13 2015 16:44:34 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:44:34 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 16:44:34 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 16:44:34 GMT+0100 (CET)] INFO Concurrency level:   10000
+[Fri Nov 13 2015 16:44:34 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 16:44:34 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:44:34 GMT+0100 (CET)] INFO Completed requests:  29518
+[Fri Nov 13 2015 16:44:34 GMT+0100 (CET)] INFO Total errors:        269
+[Fri Nov 13 2015 16:44:34 GMT+0100 (CET)] INFO Total time:          20.000663669 s
+[Fri Nov 13 2015 16:44:34 GMT+0100 (CET)] INFO Requests per second: 1476
+[Fri Nov 13 2015 16:44:34 GMT+0100 (CET)] INFO Total time:          20.000663669 s
+[Fri Nov 13 2015 16:44:34 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:44:34 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 16:44:34 GMT+0100 (CET)] INFO   50%      2823 ms
+[Fri Nov 13 2015 16:44:34 GMT+0100 (CET)] INFO   90%      7701 ms
+[Fri Nov 13 2015 16:44:34 GMT+0100 (CET)] INFO   95%      10339 ms
+[Fri Nov 13 2015 16:44:34 GMT+0100 (CET)] INFO   99%      15810 ms
+[Fri Nov 13 2015 16:44:34 GMT+0100 (CET)] INFO  100%      18058 ms (longest request)
+[Fri Nov 13 2015 16:44:34 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:44:34 GMT+0100 (CET)] INFO  100%      18058 ms (longest request)
+[Fri Nov 13 2015 16:44:34 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:44:34 GMT+0100 (CET)] INFO    -1:   269 errors
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 5000
+[Fri Nov 13 2015 16:45:30 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 16:45:35 GMT+0100 (CET)] INFO Requests: 8112, requests per second: 1608, mean latency: 2330 ms
+[Fri Nov 13 2015 16:45:40 GMT+0100 (CET)] INFO Requests: 17922, requests per second: 1900, mean latency: 2180 ms
+[Fri Nov 13 2015 16:45:45 GMT+0100 (CET)] INFO Requests: 27064, requests per second: 1856, mean latency: 2240 ms
+[Fri Nov 13 2015 16:45:49 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:45:49 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 16:45:49 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 16:45:49 GMT+0100 (CET)] INFO Concurrency level:   5000
+[Fri Nov 13 2015 16:45:49 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 16:45:49 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:45:49 GMT+0100 (CET)] INFO Completed requests:  35162
+[Fri Nov 13 2015 16:45:49 GMT+0100 (CET)] INFO Total errors:        0
+[Fri Nov 13 2015 16:45:49 GMT+0100 (CET)] INFO Total time:          20.000483047000003 s
+[Fri Nov 13 2015 16:45:49 GMT+0100 (CET)] INFO Requests per second: 1758
+[Fri Nov 13 2015 16:45:49 GMT+0100 (CET)] INFO Total time:          20.000483047000003 s
+[Fri Nov 13 2015 16:45:49 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:45:49 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 16:45:49 GMT+0100 (CET)] INFO   50%      1721 ms
+[Fri Nov 13 2015 16:45:49 GMT+0100 (CET)] INFO   90%      4078 ms
+[Fri Nov 13 2015 16:45:49 GMT+0100 (CET)] INFO   95%      4837 ms
+[Fri Nov 13 2015 16:45:49 GMT+0100 (CET)] INFO   99%      8440 ms
+[Fri Nov 13 2015 16:45:49 GMT+0100 (CET)] INFO  100%      15851 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 8000
+[Fri Nov 13 2015 16:46:27 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 16:46:33 GMT+0100 (CET)] INFO Requests: 7705, requests per second: 1402, mean latency: 3070 ms
+[Fri Nov 13 2015 16:46:33 GMT+0100 (CET)] INFO Errors: 129, accumulated errors: 129, 1.7% of total requests
+[Fri Nov 13 2015 16:46:37 GMT+0100 (CET)] INFO Requests: 15807, requests per second: 1799, mean latency: 3200 ms
+[Fri Nov 13 2015 16:46:37 GMT+0100 (CET)] INFO Errors: 0, accumulated errors: 129, 0.8% of total requests
+[Fri Nov 13 2015 16:46:43 GMT+0100 (CET)] INFO Requests: 25423, requests per second: 1863, mean latency: 3030 ms
+[Fri Nov 13 2015 16:46:43 GMT+0100 (CET)] INFO Errors: 0, accumulated errors: 129, 0.5% of total requests
+[Fri Nov 13 2015 16:46:46 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:46:46 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 16:46:46 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 16:46:46 GMT+0100 (CET)] INFO Concurrency level:   8000
+[Fri Nov 13 2015 16:46:46 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 16:46:46 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:46:46 GMT+0100 (CET)] INFO Completed requests:  31195
+[Fri Nov 13 2015 16:46:46 GMT+0100 (CET)] INFO Total errors:        129
+[Fri Nov 13 2015 16:46:46 GMT+0100 (CET)] INFO Total time:          20.000462345 s
+[Fri Nov 13 2015 16:46:46 GMT+0100 (CET)] INFO Requests per second: 1560
+[Fri Nov 13 2015 16:46:46 GMT+0100 (CET)] INFO Total time:          20.000462345 s
+[Fri Nov 13 2015 16:46:46 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:46:46 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 16:46:46 GMT+0100 (CET)] INFO   50%      2146 ms
+[Fri Nov 13 2015 16:46:46 GMT+0100 (CET)] INFO   90%      7740 ms
+[Fri Nov 13 2015 16:46:46 GMT+0100 (CET)] INFO   95%      9452 ms
+[Fri Nov 13 2015 16:46:46 GMT+0100 (CET)] INFO   99%      15206 ms
+[Fri Nov 13 2015 16:46:46 GMT+0100 (CET)] INFO  100%      18234 ms (longest request)
+[Fri Nov 13 2015 16:46:46 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:46:46 GMT+0100 (CET)] INFO  100%      18234 ms (longest request)
+[Fri Nov 13 2015 16:46:46 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:46:46 GMT+0100 (CET)] INFO    -1:   129 errors
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 8000
+[Fri Nov 13 2015 16:49:38 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 16:49:43 GMT+0100 (CET)] INFO Requests: 6063, requests per second: 1212, mean latency: 3400 ms
+[Fri Nov 13 2015 16:49:43 GMT+0100 (CET)] INFO Errors: 177, accumulated errors: 177, 2.9% of total requests
+[Fri Nov 13 2015 16:49:48 GMT+0100 (CET)] INFO Requests: 14523, requests per second: 1687, mean latency: 3620 ms
+[Fri Nov 13 2015 16:49:48 GMT+0100 (CET)] INFO Errors: 2, accumulated errors: 179, 1.2% of total requests
+[Fri Nov 13 2015 16:49:53 GMT+0100 (CET)] INFO Requests: 23707, requests per second: 1844, mean latency: 2560 ms
+[Fri Nov 13 2015 16:49:53 GMT+0100 (CET)] INFO Errors: 0, accumulated errors: 179, 0.8% of total requests
+[Fri Nov 13 2015 16:49:57 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:49:57 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 16:49:57 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 16:49:57 GMT+0100 (CET)] INFO Concurrency level:   8000
+[Fri Nov 13 2015 16:49:57 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 16:49:57 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:49:57 GMT+0100 (CET)] INFO Completed requests:  29158
+[Fri Nov 13 2015 16:49:57 GMT+0100 (CET)] INFO Total errors:        179
+[Fri Nov 13 2015 16:49:57 GMT+0100 (CET)] INFO Total time:          20.00056665 s
+[Fri Nov 13 2015 16:49:57 GMT+0100 (CET)] INFO Requests per second: 1458
+[Fri Nov 13 2015 16:49:57 GMT+0100 (CET)] INFO Total time:          20.00056665 s
+[Fri Nov 13 2015 16:49:57 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:49:57 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 16:49:57 GMT+0100 (CET)] INFO   50%      2575 ms
+[Fri Nov 13 2015 16:49:57 GMT+0100 (CET)] INFO   90%      7011 ms
+[Fri Nov 13 2015 16:49:57 GMT+0100 (CET)] INFO   95%      9643 ms
+[Fri Nov 13 2015 16:49:57 GMT+0100 (CET)] INFO   99%      16103 ms
+[Fri Nov 13 2015 16:49:57 GMT+0100 (CET)] INFO  100%      18670 ms (longest request)
+[Fri Nov 13 2015 16:49:57 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:49:57 GMT+0100 (CET)] INFO  100%      18670 ms (longest request)
+[Fri Nov 13 2015 16:49:57 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:49:57 GMT+0100 (CET)] INFO    -1:   179 errors
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 7500
+[Fri Nov 13 2015 16:50:39 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 16:50:44 GMT+0100 (CET)] INFO Requests: 6824, requests per second: 1360, mean latency: 2690 ms
+[Fri Nov 13 2015 16:50:49 GMT+0100 (CET)] INFO Requests: 15293, requests per second: 1635, mean latency: 3600 ms
+[Fri Nov 13 2015 16:50:49 GMT+0100 (CET)] INFO Errors: 77, accumulated errors: 77, 0.5% of total requests
+[Fri Nov 13 2015 16:50:54 GMT+0100 (CET)] INFO Requests: 23602, requests per second: 1676, mean latency: 3030 ms
+[Fri Nov 13 2015 16:50:54 GMT+0100 (CET)] INFO Errors: 0, accumulated errors: 77, 0.3% of total requests
+[Fri Nov 13 2015 16:50:57 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:50:57 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 16:50:57 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 16:50:57 GMT+0100 (CET)] INFO Concurrency level:   7500
+[Fri Nov 13 2015 16:50:57 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 16:50:57 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:50:57 GMT+0100 (CET)] INFO Completed requests:  29739
+[Fri Nov 13 2015 16:50:57 GMT+0100 (CET)] INFO Total errors:        128
+[Fri Nov 13 2015 16:50:57 GMT+0100 (CET)] INFO Total time:          20.000820975 s
+[Fri Nov 13 2015 16:50:57 GMT+0100 (CET)] INFO Requests per second: 1487
+[Fri Nov 13 2015 16:50:57 GMT+0100 (CET)] INFO Total time:          20.000820975 s
+[Fri Nov 13 2015 16:50:57 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:50:57 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 16:50:57 GMT+0100 (CET)] INFO   50%      1934 ms
+[Fri Nov 13 2015 16:50:57 GMT+0100 (CET)] INFO   90%      8795 ms
+[Fri Nov 13 2015 16:50:57 GMT+0100 (CET)] INFO   95%      9785 ms
+[Fri Nov 13 2015 16:50:57 GMT+0100 (CET)] INFO   99%      15835 ms
+[Fri Nov 13 2015 16:50:57 GMT+0100 (CET)] INFO  100%      16868 ms (longest request)
+[Fri Nov 13 2015 16:50:57 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:50:57 GMT+0100 (CET)] INFO  100%      16868 ms (longest request)
+[Fri Nov 13 2015 16:50:57 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:50:57 GMT+0100 (CET)] INFO    -1:   128 errors
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 7500
+[Fri Nov 13 2015 16:52:44 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 16:52:49 GMT+0100 (CET)] INFO Requests: 5559, requests per second: 1111, mean latency: 3430 ms
+[Fri Nov 13 2015 16:52:49 GMT+0100 (CET)] INFO Errors: 301, accumulated errors: 301, 5.4% of total requests
+[Fri Nov 13 2015 16:52:54 GMT+0100 (CET)] INFO Requests: 15671, requests per second: 1988, mean latency: 3180 ms
+[Fri Nov 13 2015 16:52:54 GMT+0100 (CET)] INFO Errors: 0, accumulated errors: 301, 1.9% of total requests
+[Fri Nov 13 2015 16:53:00 GMT+0100 (CET)] INFO Requests: 25757, requests per second: 1763, mean latency: 2610 ms
+[Fri Nov 13 2015 16:53:00 GMT+0100 (CET)] INFO Errors: 0, accumulated errors: 301, 1.2% of total requests
+[Fri Nov 13 2015 16:53:03 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:53:03 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 16:53:03 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 16:53:03 GMT+0100 (CET)] INFO Concurrency level:   7500
+[Fri Nov 13 2015 16:53:03 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 16:53:03 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:53:03 GMT+0100 (CET)] INFO Completed requests:  31594
+[Fri Nov 13 2015 16:53:03 GMT+0100 (CET)] INFO Total errors:        301
+[Fri Nov 13 2015 16:53:03 GMT+0100 (CET)] INFO Total time:          20.000611712 s
+[Fri Nov 13 2015 16:53:03 GMT+0100 (CET)] INFO Requests per second: 1580
+[Fri Nov 13 2015 16:53:03 GMT+0100 (CET)] INFO Total time:          20.000611712 s
+[Fri Nov 13 2015 16:53:03 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:53:03 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 16:53:03 GMT+0100 (CET)] INFO   50%      1984 ms
+[Fri Nov 13 2015 16:53:03 GMT+0100 (CET)] INFO   90%      7456 ms
+[Fri Nov 13 2015 16:53:03 GMT+0100 (CET)] INFO   95%      8493 ms
+[Fri Nov 13 2015 16:53:03 GMT+0100 (CET)] INFO   99%      14468 ms
+[Fri Nov 13 2015 16:53:03 GMT+0100 (CET)] INFO  100%      17398 ms (longest request)
+[Fri Nov 13 2015 16:53:03 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:53:03 GMT+0100 (CET)] INFO  100%      17398 ms (longest request)
+[Fri Nov 13 2015 16:53:03 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:53:03 GMT+0100 (CET)] INFO    -1:   301 errors
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 7000
+[Fri Nov 13 2015 16:53:51 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 16:53:56 GMT+0100 (CET)] INFO Requests: 7171, requests per second: 1425, mean latency: 3010 ms
+[Fri Nov 13 2015 16:53:56 GMT+0100 (CET)] INFO Errors: 154, accumulated errors: 154, 2.1% of total requests
+[Fri Nov 13 2015 16:54:01 GMT+0100 (CET)] INFO Requests: 17472, requests per second: 1961, mean latency: 2650 ms
+[Fri Nov 13 2015 16:54:01 GMT+0100 (CET)] INFO Errors: 0, accumulated errors: 154, 0.9% of total requests
+[Fri Nov 13 2015 16:54:06 GMT+0100 (CET)] INFO Requests: 26893, requests per second: 1890, mean latency: 2610 ms
+[Fri Nov 13 2015 16:54:06 GMT+0100 (CET)] INFO Errors: 0, accumulated errors: 154, 0.6% of total requests
+[Fri Nov 13 2015 16:54:09 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:54:09 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 16:54:09 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 16:54:09 GMT+0100 (CET)] INFO Concurrency level:   7000
+[Fri Nov 13 2015 16:54:09 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 16:54:09 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:54:09 GMT+0100 (CET)] INFO Completed requests:  32962
+[Fri Nov 13 2015 16:54:09 GMT+0100 (CET)] INFO Total errors:        154
+[Fri Nov 13 2015 16:54:09 GMT+0100 (CET)] INFO Total time:          20.02045155 s
+[Fri Nov 13 2015 16:54:09 GMT+0100 (CET)] INFO Requests per second: 1646
+[Fri Nov 13 2015 16:54:09 GMT+0100 (CET)] INFO Total time:          20.02045155 s
+[Fri Nov 13 2015 16:54:09 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:54:09 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 16:54:09 GMT+0100 (CET)] INFO   50%      2227 ms
+[Fri Nov 13 2015 16:54:09 GMT+0100 (CET)] INFO   90%      5620 ms
+[Fri Nov 13 2015 16:54:09 GMT+0100 (CET)] INFO   95%      7758 ms
+[Fri Nov 13 2015 16:54:09 GMT+0100 (CET)] INFO   99%      16946 ms
+[Fri Nov 13 2015 16:54:09 GMT+0100 (CET)] INFO  100%      17481 ms (longest request)
+[Fri Nov 13 2015 16:54:09 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:54:09 GMT+0100 (CET)] INFO  100%      17481 ms (longest request)
+[Fri Nov 13 2015 16:54:09 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:54:09 GMT+0100 (CET)] INFO    -1:   154 errors
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 5000
+[Fri Nov 13 2015 16:54:45 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 16:54:50 GMT+0100 (CET)] INFO Requests: 8216, requests per second: 1615, mean latency: 2130 ms
+[Fri Nov 13 2015 16:54:55 GMT+0100 (CET)] INFO Requests: 18743, requests per second: 2057, mean latency: 1740 ms
+[Fri Nov 13 2015 16:55:01 GMT+0100 (CET)] INFO Requests: 28270, requests per second: 1735, mean latency: 1900 ms
+[Fri Nov 13 2015 16:55:04 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:55:04 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 16:55:04 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 16:55:04 GMT+0100 (CET)] INFO Concurrency level:   5000
+[Fri Nov 13 2015 16:55:04 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 16:55:04 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:55:04 GMT+0100 (CET)] INFO Completed requests:  35237
+[Fri Nov 13 2015 16:55:04 GMT+0100 (CET)] INFO Total errors:        0
+[Fri Nov 13 2015 16:55:04 GMT+0100 (CET)] INFO Total time:          20.000650486999998 s
+[Fri Nov 13 2015 16:55:04 GMT+0100 (CET)] INFO Requests per second: 1762
+[Fri Nov 13 2015 16:55:04 GMT+0100 (CET)] INFO Total time:          20.000650486999998 s
+[Fri Nov 13 2015 16:55:04 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:55:04 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 16:55:04 GMT+0100 (CET)] INFO   50%      1604 ms
+[Fri Nov 13 2015 16:55:04 GMT+0100 (CET)] INFO   90%      3804 ms
+[Fri Nov 13 2015 16:55:04 GMT+0100 (CET)] INFO   95%      4407 ms
+[Fri Nov 13 2015 16:55:04 GMT+0100 (CET)] INFO   99%      16534 ms
+[Fri Nov 13 2015 16:55:04 GMT+0100 (CET)] INFO  100%      19271 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 6000
+[Fri Nov 13 2015 16:55:55 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 16:56:00 GMT+0100 (CET)] INFO Requests: 7379, requests per second: 1473, mean latency: 2400 ms
+[Fri Nov 13 2015 16:56:00 GMT+0100 (CET)] INFO Errors: 2, accumulated errors: 2, 0% of total requests
+[Fri Nov 13 2015 16:56:05 GMT+0100 (CET)] INFO Requests: 17289, requests per second: 1984, mean latency: 2590 ms
+[Fri Nov 13 2015 16:56:05 GMT+0100 (CET)] INFO Errors: 0, accumulated errors: 2, 0% of total requests
+[Fri Nov 13 2015 16:56:11 GMT+0100 (CET)] INFO Requests: 27366, requests per second: 1831, mean latency: 2440 ms
+[Fri Nov 13 2015 16:56:11 GMT+0100 (CET)] INFO Errors: 0, accumulated errors: 2, 0% of total requests
+[Fri Nov 13 2015 16:56:14 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:56:14 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 16:56:14 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 16:56:14 GMT+0100 (CET)] INFO Concurrency level:   6000
+[Fri Nov 13 2015 16:56:14 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 16:56:14 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:56:14 GMT+0100 (CET)] INFO Completed requests:  33294
+[Fri Nov 13 2015 16:56:14 GMT+0100 (CET)] INFO Total errors:        2
+[Fri Nov 13 2015 16:56:14 GMT+0100 (CET)] INFO Total time:          20.000710823000002 s
+[Fri Nov 13 2015 16:56:14 GMT+0100 (CET)] INFO Requests per second: 1665
+[Fri Nov 13 2015 16:56:14 GMT+0100 (CET)] INFO Total time:          20.000710823000002 s
+[Fri Nov 13 2015 16:56:14 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:56:14 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 16:56:14 GMT+0100 (CET)] INFO   50%      2015 ms
+[Fri Nov 13 2015 16:56:14 GMT+0100 (CET)] INFO   90%      4649 ms
+[Fri Nov 13 2015 16:56:14 GMT+0100 (CET)] INFO   95%      7859 ms
+[Fri Nov 13 2015 16:56:14 GMT+0100 (CET)] INFO   99%      11267 ms
+[Fri Nov 13 2015 16:56:14 GMT+0100 (CET)] INFO  100%      17472 ms (longest request)
+[Fri Nov 13 2015 16:56:14 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:56:14 GMT+0100 (CET)] INFO  100%      17472 ms (longest request)
+[Fri Nov 13 2015 16:56:14 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:56:14 GMT+0100 (CET)] INFO    -1:   2 errors
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 6000
+[Fri Nov 13 2015 16:57:46 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 16:57:51 GMT+0100 (CET)] INFO Requests: 7696, requests per second: 1527, mean latency: 2520 ms
+[Fri Nov 13 2015 16:57:51 GMT+0100 (CET)] INFO Errors: 34, accumulated errors: 34, 0.4% of total requests
+[Fri Nov 13 2015 16:57:56 GMT+0100 (CET)] INFO Requests: 18191, requests per second: 2008, mean latency: 2660 ms
+[Fri Nov 13 2015 16:57:56 GMT+0100 (CET)] INFO Errors: 0, accumulated errors: 34, 0.2% of total requests
+[Fri Nov 13 2015 16:58:01 GMT+0100 (CET)] INFO Requests: 27501, requests per second: 1840, mean latency: 2170 ms
+[Fri Nov 13 2015 16:58:01 GMT+0100 (CET)] INFO Errors: 0, accumulated errors: 34, 0.1% of total requests
+[Fri Nov 13 2015 16:58:05 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:58:05 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 16:58:05 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 16:58:05 GMT+0100 (CET)] INFO Concurrency level:   6000
+[Fri Nov 13 2015 16:58:05 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 16:58:05 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:58:05 GMT+0100 (CET)] INFO Completed requests:  33676
+[Fri Nov 13 2015 16:58:05 GMT+0100 (CET)] INFO Total errors:        34
+[Fri Nov 13 2015 16:58:05 GMT+0100 (CET)] INFO Total time:          20.030365264 s
+[Fri Nov 13 2015 16:58:05 GMT+0100 (CET)] INFO Requests per second: 1681
+[Fri Nov 13 2015 16:58:05 GMT+0100 (CET)] INFO Total time:          20.030365264 s
+[Fri Nov 13 2015 16:58:05 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:58:05 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 16:58:05 GMT+0100 (CET)] INFO   50%      1938 ms
+[Fri Nov 13 2015 16:58:05 GMT+0100 (CET)] INFO   90%      5252 ms
+[Fri Nov 13 2015 16:58:05 GMT+0100 (CET)] INFO   95%      7754 ms
+[Fri Nov 13 2015 16:58:05 GMT+0100 (CET)] INFO   99%      8723 ms
+[Fri Nov 13 2015 16:58:05 GMT+0100 (CET)] INFO  100%      17169 ms (longest request)
+[Fri Nov 13 2015 16:58:05 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:58:05 GMT+0100 (CET)] INFO  100%      17169 ms (longest request)
+[Fri Nov 13 2015 16:58:05 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:58:05 GMT+0100 (CET)] INFO    -1:   34 errors
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 6000
+[Fri Nov 13 2015 16:58:39 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 16:58:44 GMT+0100 (CET)] INFO Requests: 7206, requests per second: 1439, mean latency: 2430 ms
+[Fri Nov 13 2015 16:58:44 GMT+0100 (CET)] INFO Errors: 261, accumulated errors: 261, 3.6% of total requests
+[Fri Nov 13 2015 16:58:49 GMT+0100 (CET)] INFO Requests: 18218, requests per second: 2034, mean latency: 2860 ms
+[Fri Nov 13 2015 16:58:49 GMT+0100 (CET)] INFO Errors: 0, accumulated errors: 261, 1.4% of total requests
+[Fri Nov 13 2015 16:58:54 GMT+0100 (CET)] INFO Requests: 26220, requests per second: 1741, mean latency: 2920 ms
+[Fri Nov 13 2015 16:58:54 GMT+0100 (CET)] INFO Errors: 0, accumulated errors: 261, 1% of total requests
+[Fri Nov 13 2015 16:58:58 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:58:58 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 16:58:58 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 16:58:58 GMT+0100 (CET)] INFO Concurrency level:   6000
+[Fri Nov 13 2015 16:58:58 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 16:58:58 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:58:58 GMT+0100 (CET)] INFO Completed requests:  34149
+[Fri Nov 13 2015 16:58:58 GMT+0100 (CET)] INFO Total errors:        261
+[Fri Nov 13 2015 16:58:58 GMT+0100 (CET)] INFO Total time:          20.000401587 s
+[Fri Nov 13 2015 16:58:58 GMT+0100 (CET)] INFO Requests per second: 1707
+[Fri Nov 13 2015 16:58:58 GMT+0100 (CET)] INFO Total time:          20.000401587 s
+[Fri Nov 13 2015 16:58:58 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:58:58 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 16:58:58 GMT+0100 (CET)] INFO   50%      2060 ms
+[Fri Nov 13 2015 16:58:58 GMT+0100 (CET)] INFO   90%      5840 ms
+[Fri Nov 13 2015 16:58:58 GMT+0100 (CET)] INFO   95%      7962 ms
+[Fri Nov 13 2015 16:58:58 GMT+0100 (CET)] INFO   99%      8999 ms
+[Fri Nov 13 2015 16:58:58 GMT+0100 (CET)] INFO  100%      15749 ms (longest request)
+[Fri Nov 13 2015 16:58:58 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:58:58 GMT+0100 (CET)] INFO  100%      15749 ms (longest request)
+[Fri Nov 13 2015 16:58:58 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 16:58:58 GMT+0100 (CET)] INFO    -1:   261 errors
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 5750
+[Fri Nov 13 2015 16:59:51 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 16:59:56 GMT+0100 (CET)] INFO Requests: 7549, requests per second: 1480, mean latency: 2320 ms
+[Fri Nov 13 2015 16:59:56 GMT+0100 (CET)] INFO Errors: 205, accumulated errors: 205, 2.7% of total requests
+[Fri Nov 13 2015 17:00:02 GMT+0100 (CET)] INFO Requests: 18120, requests per second: 2004, mean latency: 2580 ms
+[Fri Nov 13 2015 17:00:02 GMT+0100 (CET)] INFO Errors: 0, accumulated errors: 205, 1.1% of total requests
+[Fri Nov 13 2015 17:00:06 GMT+0100 (CET)] INFO Requests: 26806, requests per second: 1878, mean latency: 2040 ms
+[Fri Nov 13 2015 17:00:06 GMT+0100 (CET)] INFO Errors: 0, accumulated errors: 205, 0.8% of total requests
+[Fri Nov 13 2015 17:00:10 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:00:10 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 17:00:10 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 17:00:10 GMT+0100 (CET)] INFO Concurrency level:   5750
+[Fri Nov 13 2015 17:00:10 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 17:00:10 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:00:10 GMT+0100 (CET)] INFO Completed requests:  33531
+[Fri Nov 13 2015 17:00:10 GMT+0100 (CET)] INFO Total errors:        205
+[Fri Nov 13 2015 17:00:10 GMT+0100 (CET)] INFO Total time:          20.000499701 s
+[Fri Nov 13 2015 17:00:10 GMT+0100 (CET)] INFO Requests per second: 1677
+[Fri Nov 13 2015 17:00:10 GMT+0100 (CET)] INFO Total time:          20.000499701 s
+[Fri Nov 13 2015 17:00:10 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:00:10 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 17:00:10 GMT+0100 (CET)] INFO   50%      1818 ms
+[Fri Nov 13 2015 17:00:10 GMT+0100 (CET)] INFO   90%      5716 ms
+[Fri Nov 13 2015 17:00:10 GMT+0100 (CET)] INFO   95%      7702 ms
+[Fri Nov 13 2015 17:00:10 GMT+0100 (CET)] INFO   99%      10511 ms
+[Fri Nov 13 2015 17:00:10 GMT+0100 (CET)] INFO  100%      16528 ms (longest request)
+[Fri Nov 13 2015 17:00:10 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:00:10 GMT+0100 (CET)] INFO  100%      16528 ms (longest request)
+[Fri Nov 13 2015 17:00:10 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:00:10 GMT+0100 (CET)] INFO    -1:   205 errors
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 5500
+[Fri Nov 13 2015 17:01:11 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 17:01:16 GMT+0100 (CET)] INFO Requests: 8466, requests per second: 1661, mean latency: 2020 ms
+[Fri Nov 13 2015 17:01:21 GMT+0100 (CET)] INFO Requests: 18352, requests per second: 2007, mean latency: 2220 ms
+[Fri Nov 13 2015 17:01:26 GMT+0100 (CET)] INFO Requests: 28186, requests per second: 1930, mean latency: 2280 ms
+[Fri Nov 13 2015 17:01:30 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:01:30 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 17:01:30 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 17:01:30 GMT+0100 (CET)] INFO Concurrency level:   5500
+[Fri Nov 13 2015 17:01:30 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 17:01:30 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:01:30 GMT+0100 (CET)] INFO Completed requests:  35946
+[Fri Nov 13 2015 17:01:30 GMT+0100 (CET)] INFO Total errors:        0
+[Fri Nov 13 2015 17:01:30 GMT+0100 (CET)] INFO Total time:          20.00087115 s
+[Fri Nov 13 2015 17:01:30 GMT+0100 (CET)] INFO Requests per second: 1797
+[Fri Nov 13 2015 17:01:30 GMT+0100 (CET)] INFO Total time:          20.00087115 s
+[Fri Nov 13 2015 17:01:30 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:01:30 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 17:01:30 GMT+0100 (CET)] INFO   50%      1598 ms
+[Fri Nov 13 2015 17:01:30 GMT+0100 (CET)] INFO   90%      4698 ms
+[Fri Nov 13 2015 17:01:30 GMT+0100 (CET)] INFO   95%      7951 ms
+[Fri Nov 13 2015 17:01:30 GMT+0100 (CET)] INFO   99%      16287 ms
+[Fri Nov 13 2015 17:01:30 GMT+0100 (CET)] INFO  100%      16594 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 1000 --rps 2000
+[Fri Nov 13 2015 17:03:14 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 17:03:19 GMT+0100 (CET)] INFO Requests: 9467, requests per second: 1889, mean latency: 50 ms
+[Fri Nov 13 2015 17:03:24 GMT+0100 (CET)] INFO Requests: 19525, requests per second: 2017, mean latency: 30 ms
+[Fri Nov 13 2015 17:03:29 GMT+0100 (CET)] INFO Requests: 29526, requests per second: 2000, mean latency: 30 ms
+[Fri Nov 13 2015 17:03:34 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:03:34 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 17:03:34 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 17:03:34 GMT+0100 (CET)] INFO Concurrency level:   1000
+[Fri Nov 13 2015 17:03:34 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 17:03:34 GMT+0100 (CET)] INFO Requests per second: 2000
+[Fri Nov 13 2015 17:03:34 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:03:34 GMT+0100 (CET)] INFO Completed requests:  39325
+[Fri Nov 13 2015 17:03:34 GMT+0100 (CET)] INFO Total errors:        0
+[Fri Nov 13 2015 17:03:34 GMT+0100 (CET)] INFO Total time:          20.000405893 s
+[Fri Nov 13 2015 17:03:34 GMT+0100 (CET)] INFO Requests per second: 1966
+[Fri Nov 13 2015 17:03:34 GMT+0100 (CET)] INFO Total time:          20.000405893 s
+[Fri Nov 13 2015 17:03:34 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:03:34 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 17:03:34 GMT+0100 (CET)] INFO   50%      25 ms
+[Fri Nov 13 2015 17:03:34 GMT+0100 (CET)] INFO   90%      69 ms
+[Fri Nov 13 2015 17:03:34 GMT+0100 (CET)] INFO   95%      88 ms
+[Fri Nov 13 2015 17:03:34 GMT+0100 (CET)] INFO   99%      126 ms
+[Fri Nov 13 2015 17:03:34 GMT+0100 (CET)] INFO  100%      162 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 1000 --rps 3000
+[Fri Nov 13 2015 17:03:56 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 17:04:01 GMT+0100 (CET)] INFO Requests: 4901, requests per second: 892, mean latency: 1310 ms
+[Fri Nov 13 2015 17:04:07 GMT+0100 (CET)] INFO Requests: 14856, requests per second: 1683, mean latency: 3010 ms
+[Fri Nov 13 2015 17:04:07 GMT+0100 (CET)] INFO Errors: 9172, accumulated errors: 9172, 61.7% of total requests
+[Fri Nov 13 2015 17:04:13 GMT+0100 (CET)] INFO Requests: 19230, requests per second: 690, mean latency: 9690 ms
+[Fri Nov 13 2015 17:04:13 GMT+0100 (CET)] INFO Errors: 0, accumulated errors: 9172, 47.7% of total requests
+[Fri Nov 13 2015 17:04:16 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:04:16 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 17:04:16 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 17:04:16 GMT+0100 (CET)] INFO Concurrency level:   1000
+[Fri Nov 13 2015 17:04:16 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 17:04:16 GMT+0100 (CET)] INFO Requests per second: 3000
+[Fri Nov 13 2015 17:04:16 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:04:16 GMT+0100 (CET)] INFO Completed requests:  19230
+[Fri Nov 13 2015 17:04:16 GMT+0100 (CET)] INFO Total errors:        9172
+[Fri Nov 13 2015 17:04:16 GMT+0100 (CET)] INFO Total time:          20.222711792 s
+[Fri Nov 13 2015 17:04:16 GMT+0100 (CET)] INFO Requests per second: 951
+[Fri Nov 13 2015 17:04:16 GMT+0100 (CET)] INFO Total time:          20.222711792 s
+[Fri Nov 13 2015 17:04:16 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:04:16 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 17:04:16 GMT+0100 (CET)] INFO   50%      2491 ms
+[Fri Nov 13 2015 17:04:16 GMT+0100 (CET)] INFO   90%      9601 ms
+[Fri Nov 13 2015 17:04:16 GMT+0100 (CET)] INFO   95%      10425 ms
+[Fri Nov 13 2015 17:04:16 GMT+0100 (CET)] INFO   99%      10477 ms
+[Fri Nov 13 2015 17:04:16 GMT+0100 (CET)] INFO  100%      10526 ms (longest request)
+[Fri Nov 13 2015 17:04:16 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:04:16 GMT+0100 (CET)] INFO  100%      10526 ms (longest request)
+[Fri Nov 13 2015 17:04:16 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:04:16 GMT+0100 (CET)] INFO    -1:   9172 errors
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 1000 --rps 3000
+[Fri Nov 13 2015 17:04:42 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 17:04:48 GMT+0100 (CET)] INFO Requests: 6100, requests per second: 1152, mean latency: 1300 ms
+[Fri Nov 13 2015 17:04:55 GMT+0100 (CET)] INFO Requests: 18042, requests per second: 1573, mean latency: 3870 ms
+[Fri Nov 13 2015 17:04:55 GMT+0100 (CET)] INFO Errors: 8254, accumulated errors: 8254, 45.7% of total requests
+[Fri Nov 13 2015 17:04:58 GMT+0100 (CET)] INFO Requests: 18042, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 17:04:58 GMT+0100 (CET)] INFO Errors: 0, accumulated errors: 8254, 45.7% of total requests
+[Fri Nov 13 2015 17:05:04 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:05:04 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 17:05:04 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 17:05:04 GMT+0100 (CET)] INFO Concurrency level:   1000
+[Fri Nov 13 2015 17:05:04 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 17:05:04 GMT+0100 (CET)] INFO Requests per second: 3000
+[Fri Nov 13 2015 17:05:04 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:05:04 GMT+0100 (CET)] INFO Completed requests:  23191
+[Fri Nov 13 2015 17:05:04 GMT+0100 (CET)] INFO Total errors:        9113
+[Fri Nov 13 2015 17:05:04 GMT+0100 (CET)] INFO Total time:          21.873668671 s
+[Fri Nov 13 2015 17:05:04 GMT+0100 (CET)] INFO Requests per second: 1060
+[Fri Nov 13 2015 17:05:04 GMT+0100 (CET)] INFO Total time:          21.873668671 s
+[Fri Nov 13 2015 17:05:04 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:05:04 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 17:05:04 GMT+0100 (CET)] INFO   50%      3846 ms
+[Fri Nov 13 2015 17:05:04 GMT+0100 (CET)] INFO   90%      9994 ms
+[Fri Nov 13 2015 17:05:04 GMT+0100 (CET)] INFO   95%      10827 ms
+[Fri Nov 13 2015 17:05:04 GMT+0100 (CET)] INFO   99%      10932 ms
+[Fri Nov 13 2015 17:05:04 GMT+0100 (CET)] INFO  100%      15078 ms (longest request)
+[Fri Nov 13 2015 17:05:04 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:05:04 GMT+0100 (CET)] INFO  100%      15078 ms (longest request)
+[Fri Nov 13 2015 17:05:04 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:05:04 GMT+0100 (CET)] INFO    -1:   9113 errors
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 1000 --rps 2000
+[Fri Nov 13 2015 17:05:29 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 17:05:34 GMT+0100 (CET)] INFO Requests: 9500, requests per second: 1900, mean latency: 40 ms
+[Fri Nov 13 2015 17:05:39 GMT+0100 (CET)] INFO Requests: 19508, requests per second: 2003, mean latency: 30 ms
+[Fri Nov 13 2015 17:05:44 GMT+0100 (CET)] INFO Requests: 29509, requests per second: 2000, mean latency: 30 ms
+[Fri Nov 13 2015 17:05:49 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:05:49 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 17:05:49 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 17:05:49 GMT+0100 (CET)] INFO Concurrency level:   1000
+[Fri Nov 13 2015 17:05:49 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 17:05:49 GMT+0100 (CET)] INFO Requests per second: 2000
+[Fri Nov 13 2015 17:05:49 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:05:49 GMT+0100 (CET)] INFO Completed requests:  39349
+[Fri Nov 13 2015 17:05:49 GMT+0100 (CET)] INFO Total errors:        0
+[Fri Nov 13 2015 17:05:49 GMT+0100 (CET)] INFO Total time:          20.000453472 s
+[Fri Nov 13 2015 17:05:49 GMT+0100 (CET)] INFO Requests per second: 1967
+[Fri Nov 13 2015 17:05:49 GMT+0100 (CET)] INFO Total time:          20.000453472 s
+[Fri Nov 13 2015 17:05:49 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:05:49 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 17:05:49 GMT+0100 (CET)] INFO   50%      26 ms
+[Fri Nov 13 2015 17:05:49 GMT+0100 (CET)] INFO   90%      62 ms
+[Fri Nov 13 2015 17:05:49 GMT+0100 (CET)] INFO   95%      76 ms
+[Fri Nov 13 2015 17:05:49 GMT+0100 (CET)] INFO   99%      119 ms
+[Fri Nov 13 2015 17:05:49 GMT+0100 (CET)] INFO  100%      170 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 2000 --rps 2000
+[Fri Nov 13 2015 17:06:06 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 17:06:11 GMT+0100 (CET)] INFO Requests: 9303, requests per second: 1857, mean latency: 280 ms
+[Fri Nov 13 2015 17:06:16 GMT+0100 (CET)] INFO Requests: 19275, requests per second: 1994, mean latency: 400 ms
+[Fri Nov 13 2015 17:06:21 GMT+0100 (CET)] INFO Requests: 29505, requests per second: 2044, mean latency: 270 ms
+[Fri Nov 13 2015 17:06:26 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:06:26 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 17:06:26 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 17:06:26 GMT+0100 (CET)] INFO Concurrency level:   2000
+[Fri Nov 13 2015 17:06:26 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 17:06:26 GMT+0100 (CET)] INFO Requests per second: 2000
+[Fri Nov 13 2015 17:06:26 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:06:26 GMT+0100 (CET)] INFO Completed requests:  39073
+[Fri Nov 13 2015 17:06:26 GMT+0100 (CET)] INFO Total errors:        0
+[Fri Nov 13 2015 17:06:26 GMT+0100 (CET)] INFO Total time:          20.000375264 s
+[Fri Nov 13 2015 17:06:26 GMT+0100 (CET)] INFO Requests per second: 1954
+[Fri Nov 13 2015 17:06:26 GMT+0100 (CET)] INFO Total time:          20.000375264 s
+[Fri Nov 13 2015 17:06:26 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:06:26 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 17:06:26 GMT+0100 (CET)] INFO   50%      141 ms
+[Fri Nov 13 2015 17:06:26 GMT+0100 (CET)] INFO   90%      425 ms
+[Fri Nov 13 2015 17:06:26 GMT+0100 (CET)] INFO   95%      1108 ms
+[Fri Nov 13 2015 17:06:26 GMT+0100 (CET)] INFO   99%      3122 ms
+[Fri Nov 13 2015 17:06:26 GMT+0100 (CET)] INFO  100%      15113 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 3000 --rps 2000
+[Fri Nov 13 2015 17:06:49 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 17:06:54 GMT+0100 (CET)] INFO Requests: 8098, requests per second: 1604, mean latency: 700 ms
+[Fri Nov 13 2015 17:06:59 GMT+0100 (CET)] INFO Requests: 17924, requests per second: 1967, mean latency: 980 ms
+[Fri Nov 13 2015 17:07:04 GMT+0100 (CET)] INFO Requests: 27524, requests per second: 1939, mean latency: 1430 ms
+[Fri Nov 13 2015 17:07:09 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:07:09 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 17:07:09 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 17:07:09 GMT+0100 (CET)] INFO Concurrency level:   3000
+[Fri Nov 13 2015 17:07:09 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 17:07:09 GMT+0100 (CET)] INFO Requests per second: 2000
+[Fri Nov 13 2015 17:07:09 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:07:09 GMT+0100 (CET)] INFO Completed requests:  36602
+[Fri Nov 13 2015 17:07:09 GMT+0100 (CET)] INFO Total errors:        0
+[Fri Nov 13 2015 17:07:09 GMT+0100 (CET)] INFO Total time:          20.128761015 s
+[Fri Nov 13 2015 17:07:09 GMT+0100 (CET)] INFO Requests per second: 1818
+[Fri Nov 13 2015 17:07:09 GMT+0100 (CET)] INFO Total time:          20.128761015 s
+[Fri Nov 13 2015 17:07:09 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:07:09 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 17:07:09 GMT+0100 (CET)] INFO   50%      965 ms
+[Fri Nov 13 2015 17:07:09 GMT+0100 (CET)] INFO   90%      2068 ms
+[Fri Nov 13 2015 17:07:09 GMT+0100 (CET)] INFO   95%      3589 ms
+[Fri Nov 13 2015 17:07:09 GMT+0100 (CET)] INFO   99%      7424 ms
+[Fri Nov 13 2015 17:07:09 GMT+0100 (CET)] INFO  100%      15380 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 2000 --rps 2000
+[Fri Nov 13 2015 17:08:08 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 17:08:13 GMT+0100 (CET)] INFO Requests: 9680, requests per second: 1930, mean latency: 260 ms
+[Fri Nov 13 2015 17:08:18 GMT+0100 (CET)] INFO Requests: 19650, requests per second: 2002, mean latency: 150 ms
+[Fri Nov 13 2015 17:08:23 GMT+0100 (CET)] INFO Requests: 29588, requests per second: 1964, mean latency: 170 ms
+[Fri Nov 13 2015 17:08:28 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:08:28 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 17:08:28 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 17:08:28 GMT+0100 (CET)] INFO Concurrency level:   2000
+[Fri Nov 13 2015 17:08:28 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 17:08:28 GMT+0100 (CET)] INFO Requests per second: 2000
+[Fri Nov 13 2015 17:08:28 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:08:28 GMT+0100 (CET)] INFO Completed requests:  39525
+[Fri Nov 13 2015 17:08:28 GMT+0100 (CET)] INFO Total errors:        0
+[Fri Nov 13 2015 17:08:28 GMT+0100 (CET)] INFO Total time:          20.031118194999998 s
+[Fri Nov 13 2015 17:08:28 GMT+0100 (CET)] INFO Requests per second: 1973
+[Fri Nov 13 2015 17:08:28 GMT+0100 (CET)] INFO Total time:          20.031118194999998 s
+[Fri Nov 13 2015 17:08:28 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:08:28 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 17:08:28 GMT+0100 (CET)] INFO   50%      99 ms
+[Fri Nov 13 2015 17:08:28 GMT+0100 (CET)] INFO   90%      261 ms
+[Fri Nov 13 2015 17:08:28 GMT+0100 (CET)] INFO   95%      1057 ms
+[Fri Nov 13 2015 17:08:28 GMT+0100 (CET)] INFO   99%      1186 ms
+[Fri Nov 13 2015 17:08:28 GMT+0100 (CET)] INFO  100%      7081 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 1000 --rps 2000
+[Fri Nov 13 2015 17:08:53 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 17:08:58 GMT+0100 (CET)] INFO Requests: 9484, requests per second: 1892, mean latency: 60 ms
+[Fri Nov 13 2015 17:09:03 GMT+0100 (CET)] INFO Requests: 19438, requests per second: 1995, mean latency: 40 ms
+[Fri Nov 13 2015 17:09:08 GMT+0100 (CET)] INFO Requests: 29493, requests per second: 2013, mean latency: 50 ms
+[Fri Nov 13 2015 17:09:13 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:09:13 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 17:09:13 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 17:09:13 GMT+0100 (CET)] INFO Concurrency level:   1000
+[Fri Nov 13 2015 17:09:13 GMT+0100 (CET)] INFO Agent:               none
+[Fri Nov 13 2015 17:09:13 GMT+0100 (CET)] INFO Requests per second: 2000
+[Fri Nov 13 2015 17:09:13 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:09:13 GMT+0100 (CET)] INFO Completed requests:  39349
+[Fri Nov 13 2015 17:09:13 GMT+0100 (CET)] INFO Total errors:        0
+[Fri Nov 13 2015 17:09:13 GMT+0100 (CET)] INFO Total time:          20.002209241 s
+[Fri Nov 13 2015 17:09:13 GMT+0100 (CET)] INFO Requests per second: 1967
+[Fri Nov 13 2015 17:09:13 GMT+0100 (CET)] INFO Total time:          20.002209241 s
+[Fri Nov 13 2015 17:09:13 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:09:13 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 17:09:13 GMT+0100 (CET)] INFO   50%      38 ms
+[Fri Nov 13 2015 17:09:13 GMT+0100 (CET)] INFO   90%      86 ms
+[Fri Nov 13 2015 17:09:13 GMT+0100 (CET)] INFO   95%      116 ms
+[Fri Nov 13 2015 17:09:13 GMT+0100 (CET)] INFO   99%      190 ms
+[Fri Nov 13 2015 17:09:13 GMT+0100 (CET)] INFO  100%      1051 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 1000 -k
+[Fri Nov 13 2015 17:11:26 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 17:11:31 GMT+0100 (CET)] INFO Requests: 12581, requests per second: 2516, mean latency: 390 ms
+[Fri Nov 13 2015 17:11:36 GMT+0100 (CET)] INFO Requests: 26230, requests per second: 2731, mean latency: 370 ms
+[Fri Nov 13 2015 17:11:41 GMT+0100 (CET)] INFO Requests: 39230, requests per second: 2600, mean latency: 380 ms
+[Fri Nov 13 2015 17:11:46 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:11:46 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 17:11:46 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 17:11:46 GMT+0100 (CET)] INFO Concurrency level:   1000
+[Fri Nov 13 2015 17:11:46 GMT+0100 (CET)] INFO Agent:               keepalive
+[Fri Nov 13 2015 17:11:46 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:11:46 GMT+0100 (CET)] INFO Completed requests:  51967
+[Fri Nov 13 2015 17:11:46 GMT+0100 (CET)] INFO Total errors:        0
+[Fri Nov 13 2015 17:11:46 GMT+0100 (CET)] INFO Total time:          20.000596788 s
+[Fri Nov 13 2015 17:11:46 GMT+0100 (CET)] INFO Requests per second: 2598
+[Fri Nov 13 2015 17:11:46 GMT+0100 (CET)] INFO Total time:          20.000596788 s
+[Fri Nov 13 2015 17:11:46 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:11:46 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 17:11:46 GMT+0100 (CET)] INFO   50%      350 ms
+[Fri Nov 13 2015 17:11:46 GMT+0100 (CET)] INFO   90%      491 ms
+[Fri Nov 13 2015 17:11:46 GMT+0100 (CET)] INFO   95%      563 ms
+[Fri Nov 13 2015 17:11:46 GMT+0100 (CET)] INFO   99%      663 ms
+[Fri Nov 13 2015 17:11:46 GMT+0100 (CET)] INFO  100%      7548 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 10 -k
+[Fri Nov 13 2015 17:12:07 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 17:12:12 GMT+0100 (CET)] INFO Requests: 21233, requests per second: 4246, mean latency: 0 ms
+[Fri Nov 13 2015 17:12:17 GMT+0100 (CET)] INFO Requests: 42226, requests per second: 4201, mean latency: 0 ms
+[Fri Nov 13 2015 17:12:22 GMT+0100 (CET)] INFO Requests: 64660, requests per second: 4487, mean latency: 0 ms
+[Fri Nov 13 2015 17:12:27 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:12:27 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 17:12:27 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 17:12:27 GMT+0100 (CET)] INFO Concurrency level:   10
+[Fri Nov 13 2015 17:12:27 GMT+0100 (CET)] INFO Agent:               keepalive
+[Fri Nov 13 2015 17:12:27 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:12:27 GMT+0100 (CET)] INFO Completed requests:  87344
+[Fri Nov 13 2015 17:12:27 GMT+0100 (CET)] INFO Total errors:        0
+[Fri Nov 13 2015 17:12:27 GMT+0100 (CET)] INFO Total time:          20.000536746 s
+[Fri Nov 13 2015 17:12:27 GMT+0100 (CET)] INFO Requests per second: 4367
+[Fri Nov 13 2015 17:12:27 GMT+0100 (CET)] INFO Total time:          20.000536746 s
+[Fri Nov 13 2015 17:12:27 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:12:27 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 17:12:27 GMT+0100 (CET)] INFO   50%      2 ms
+[Fri Nov 13 2015 17:12:27 GMT+0100 (CET)] INFO   90%      2 ms
+[Fri Nov 13 2015 17:12:27 GMT+0100 (CET)] INFO   95%      2 ms
+[Fri Nov 13 2015 17:12:27 GMT+0100 (CET)] INFO   99%      5 ms
+[Fri Nov 13 2015 17:12:27 GMT+0100 (CET)] INFO  100%      40 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 10000 -k
+[Fri Nov 13 2015 17:12:52 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 17:12:58 GMT+0100 (CET)] INFO Requests: 11318, requests per second: 1747, mean latency: 2700 ms
+[Fri Nov 13 2015 17:12:58 GMT+0100 (CET)] INFO Errors: 4678, accumulated errors: 4678, 41.3% of total requests
+[Fri Nov 13 2015 17:13:04 GMT+0100 (CET)] INFO Requests: 24843, requests per second: 2444, mean latency: 4150 ms
+[Fri Nov 13 2015 17:13:04 GMT+0100 (CET)] INFO Errors: 8571, accumulated errors: 13249, 53.3% of total requests
+[Fri Nov 13 2015 17:13:09 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:13:09 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 17:13:09 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 17:13:09 GMT+0100 (CET)] INFO Concurrency level:   10000
+[Fri Nov 13 2015 17:13:09 GMT+0100 (CET)] INFO Agent:               keepalive
+[Fri Nov 13 2015 17:13:09 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:13:09 GMT+0100 (CET)] INFO Completed requests:  37212
+[Fri Nov 13 2015 17:13:09 GMT+0100 (CET)] INFO Total errors:        21613
+[Fri Nov 13 2015 17:13:09 GMT+0100 (CET)] INFO Total time:          20.000633445 s
+[Fri Nov 13 2015 17:13:09 GMT+0100 (CET)] INFO Requests per second: 1861
+[Fri Nov 13 2015 17:13:09 GMT+0100 (CET)] INFO Total time:          20.000633445 s
+[Fri Nov 13 2015 17:13:09 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:13:09 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 17:13:09 GMT+0100 (CET)] INFO   50%      3549 ms
+[Fri Nov 13 2015 17:13:09 GMT+0100 (CET)] INFO   90%      8278 ms
+[Fri Nov 13 2015 17:13:09 GMT+0100 (CET)] INFO   95%      10015 ms
+[Fri Nov 13 2015 17:13:09 GMT+0100 (CET)] INFO   99%      16059 ms
+[Fri Nov 13 2015 17:13:09 GMT+0100 (CET)] INFO  100%      17244 ms (longest request)
+[Fri Nov 13 2015 17:13:09 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:13:09 GMT+0100 (CET)] INFO  100%      17244 ms (longest request)
+[Fri Nov 13 2015 17:13:09 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:13:09 GMT+0100 (CET)] INFO    -1:   21613 errors
+[Fri Nov 13 2015 17:13:10 GMT+0100 (CET)] INFO Requests: 37212, requests per second: 2032, mean latency: 3880 ms
+[Fri Nov 13 2015 17:13:10 GMT+0100 (CET)] INFO Errors: 8364, accumulated errors: 21613, 58.1% of total requests
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 5000 -k
+[Fri Nov 13 2015 17:13:39 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 17:13:44 GMT+0100 (CET)] INFO Requests: 8054, requests per second: 1610, mean latency: 1440 ms
+[Fri Nov 13 2015 17:13:44 GMT+0100 (CET)] INFO Errors: 585, accumulated errors: 585, 7.3% of total requests
+[Fri Nov 13 2015 17:13:49 GMT+0100 (CET)] INFO Requests: 17682, requests per second: 1926, mean latency: 950 ms
+[Fri Nov 13 2015 17:13:49 GMT+0100 (CET)] INFO Errors: 1064, accumulated errors: 1649, 9.3% of total requests
+[Fri Nov 13 2015 17:13:54 GMT+0100 (CET)] INFO Requests: 28666, requests per second: 2197, mean latency: 770 ms
+[Fri Nov 13 2015 17:13:54 GMT+0100 (CET)] INFO Errors: 1290, accumulated errors: 2939, 10.3% of total requests
+[Fri Nov 13 2015 17:13:58 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:13:58 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 17:13:58 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 17:13:58 GMT+0100 (CET)] INFO Concurrency level:   5000
+[Fri Nov 13 2015 17:13:58 GMT+0100 (CET)] INFO Agent:               keepalive
+[Fri Nov 13 2015 17:13:58 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:13:58 GMT+0100 (CET)] INFO Completed requests:  35722
+[Fri Nov 13 2015 17:13:58 GMT+0100 (CET)] INFO Total errors:        3317
+[Fri Nov 13 2015 17:13:58 GMT+0100 (CET)] INFO Total time:          20.000461285 s
+[Fri Nov 13 2015 17:13:58 GMT+0100 (CET)] INFO Requests per second: 1786
+[Fri Nov 13 2015 17:13:58 GMT+0100 (CET)] INFO Total time:          20.000461285 s
+[Fri Nov 13 2015 17:13:58 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:13:58 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 17:13:58 GMT+0100 (CET)] INFO   50%      722 ms
+[Fri Nov 13 2015 17:13:58 GMT+0100 (CET)] INFO   90%      1937 ms
+[Fri Nov 13 2015 17:13:58 GMT+0100 (CET)] INFO   95%      2044 ms
+[Fri Nov 13 2015 17:13:58 GMT+0100 (CET)] INFO   99%      7393 ms
+[Fri Nov 13 2015 17:13:58 GMT+0100 (CET)] INFO  100%      16183 ms (longest request)
+[Fri Nov 13 2015 17:13:58 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:13:58 GMT+0100 (CET)] INFO  100%      16183 ms (longest request)
+[Fri Nov 13 2015 17:13:58 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:13:58 GMT+0100 (CET)] INFO    -1:   3317 errors
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 4000 -k
+[Fri Nov 13 2015 17:14:27 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 17:14:32 GMT+0100 (CET)] INFO Requests: 6822, requests per second: 1364, mean latency: 1190 ms
+[Fri Nov 13 2015 17:14:37 GMT+0100 (CET)] INFO Requests: 15679, requests per second: 1772, mean latency: 870 ms
+[Fri Nov 13 2015 17:14:37 GMT+0100 (CET)] INFO Errors: 713, accumulated errors: 713, 4.5% of total requests
+[Fri Nov 13 2015 17:14:42 GMT+0100 (CET)] INFO Requests: 25186, requests per second: 1902, mean latency: 760 ms
+[Fri Nov 13 2015 17:14:42 GMT+0100 (CET)] INFO Errors: 1160, accumulated errors: 1873, 7.4% of total requests
+[Fri Nov 13 2015 17:14:46 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:14:46 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 17:14:46 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 17:14:46 GMT+0100 (CET)] INFO Concurrency level:   4000
+[Fri Nov 13 2015 17:14:46 GMT+0100 (CET)] INFO Agent:               keepalive
+[Fri Nov 13 2015 17:14:46 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:14:46 GMT+0100 (CET)] INFO Completed requests:  32871
+[Fri Nov 13 2015 17:14:46 GMT+0100 (CET)] INFO Total errors:        2122
+[Fri Nov 13 2015 17:14:46 GMT+0100 (CET)] INFO Total time:          20.008689032 s
+[Fri Nov 13 2015 17:14:46 GMT+0100 (CET)] INFO Requests per second: 1643
+[Fri Nov 13 2015 17:14:46 GMT+0100 (CET)] INFO Total time:          20.008689032 s
+[Fri Nov 13 2015 17:14:46 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:14:46 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 17:14:46 GMT+0100 (CET)] INFO   50%      646 ms
+[Fri Nov 13 2015 17:14:46 GMT+0100 (CET)] INFO   90%      1590 ms
+[Fri Nov 13 2015 17:14:46 GMT+0100 (CET)] INFO   95%      1697 ms
+[Fri Nov 13 2015 17:14:46 GMT+0100 (CET)] INFO   99%      7755 ms
+[Fri Nov 13 2015 17:14:46 GMT+0100 (CET)] INFO  100%      15675 ms (longest request)
+[Fri Nov 13 2015 17:14:46 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:14:46 GMT+0100 (CET)] INFO  100%      15675 ms (longest request)
+[Fri Nov 13 2015 17:14:46 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:14:46 GMT+0100 (CET)] INFO    -1:   2122 errors
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 1000 -k --rps 3000
+[Fri Nov 13 2015 17:15:13 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 17:15:18 GMT+0100 (CET)] INFO Requests: 14088, requests per second: 2817, mean latency: 30 ms
+[Fri Nov 13 2015 17:15:23 GMT+0100 (CET)] INFO Requests: 29088, requests per second: 3003, mean latency: 20 ms
+[Fri Nov 13 2015 17:15:28 GMT+0100 (CET)] INFO Requests: 44077, requests per second: 2998, mean latency: 30 ms
+[Fri Nov 13 2015 17:15:33 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:15:33 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 17:15:33 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 17:15:33 GMT+0100 (CET)] INFO Concurrency level:   1000
+[Fri Nov 13 2015 17:15:33 GMT+0100 (CET)] INFO Agent:               keepalive
+[Fri Nov 13 2015 17:15:33 GMT+0100 (CET)] INFO Requests per second: 3000
+[Fri Nov 13 2015 17:15:33 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:15:33 GMT+0100 (CET)] INFO Completed requests:  58685
+[Fri Nov 13 2015 17:15:33 GMT+0100 (CET)] INFO Total errors:        0
+[Fri Nov 13 2015 17:15:33 GMT+0100 (CET)] INFO Total time:          20.027046031999998 s
+[Fri Nov 13 2015 17:15:33 GMT+0100 (CET)] INFO Requests per second: 2930
+[Fri Nov 13 2015 17:15:33 GMT+0100 (CET)] INFO Total time:          20.027046031999998 s
+[Fri Nov 13 2015 17:15:33 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:15:33 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 17:15:33 GMT+0100 (CET)] INFO   50%      23 ms
+[Fri Nov 13 2015 17:15:33 GMT+0100 (CET)] INFO   90%      44 ms
+[Fri Nov 13 2015 17:15:33 GMT+0100 (CET)] INFO   95%      53 ms
+[Fri Nov 13 2015 17:15:33 GMT+0100 (CET)] INFO   99%      69 ms
+[Fri Nov 13 2015 17:15:33 GMT+0100 (CET)] INFO  100%      131 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 1000 -k --rps 5000
+[Fri Nov 13 2015 17:15:55 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 17:16:02 GMT+0100 (CET)] INFO Requests: 2379, requests per second: 377, mean latency: 2120 ms
+[Fri Nov 13 2015 17:16:02 GMT+0100 (CET)] INFO Errors: 104, accumulated errors: 104, 4.4% of total requests
+[Fri Nov 13 2015 17:16:09 GMT+0100 (CET)] INFO Requests: 19083, requests per second: 2163, mean latency: 4710 ms
+[Fri Nov 13 2015 17:16:09 GMT+0100 (CET)] INFO Errors: 10915, accumulated errors: 11019, 57.7% of total requests
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO Requests: 40853, requests per second: 2455, mean latency: 7950 ms
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO Errors: 10915, accumulated errors: 21934, 53.7% of total requests
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO Concurrency level:   1000
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO Agent:               keepalive
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO Requests per second: 5000
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO Completed requests:  40853
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO Total errors:        21934
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO Total time:          23.062250835 s
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO Requests per second: 1771
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO Total time:          23.062250835 s
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO   50%      5287 ms
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO   90%      10608 ms
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO   95%      10740 ms
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO   99%      11154 ms
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO  100%      12164 ms (longest request)
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO  100%      12164 ms (longest request)
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:16:18 GMT+0100 (CET)] INFO    -1:   21934 errors
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 1000 -k --rps 4000
+[Fri Nov 13 2015 17:17:19 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 17:17:25 GMT+0100 (CET)] INFO Requests: 3795, requests per second: 732, mean latency: 200 ms
+[Fri Nov 13 2015 17:17:31 GMT+0100 (CET)] INFO Requests: 16273, requests per second: 1873, mean latency: 3000 ms
+[Fri Nov 13 2015 17:17:31 GMT+0100 (CET)] INFO Errors: 9624, accumulated errors: 9624, 59.1% of total requests
+[Fri Nov 13 2015 17:17:38 GMT+0100 (CET)] INFO Requests: 34740, requests per second: 2682, mean latency: 5840 ms
+[Fri Nov 13 2015 17:17:38 GMT+0100 (CET)] INFO Errors: 9915, accumulated errors: 19539, 56.2% of total requests
+[Fri Nov 13 2015 17:17:39 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:17:39 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 17:17:39 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 17:17:39 GMT+0100 (CET)] INFO Concurrency level:   1000
+[Fri Nov 13 2015 17:17:39 GMT+0100 (CET)] INFO Agent:               keepalive
+[Fri Nov 13 2015 17:17:39 GMT+0100 (CET)] INFO Requests per second: 4000
+[Fri Nov 13 2015 17:17:39 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:17:39 GMT+0100 (CET)] INFO Completed requests:  38897
+[Fri Nov 13 2015 17:17:39 GMT+0100 (CET)] INFO Total errors:        19539
+[Fri Nov 13 2015 17:17:39 GMT+0100 (CET)] INFO Total time:          20.000595097 s
+[Fri Nov 13 2015 17:17:39 GMT+0100 (CET)] INFO Requests per second: 1945
+[Fri Nov 13 2015 17:17:39 GMT+0100 (CET)] INFO Total time:          20.000595097 s
+[Fri Nov 13 2015 17:17:39 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:17:39 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 17:17:39 GMT+0100 (CET)] INFO   50%      4432 ms
+[Fri Nov 13 2015 17:17:39 GMT+0100 (CET)] INFO   90%      9352 ms
+[Fri Nov 13 2015 17:17:39 GMT+0100 (CET)] INFO   95%      9855 ms
+[Fri Nov 13 2015 17:17:39 GMT+0100 (CET)] INFO   99%      10519 ms
+[Fri Nov 13 2015 17:17:39 GMT+0100 (CET)] INFO  100%      13109 ms (longest request)
+[Fri Nov 13 2015 17:17:39 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:17:39 GMT+0100 (CET)] INFO  100%      13109 ms (longest request)
+[Fri Nov 13 2015 17:17:39 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:17:39 GMT+0100 (CET)] INFO    -1:   19539 errors
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 1000 -k --rps 3000
+[Fri Nov 13 2015 17:18:33 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 17:18:38 GMT+0100 (CET)] INFO Requests: 14052, requests per second: 2810, mean latency: 30 ms
+[Fri Nov 13 2015 17:18:43 GMT+0100 (CET)] INFO Requests: 29055, requests per second: 3003, mean latency: 20 ms
+[Fri Nov 13 2015 17:18:48 GMT+0100 (CET)] INFO Requests: 44056, requests per second: 3000, mean latency: 40 ms
+[Fri Nov 13 2015 17:18:53 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:18:53 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 17:18:53 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 17:18:53 GMT+0100 (CET)] INFO Concurrency level:   1000
+[Fri Nov 13 2015 17:18:53 GMT+0100 (CET)] INFO Agent:               keepalive
+[Fri Nov 13 2015 17:18:53 GMT+0100 (CET)] INFO Requests per second: 3000
+[Fri Nov 13 2015 17:18:53 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:18:53 GMT+0100 (CET)] INFO Completed requests:  58663
+[Fri Nov 13 2015 17:18:53 GMT+0100 (CET)] INFO Total errors:        0
+[Fri Nov 13 2015 17:18:53 GMT+0100 (CET)] INFO Total time:          20.003050448000003 s
+[Fri Nov 13 2015 17:18:53 GMT+0100 (CET)] INFO Requests per second: 2933
+[Fri Nov 13 2015 17:18:53 GMT+0100 (CET)] INFO Total time:          20.003050448000003 s
+[Fri Nov 13 2015 17:18:53 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:18:53 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 17:18:53 GMT+0100 (CET)] INFO   50%      25 ms
+[Fri Nov 13 2015 17:18:53 GMT+0100 (CET)] INFO   90%      48 ms
+[Fri Nov 13 2015 17:18:53 GMT+0100 (CET)] INFO   95%      67 ms
+[Fri Nov 13 2015 17:18:53 GMT+0100 (CET)] INFO   99%      130 ms
+[Fri Nov 13 2015 17:18:53 GMT+0100 (CET)] INFO  100%      204 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 1000 -k --rps 3500
+[Fri Nov 13 2015 17:19:05 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 17:19:10 GMT+0100 (CET)] INFO Requests: 16332, requests per second: 3248, mean latency: 100 ms
+[Fri Nov 13 2015 17:19:15 GMT+0100 (CET)] INFO Requests: 33797, requests per second: 3504, mean latency: 80 ms
+[Fri Nov 13 2015 17:19:21 GMT+0100 (CET)] INFO Requests: 37769, requests per second: 706, mean latency: 1020 ms
+[Fri Nov 13 2015 17:19:26 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:19:26 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 17:19:26 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 17:19:26 GMT+0100 (CET)] INFO Concurrency level:   1000
+[Fri Nov 13 2015 17:19:26 GMT+0100 (CET)] INFO Agent:               keepalive
+[Fri Nov 13 2015 17:19:26 GMT+0100 (CET)] INFO Requests per second: 3500
+[Fri Nov 13 2015 17:19:26 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:19:26 GMT+0100 (CET)] INFO Completed requests:  50836
+[Fri Nov 13 2015 17:19:26 GMT+0100 (CET)] INFO Total errors:        8915
+[Fri Nov 13 2015 17:19:26 GMT+0100 (CET)] INFO Total time:          21.260311184 s
+[Fri Nov 13 2015 17:19:26 GMT+0100 (CET)] INFO Requests per second: 2391
+[Fri Nov 13 2015 17:19:26 GMT+0100 (CET)] INFO Total time:          21.260311184 s
+[Fri Nov 13 2015 17:19:26 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:19:26 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 17:19:26 GMT+0100 (CET)] INFO   50%      98 ms
+[Fri Nov 13 2015 17:19:26 GMT+0100 (CET)] INFO   90%      3524 ms
+[Fri Nov 13 2015 17:19:26 GMT+0100 (CET)] INFO   95%      5326 ms
+[Fri Nov 13 2015 17:19:26 GMT+0100 (CET)] INFO   99%      5618 ms
+[Fri Nov 13 2015 17:19:26 GMT+0100 (CET)] INFO  100%      5694 ms (longest request)
+[Fri Nov 13 2015 17:19:26 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:19:26 GMT+0100 (CET)] INFO  100%      5694 ms (longest request)
+[Fri Nov 13 2015 17:19:26 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:19:26 GMT+0100 (CET)] INFO    -1:   8915 errors
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 1000 -k --rps 3000
+[Fri Nov 13 2015 17:21:10 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 17:21:15 GMT+0100 (CET)] INFO Requests: 14041, requests per second: 2808, mean latency: 30 ms
+[Fri Nov 13 2015 17:21:20 GMT+0100 (CET)] INFO Requests: 29004, requests per second: 2994, mean latency: 30 ms
+[Fri Nov 13 2015 17:21:25 GMT+0100 (CET)] INFO Requests: 44032, requests per second: 3006, mean latency: 30 ms
+[Fri Nov 13 2015 17:21:30 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:21:30 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 17:21:30 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 17:21:30 GMT+0100 (CET)] INFO Concurrency level:   1000
+[Fri Nov 13 2015 17:21:30 GMT+0100 (CET)] INFO Agent:               keepalive
+[Fri Nov 13 2015 17:21:30 GMT+0100 (CET)] INFO Requests per second: 3000
+[Fri Nov 13 2015 17:21:30 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:21:30 GMT+0100 (CET)] INFO Completed requests:  58594
+[Fri Nov 13 2015 17:21:30 GMT+0100 (CET)] INFO Total errors:        0
+[Fri Nov 13 2015 17:21:30 GMT+0100 (CET)] INFO Total time:          20.005688506 s
+[Fri Nov 13 2015 17:21:30 GMT+0100 (CET)] INFO Requests per second: 2929
+[Fri Nov 13 2015 17:21:30 GMT+0100 (CET)] INFO Total time:          20.005688506 s
+[Fri Nov 13 2015 17:21:30 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:21:30 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 17:21:30 GMT+0100 (CET)] INFO   50%      30 ms
+[Fri Nov 13 2015 17:21:30 GMT+0100 (CET)] INFO   90%      49 ms
+[Fri Nov 13 2015 17:21:30 GMT+0100 (CET)] INFO   95%      63 ms
+[Fri Nov 13 2015 17:21:30 GMT+0100 (CET)] INFO   99%      89 ms
+[Fri Nov 13 2015 17:21:30 GMT+0100 (CET)] INFO  100%      145 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 1000 -k --rps 3500
+[Fri Nov 13 2015 17:22:15 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 17:22:20 GMT+0100 (CET)] INFO Requests: 16253, requests per second: 3243, mean latency: 110 ms
+[Fri Nov 13 2015 17:22:25 GMT+0100 (CET)] INFO Requests: 33792, requests per second: 3517, mean latency: 50 ms
+[Fri Nov 13 2015 17:22:30 GMT+0100 (CET)] INFO Requests: 37711, requests per second: 691, mean latency: 970 ms
+[Fri Nov 13 2015 17:22:35 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:22:35 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 17:22:35 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 17:22:35 GMT+0100 (CET)] INFO Concurrency level:   1000
+[Fri Nov 13 2015 17:22:35 GMT+0100 (CET)] INFO Agent:               keepalive
+[Fri Nov 13 2015 17:22:35 GMT+0100 (CET)] INFO Requests per second: 3500
+[Fri Nov 13 2015 17:22:35 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:22:35 GMT+0100 (CET)] INFO Completed requests:  51518
+[Fri Nov 13 2015 17:22:35 GMT+0100 (CET)] INFO Total errors:        8915
+[Fri Nov 13 2015 17:22:35 GMT+0100 (CET)] INFO Total time:          20.927425298 s
+[Fri Nov 13 2015 17:22:35 GMT+0100 (CET)] INFO Requests per second: 2462
+[Fri Nov 13 2015 17:22:35 GMT+0100 (CET)] INFO Total time:          20.927425298 s
+[Fri Nov 13 2015 17:22:35 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:22:35 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 17:22:35 GMT+0100 (CET)] INFO   50%      90 ms
+[Fri Nov 13 2015 17:22:35 GMT+0100 (CET)] INFO   90%      3690 ms
+[Fri Nov 13 2015 17:22:35 GMT+0100 (CET)] INFO   95%      4419 ms
+[Fri Nov 13 2015 17:22:35 GMT+0100 (CET)] INFO   99%      6128 ms
+[Fri Nov 13 2015 17:22:35 GMT+0100 (CET)] INFO  100%      6203 ms (longest request)
+[Fri Nov 13 2015 17:22:35 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:22:35 GMT+0100 (CET)] INFO  100%      6203 ms (longest request)
+[Fri Nov 13 2015 17:22:35 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:22:35 GMT+0100 (CET)] INFO    -1:   8915 errors
+
+> bin/loadtest.js http://192.168.1.104:7357/ -t 20 -c 1000 -k --rps 3250
+[Fri Nov 13 2015 17:22:53 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Fri Nov 13 2015 17:22:58 GMT+0100 (CET)] INFO Requests: 15001, requests per second: 3000, mean latency: 60 ms
+[Fri Nov 13 2015 17:23:03 GMT+0100 (CET)] INFO Requests: 30123, requests per second: 3019, mean latency: 70 ms
+[Fri Nov 13 2015 17:23:08 GMT+0100 (CET)] INFO Requests: 41533, requests per second: 2267, mean latency: 700 ms
+[Fri Nov 13 2015 17:23:13 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:23:13 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.104:7357/
+[Fri Nov 13 2015 17:23:13 GMT+0100 (CET)] INFO Max time (s):        20
+[Fri Nov 13 2015 17:23:13 GMT+0100 (CET)] INFO Concurrency level:   1000
+[Fri Nov 13 2015 17:23:13 GMT+0100 (CET)] INFO Agent:               keepalive
+[Fri Nov 13 2015 17:23:13 GMT+0100 (CET)] INFO Requests per second: 3250
+[Fri Nov 13 2015 17:23:13 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:23:13 GMT+0100 (CET)] INFO Completed requests:  47690
+[Fri Nov 13 2015 17:23:13 GMT+0100 (CET)] INFO Total errors:        443
+[Fri Nov 13 2015 17:23:13 GMT+0100 (CET)] INFO Total time:          20.000416472 s
+[Fri Nov 13 2015 17:23:13 GMT+0100 (CET)] INFO Requests per second: 2384
+[Fri Nov 13 2015 17:23:13 GMT+0100 (CET)] INFO Total time:          20.000416472 s
+[Fri Nov 13 2015 17:23:13 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:23:13 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Fri Nov 13 2015 17:23:13 GMT+0100 (CET)] INFO   50%      82 ms
+[Fri Nov 13 2015 17:23:13 GMT+0100 (CET)] INFO   90%      1435 ms
+[Fri Nov 13 2015 17:23:13 GMT+0100 (CET)] INFO   95%      3320 ms
+[Fri Nov 13 2015 17:23:13 GMT+0100 (CET)] INFO   99%      6770 ms
+[Fri Nov 13 2015 17:23:13 GMT+0100 (CET)] INFO  100%      9383 ms (longest request)
+[Fri Nov 13 2015 17:23:13 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:23:13 GMT+0100 (CET)] INFO  100%      9383 ms (longest request)
+[Fri Nov 13 2015 17:23:13 GMT+0100 (CET)] INFO
+[Fri Nov 13 2015 17:23:13 GMT+0100 (CET)] INFO    -1:   443 errors
+
+
+64 bits
+=======
+
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10
+[Thu Nov 19 2015 17:15:52 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:15:57 GMT+0100 (CET)] INFO Requests: 8638, requests per second: 1727, mean latency: 10 ms
+[Thu Nov 19 2015 17:16:02 GMT+0100 (CET)] INFO Requests: 17482, requests per second: 1767, mean latency: 10 ms
+[Thu Nov 19 2015 17:16:07 GMT+0100 (CET)] INFO Requests: 26665, requests per second: 1841, mean latency: 10 ms
+[Thu Nov 19 2015 17:16:12 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:16:12 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:16:12 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:16:12 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:16:12 GMT+0100 (CET)] INFO Agent:               none
+[Thu Nov 19 2015 17:16:12 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:16:12 GMT+0100 (CET)] INFO Completed requests:  36446
+[Thu Nov 19 2015 17:16:12 GMT+0100 (CET)] INFO Total errors:        0
+[Thu Nov 19 2015 17:16:12 GMT+0100 (CET)] INFO Total time:          20.00039648 s
+[Thu Nov 19 2015 17:16:12 GMT+0100 (CET)] INFO Requests per second: 1822
+[Thu Nov 19 2015 17:16:12 GMT+0100 (CET)] INFO Total time:          20.00039648 s
+[Thu Nov 19 2015 17:16:12 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:16:12 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:16:12 GMT+0100 (CET)] INFO   50%      3 ms
+[Thu Nov 19 2015 17:16:12 GMT+0100 (CET)] INFO   90%      8 ms
+[Thu Nov 19 2015 17:16:12 GMT+0100 (CET)] INFO   95%      11 ms
+[Thu Nov 19 2015 17:16:12 GMT+0100 (CET)] INFO   99%      19 ms
+[Thu Nov 19 2015 17:16:12 GMT+0100 (CET)] INFO  100%      47 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 --rps 2000
+[Thu Nov 19 2015 17:17:31 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:17:36 GMT+0100 (CET)] INFO Requests: 8555, requests per second: 1700, mean latency: 50 ms
+[Thu Nov 19 2015 17:17:41 GMT+0100 (CET)] INFO Requests: 18639, requests per second: 2019, mean latency: 90 ms
+[Thu Nov 19 2015 17:17:46 GMT+0100 (CET)] INFO Requests: 28634, requests per second: 1992, mean latency: 60 ms
+[Thu Nov 19 2015 17:17:51 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:17:51 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:17:51 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:17:51 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:17:51 GMT+0100 (CET)] INFO Agent:               none
+[Thu Nov 19 2015 17:17:51 GMT+0100 (CET)] INFO Requests per second: 2000
+[Thu Nov 19 2015 17:17:51 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:17:51 GMT+0100 (CET)] INFO Completed requests:  38498
+[Thu Nov 19 2015 17:17:51 GMT+0100 (CET)] INFO Total errors:        0
+[Thu Nov 19 2015 17:17:51 GMT+0100 (CET)] INFO Total time:          20.032104708 s
+[Thu Nov 19 2015 17:17:51 GMT+0100 (CET)] INFO Requests per second: 1922
+[Thu Nov 19 2015 17:17:51 GMT+0100 (CET)] INFO Total time:          20.032104708 s
+[Thu Nov 19 2015 17:17:51 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:17:51 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:17:51 GMT+0100 (CET)] INFO   50%      44 ms
+[Thu Nov 19 2015 17:17:51 GMT+0100 (CET)] INFO   90%      165 ms
+[Thu Nov 19 2015 17:17:51 GMT+0100 (CET)] INFO   95%      237 ms
+[Thu Nov 19 2015 17:17:51 GMT+0100 (CET)] INFO   99%      1060 ms
+[Thu Nov 19 2015 17:17:51 GMT+0100 (CET)] INFO  100%      3053 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 --rps 2500
+[Thu Nov 19 2015 17:18:20 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:18:25 GMT+0100 (CET)] INFO Requests: 8678, requests per second: 1672, mean latency: 380 ms
+[Thu Nov 19 2015 17:18:30 GMT+0100 (CET)] INFO Requests: 17706, requests per second: 1815, mean latency: 1290 ms
+[Thu Nov 19 2015 17:18:35 GMT+0100 (CET)] INFO Requests: 21117, requests per second: 705, mean latency: 3040 ms
+[Thu Nov 19 2015 17:18:35 GMT+0100 (CET)] INFO Errors: 315, accumulated errors: 315, 1.5% of total requests
+[Thu Nov 19 2015 17:18:40 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:18:40 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:18:40 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:18:40 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:18:40 GMT+0100 (CET)] INFO Agent:               none
+[Thu Nov 19 2015 17:18:40 GMT+0100 (CET)] INFO Requests per second: 2500
+[Thu Nov 19 2015 17:18:40 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:18:40 GMT+0100 (CET)] INFO Completed requests:  25226
+[Thu Nov 19 2015 17:18:40 GMT+0100 (CET)] INFO Total errors:        797
+[Thu Nov 19 2015 17:18:40 GMT+0100 (CET)] INFO Total time:          20.284020603000002 s
+[Thu Nov 19 2015 17:18:40 GMT+0100 (CET)] INFO Requests per second: 1244
+[Thu Nov 19 2015 17:18:40 GMT+0100 (CET)] INFO Total time:          20.284020603000002 s
+[Thu Nov 19 2015 17:18:40 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:18:40 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:18:40 GMT+0100 (CET)] INFO   50%      1098 ms
+[Thu Nov 19 2015 17:18:40 GMT+0100 (CET)] INFO   90%      5071 ms
+[Thu Nov 19 2015 17:18:40 GMT+0100 (CET)] INFO   95%      5680 ms
+[Thu Nov 19 2015 17:18:40 GMT+0100 (CET)] INFO   99%      8756 ms
+[Thu Nov 19 2015 17:18:40 GMT+0100 (CET)] INFO  100%      15266 ms (longest request)
+[Thu Nov 19 2015 17:18:40 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:18:40 GMT+0100 (CET)] INFO  100%      15266 ms (longest request)
+[Thu Nov 19 2015 17:18:40 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:18:40 GMT+0100 (CET)] INFO    -1:   797 errors
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 --rps 2500
+[Thu Nov 19 2015 17:19:44 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:19:49 GMT+0100 (CET)] INFO Requests: 8353, requests per second: 1641, mean latency: 560 ms
+[Thu Nov 19 2015 17:19:54 GMT+0100 (CET)] INFO Requests: 16796, requests per second: 1649, mean latency: 1510 ms
+[Thu Nov 19 2015 17:19:59 GMT+0100 (CET)] INFO Requests: 27026, requests per second: 2136, mean latency: 2510 ms
+[Thu Nov 19 2015 17:20:04 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:20:04 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:20:04 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:20:04 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:20:04 GMT+0100 (CET)] INFO Agent:               none
+[Thu Nov 19 2015 17:20:04 GMT+0100 (CET)] INFO Requests per second: 2500
+[Thu Nov 19 2015 17:20:04 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:20:04 GMT+0100 (CET)] INFO Completed requests:  34547
+[Thu Nov 19 2015 17:20:04 GMT+0100 (CET)] INFO Total errors:        169
+[Thu Nov 19 2015 17:20:04 GMT+0100 (CET)] INFO Total time:          20.001989749 s
+[Thu Nov 19 2015 17:20:04 GMT+0100 (CET)] INFO Requests per second: 1727
+[Thu Nov 19 2015 17:20:04 GMT+0100 (CET)] INFO Total time:          20.001989749 s
+[Thu Nov 19 2015 17:20:04 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:20:04 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:20:04 GMT+0100 (CET)] INFO   50%      1282 ms
+[Thu Nov 19 2015 17:20:04 GMT+0100 (CET)] INFO   90%      3732 ms
+[Thu Nov 19 2015 17:20:04 GMT+0100 (CET)] INFO   95%      4740 ms
+[Thu Nov 19 2015 17:20:04 GMT+0100 (CET)] INFO   99%      8199 ms
+[Thu Nov 19 2015 17:20:04 GMT+0100 (CET)] INFO  100%      15543 ms (longest request)
+[Thu Nov 19 2015 17:20:04 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:20:04 GMT+0100 (CET)] INFO  100%      15543 ms (longest request)
+[Thu Nov 19 2015 17:20:04 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:20:04 GMT+0100 (CET)] INFO    -1:   169 errors
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 --rps 2400
+[Thu Nov 19 2015 17:20:52 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:20:57 GMT+0100 (CET)] INFO Requests: 7282, requests per second: 1430, mean latency: 570 ms
+[Thu Nov 19 2015 17:21:02 GMT+0100 (CET)] INFO Requests: 17403, requests per second: 2063, mean latency: 1310 ms
+[Thu Nov 19 2015 17:21:07 GMT+0100 (CET)] INFO Requests: 25707, requests per second: 1657, mean latency: 2340 ms
+[Thu Nov 19 2015 17:21:12 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:21:12 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:21:12 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:21:12 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:21:12 GMT+0100 (CET)] INFO Agent:               none
+[Thu Nov 19 2015 17:21:12 GMT+0100 (CET)] INFO Requests per second: 2400
+[Thu Nov 19 2015 17:21:12 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:21:12 GMT+0100 (CET)] INFO Completed requests:  31977
+[Thu Nov 19 2015 17:21:12 GMT+0100 (CET)] INFO Total errors:        289
+[Thu Nov 19 2015 17:21:12 GMT+0100 (CET)] INFO Total time:          20.004249925 s
+[Thu Nov 19 2015 17:21:12 GMT+0100 (CET)] INFO Requests per second: 1599
+[Thu Nov 19 2015 17:21:12 GMT+0100 (CET)] INFO Total time:          20.004249925 s
+[Thu Nov 19 2015 17:21:12 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:21:12 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:21:12 GMT+0100 (CET)] INFO   50%      1272 ms
+[Thu Nov 19 2015 17:21:12 GMT+0100 (CET)] INFO   90%      3782 ms
+[Thu Nov 19 2015 17:21:12 GMT+0100 (CET)] INFO   95%      4604 ms
+[Thu Nov 19 2015 17:21:12 GMT+0100 (CET)] INFO   99%      8188 ms
+[Thu Nov 19 2015 17:21:12 GMT+0100 (CET)] INFO  100%      9140 ms (longest request)
+[Thu Nov 19 2015 17:21:12 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:21:12 GMT+0100 (CET)] INFO  100%      9140 ms (longest request)
+[Thu Nov 19 2015 17:21:12 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:21:12 GMT+0100 (CET)] INFO    -1:   289 errors
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 --rps 2400
+[Thu Nov 19 2015 17:21:36 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:21:42 GMT+0100 (CET)] INFO Requests: 6969, requests per second: 1320, mean latency: 1010 ms
+[Thu Nov 19 2015 17:21:46 GMT+0100 (CET)] INFO Requests: 12818, requests per second: 1215, mean latency: 2490 ms
+[Thu Nov 19 2015 17:21:46 GMT+0100 (CET)] INFO Errors: 212, accumulated errors: 212, 1.7% of total requests
+[Thu Nov 19 2015 17:21:51 GMT+0100 (CET)] INFO Requests: 19515, requests per second: 1367, mean latency: 2850 ms
+[Thu Nov 19 2015 17:21:51 GMT+0100 (CET)] INFO Errors: 402, accumulated errors: 614, 3.1% of total requests
+[Thu Nov 19 2015 17:21:56 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:21:56 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:21:56 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:21:56 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:21:56 GMT+0100 (CET)] INFO Agent:               none
+[Thu Nov 19 2015 17:21:56 GMT+0100 (CET)] INFO Requests per second: 2400
+[Thu Nov 19 2015 17:21:56 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:21:56 GMT+0100 (CET)] INFO Completed requests:  25522
+[Thu Nov 19 2015 17:21:56 GMT+0100 (CET)] INFO Total errors:        1064
+[Thu Nov 19 2015 17:21:56 GMT+0100 (CET)] INFO Total time:          20.006069626000002 s
+[Thu Nov 19 2015 17:21:56 GMT+0100 (CET)] INFO Requests per second: 1276
+[Thu Nov 19 2015 17:21:56 GMT+0100 (CET)] INFO Total time:          20.006069626000002 s
+[Thu Nov 19 2015 17:21:56 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:21:56 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:21:56 GMT+0100 (CET)] INFO   50%      2393 ms
+[Thu Nov 19 2015 17:21:56 GMT+0100 (CET)] INFO   90%      4873 ms
+[Thu Nov 19 2015 17:21:56 GMT+0100 (CET)] INFO   95%      6039 ms
+[Thu Nov 19 2015 17:21:56 GMT+0100 (CET)] INFO   99%      9854 ms
+[Thu Nov 19 2015 17:21:56 GMT+0100 (CET)] INFO  100%      18396 ms (longest request)
+[Thu Nov 19 2015 17:21:56 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:21:56 GMT+0100 (CET)] INFO  100%      18396 ms (longest request)
+[Thu Nov 19 2015 17:21:56 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:21:56 GMT+0100 (CET)] INFO    -1:   1064 errors
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 --rps 2300
+[Thu Nov 19 2015 17:22:43 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:22:48 GMT+0100 (CET)] INFO Requests: 7459, requests per second: 1492, mean latency: 610 ms
+[Thu Nov 19 2015 17:22:53 GMT+0100 (CET)] INFO Requests: 16167, requests per second: 1724, mean latency: 1400 ms
+[Thu Nov 19 2015 17:22:58 GMT+0100 (CET)] INFO Requests: 25841, requests per second: 1869, mean latency: 2060 ms
+[Thu Nov 19 2015 17:23:03 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:23:03 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:23:03 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:23:03 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:23:03 GMT+0100 (CET)] INFO Agent:               none
+[Thu Nov 19 2015 17:23:03 GMT+0100 (CET)] INFO Requests per second: 2300
+[Thu Nov 19 2015 17:23:03 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:23:03 GMT+0100 (CET)] INFO Completed requests:  32649
+[Thu Nov 19 2015 17:23:03 GMT+0100 (CET)] INFO Total errors:        142
+[Thu Nov 19 2015 17:23:03 GMT+0100 (CET)] INFO Total time:          20.004668393 s
+[Thu Nov 19 2015 17:23:03 GMT+0100 (CET)] INFO Requests per second: 1632
+[Thu Nov 19 2015 17:23:03 GMT+0100 (CET)] INFO Total time:          20.004668393 s
+[Thu Nov 19 2015 17:23:03 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:23:03 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:23:03 GMT+0100 (CET)] INFO   50%      1279 ms
+[Thu Nov 19 2015 17:23:03 GMT+0100 (CET)] INFO   90%      3582 ms
+[Thu Nov 19 2015 17:23:03 GMT+0100 (CET)] INFO   95%      5068 ms
+[Thu Nov 19 2015 17:23:03 GMT+0100 (CET)] INFO   99%      7844 ms
+[Thu Nov 19 2015 17:23:03 GMT+0100 (CET)] INFO  100%      8390 ms (longest request)
+[Thu Nov 19 2015 17:23:03 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:23:03 GMT+0100 (CET)] INFO  100%      8390 ms (longest request)
+[Thu Nov 19 2015 17:23:03 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:23:03 GMT+0100 (CET)] INFO    -1:   142 errors
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 --rps 2200
+[Thu Nov 19 2015 17:24:57 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:25:02 GMT+0100 (CET)] INFO Requests: 8837, requests per second: 1752, mean latency: 270 ms
+[Thu Nov 19 2015 17:25:07 GMT+0100 (CET)] INFO Requests: 19703, requests per second: 2143, mean latency: 450 ms
+[Thu Nov 19 2015 17:25:12 GMT+0100 (CET)] INFO Requests: 30699, requests per second: 2238, mean latency: 470 ms
+[Thu Nov 19 2015 17:25:17 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:25:17 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:25:17 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:25:17 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:25:17 GMT+0100 (CET)] INFO Agent:               none
+[Thu Nov 19 2015 17:25:17 GMT+0100 (CET)] INFO Requests per second: 2200
+[Thu Nov 19 2015 17:25:17 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:25:17 GMT+0100 (CET)] INFO Completed requests:  40513
+[Thu Nov 19 2015 17:25:17 GMT+0100 (CET)] INFO Total errors:        0
+[Thu Nov 19 2015 17:25:17 GMT+0100 (CET)] INFO Total time:          20.024568329 s
+[Thu Nov 19 2015 17:25:17 GMT+0100 (CET)] INFO Requests per second: 2023
+[Thu Nov 19 2015 17:25:17 GMT+0100 (CET)] INFO Total time:          20.024568329 s
+[Thu Nov 19 2015 17:25:17 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:25:17 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:25:17 GMT+0100 (CET)] INFO   50%      193 ms
+[Thu Nov 19 2015 17:25:17 GMT+0100 (CET)] INFO   90%      1169 ms
+[Thu Nov 19 2015 17:25:17 GMT+0100 (CET)] INFO   95%      1247 ms
+[Thu Nov 19 2015 17:25:17 GMT+0100 (CET)] INFO   99%      3277 ms
+[Thu Nov 19 2015 17:25:17 GMT+0100 (CET)] INFO  100%      15157 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 --rps 2200
+[Thu Nov 19 2015 17:25:36 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:25:41 GMT+0100 (CET)] INFO Requests: 9004, requests per second: 1780, mean latency: 260 ms
+[Thu Nov 19 2015 17:25:46 GMT+0100 (CET)] INFO Requests: 19780, requests per second: 2149, mean latency: 290 ms
+[Thu Nov 19 2015 17:25:51 GMT+0100 (CET)] INFO Requests: 30845, requests per second: 2232, mean latency: 420 ms
+[Thu Nov 19 2015 17:25:56 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:25:56 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:25:56 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:25:56 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:25:56 GMT+0100 (CET)] INFO Agent:               none
+[Thu Nov 19 2015 17:25:56 GMT+0100 (CET)] INFO Requests per second: 2200
+[Thu Nov 19 2015 17:25:56 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:25:56 GMT+0100 (CET)] INFO Completed requests:  41502
+[Thu Nov 19 2015 17:25:56 GMT+0100 (CET)] INFO Total errors:        0
+[Thu Nov 19 2015 17:25:56 GMT+0100 (CET)] INFO Total time:          20.003672509 s
+[Thu Nov 19 2015 17:25:56 GMT+0100 (CET)] INFO Requests per second: 2075
+[Thu Nov 19 2015 17:25:56 GMT+0100 (CET)] INFO Total time:          20.003672509 s
+[Thu Nov 19 2015 17:25:56 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:25:56 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:25:56 GMT+0100 (CET)] INFO   50%      163 ms
+[Thu Nov 19 2015 17:25:56 GMT+0100 (CET)] INFO   90%      1102 ms
+[Thu Nov 19 2015 17:25:56 GMT+0100 (CET)] INFO   95%      1183 ms
+[Thu Nov 19 2015 17:25:56 GMT+0100 (CET)] INFO   99%      3121 ms
+[Thu Nov 19 2015 17:25:56 GMT+0100 (CET)] INFO  100%      7344 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 --rps 2250
+[Thu Nov 19 2015 17:26:13 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:26:18 GMT+0100 (CET)] INFO Requests: 8155, requests per second: 1625, mean latency: 540 ms
+[Thu Nov 19 2015 17:26:23 GMT+0100 (CET)] INFO Requests: 17565, requests per second: 1889, mean latency: 1080 ms
+[Thu Nov 19 2015 17:26:28 GMT+0100 (CET)] INFO Requests: 26676, requests per second: 1812, mean latency: 1840 ms
+[Thu Nov 19 2015 17:26:33 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:26:33 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:26:33 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:26:33 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:26:33 GMT+0100 (CET)] INFO Agent:               none
+[Thu Nov 19 2015 17:26:33 GMT+0100 (CET)] INFO Requests per second: 2250
+[Thu Nov 19 2015 17:26:33 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:26:33 GMT+0100 (CET)] INFO Completed requests:  35508
+[Thu Nov 19 2015 17:26:33 GMT+0100 (CET)] INFO Total errors:        0
+[Thu Nov 19 2015 17:26:33 GMT+0100 (CET)] INFO Total time:          20.000399863 s
+[Thu Nov 19 2015 17:26:33 GMT+0100 (CET)] INFO Requests per second: 1775
+[Thu Nov 19 2015 17:26:33 GMT+0100 (CET)] INFO Total time:          20.000399863 s
+[Thu Nov 19 2015 17:26:33 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:26:33 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:26:33 GMT+0100 (CET)] INFO   50%      896 ms
+[Thu Nov 19 2015 17:26:33 GMT+0100 (CET)] INFO   90%      3601 ms
+[Thu Nov 19 2015 17:26:33 GMT+0100 (CET)] INFO   95%      3864 ms
+[Thu Nov 19 2015 17:26:33 GMT+0100 (CET)] INFO   99%      7853 ms
+[Thu Nov 19 2015 17:26:33 GMT+0100 (CET)] INFO  100%      16320 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 --rps 2275
+[Thu Nov 19 2015 17:27:01 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:27:06 GMT+0100 (CET)] INFO Requests: 7338, requests per second: 1467, mean latency: 560 ms
+[Thu Nov 19 2015 17:27:11 GMT+0100 (CET)] INFO Requests: 16827, requests per second: 1894, mean latency: 1310 ms
+[Thu Nov 19 2015 17:27:16 GMT+0100 (CET)] INFO Requests: 25139, requests per second: 1664, mean latency: 1560 ms
+[Thu Nov 19 2015 17:27:16 GMT+0100 (CET)] INFO Errors: 127, accumulated errors: 127, 0.5% of total requests
+[Thu Nov 19 2015 17:27:21 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:27:21 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:27:21 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:27:21 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:27:21 GMT+0100 (CET)] INFO Agent:               none
+[Thu Nov 19 2015 17:27:21 GMT+0100 (CET)] INFO Requests per second: 2275
+[Thu Nov 19 2015 17:27:21 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:27:21 GMT+0100 (CET)] INFO Completed requests:  29086
+[Thu Nov 19 2015 17:27:21 GMT+0100 (CET)] INFO Total errors:        521
+[Thu Nov 19 2015 17:27:21 GMT+0100 (CET)] INFO Total time:          20.004566226999998 s
+[Thu Nov 19 2015 17:27:21 GMT+0100 (CET)] INFO Requests per second: 1454
+[Thu Nov 19 2015 17:27:21 GMT+0100 (CET)] INFO Total time:          20.004566226999998 s
+[Thu Nov 19 2015 17:27:21 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:27:21 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:27:21 GMT+0100 (CET)] INFO   50%      1094 ms
+[Thu Nov 19 2015 17:27:21 GMT+0100 (CET)] INFO   90%      3733 ms
+[Thu Nov 19 2015 17:27:21 GMT+0100 (CET)] INFO   95%      4398 ms
+[Thu Nov 19 2015 17:27:21 GMT+0100 (CET)] INFO   99%      7329 ms
+[Thu Nov 19 2015 17:27:21 GMT+0100 (CET)] INFO  100%      12450 ms (longest request)
+[Thu Nov 19 2015 17:27:21 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:27:21 GMT+0100 (CET)] INFO  100%      12450 ms (longest request)
+[Thu Nov 19 2015 17:27:21 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:27:21 GMT+0100 (CET)] INFO    -1:   521 errors
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 --rps 2275
+[Thu Nov 19 2015 17:27:54 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:27:59 GMT+0100 (CET)] INFO Requests: 8066, requests per second: 1577, mean latency: 390 ms
+[Thu Nov 19 2015 17:28:05 GMT+0100 (CET)] INFO Requests: 15817, requests per second: 1466, mean latency: 1330 ms
+[Thu Nov 19 2015 17:28:09 GMT+0100 (CET)] INFO Requests: 21620, requests per second: 1263, mean latency: 3350 ms
+[Thu Nov 19 2015 17:28:09 GMT+0100 (CET)] INFO Errors: 405, accumulated errors: 405, 1.9% of total requests
+[Thu Nov 19 2015 17:28:14 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:28:14 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:28:14 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:28:14 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:28:14 GMT+0100 (CET)] INFO Agent:               none
+[Thu Nov 19 2015 17:28:14 GMT+0100 (CET)] INFO Requests per second: 2275
+[Thu Nov 19 2015 17:28:14 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:28:14 GMT+0100 (CET)] INFO Completed requests:  26727
+[Thu Nov 19 2015 17:28:14 GMT+0100 (CET)] INFO Total errors:        809
+[Thu Nov 19 2015 17:28:14 GMT+0100 (CET)] INFO Total time:          20.001157684000002 s
+[Thu Nov 19 2015 17:28:14 GMT+0100 (CET)] INFO Requests per second: 1336
+[Thu Nov 19 2015 17:28:14 GMT+0100 (CET)] INFO Total time:          20.001157684000002 s
+[Thu Nov 19 2015 17:28:14 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:28:14 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:28:14 GMT+0100 (CET)] INFO   50%      1445 ms
+[Thu Nov 19 2015 17:28:14 GMT+0100 (CET)] INFO   90%      4808 ms
+[Thu Nov 19 2015 17:28:14 GMT+0100 (CET)] INFO   95%      5896 ms
+[Thu Nov 19 2015 17:28:14 GMT+0100 (CET)] INFO   99%      9448 ms
+[Thu Nov 19 2015 17:28:14 GMT+0100 (CET)] INFO  100%      11609 ms (longest request)
+[Thu Nov 19 2015 17:28:14 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:28:14 GMT+0100 (CET)] INFO  100%      11609 ms (longest request)
+[Thu Nov 19 2015 17:28:14 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:28:14 GMT+0100 (CET)] INFO    -1:   809 errors
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 --rps 2250
+[Thu Nov 19 2015 17:28:59 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:29:04 GMT+0100 (CET)] INFO Requests: 8041, requests per second: 1604, mean latency: 380 ms
+[Thu Nov 19 2015 17:29:09 GMT+0100 (CET)] INFO Requests: 17694, requests per second: 1873, mean latency: 910 ms
+[Thu Nov 19 2015 17:29:14 GMT+0100 (CET)] INFO Requests: 26750, requests per second: 1858, mean latency: 1560 ms
+[Thu Nov 19 2015 17:29:19 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:29:19 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:29:19 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:29:19 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:29:19 GMT+0100 (CET)] INFO Agent:               none
+[Thu Nov 19 2015 17:29:19 GMT+0100 (CET)] INFO Requests per second: 2250
+[Thu Nov 19 2015 17:29:19 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:29:19 GMT+0100 (CET)] INFO Completed requests:  33393
+[Thu Nov 19 2015 17:29:19 GMT+0100 (CET)] INFO Total errors:        137
+[Thu Nov 19 2015 17:29:19 GMT+0100 (CET)] INFO Total time:          20.000412384 s
+[Thu Nov 19 2015 17:29:19 GMT+0100 (CET)] INFO Requests per second: 1670
+[Thu Nov 19 2015 17:29:19 GMT+0100 (CET)] INFO Total time:          20.000412384 s
+[Thu Nov 19 2015 17:29:19 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:29:19 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:29:19 GMT+0100 (CET)] INFO   50%      957 ms
+[Thu Nov 19 2015 17:29:19 GMT+0100 (CET)] INFO   90%      3352 ms
+[Thu Nov 19 2015 17:29:19 GMT+0100 (CET)] INFO   95%      4077 ms
+[Thu Nov 19 2015 17:29:19 GMT+0100 (CET)] INFO   99%      6096 ms
+[Thu Nov 19 2015 17:29:19 GMT+0100 (CET)] INFO  100%      15440 ms (longest request)
+[Thu Nov 19 2015 17:29:19 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:29:19 GMT+0100 (CET)] INFO  100%      15440 ms (longest request)
+[Thu Nov 19 2015 17:29:19 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:29:19 GMT+0100 (CET)] INFO    -1:   137 errors
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 --rps 2250
+[Thu Nov 19 2015 17:29:46 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:29:51 GMT+0100 (CET)] INFO Requests: 7761, requests per second: 1551, mean latency: 400 ms
+[Thu Nov 19 2015 17:29:56 GMT+0100 (CET)] INFO Requests: 18012, requests per second: 2052, mean latency: 830 ms
+[Thu Nov 19 2015 17:30:01 GMT+0100 (CET)] INFO Requests: 26764, requests per second: 1736, mean latency: 1530 ms
+[Thu Nov 19 2015 17:30:06 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:30:06 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:30:06 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:30:06 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:30:06 GMT+0100 (CET)] INFO Agent:               none
+[Thu Nov 19 2015 17:30:06 GMT+0100 (CET)] INFO Requests per second: 2250
+[Thu Nov 19 2015 17:30:06 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:30:06 GMT+0100 (CET)] INFO Completed requests:  34421
+[Thu Nov 19 2015 17:30:06 GMT+0100 (CET)] INFO Total errors:        0
+[Thu Nov 19 2015 17:30:06 GMT+0100 (CET)] INFO Total time:          20.010718743 s
+[Thu Nov 19 2015 17:30:06 GMT+0100 (CET)] INFO Requests per second: 1720
+[Thu Nov 19 2015 17:30:06 GMT+0100 (CET)] INFO Total time:          20.010718743 s
+[Thu Nov 19 2015 17:30:06 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:30:06 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:30:06 GMT+0100 (CET)] INFO   50%      601 ms
+[Thu Nov 19 2015 17:30:06 GMT+0100 (CET)] INFO   90%      3306 ms
+[Thu Nov 19 2015 17:30:06 GMT+0100 (CET)] INFO   95%      3926 ms
+[Thu Nov 19 2015 17:30:06 GMT+0100 (CET)] INFO   99%      7818 ms
+[Thu Nov 19 2015 17:30:06 GMT+0100 (CET)] INFO  100%      15872 ms (longest request)
+
+
+keepalive
+---------
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 -k --rps 2250
+[Thu Nov 19 2015 17:30:56 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:31:01 GMT+0100 (CET)] INFO Requests: 10344, requests per second: 2069, mean latency: 10 ms
+[Thu Nov 19 2015 17:31:06 GMT+0100 (CET)] INFO Requests: 21585, requests per second: 2249, mean latency: 10 ms
+[Thu Nov 19 2015 17:31:11 GMT+0100 (CET)] INFO Requests: 32845, requests per second: 2252, mean latency: 10 ms
+[Thu Nov 19 2015 17:31:16 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:31:16 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:31:16 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:31:16 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:31:16 GMT+0100 (CET)] INFO Agent:               keepalive
+[Thu Nov 19 2015 17:31:16 GMT+0100 (CET)] INFO Requests per second: 2250
+[Thu Nov 19 2015 17:31:16 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:31:16 GMT+0100 (CET)] INFO Completed requests:  44075
+[Thu Nov 19 2015 17:31:16 GMT+0100 (CET)] INFO Total errors:        0
+[Thu Nov 19 2015 17:31:16 GMT+0100 (CET)] INFO Total time:          20.007153126000002 s
+[Thu Nov 19 2015 17:31:16 GMT+0100 (CET)] INFO Requests per second: 2203
+[Thu Nov 19 2015 17:31:16 GMT+0100 (CET)] INFO Total time:          20.007153126000002 s
+[Thu Nov 19 2015 17:31:16 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:31:16 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:31:16 GMT+0100 (CET)] INFO   50%      7 ms
+[Thu Nov 19 2015 17:31:16 GMT+0100 (CET)] INFO   90%      16 ms
+[Thu Nov 19 2015 17:31:16 GMT+0100 (CET)] INFO   95%      19 ms
+[Thu Nov 19 2015 17:31:16 GMT+0100 (CET)] INFO   99%      29 ms
+[Thu Nov 19 2015 17:31:16 GMT+0100 (CET)] INFO  100%      62 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 -k --rps 3000
+[Thu Nov 19 2015 17:31:33 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:31:38 GMT+0100 (CET)] INFO Requests: 5791, requests per second: 1158, mean latency: 1080 ms
+[Thu Nov 19 2015 17:31:43 GMT+0100 (CET)] INFO Requests: 14193, requests per second: 1671, mean latency: 3520 ms
+[Thu Nov 19 2015 17:31:48 GMT+0100 (CET)] INFO Requests: 22050, requests per second: 1547, mean latency: 6110 ms
+[Thu Nov 19 2015 17:31:53 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:31:53 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:31:53 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:31:53 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:31:53 GMT+0100 (CET)] INFO Agent:               keepalive
+[Thu Nov 19 2015 17:31:53 GMT+0100 (CET)] INFO Requests per second: 3000
+[Thu Nov 19 2015 17:31:53 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:31:53 GMT+0100 (CET)] INFO Completed requests:  30306
+[Thu Nov 19 2015 17:31:53 GMT+0100 (CET)] INFO Total errors:        0
+[Thu Nov 19 2015 17:31:53 GMT+0100 (CET)] INFO Total time:          20.00848374 s
+[Thu Nov 19 2015 17:31:53 GMT+0100 (CET)] INFO Requests per second: 1515
+[Thu Nov 19 2015 17:31:53 GMT+0100 (CET)] INFO Total time:          20.00848374 s
+[Thu Nov 19 2015 17:31:53 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:31:53 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:31:53 GMT+0100 (CET)] INFO   50%      4995 ms
+[Thu Nov 19 2015 17:31:53 GMT+0100 (CET)] INFO   90%      8312 ms
+[Thu Nov 19 2015 17:31:53 GMT+0100 (CET)] INFO   95%      8762 ms
+[Thu Nov 19 2015 17:31:53 GMT+0100 (CET)] INFO   99%      8908 ms
+[Thu Nov 19 2015 17:31:53 GMT+0100 (CET)] INFO  100%      9025 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 -k --rps 4000
+[Thu Nov 19 2015 17:32:36 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:32:41 GMT+0100 (CET)] INFO Requests: 5414, requests per second: 1083, mean latency: 1520 ms
+[Thu Nov 19 2015 17:32:46 GMT+0100 (CET)] INFO Requests: 12563, requests per second: 1427, mean latency: 4350 ms
+[Thu Nov 19 2015 17:32:51 GMT+0100 (CET)] INFO Requests: 19238, requests per second: 1339, mean latency: 7490 ms
+[Thu Nov 19 2015 17:32:56 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:32:56 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:32:56 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:32:56 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:32:56 GMT+0100 (CET)] INFO Agent:               keepalive
+[Thu Nov 19 2015 17:32:56 GMT+0100 (CET)] INFO Requests per second: 4000
+[Thu Nov 19 2015 17:32:56 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:32:56 GMT+0100 (CET)] INFO Completed requests:  25083
+[Thu Nov 19 2015 17:32:56 GMT+0100 (CET)] INFO Total errors:        0
+[Thu Nov 19 2015 17:32:56 GMT+0100 (CET)] INFO Total time:          20.002415944 s
+[Thu Nov 19 2015 17:32:56 GMT+0100 (CET)] INFO Requests per second: 1254
+[Thu Nov 19 2015 17:32:56 GMT+0100 (CET)] INFO Total time:          20.002415944 s
+[Thu Nov 19 2015 17:32:56 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:32:56 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:32:56 GMT+0100 (CET)] INFO   50%      5812 ms
+[Thu Nov 19 2015 17:32:56 GMT+0100 (CET)] INFO   90%      11180 ms
+[Thu Nov 19 2015 17:32:56 GMT+0100 (CET)] INFO   95%      11967 ms
+[Thu Nov 19 2015 17:32:56 GMT+0100 (CET)] INFO   99%      13178 ms
+[Thu Nov 19 2015 17:32:56 GMT+0100 (CET)] INFO  100%      14285 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 -k --rps 5500
+[Thu Nov 19 2015 17:38:37 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:38:43 GMT+0100 (CET)] INFO Requests: 1974, requests per second: 358, mean latency: 2300 ms
+[Thu Nov 19 2015 17:38:43 GMT+0100 (CET)] INFO Errors: 1436, accumulated errors: 1436, 72.7% of total requests
+[Thu Nov 19 2015 17:38:47 GMT+0100 (CET)] INFO Requests: 7291, requests per second: 1183, mean latency: 7620 ms
+[Thu Nov 19 2015 17:38:47 GMT+0100 (CET)] INFO Errors: 413, accumulated errors: 1849, 25.4% of total requests
+[Thu Nov 19 2015 17:38:53 GMT+0100 (CET)] INFO Requests: 13751, requests per second: 1225, mean latency: 10190 ms
+[Thu Nov 19 2015 17:38:53 GMT+0100 (CET)] INFO Errors: 129, accumulated errors: 1978, 14.4% of total requests
+[Thu Nov 19 2015 17:38:57 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:38:57 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:38:57 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:38:57 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:38:57 GMT+0100 (CET)] INFO Agent:               keepalive
+[Thu Nov 19 2015 17:38:57 GMT+0100 (CET)] INFO Requests per second: 5500
+[Thu Nov 19 2015 17:38:57 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:38:57 GMT+0100 (CET)] INFO Completed requests:  18857
+[Thu Nov 19 2015 17:38:57 GMT+0100 (CET)] INFO Total errors:        2107
+[Thu Nov 19 2015 17:38:57 GMT+0100 (CET)] INFO Total time:          20.000518184 s
+[Thu Nov 19 2015 17:38:57 GMT+0100 (CET)] INFO Requests per second: 943
+[Thu Nov 19 2015 17:38:57 GMT+0100 (CET)] INFO Total time:          20.000518184 s
+[Thu Nov 19 2015 17:38:57 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:38:57 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:38:57 GMT+0100 (CET)] INFO   50%      9307 ms
+[Thu Nov 19 2015 17:38:57 GMT+0100 (CET)] INFO   90%      14165 ms
+[Thu Nov 19 2015 17:38:57 GMT+0100 (CET)] INFO   95%      14840 ms
+[Thu Nov 19 2015 17:38:57 GMT+0100 (CET)] INFO   99%      15272 ms
+[Thu Nov 19 2015 17:38:57 GMT+0100 (CET)] INFO  100%      16223 ms (longest request)
+[Thu Nov 19 2015 17:38:57 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:38:57 GMT+0100 (CET)] INFO  100%      16223 ms (longest request)
+[Thu Nov 19 2015 17:38:57 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:38:57 GMT+0100 (CET)] INFO    -1:   2107 errors
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 -k --rps 5500
+[Thu Nov 19 2015 17:45:10 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:45:15 GMT+0100 (CET)] INFO Requests: 317, requests per second: 63, mean latency: 1130 ms
+[Thu Nov 19 2015 17:45:20 GMT+0100 (CET)] INFO Requests: 3046, requests per second: 551, mean latency: 4270 ms
+[Thu Nov 19 2015 17:45:20 GMT+0100 (CET)] INFO Errors: 1427, accumulated errors: 1427, 46.8% of total requests
+[Thu Nov 19 2015 17:45:25 GMT+0100 (CET)] INFO Requests: 8542, requests per second: 1099, mean latency: 9300 ms
+[Thu Nov 19 2015 17:45:25 GMT+0100 (CET)] INFO Errors: 403, accumulated errors: 1830, 21.4% of total requests
+[Thu Nov 19 2015 17:45:30 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:45:30 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:45:30 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:45:30 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:45:30 GMT+0100 (CET)] INFO Agent:               keepalive
+[Thu Nov 19 2015 17:45:30 GMT+0100 (CET)] INFO Requests per second: 5500
+[Thu Nov 19 2015 17:45:30 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:45:30 GMT+0100 (CET)] INFO Completed requests:  16849
+[Thu Nov 19 2015 17:45:30 GMT+0100 (CET)] INFO Total errors:        2088
+[Thu Nov 19 2015 17:45:30 GMT+0100 (CET)] INFO Total time:          20.00956898 s
+[Thu Nov 19 2015 17:45:30 GMT+0100 (CET)] INFO Requests per second: 842
+[Thu Nov 19 2015 17:45:30 GMT+0100 (CET)] INFO Total time:          20.00956898 s
+[Thu Nov 19 2015 17:45:30 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:45:30 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:45:30 GMT+0100 (CET)] INFO   50%      9663 ms
+[Thu Nov 19 2015 17:45:30 GMT+0100 (CET)] INFO   90%      15488 ms
+[Thu Nov 19 2015 17:45:30 GMT+0100 (CET)] INFO   95%      15710 ms
+[Thu Nov 19 2015 17:45:30 GMT+0100 (CET)] INFO   99%      16495 ms
+[Thu Nov 19 2015 17:45:30 GMT+0100 (CET)] INFO  100%      16652 ms (longest request)
+[Thu Nov 19 2015 17:45:30 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:45:30 GMT+0100 (CET)] INFO  100%      16652 ms (longest request)
+[Thu Nov 19 2015 17:45:30 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:45:30 GMT+0100 (CET)] INFO    -1:   2088 errors
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 -k --rps 5000
+[Thu Nov 19 2015 17:47:11 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:47:16 GMT+0100 (CET)] INFO Requests: 4556, requests per second: 910, mean latency: 1710 ms
+[Thu Nov 19 2015 17:47:21 GMT+0100 (CET)] INFO Requests: 11158, requests per second: 1317, mean latency: 4410 ms
+[Thu Nov 19 2015 17:47:26 GMT+0100 (CET)] INFO Requests: 16180, requests per second: 949, mean latency: 8020 ms
+[Thu Nov 19 2015 17:47:31 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:47:31 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:47:31 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:47:31 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:47:31 GMT+0100 (CET)] INFO Agent:               keepalive
+[Thu Nov 19 2015 17:47:31 GMT+0100 (CET)] INFO Requests per second: 5000
+[Thu Nov 19 2015 17:47:31 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:47:31 GMT+0100 (CET)] INFO Completed requests:  21541
+[Thu Nov 19 2015 17:47:31 GMT+0100 (CET)] INFO Total errors:        0
+[Thu Nov 19 2015 17:47:31 GMT+0100 (CET)] INFO Total time:          20.00048533 s
+[Thu Nov 19 2015 17:47:31 GMT+0100 (CET)] INFO Requests per second: 1077
+[Thu Nov 19 2015 17:47:31 GMT+0100 (CET)] INFO Total time:          20.00048533 s
+[Thu Nov 19 2015 17:47:31 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:47:31 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:47:31 GMT+0100 (CET)] INFO   50%      6030 ms
+[Thu Nov 19 2015 17:47:31 GMT+0100 (CET)] INFO   90%      12606 ms
+[Thu Nov 19 2015 17:47:31 GMT+0100 (CET)] INFO   95%      13236 ms
+[Thu Nov 19 2015 17:47:31 GMT+0100 (CET)] INFO   99%      14672 ms
+[Thu Nov 19 2015 17:47:31 GMT+0100 (CET)] INFO  100%      15397 ms (longest request)
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 -k --rps 5250
+[Thu Nov 19 2015 17:49:52 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:49:58 GMT+0100 (CET)] INFO Requests: 4296, requests per second: 720, mean latency: 3560 ms
+[Thu Nov 19 2015 17:49:58 GMT+0100 (CET)] INFO Errors: 1245, accumulated errors: 1245, 29% of total requests
+[Thu Nov 19 2015 17:50:02 GMT+0100 (CET)] INFO Requests: 9660, requests per second: 1331, mean latency: 5770 ms
+[Thu Nov 19 2015 17:50:02 GMT+0100 (CET)] INFO Errors: 129, accumulated errors: 1374, 14.2% of total requests
+[Thu Nov 19 2015 17:50:07 GMT+0100 (CET)] INFO Requests: 16638, requests per second: 1305, mean latency: 9710 ms
+[Thu Nov 19 2015 17:50:07 GMT+0100 (CET)] INFO Errors: 258, accumulated errors: 1632, 9.8% of total requests
+[Thu Nov 19 2015 17:50:12 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:50:12 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:50:12 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:50:12 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:50:12 GMT+0100 (CET)] INFO Agent:               keepalive
+[Thu Nov 19 2015 17:50:12 GMT+0100 (CET)] INFO Requests per second: 5250
+[Thu Nov 19 2015 17:50:12 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:50:12 GMT+0100 (CET)] INFO Completed requests:  20965
+[Thu Nov 19 2015 17:50:12 GMT+0100 (CET)] INFO Total errors:        1876
+[Thu Nov 19 2015 17:50:12 GMT+0100 (CET)] INFO Total time:          20.008701667 s
+[Thu Nov 19 2015 17:50:12 GMT+0100 (CET)] INFO Requests per second: 1048
+[Thu Nov 19 2015 17:50:12 GMT+0100 (CET)] INFO Total time:          20.008701667 s
+[Thu Nov 19 2015 17:50:12 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:50:12 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:50:12 GMT+0100 (CET)] INFO   50%      7933 ms
+[Thu Nov 19 2015 17:50:12 GMT+0100 (CET)] INFO   90%      14418 ms
+[Thu Nov 19 2015 17:50:12 GMT+0100 (CET)] INFO   95%      14604 ms
+[Thu Nov 19 2015 17:50:12 GMT+0100 (CET)] INFO   99%      15025 ms
+[Thu Nov 19 2015 17:50:12 GMT+0100 (CET)] INFO  100%      16399 ms (longest request)
+[Thu Nov 19 2015 17:50:12 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:50:12 GMT+0100 (CET)] INFO  100%      16399 ms (longest request)
+[Thu Nov 19 2015 17:50:12 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:50:12 GMT+0100 (CET)] INFO    -1:   1876 errors
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 -k --rps 5250
+[Thu Nov 19 2015 17:51:33 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:51:38 GMT+0100 (CET)] INFO Requests: 2906, requests per second: 581, mean latency: 2740 ms
+[Thu Nov 19 2015 17:51:38 GMT+0100 (CET)] INFO Errors: 1269, accumulated errors: 1269, 43.7% of total requests
+[Thu Nov 19 2015 17:51:43 GMT+0100 (CET)] INFO Requests: 7058, requests per second: 831, mean latency: 5520 ms
+[Thu Nov 19 2015 17:51:43 GMT+0100 (CET)] INFO Errors: 0, accumulated errors: 1269, 18% of total requests
+[Thu Nov 19 2015 17:51:50 GMT+0100 (CET)] INFO Requests: 16718, requests per second: 1487, mean latency: 9450 ms
+[Thu Nov 19 2015 17:51:50 GMT+0100 (CET)] INFO Errors: 385, accumulated errors: 1654, 9.9% of total requests
+[Thu Nov 19 2015 17:51:53 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:51:53 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:51:53 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:51:53 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:51:53 GMT+0100 (CET)] INFO Agent:               keepalive
+[Thu Nov 19 2015 17:51:53 GMT+0100 (CET)] INFO Requests per second: 5250
+[Thu Nov 19 2015 17:51:53 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:51:53 GMT+0100 (CET)] INFO Completed requests:  17407
+[Thu Nov 19 2015 17:51:53 GMT+0100 (CET)] INFO Total errors:        1654
+[Thu Nov 19 2015 17:51:53 GMT+0100 (CET)] INFO Total time:          20.000488234 s
+[Thu Nov 19 2015 17:51:53 GMT+0100 (CET)] INFO Requests per second: 870
+[Thu Nov 19 2015 17:51:53 GMT+0100 (CET)] INFO Total time:          20.000488234 s
+[Thu Nov 19 2015 17:51:53 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:51:53 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:51:53 GMT+0100 (CET)] INFO   50%      8128 ms
+[Thu Nov 19 2015 17:51:53 GMT+0100 (CET)] INFO   90%      11615 ms
+[Thu Nov 19 2015 17:51:53 GMT+0100 (CET)] INFO   95%      11938 ms
+[Thu Nov 19 2015 17:51:53 GMT+0100 (CET)] INFO   99%      16057 ms
+[Thu Nov 19 2015 17:51:53 GMT+0100 (CET)] INFO  100%      16510 ms (longest request)
+[Thu Nov 19 2015 17:51:53 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:51:53 GMT+0100 (CET)] INFO  100%      16510 ms (longest request)
+[Thu Nov 19 2015 17:51:53 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:51:53 GMT+0100 (CET)] INFO    -1:   1654 errors
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 -k --rps 5100
+[Thu Nov 19 2015 17:53:49 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:53:54 GMT+0100 (CET)] INFO Requests: 1051, requests per second: 210, mean latency: 800 ms
+[Thu Nov 19 2015 17:53:59 GMT+0100 (CET)] INFO Requests: 9371, requests per second: 1667, mean latency: 5040 ms
+[Thu Nov 19 2015 17:53:59 GMT+0100 (CET)] INFO Errors: 1040, accumulated errors: 1040, 11.1% of total requests
+[Thu Nov 19 2015 17:54:04 GMT+0100 (CET)] INFO Requests: 15585, requests per second: 1243, mean latency: 8700 ms
+[Thu Nov 19 2015 17:54:04 GMT+0100 (CET)] INFO Errors: 258, accumulated errors: 1298, 8.3% of total requests
+[Thu Nov 19 2015 17:54:09 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:54:09 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:54:09 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:54:09 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:54:09 GMT+0100 (CET)] INFO Agent:               keepalive
+[Thu Nov 19 2015 17:54:09 GMT+0100 (CET)] INFO Requests per second: 5100
+[Thu Nov 19 2015 17:54:09 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:54:09 GMT+0100 (CET)] INFO Completed requests:  22886
+[Thu Nov 19 2015 17:54:09 GMT+0100 (CET)] INFO Total errors:        1427
+[Thu Nov 19 2015 17:54:09 GMT+0100 (CET)] INFO Total time:          20.000478991 s
+[Thu Nov 19 2015 17:54:09 GMT+0100 (CET)] INFO Requests per second: 1144
+[Thu Nov 19 2015 17:54:09 GMT+0100 (CET)] INFO Total time:          20.000478991 s
+[Thu Nov 19 2015 17:54:09 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:54:09 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:54:09 GMT+0100 (CET)] INFO   50%      8155 ms
+[Thu Nov 19 2015 17:54:09 GMT+0100 (CET)] INFO   90%      13266 ms
+[Thu Nov 19 2015 17:54:09 GMT+0100 (CET)] INFO   95%      13687 ms
+[Thu Nov 19 2015 17:54:09 GMT+0100 (CET)] INFO   99%      14679 ms
+[Thu Nov 19 2015 17:54:09 GMT+0100 (CET)] INFO  100%      15434 ms (longest request)
+[Thu Nov 19 2015 17:54:09 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:54:09 GMT+0100 (CET)] INFO  100%      15434 ms (longest request)
+[Thu Nov 19 2015 17:54:09 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:54:09 GMT+0100 (CET)] INFO    -1:   1427 errors
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 -k --rps 5100
+[Thu Nov 19 2015 17:55:57 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:56:02 GMT+0100 (CET)] INFO Requests: 4821, requests per second: 932, mean latency: 2050 ms
+[Thu Nov 19 2015 17:56:02 GMT+0100 (CET)] INFO Errors: 804, accumulated errors: 804, 16.7% of total requests
+[Thu Nov 19 2015 17:56:07 GMT+0100 (CET)] INFO Requests: 10890, requests per second: 1257, mean latency: 5430 ms
+[Thu Nov 19 2015 17:56:07 GMT+0100 (CET)] INFO Errors: 129, accumulated errors: 933, 8.6% of total requests
+[Thu Nov 19 2015 17:56:12 GMT+0100 (CET)] INFO Requests: 16225, requests per second: 1067, mean latency: 8790 ms
+[Thu Nov 19 2015 17:56:12 GMT+0100 (CET)] INFO Errors: 129, accumulated errors: 1062, 6.5% of total requests
+[Thu Nov 19 2015 17:56:17 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:56:17 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:56:17 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:56:17 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:56:17 GMT+0100 (CET)] INFO Agent:               keepalive
+[Thu Nov 19 2015 17:56:17 GMT+0100 (CET)] INFO Requests per second: 5100
+[Thu Nov 19 2015 17:56:17 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:56:17 GMT+0100 (CET)] INFO Completed requests:  21658
+[Thu Nov 19 2015 17:56:17 GMT+0100 (CET)] INFO Total errors:        1320
+[Thu Nov 19 2015 17:56:17 GMT+0100 (CET)] INFO Total time:          20.009740478 s
+[Thu Nov 19 2015 17:56:17 GMT+0100 (CET)] INFO Requests per second: 1082
+[Thu Nov 19 2015 17:56:17 GMT+0100 (CET)] INFO Total time:          20.009740478 s
+[Thu Nov 19 2015 17:56:17 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:56:17 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:56:17 GMT+0100 (CET)] INFO   50%      6984 ms
+[Thu Nov 19 2015 17:56:17 GMT+0100 (CET)] INFO   90%      13529 ms
+[Thu Nov 19 2015 17:56:17 GMT+0100 (CET)] INFO   95%      13749 ms
+[Thu Nov 19 2015 17:56:17 GMT+0100 (CET)] INFO   99%      14637 ms
+[Thu Nov 19 2015 17:56:17 GMT+0100 (CET)] INFO  100%      17409 ms (longest request)
+[Thu Nov 19 2015 17:56:17 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:56:17 GMT+0100 (CET)] INFO  100%      17409 ms (longest request)
+[Thu Nov 19 2015 17:56:17 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:56:17 GMT+0100 (CET)] INFO    -1:   1320 errors
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 -k --rps 5000
+[Thu Nov 19 2015 17:57:30 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:57:35 GMT+0100 (CET)] INFO Requests: 5183, requests per second: 1037, mean latency: 1750 ms
+[Thu Nov 19 2015 17:57:40 GMT+0100 (CET)] INFO Requests: 10876, requests per second: 1140, mean latency: 4980 ms
+[Thu Nov 19 2015 17:57:45 GMT+0100 (CET)] INFO Requests: 16853, requests per second: 1195, mean latency: 8700 ms
+[Thu Nov 19 2015 17:57:50 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:57:50 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:57:50 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:57:50 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:57:50 GMT+0100 (CET)] INFO Agent:               keepalive
+[Thu Nov 19 2015 17:57:50 GMT+0100 (CET)] INFO Requests per second: 5000
+[Thu Nov 19 2015 17:57:50 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:57:50 GMT+0100 (CET)] INFO Completed requests:  22963
+[Thu Nov 19 2015 17:57:50 GMT+0100 (CET)] INFO Total errors:        244
+[Thu Nov 19 2015 17:57:50 GMT+0100 (CET)] INFO Total time:          20.037596792 s
+[Thu Nov 19 2015 17:57:50 GMT+0100 (CET)] INFO Requests per second: 1146
+[Thu Nov 19 2015 17:57:50 GMT+0100 (CET)] INFO Total time:          20.037596792 s
+[Thu Nov 19 2015 17:57:50 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:57:50 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:57:50 GMT+0100 (CET)] INFO   50%      7265 ms
+[Thu Nov 19 2015 17:57:50 GMT+0100 (CET)] INFO   90%      12834 ms
+[Thu Nov 19 2015 17:57:50 GMT+0100 (CET)] INFO   95%      14039 ms
+[Thu Nov 19 2015 17:57:50 GMT+0100 (CET)] INFO   99%      14903 ms
+[Thu Nov 19 2015 17:57:50 GMT+0100 (CET)] INFO  100%      17746 ms (longest request)
+[Thu Nov 19 2015 17:57:50 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:57:50 GMT+0100 (CET)] INFO  100%      17746 ms (longest request)
+[Thu Nov 19 2015 17:57:50 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:57:50 GMT+0100 (CET)] INFO    -1:   244 errors
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 -k --rps 5000
+[Thu Nov 19 2015 17:59:23 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 17:59:28 GMT+0100 (CET)] INFO Requests: 4179, requests per second: 836, mean latency: 2020 ms
+[Thu Nov 19 2015 17:59:33 GMT+0100 (CET)] INFO Requests: 8710, requests per second: 880, mean latency: 4960 ms
+[Thu Nov 19 2015 17:59:33 GMT+0100 (CET)] INFO Errors: 13, accumulated errors: 13, 0.1% of total requests
+[Thu Nov 19 2015 17:59:38 GMT+0100 (CET)] INFO Requests: 15936, requests per second: 1489, mean latency: 9040 ms
+[Thu Nov 19 2015 17:59:38 GMT+0100 (CET)] INFO Errors: 318, accumulated errors: 331, 2.1% of total requests
+[Thu Nov 19 2015 17:59:43 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:59:43 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 17:59:43 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 17:59:43 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 17:59:43 GMT+0100 (CET)] INFO Agent:               keepalive
+[Thu Nov 19 2015 17:59:43 GMT+0100 (CET)] INFO Requests per second: 5000
+[Thu Nov 19 2015 17:59:43 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:59:43 GMT+0100 (CET)] INFO Completed requests:  21753
+[Thu Nov 19 2015 17:59:43 GMT+0100 (CET)] INFO Total errors:        463
+[Thu Nov 19 2015 17:59:43 GMT+0100 (CET)] INFO Total time:          20.000840493 s
+[Thu Nov 19 2015 17:59:43 GMT+0100 (CET)] INFO Requests per second: 1088
+[Thu Nov 19 2015 17:59:43 GMT+0100 (CET)] INFO Total time:          20.000840493 s
+[Thu Nov 19 2015 17:59:43 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:59:43 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 17:59:43 GMT+0100 (CET)] INFO   50%      8030 ms
+[Thu Nov 19 2015 17:59:43 GMT+0100 (CET)] INFO   90%      13514 ms
+[Thu Nov 19 2015 17:59:43 GMT+0100 (CET)] INFO   95%      14144 ms
+[Thu Nov 19 2015 17:59:43 GMT+0100 (CET)] INFO   99%      15061 ms
+[Thu Nov 19 2015 17:59:43 GMT+0100 (CET)] INFO  100%      16074 ms (longest request)
+[Thu Nov 19 2015 17:59:43 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:59:43 GMT+0100 (CET)] INFO  100%      16074 ms (longest request)
+[Thu Nov 19 2015 17:59:43 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 17:59:43 GMT+0100 (CET)] INFO    -1:   463 errors
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 -k --rps 5000
+[Thu Nov 19 2015 18:01:21 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 18:01:26 GMT+0100 (CET)] INFO Requests: 5420, requests per second: 1084, mean latency: 1810 ms
+[Thu Nov 19 2015 18:01:31 GMT+0100 (CET)] INFO Requests: 12241, requests per second: 1365, mean latency: 4750 ms
+[Thu Nov 19 2015 18:01:36 GMT+0100 (CET)] INFO Requests: 17487, requests per second: 978, mean latency: 8460 ms
+[Thu Nov 19 2015 18:01:41 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 18:01:41 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 18:01:41 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 18:01:41 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 18:01:41 GMT+0100 (CET)] INFO Agent:               keepalive
+[Thu Nov 19 2015 18:01:41 GMT+0100 (CET)] INFO Requests per second: 5000
+[Thu Nov 19 2015 18:01:41 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 18:01:41 GMT+0100 (CET)] INFO Completed requests:  23573
+[Thu Nov 19 2015 18:01:41 GMT+0100 (CET)] INFO Total errors:        43
+[Thu Nov 19 2015 18:01:41 GMT+0100 (CET)] INFO Total time:          20.001078198 s
+[Thu Nov 19 2015 18:01:41 GMT+0100 (CET)] INFO Requests per second: 1179
+[Thu Nov 19 2015 18:01:41 GMT+0100 (CET)] INFO Total time:          20.001078198 s
+[Thu Nov 19 2015 18:01:41 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 18:01:41 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 18:01:41 GMT+0100 (CET)] INFO   50%      6400 ms
+[Thu Nov 19 2015 18:01:41 GMT+0100 (CET)] INFO   90%      12745 ms
+[Thu Nov 19 2015 18:01:41 GMT+0100 (CET)] INFO   95%      13475 ms
+[Thu Nov 19 2015 18:01:41 GMT+0100 (CET)] INFO   99%      14580 ms
+[Thu Nov 19 2015 18:01:41 GMT+0100 (CET)] INFO  100%      17392 ms (longest request)
+[Thu Nov 19 2015 18:01:41 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 18:01:41 GMT+0100 (CET)] INFO  100%      17392 ms (longest request)
+[Thu Nov 19 2015 18:01:41 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 18:01:41 GMT+0100 (CET)] INFO    -1:   43 errors
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 -k --rps 4950
+[Thu Nov 19 2015 18:02:30 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 18:02:35 GMT+0100 (CET)] INFO Requests: 2555, requests per second: 511, mean latency: 1970 ms
+[Thu Nov 19 2015 18:02:35 GMT+0100 (CET)] INFO Errors: 467, accumulated errors: 467, 18.3% of total requests
+[Thu Nov 19 2015 18:02:40 GMT+0100 (CET)] INFO Requests: 9786, requests per second: 1348, mean latency: 5740 ms
+[Thu Nov 19 2015 18:02:40 GMT+0100 (CET)] INFO Errors: 258, accumulated errors: 725, 7.4% of total requests
+[Thu Nov 19 2015 18:02:45 GMT+0100 (CET)] INFO Requests: 15895, requests per second: 1315, mean latency: 9310 ms
+[Thu Nov 19 2015 18:02:45 GMT+0100 (CET)] INFO Errors: 141, accumulated errors: 866, 5.4% of total requests
+[Thu Nov 19 2015 18:02:50 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 18:02:50 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 18:02:50 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 18:02:50 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 18:02:50 GMT+0100 (CET)] INFO Agent:               keepalive
+[Thu Nov 19 2015 18:02:50 GMT+0100 (CET)] INFO Requests per second: 4950
+[Thu Nov 19 2015 18:02:50 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 18:02:50 GMT+0100 (CET)] INFO Completed requests:  22030
+[Thu Nov 19 2015 18:02:50 GMT+0100 (CET)] INFO Total errors:        1124
+[Thu Nov 19 2015 18:02:50 GMT+0100 (CET)] INFO Total time:          20.009239211 s
+[Thu Nov 19 2015 18:02:50 GMT+0100 (CET)] INFO Requests per second: 1101
+[Thu Nov 19 2015 18:02:50 GMT+0100 (CET)] INFO Total time:          20.009239211 s
+[Thu Nov 19 2015 18:02:50 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 18:02:50 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 18:02:50 GMT+0100 (CET)] INFO   50%      8240 ms
+[Thu Nov 19 2015 18:02:50 GMT+0100 (CET)] INFO   90%      13321 ms
+[Thu Nov 19 2015 18:02:50 GMT+0100 (CET)] INFO   95%      13994 ms
+[Thu Nov 19 2015 18:02:50 GMT+0100 (CET)] INFO   99%      15240 ms
+[Thu Nov 19 2015 18:02:50 GMT+0100 (CET)] INFO  100%      17075 ms (longest request)
+[Thu Nov 19 2015 18:02:50 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 18:02:50 GMT+0100 (CET)] INFO  100%      17075 ms (longest request)
+[Thu Nov 19 2015 18:02:50 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 18:02:50 GMT+0100 (CET)] INFO    -1:   1124 errors
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 -k --rps 4000
+[Thu Nov 19 2015 18:03:06 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 18:03:11 GMT+0100 (CET)] INFO Requests: 4740, requests per second: 948, mean latency: 1440 ms
+[Thu Nov 19 2015 18:03:16 GMT+0100 (CET)] INFO Requests: 10214, requests per second: 1095, mean latency: 4690 ms
+[Thu Nov 19 2015 18:03:21 GMT+0100 (CET)] INFO Requests: 15299, requests per second: 1015, mean latency: 8320 ms
+[Thu Nov 19 2015 18:03:26 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 18:03:26 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 18:03:26 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 18:03:26 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 18:03:26 GMT+0100 (CET)] INFO Agent:               keepalive
+[Thu Nov 19 2015 18:03:26 GMT+0100 (CET)] INFO Requests per second: 4000
+[Thu Nov 19 2015 18:03:26 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 18:03:26 GMT+0100 (CET)] INFO Completed requests:  20087
+[Thu Nov 19 2015 18:03:26 GMT+0100 (CET)] INFO Total errors:        19
+[Thu Nov 19 2015 18:03:26 GMT+0100 (CET)] INFO Total time:          20.001534781 s
+[Thu Nov 19 2015 18:03:26 GMT+0100 (CET)] INFO Requests per second: 1004
+[Thu Nov 19 2015 18:03:26 GMT+0100 (CET)] INFO Total time:          20.001534781 s
+[Thu Nov 19 2015 18:03:26 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 18:03:26 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 18:03:26 GMT+0100 (CET)] INFO   50%      6371 ms
+[Thu Nov 19 2015 18:03:26 GMT+0100 (CET)] INFO   90%      12278 ms
+[Thu Nov 19 2015 18:03:26 GMT+0100 (CET)] INFO   95%      13259 ms
+[Thu Nov 19 2015 18:03:26 GMT+0100 (CET)] INFO   99%      13971 ms
+[Thu Nov 19 2015 18:03:26 GMT+0100 (CET)] INFO  100%      14669 ms (longest request)
+[Thu Nov 19 2015 18:03:26 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 18:03:26 GMT+0100 (CET)] INFO  100%      14669 ms (longest request)
+[Thu Nov 19 2015 18:03:26 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 18:03:26 GMT+0100 (CET)] INFO    -1:   19 errors
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 -k --rps 4000
+[Thu Nov 19 2015 18:05:13 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 18:05:18 GMT+0100 (CET)] INFO Requests: 4786, requests per second: 957, mean latency: 1740 ms
+[Thu Nov 19 2015 18:05:23 GMT+0100 (CET)] INFO Requests: 11257, requests per second: 1295, mean latency: 4900 ms
+[Thu Nov 19 2015 18:05:28 GMT+0100 (CET)] INFO Requests: 17020, requests per second: 1150, mean latency: 8380 ms
+[Thu Nov 19 2015 18:05:33 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 18:05:33 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 18:05:33 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 18:05:33 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 18:05:33 GMT+0100 (CET)] INFO Agent:               keepalive
+[Thu Nov 19 2015 18:05:33 GMT+0100 (CET)] INFO Requests per second: 4000
+[Thu Nov 19 2015 18:05:33 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 18:05:33 GMT+0100 (CET)] INFO Completed requests:  22284
+[Thu Nov 19 2015 18:05:33 GMT+0100 (CET)] INFO Total errors:        13
+[Thu Nov 19 2015 18:05:33 GMT+0100 (CET)] INFO Total time:          20.017268313 s
+[Thu Nov 19 2015 18:05:33 GMT+0100 (CET)] INFO Requests per second: 1113
+[Thu Nov 19 2015 18:05:33 GMT+0100 (CET)] INFO Total time:          20.017268313 s
+[Thu Nov 19 2015 18:05:33 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 18:05:33 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 18:05:33 GMT+0100 (CET)] INFO   50%      6695 ms
+[Thu Nov 19 2015 18:05:33 GMT+0100 (CET)] INFO   90%      12082 ms
+[Thu Nov 19 2015 18:05:33 GMT+0100 (CET)] INFO   95%      12881 ms
+[Thu Nov 19 2015 18:05:33 GMT+0100 (CET)] INFO   99%      14319 ms
+[Thu Nov 19 2015 18:05:33 GMT+0100 (CET)] INFO  100%      15756 ms (longest request)
+[Thu Nov 19 2015 18:05:33 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 18:05:33 GMT+0100 (CET)] INFO  100%      15756 ms (longest request)
+[Thu Nov 19 2015 18:05:33 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 18:05:33 GMT+0100 (CET)] INFO    -1:   13 errors
+
+> bin/loadtest.js http://192.168.1.100:7357/ -t 20 -c 10 -k --rps 4000
+[Thu Nov 19 2015 18:07:44 GMT+0100 (CET)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Nov 19 2015 18:07:49 GMT+0100 (CET)] INFO Requests: 4170, requests per second: 834, mean latency: 1690 ms
+[Thu Nov 19 2015 18:07:54 GMT+0100 (CET)] INFO Requests: 10097, requests per second: 1181, mean latency: 4970 ms
+[Thu Nov 19 2015 18:07:59 GMT+0100 (CET)] INFO Requests: 15757, requests per second: 1137, mean latency: 8540 ms
+[Thu Nov 19 2015 18:08:04 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 18:08:04 GMT+0100 (CET)] INFO Target URL:          http://192.168.1.100:7357/
+[Thu Nov 19 2015 18:08:04 GMT+0100 (CET)] INFO Max time (s):        20
+[Thu Nov 19 2015 18:08:04 GMT+0100 (CET)] INFO Concurrency level:   10
+[Thu Nov 19 2015 18:08:04 GMT+0100 (CET)] INFO Agent:               keepalive
+[Thu Nov 19 2015 18:08:04 GMT+0100 (CET)] INFO Requests per second: 4000
+[Thu Nov 19 2015 18:08:04 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 18:08:04 GMT+0100 (CET)] INFO Completed requests:  21049
+[Thu Nov 19 2015 18:08:04 GMT+0100 (CET)] INFO Total errors:        0
+[Thu Nov 19 2015 18:08:04 GMT+0100 (CET)] INFO Total time:          20.004982087000002 s
+[Thu Nov 19 2015 18:08:04 GMT+0100 (CET)] INFO Requests per second: 1052
+[Thu Nov 19 2015 18:08:04 GMT+0100 (CET)] INFO Total time:          20.004982087000002 s
+[Thu Nov 19 2015 18:08:04 GMT+0100 (CET)] INFO
+[Thu Nov 19 2015 18:08:04 GMT+0100 (CET)] INFO Percentage of the requests served within a certain time
+[Thu Nov 19 2015 18:08:04 GMT+0100 (CET)] INFO   50%      7050 ms
+[Thu Nov 19 2015 18:08:04 GMT+0100 (CET)] INFO   90%      12405 ms
+[Thu Nov 19 2015 18:08:04 GMT+0100 (CET)] INFO   95%      13262 ms
+[Thu Nov 19 2015 18:08:04 GMT+0100 (CET)] INFO   99%      13805 ms
+[Thu Nov 19 2015 18:08:04 GMT+0100 (CET)] INFO  100%      14308 ms (longest request)
