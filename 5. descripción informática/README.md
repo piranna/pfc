@@ -1,10 +1,16 @@
 # Descripción informática
 
 1. [Especificación](1. Especificación.html)
+  1. [Diseño minimalista](1. Especificación.html#diseño-minimalista)
+  2. [Sistema de archivos por usuario](1. Especificación.html#sistema-de-archivos-por-usuario)
+  3. [Usuarios sin privilegios](1. Especificación.html#usuarios-sin-privilegios)
+  4. [Simplicidad de uso](1. Especificación.html#simplicidad-de-uso)
+  5. [Interfaz gráfica basada en HTML5](1. Especificación.html#interfaz-gráfica-basada-en-html5)
 2. [Diseño](2. Diseño.html)
   1. [División en capas](2. Diseño.html#división-en-capas)
   2. [Módulos](2. Diseño.html#Módulos)
   3. [Sistema de archivos por usuario](2. Diseño.html#sistema-de-archivos-por-usuario)
+  4. [Interfaz gráfica basada en HTML5](2. Diseño.html#interfaz-gráfica-basada-en-html5)
 3. [Implementación](3. Implementación/index.html)
   1. [cross-toolchain](3. Implementación/1. cross-toolchain.html)
   2. [barebones](3. Implementación/2. barebones.html)
