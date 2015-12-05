@@ -1,18 +1,18 @@
 #### nodeos-mount-utils
 
-El diseño original de NodeOS planteaba el que ubiese una particion raiz comun a
-todos los usuarios y que contuviera los servicios globales del sistema, por lo
-que los sistemas de archivos
+El diseño original de NodeOS planteaba el que hubiese una partición raíz común a
+todos los usuarios que contuviera los servicios globales del sistema, por lo que
+los sistemas de archivos
 [rootfs](../../../5. descripción informática/3. Implementación/3. rootfs.html) y
 [usersfs](../../../5. descripción informática/3. Implementación/4. usersfs.html)
-debian montarse por separado, aunque existia un conjunto de funciones comunes
+debían montarse por separado, aunque existía un conjunto de funciones comunes
 necesarias para facilitar el montaje de ambos sistemas de archivos y el manejo
 de los puntos de montaje que se han mantenido dentro del módulo
 [nodeos-mount-utils](https://github.com/NodeOS/nodeos-mount-utils). Desde que
 *rootfs* no es un sistema de archivos independiente al usarse *OverlayFS* en los
-directorios de los usuarios dichas funciones podian haberse reintegrado dentro
-el módulo
-[nodeos-mount-filesystems](nodeos-mount-filesystems.html), sin embargo se han
+directorios de los usuarios, dichas funciones podían haberse reintegrado dentro
+del módulo
+[nodeos-mount-filesystems](nodeos-mount-filesystems.html). Sin embargo, se han
 decidido dejar en un módulo aparte para seguir manteniendo su reusabilidad.
 
 Las funciones que aporta dicho módulo son:
@@ -24,39 +24,40 @@ Las funciones que aporta dicho módulo son:
   posteriormente para definir el `UID` y `GID` de los procesos del usuario en
   ejecución. El script de inicio del usuario se ejecuta dentro de su propia
   jaula *chroot* utilizando el directorio del usuario como sistema de archivos
-  raiz, del mismo modo como posteriormente se ejecutaran el resto de procesos de
+  raíz, del mismo modo como posteriormente se ejecutaran el resto de procesos de
   dicho usuario. Para ello, se ejecuta un proceso intermedio `chrootInit` cuya
-  unica labor es crear la jaula *chroot* y despues ejecutar el propio script de
-  `/init` del usuario dentro de él con el `UID` y `GID` con permisos reducidos.
-  Esto es asi porque la jaula *chroot* solo puede generarse con permisos de
+  única labor es crear la jaula *chroot* y despues ejecutar el propio script de
+  `/init` del usuario dentro de ella con su `UID` y `GID` y permisos reducidos.
+  Esto es así porque la jaula *chroot* sólo puede generarse con permisos de
   administrador (los mismos usados para montar los sistemas de archivos), pero
-  sobretodo porque ésta afecta al propio proceso en curso, con lo que haciendolo
-  de otra manera se estaria encerrando al proceso que este ejecutando la funcion
+  sobretodo porque ésta afecta al própio proceso en curso, con lo que haciendolo
+  de otra manera se estaria encerrando al proceso que esté ejecutando la función
   (probablemente [nodeos-mount-filesystems](nodeos-mount-filesystems.html)).
   Ademas, de este modo se puede comprobar cuando el script se ha iniciado
-  correctamente para poder seguir con la ejecucion de los scripts del resto de
-  usuarios, sin tener que esperar a que este haya terminado. Por ultimo, para
+  correctamente para poder seguir con la ejecución de los scripts del resto de
+  usuarios, sin tener que esperar a que éste haya terminado. Por último, para
   poder indicar a `chrootInit` el `UID` y `GID` con que debe ejecutar el script
-  de inicio del usuario, estos se añaden al principio de la lista de argumentos
-  del mismo, de forma que esten en una ubicacion que permitan ser facilmente
-  localizables por este.
+  de inicio del usuario, éstos se añaden al principio de la lista de argumentos
+  del mismo, de forma que estén en una ubicación que permitan despues ser
+  facilmente localizables por este.
 * *mkdirMount*: monta el sistema de archivos indicado, creando el directorio
-  donde se va a alojar el punto de montaje previamente si este no existia.
-  Puesto que no importan los permisos del directorio que se utilice como punto
-  de montaje para poder ser usado puesto que estos son ignorados, este se crea
+  donde se va a alojar el punto de montaje previamente si no existia. Puesto que
+  no importan los permisos del directorio que se utilice como punto de montaje
+  para poder ser usado puesto que estos son ignorados por Linux, este se crea
   con modo *0000* para evitar el que se puedan escribir archivos dentro del
-  mismo por accidente una vez se haya desmontado el sistema de archivos.
-* *mountfs*: comprueba si el sistema donde se esta ejecutando es un entorno
+  mismo por accidente una vez se haya desmontado el sistema de archivos en caso
+  de que no se haya hecho limpiamente y no se haya eliminado el punto de montaje.
+* *mountfs*: comprueba si el sistema donde se está ejecutando es un entorno
   Docker (ya que este no usa montaje de particiones sino apilamiento de
   containers LXC), y si no es el caso, monta el sistema de archivos a partir del
-  nombre de la variable de entorno indicada usando la funcion *mkdirMount*. Para
-  comprobar si se esta ejecutando dentro de un entorno Docker se comprueba l
-   existencia del archivo `.dockerinit` en el directorio raiz.
+  nombre de la variable de entorno indicada usando la función *mkdirMount*. Para
+  comprobar si se esta ejecutando dentro de un entorno Docker se comprueba la
+  existencia del archivo `.dockerinit` en el directorio raíz.
 * *mountfs_path*: esta función es igual que *mountfs*, pero usa directamente la
   ruta del dispositivo en vez de una variable de entorno. *mountfs* se ha
   mantenido por retrocompatibilidad, pero es probable que se marque como
   deprecada en el futuro.
-* *move*: mueve un sistema de archivos a una nueva ubicacion, y si el directorio
+* *move*: mueve un sistema de archivos a una nueva ubicación, y si el directorio
   del anterior punto de montaje esta vacio, lo elimina.
 * *moveSync*: version sincrona de *move*.
 * *mkdirMove*: igual a *move*, pero creando previamente el directorio del punto
