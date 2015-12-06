@@ -1,7 +1,7 @@
 # Conclusiones
 
 1. [Logros principales alcanzados](1. Logros principales alcanzados.html)
-  1. [Repercusión](1. Logros principales alcanzados.html#repercusión)
+  1. [Repercusión del proyecto](1. Logros principales alcanzados.html#repercusión-del-proyecto)
 2. [Posibles trabajos futuros](2. Posibles trabajos futuros.html)
   1. [Actualizar versión de Node.js](2. Posibles trabajos futuros.html#actualizar-versión-de-node.js)
   2. [Separar módulos en proyectos independientes](2. Posibles trabajos futuros.html#separar-módulos-en-proyectos-independientes)
@@ -11,25 +11,46 @@
   6. [Mejorar la experiencia de usuario](2. Posibles trabajos futuros.html#mejorar-la-experiencia-de-usuario)
     1. [Modo texto](2. Posibles trabajos futuros.html#modo-texto)
     2. [Interfaz gráfica](2. Posibles trabajos futuros.html#interfaz-gráfica)
+    3. [Añadir soporte de múltiples framebuffers al kernel de Linux](2. Posibles trabajos futuros.html#añadir-soporte-de-múltiples-framebuffers-al-kernel-de-linux)
   7. [Uso de memoria](2. Posibles trabajos futuros.html#uso-de-memoria)
     1. [Reducir el consúmo de memoria](2. Posibles trabajos futuros.html#reducir-el-consúmo-de-memoria)
     2. [Ajustar la ejecución del Recolector de Basura](2. Posibles trabajos futuros.html#ajustar-la-ejecución-del-recolector-de-basura)
     3. [Uso de zram](2. Posibles trabajos futuros.html#uso-de-zram)
 
 
-Las mayores virtudes del ecosistema de Javascript y Node.js son su dinamismo y
-su modularidad, los cuales les dan mucha flexibilidad para poder adaptarse a los
-cambios. Sin embargo, estas tambien son a la vez sus mayores defectos debido a
-lo inestable que se vuelve el desarrollo, ya que un módulo de terceros puede
-afectar a todo el sistema. Ésto es algo que ha afectado directamente a NodeOS en
-dos ocasiones, la primera por un cambio en la versión empleada del motor
-Javascript `v8` por Node.js que imposibilita por el momento usar cualquier
-versión de Node.js superior a la 0.11.14, y la segunda mas recientemente por la
+Al contrario de lo que pensé en un principio, este proyecto me ha permitido ver
+que lo mas complicado de desarrollar un sistema operativo no es su programación,
+la cual ha sido bastante menor de lo que en un principio se podria suponer
+puesto que la mayoria de sus elementos ya estan hechos y testeados previamente,
+sino la orquestación y configuración de los distintos componentes para que el
+sistema funcione correctamente, lo que me ha permitido conocer mejor como
+funcionan los distintos elementos del mismo y su relación entre ellos. Otro
+aspecto importante ha sido el aprender a organizar el grupo de desarrolladores y
+a administrar los issues, recogiendo sugerencias y problemas acontecidos y
+moderandolos (ya que a efectos prácticos ha funcionado tambien como lista de
+correo y foro), y también a promocionar y hacer publicidad del proyecto y a
+recabar atención sobre el mismo mediante la incripción en diversos concursos, la
+publicación de articulos o solicitando la colaboración de los distintos
+proyectos de los que NodeOS depende tanto para su fase de construcción como para
+su funcionamiento. Esto también me ha permitido aprender a valorar la
+importancia de anotar los cámbios, evolucion y desarrollo del proyecto para
+poder despues tener referencias sobre los problemas que ha habido y la forma en
+que se han resuelto de cara a poder ser documentados y estudiados posteriormente.
+
+También me ha permitido comprobar que las mayores virtudes del ecosistema de
+Javascript y de Node.js son su dinamismo y su modularidad, los cuales les dan
+mucha flexibilidad para poder adaptarse a los cambios. Sin embargo, estas
+también son a la vez sus mayores defectos debido a lo inestable que se vuelve el
+desarrollo, ya que un módulo de terceros puede afectar a todo el sistema. Ésto
+es algo que ha afectado directamente a NodeOS en dos ocasiones, la primera por
+un cambio en la versión empleada del motor Javascript `v8` por Node.js que ha
+imposibilitado por el momento usar cualquier versión de Node.js superior a la
+0.11.14, y la segunda mas recientemente y relaccionada con la anterior, por la
 actualización de vários módulos compilados para hacer uso de las macros
 ofrecidas por la versión 2 del módulo `nan`, necesarias para que estos sean
 compatibles con Node.js 5.
 
-Han surgido diversas soluciones al respecto como son el uso de las
+Respecto al problema de las versiones han surgido soluciones como son el uso de
 [bundledDependencies](https://docs.npmjs.com/files/package.json#bundleddependencies)
 o de [shrinkwrap](https://docs.npmjs.com/cli/shrinkwrap) (o el propio módulo
 `nan` en el caso de la compatibilidad de los módulos compilados entre versiones)
