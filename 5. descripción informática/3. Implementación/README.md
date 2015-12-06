@@ -2,6 +2,10 @@
 
 1. [cross-toolchain](1. cross-toolchain.html)
 2. [barebones](2. barebones.html)
+  1. [Node.js](2. barebones.html#node.js)
+  2. [Linux](2. barebones.html#linux)
+  3. [Comprobaciónes finales](2. barebones.html#comprobaciónes-finales)
+  4. [Problemas encontrados](2. barebones.html#problemas-encontrados)
 3. [initramfs](3. initramfs.html)
 4. [rootfs](4. rootfs.html)
   1. [Generación del sistema raíz](4. rootfs.html#generación-del-sistema-raíz)
