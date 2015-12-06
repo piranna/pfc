@@ -38,6 +38,7 @@
   2. [Stargazers](3. desarrollo del libro/Stargazers.html)
     1. [Obtención de los datos](3. desarrollo del libro/Stargazers.html#obtención-de-los-datos)
     2. [Generación de la gráfica](3. desarrollo del libro/Stargazers.html#generación-de-la-gráfica)
+    3. [Uso de Google Image Charts](3. desarrollo del libro/Stargazers.html#uso-de-google-image-charts)
 
 {% mermaid src="resources/dependencies_build.mmd" %}{% endmermaid %}
 {% mermaid src="resources/dependencies_initramfs.mmd" %}{% endmermaid %}
