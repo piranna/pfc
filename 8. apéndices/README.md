@@ -23,6 +23,8 @@
   1. [cpio-stream](2. colaboraciones con proyectos externos/cpio-stream.html)
   2. [forever](2. colaboraciones con proyectos externos/forever.html)
   3. [fuse-bindings](2. colaboraciones con proyectos externos/fuse-bindings.html)
+    1. [Compilación estática de `libfuse`](2. colaboraciones con proyectos externos/fuse-bindings.html#compilación-estática-de-libfuse)
+    2. [Uso de `libfuse` como librería dinámica](2. colaboraciones con proyectos externos/fuse-bindings.html#uso-de-libfuse-como-librería-dinámica)
   4. [GitBlog](2. colaboraciones con proyectos externos/GitBlog.html)
   5. [jsdiff](2. colaboraciones con proyectos externos/jsdiff.html)
   6. [node-bin-getty](2. colaboraciones con proyectos externos/node-bin-getty.html)

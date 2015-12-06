@@ -3,6 +3,8 @@
 1. [cpio-stream](cpio-stream.html)
 2. [forever](forever.html)
 3. [fuse-bindings](fuse-bindings.html)
+  1. [Compilación estática de `libfuse`](fuse-bindings.html#compilación-estática-de-libfuse)
+  2. [Uso de `libfuse` como librería dinámica](fuse-bindings.html#uso-de-libfuse-como-librería-dinámica)
 4. [GitBlog](GitBlog.html)
 5. [jsdiff](jsdiff.html)
 6. [node-bin-getty](node-bin-getty.html)
