@@ -13,6 +13,8 @@
   4. [Interfaz gráfica basada en HTML5](2. Diseño.html#interfaz-gráfica-basada-en-html5)
 3. [Implementación](3. Implementación/index.html)
   1. [cross-toolchain](3. Implementación/1. cross-toolchain.html)
+    1. [gcc](3. Implementación/1. cross-toolchain.html#gcc)
+    2. [Descarga de dependencias](3. Implementación/1. cross-toolchain.html#descarga-de-dependencias)
   2. [barebones](3. Implementación/2. barebones.html)
     1. [Node.js](3. Implementación/2. barebones.html#node.js)
     2. [Linux](3. Implementación/2. barebones.html#linux)

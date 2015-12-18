@@ -1,6 +1,8 @@
 ## Implementación
 
 1. [cross-toolchain](1. cross-toolchain.html)
+  1. [gcc](1. cross-toolchain.html#gcc)
+  2. [Descarga de dependencias](1. cross-toolchain.html#descarga-de-dependencias)
 2. [barebones](2. barebones.html)
   1. [Node.js](2. barebones.html#node.js)
   2. [Linux](2. barebones.html#linux)
