@@ -25,7 +25,7 @@ de los usuarios. El sistema de archivos *procfs* es montado por seguridad con el
 parametro `hidepid=2` de forma que solo muestre a los usuarios la información de
 [sus propios procesos](http://www.cyberciti.biz/faq/linux-hide-processes-from-other-users)
 en vez de la de todos los que estan corriendo en el sistema, de forma similar a
-como se está usando el sistema de archivos [ExclFS](ExclFS.html) sobre
+como se está usando el sistema de archivos [ExclFS](ExclFS.md) sobre
 *devtmpfs* para mostrar solamente los dispositivos accesibles por el usuario. En
 el caso de estar ejecutandose el sistema sobre *Docker* o *vagga* el tratar de
 montar estos sistemas de archivos dara un fallo puesto que ya estarán montados
@@ -105,7 +105,7 @@ Este usuario no es necesario para el funcionamiento correcto del sistema y es
 totalmente opcional, aunque en caso de estar disponible se prepara antes de los
 demas usuarios para poder tener acceso a los directorios de todos usuarios,
 necesario por ejemplo para poder leer la configuración de los usuarios para el
-[login distribuido](logon.html).
+[login distribuido](logon.md).
 
 En tal caso, se crea su sistema overlay en el directorio `/root` del initramfs,
 se mueve el punto de montaje de la partición de usuarios al directorio
@@ -116,10 +116,10 @@ el directorio de *root* oculto al igual que antes estaba la partición de
 usuarios sino que ademas estos están accesibles en el directorio `/home` desde
 dentro de la jaula *chroot* del usuario *root*. No obstante, en caso de no estar
 ejecutandose dentro de un contenedor LXC y si el sistema de archivos
-[ExclFS](ExclFS.html) esta disponible, entonces se usara éste en vez de usar
+[ExclFS](ExclFS.md) esta disponible, entonces se usara éste en vez de usar
 directamente el sistema de archivos *devtmpfs* del sistema y despues se
 eliminará del *initram* para ahorrar memoria, al igual que se hace con
-[nodeos-mount-utils](nodeos-mount-utils.html) despues de montar los sistemas de
+[nodeos-mount-utils](nodeos-mount-utils.md) despues de montar los sistemas de
 archivos raíz de los usuarios o con el directorio `/usr`, éste último para que
 no se muestre en los sistemas raíz aunque siga estando usable. De esta forma, el
 sistema de archivos que veria el usuario *root* seria:

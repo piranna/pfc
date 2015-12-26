@@ -20,7 +20,7 @@ compilado que hace uso de [waitpid](http://linux.die.net/man/3/waitpid), e
 iterativamente comprueba cada 3 segundos si ha habido procesos nuevos para ir
 eliminandolos correctamente y limpiandolos del sistema.
 
-[vagga](vagga.html) por defecto no requiere del uso de un `PID 1` dentro de los
+[vagga](vagga.md) por defecto no requiere del uso de un `PID 1` dentro de los
 contenedores LXC puesto que ejecuta el suyo propio cuyo comportamiento es
 similar al de *century*, por lo que NodeOS no lo incluye. Mediante el uso de
 [pid1mode](http://vagga.readthedocs.org/en/latest/commands.html?highlight=pid1mode#opt-pid1mode)
