@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/piranna/pfc",
   "devDependencies": {
-    "gitbook-cli": "^1.0.0",
+    "gitbook-cli": "^1.0.1",
     "svgexport": "^0.2.8"
   },
   "dependencies": {
