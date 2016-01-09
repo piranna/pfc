@@ -26,9 +26,10 @@ El rendimiento de CPU se ha rehalizado mediante el uso del módulo
 ejecuta repetidamente distintas tareas básicas del lenguaje Javascript como la
 obtención de la fecha actual o de valores aleatorios o el recorrer listas,
 junto con otras mas avanzadas proporcionadas por Node.js como el cálculo de
-shashes criptográficos o la concatenación de [buffers](). De esta forma, se
-puede comprobar el rendimiento tanto del motor Javascript v8 como de las
-extensiones y módulos internos de Node.js en operaciones de gran consumo de CPU.
+shashes criptográficos o la concatenación de
+[buffers](https://nodejs.org/api/buffer.html). De esta forma, se puede
+comprobar el rendimiento tanto del motor Javascript v8 como de las extensiones
+y módulos internos de Node.js en operaciones de gran consumo de CPU.
 
 
 
