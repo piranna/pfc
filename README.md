@@ -9,14 +9,15 @@ de la [Universidad Rey Juan Carlos](http://www.urjc.es), consistente en el
 desarrollo de un sistema operativo minimalista sobre un kernel Linux y cuyo
 espacio de usuario este basado en el framework [Node.js](https://nodejs.org) y
 el gestor de dependencias [npm](https://www.npmjs.org), reduciendo el consumo de
-recursos al eliminar capas intermedias y permitiendo un facil aprendizaje y
-mantenimiento al estar todas las aplicaciones escritas en Javascript.
+recursos al eliminar capas intermedias, y permitiendo un facil aprendizaje y
+mantenimiento al estar todas sus aplicaciones y librerias escritas en
+Javascript.
 
 Este libro se ha generado con [GitBook](https://www.gitbook.com) utilizando
 [Markdown](http://daringfireball.net/projects/markdown) como formato de edición.
 Se pueden descargar sus fuentes originales desde su repositorio en
 [GitHub](https://github.com/piranna/pfc), estando tambien disponible para su
-lectura online y su descarga en formato ebook y PDF desde su pagina web en
+lectura online y su descarga en formato ebook y PDF desde su página web en
 [gitbooks.io](http://piranna.gitbooks.io/pfc).
 
 Generación del libro
