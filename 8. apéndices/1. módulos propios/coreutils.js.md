@@ -25,11 +25,11 @@ siendo la mas popular [shelljs](http://shelljs.org). Sin embargo, su
 implementación de los comandos tiene algunas limitaciónes y esta enfocada
 sólamente a replicar su funcionalidad, por lo que solo sirve para evitar el
 ejecutar scripts de shell para rehalizar tareas sencillas pero no facilita su
-integración con otros programas escritos en Javascript teniendo que parsear los
+integración con otros programas escritos en Javascript, teniendo que parsear los
 datos en cada etapa al igual que sucederia usando comandos externos.
 
-[coreutils.js](https://github.com/piranna/coreutils.js) por otro lado al estar
-diseñado especificamente para ser usado dentro de una shell interactiva como son
+[coreutils.js](https://github.com/piranna/coreutils.js) por otro lado, al estar
+diseñado específicamente para ser usado dentro de una shell interactiva como son
 [nsh](../2. colaboraciones con proyectos externos/nsh.html) o el interprete REPL
 de Node.js toma un enfoque distinto al crear streams de objetos para cada uno de
 los comandos, permitiendo el interconectar los distintos "comandos" entre si
@@ -42,10 +42,10 @@ atributos para poder ser procesados.
 
 A los streams se les ha añadido un atributo *type* indicando el tipo de los
 objetos dentro del ellos para poder procesarlos mas facilmente al poder tener
-una indicación de cual es el formato de los datos que contienen, de manera
+una indicación de cuál es el formato de los datos que contienen, de manera
 similar a como propone [TermKit](http://acko.net/blog/on-termkit). Ademas,
 tambien se añade a cada uno de estos objetos un método
 [inspect](https://nodejs.org/api/util.html#util_custom_inspect_function_on_objects)
 personalizado de forma que se muestre al imprimirlos por pantalla un resultado
-similar al de sus equivalentes comandos en UNIX en lugar de mostrar los datos de
+similar al de sus comandos equivalentes en UNIX en lugar de mostrar los datos de
 los objetos en bruto.

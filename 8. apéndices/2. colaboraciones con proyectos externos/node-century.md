@@ -21,7 +21,7 @@ iterativamente comprueba cada 3 segundos si ha habido procesos nuevos para ir
 eliminandolos correctamente y limpiandolos del sistema.
 
 [vagga](vagga.md) por defecto no requiere del uso de un `PID 1` dentro de los
-contenedores LXC puesto que ejecuta el suyo propio cuyo comportamiento es
+contenedores LXC puesto que ejecuta el suyo própio cuyo comportamiento es
 similar al de *century*, por lo que NodeOS no lo incluye. Mediante el uso de
 [pid1mode](http://vagga.readthedocs.org/en/latest/commands.html?highlight=pid1mode#opt-pid1mode)
 se puede definir que el proceso a ejecutar es *init-like* (como *century*) y

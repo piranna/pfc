@@ -32,7 +32,7 @@ Las funciones que aporta dicho módulo son:
   administrador (los mismos usados para montar los sistemas de archivos), pero
   sobretodo porque ésta afecta al própio proceso en curso, con lo que haciendolo
   de otra manera se estaria encerrando al proceso que esté ejecutando la función
-  (probablemente [nodeos-mount-filesystems](nodeos-mount-filesystems.html)).
+  (probablemente *nodeos-mount-filesystems*).
   Ademas, de este modo se puede comprobar cuando el script se ha iniciado
   correctamente para poder seguir con la ejecución de los scripts del resto de
   usuarios, sin tener que esperar a que éste haya terminado. Por último, para

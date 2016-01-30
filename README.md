@@ -25,7 +25,7 @@ Generación del libro
 
 Para generar el libro a partir de sus fuentes, necesitara tener instalados en su
 sistema [Calibre](http://calibre-ebook.com) (necesario para la generación del
-libro en formato PDF) y Node.js. La versión de Calibre incorporada en Ubuntu
+libro en formato PDF) y Node.js 0.12. La versión de Calibre incorporada en Ubuntu
 15.04 "Vivid Velvet" (2.20) contiene algunos errores que impiden su uso con
 GitBook, por lo que se recomienda usar la version 2.30 o superior, o bien la
 [última version disponible](https://github.com/GitbookIO/gitbook/issues/790)

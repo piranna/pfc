@@ -3,7 +3,7 @@
 Uno de los requisitos del CUSL es la necesidad de usar un blog donde se expongan
 los progresos que se van aconteciendo durante el desarrollo del proyecto, por lo
 que decidí usar para esto el própio blog del proyecto y de esta forma poder
-también anunciar dichos progresos oficialmente, Este blog está basado en Jekyll,
+también anunciar dichos progresos oficialmente, Este blog está basado en Jekyll
 y por tanto sólo permite tener contenido estático, por lo que para editar nuevas
 entradas es preciso hacerlo localmente y despues subirlas cuando estén listas
 como si de un repositorio de código se tratase (de hecho, Jekyll es usado por
@@ -11,11 +11,11 @@ GitHub para el hospedaje de páginas de los proyectos). Aunque éste enfoque pue
 tener ventajas como es la existencia de una copia en local de las entradas del
 blog y poder tener un control de los cámbios gracias a `git`, también tiene sus
 inconvenientes como es la falta de flexibilidad, el no poder editar las entradas
-en un ordenador que no se haya descargado antes una copia del blog, o el poder
+en un ordenador que no se haya descargado antes una copia del blog o el poder
 hacerlo facilmente desde un teléfono movil, o la mas importante de todas la
 ausencia de comentarios, teniendo que usarse para este fin servicios externas
-como [Disqus](https://disqus.com). Ademas, está el problema añadido de que esto
-representa un lugar mas donde poder recibir feedback sobre el proyecto,
+como [Disqus](https://disqus.com). Ademas, está el problema añadido de que ésto
+representa un lugar mas desde donde recibir feedback sobre el proyecto,
 descentralizandolo y complicando su administración.
 
 Para paliar todos estos problemas, puesto que la forma principal de comunicación

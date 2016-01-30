@@ -15,7 +15,8 @@ defecto solamente disponibles los caracteres pertenecientes a la página de
 códigos [CP-437](https://es.wikipedia.org/wiki/Página_de_códigos_437).
 
 Para poder hacer uso en el terminal de estos caracteres y particularmente de los
-patrones Braille usados para dibujar líneas y puntos, se ha creado la fuente
+[patrones Braille](http://en.wikipedia.org/wiki/Braille_Patterns) usados para
+dibujar líneas y puntos con una mayor precisión se ha creado la fuente
 [nodeos-console-font](https://github.com/NodeOS/nodeos-console-font) basada en
 los caracteres de [Unifont](http://unifoundry.com/unifont.html) pero cambiando
 los glifos de dichos patrones Braille por unos propios más apropiados para su

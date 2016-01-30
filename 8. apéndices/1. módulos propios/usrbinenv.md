@@ -19,7 +19,7 @@ Al ser un componente que ha de estar permanentemente en memoria se ha intentado
 reducir su tamaño al máximo, lo cual incluye el limitar el uso de dependencias
 tratando de usar solamente módulos de la librería estandar de Node.js. Para ello
 se ha prescindido del uso de un parseador de parametros externo incluyendo uno
-hecho manualmente *ad-hoc*, y tambien se hizo uso en un principio la función
+hecho manualmente *ad-hoc*, y tambien se hizo uso en un principio de la función
 [spawn](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options)
 incluida en Node.js para lanzar nuevos procesos. Sin embargo esto ocasionó un
 gran consumo de memoria al necesitar dos instancias de Node.js por cada
@@ -49,7 +49,7 @@ proporcionada por el módulo [kexec](https://github.com/jprichardson/node-kexec)
 El uso de un módulo externo requiere un acceso mas al disco ralentizando el
 inicio de las aplicaciones, ademśs de un consumo extra de memoria al estar
 NodeOS basado en initram. En este sentido planteé la posibilidad de integrar
-dicho módulo dentro del
+dicho módulo en tiempo de compilación dentro del própio
 [ejecutable de Node.js](https://github.com/nodejs/node-v0.x-archive/issues/14354),
 pero se mostro como una solución compleja, ademśs de que la diferencia en el
 tiempo de acceso seria despreciable. Esto unido al hecho de que dentro de la
