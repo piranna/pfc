@@ -13,11 +13,11 @@ justamente esta, delegando cualquier otra tarea a otros ejecutables, como es
 en el caso de NodeOS para montar la partición de usuarios e inicializar el resto
 del sistema.
 
-Las APIs de Node.js sólo permiten controlar procesos hijo que haya empezado él
-mismo, por lo que para poder recoger todos los procesos zombie del sistema
-(incluso los que no sean hijos directos suyos) *century* implementa un módulo
-compilado que hace uso de [waitpid](http://linux.die.net/man/3/waitpid), e
-iterativamente comprueba cada 3 segundos si ha habido procesos nuevos para ir
+Las APIs de Node.js sólo permiten controlar los procesos hijo que haya empezado
+el propio proceso, por lo que para poder recoger todos los procesos zombie del
+sistema (incluso los que no sean hijos directos suyos) *century* implementa un
+módulo compilado que hace uso de [waitpid](http://linux.die.net/man/3/waitpid),
+e iterativamente comprueba cada 3 segundos si ha habido procesos nuevos para ir
 eliminandolos correctamente y limpiandolos del sistema.
 
 [vagga](vagga.md) por defecto no requiere del uso de un `PID 1` dentro de los
@@ -28,4 +28,5 @@ se puede definir que el proceso a ejecutar es *init-like* (como *century*) y
 ejecutarlo directamente como `PID 1`, no obstante en estos momentos dicho
 soporte se encuentra [desactivado](https://github.com/tailhook/vagga/issues/86),
 con lo que en el futuro es posible que vuelva a activarse su uso de forma que el
-comportamiento del sistema sea mas homogeneo entre plataformas.
+comportamiento del sistema sea mas homogeneo entre plataformas al usar el mismo
+ejecutable como `PID 1` y por tanto evitar problemas por diferencias entre ellas.

@@ -116,9 +116,9 @@ el directorio de *root* oculto al igual que antes estaba la partición de
 usuarios sino que ademas estos están accesibles en el directorio `/home` desde
 dentro de la jaula *chroot* del usuario *root*. No obstante, en caso de no estar
 ejecutandose dentro de un contenedor LXC y si el sistema de archivos
-[ExclFS](ExclFS.md) esta disponible, entonces se usara éste en vez de usar
-directamente el sistema de archivos *devtmpfs* del sistema y despues se
-eliminará del *initram* para ahorrar memoria, al igual que se hace con
+*ExclFS* esta disponible, entonces se usara éste en vez de usar directamente el
+sistema de archivos *devtmpfs* del sistema y despues se eliminará del *initram*
+para ahorrar memoria, al igual que se hace con el módulo
 [nodeos-mount-utils](nodeos-mount-utils.md) despues de montar los sistemas de
 archivos raíz de los usuarios o con el directorio `/usr`, éste último para que
 no se muestre en los sistemas raíz aunque siga estando usable. De esta forma, el

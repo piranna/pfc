@@ -2,18 +2,20 @@
 
 1. [Estadísticas](1. Estadísticas/index.html)
 2. [Logros principales alcanzados](2. Logros principales alcanzados.html)
-  1. [Repercusión del proyecto](2. Logros principales alcanzados.html#repercusión-del-proyecto)
+  1. [Reconocimiento de la comunidad](2. Logros principales alcanzados.html#reconocimiento-de-la-comunidad)
+  2. [Repercusión del proyecto](2. Logros principales alcanzados.html#repercusión-del-proyecto)
 3. [Posibles trabajos futuros](3. Posibles trabajos futuros.html)
   1. [Actualizar versión de Node.js](3. Posibles trabajos futuros.html#actualizar-versión-de-node.js)
   2. [Separar módulos en proyectos independientes](3. Posibles trabajos futuros.html#separar-módulos-en-proyectos-independientes)
   3. [Compilación para ARM y MIPS](3. Posibles trabajos futuros.html#compilación-para-arm-y-mips)
-  4. [Kernels alternativos](3. Posibles trabajos futuros.html#kernels-alternativos)
-  5. ["Sabores"](3. Posibles trabajos futuros.html#"Sabores")
-  6. [Mejorar la experiencia de usuario](3. Posibles trabajos futuros.html#mejorar-la-experiencia-de-usuario)
+  4. [Descarga de dependencias](3. Posibles trabajos futuros.html#descarga-de-dependencias)
+  5. [Kernels alternativos](3. Posibles trabajos futuros.html#kernels-alternativos)
+  6. ["Sabores" del sistema operativo](3. Posibles trabajos futuros.html#"Sabores"-del-sistema-operativo)
+  7. [Mejorar la experiencia de usuario](3. Posibles trabajos futuros.html#mejorar-la-experiencia-de-usuario)
     1. [Modo texto](3. Posibles trabajos futuros.html#modo-texto)
     2. [Interfaz gráfica](3. Posibles trabajos futuros.html#interfaz-gráfica)
     3. [Añadir soporte de múltiples framebuffers al kernel de Linux](3. Posibles trabajos futuros.html#añadir-soporte-de-múltiples-framebuffers-al-kernel-de-linux)
-  7. [Uso de memoria](3. Posibles trabajos futuros.html#uso-de-memoria)
+  8. [Uso de memoria](3. Posibles trabajos futuros.html#uso-de-memoria)
     1. [Reducir el consúmo de memoria](3. Posibles trabajos futuros.html#reducir-el-consúmo-de-memoria)
     2. [Ajustar la ejecución del Recolector de Basura](3. Posibles trabajos futuros.html#ajustar-la-ejecución-del-recolector-de-basura)
     3. [Uso de zram](3. Posibles trabajos futuros.html#uso-de-zram)
@@ -44,7 +46,7 @@ mucha flexibilidad para poder adaptarse a los cambios. Sin embargo, estas
 también son a la vez sus mayores defectos debido a lo inestable que se vuelve el
 desarrollo, ya que un módulo de terceros puede afectar a todo el sistema. Ésto
 es algo que ha afectado directamente a NodeOS en dos ocasiones, la primera por
-un cambio en la versión empleada del motor Javascript `v8` por Node.js que ha
+el cambio en la versión empleada del motor Javascript `v8` por Node.js que ha
 imposibilitado por el momento usar cualquier versión de Node.js superior a la
 0.11.14, y la segunda mas recientemente y relaccionada con la anterior, por la
 actualización de vários módulos compilados para hacer uso de las macros
@@ -55,13 +57,12 @@ Respecto al problema de las versiones han surgido soluciones como son el uso de
 [bundledDependencies](https://docs.npmjs.com/files/package.json#bundleddependencies)
 o de [shrinkwrap](https://docs.npmjs.com/cli/shrinkwrap) (o el propio módulo
 `nan` en el caso de la compatibilidad de los módulos compilados entre versiones)
-y se siguen planteando otras nuevs como son el uso de paquetes comprimidos (ésta
-última [una propuesta mia](https://github.com/nodejs/node/issues/1278)), o el
-firmado de módulos. Ninguna de estas soluciones es óptima o definitiva por si
-sola, aunque mientras tanto desde la comunidad se estan intentando promover
-códigos de buena conducta como el [versionado semantico](http://semver.org)
-estricto o la conversión de módulos de la libreria estandar en paquetes `npm`
-para prevenir cambios en las APIs.
+y se siguen planteando otras nuevs como son el uso de paquetes comprimidos[^1],
+o el firmado de módulos. Ninguna de estas soluciones es óptima o definitiva por
+si sola, aunque mientras tanto se estan intentando promover códigos de buena
+conducta como el uso de [versionado semantico](http://semver.org) estricto o la
+conversión de módulos de la libreria estandar en paquetes `npm` para prevenir
+cambios en las APIs.
 
 No obstante, también he podido comprobar en primera persona la idiosincrasia y
 reticencias de algunos desarrolladores a aceptar la inclusión de cámbios en su
@@ -101,7 +102,7 @@ con los que me he encontrado han sido:
 
 Estas cuestiones hacen plantearse el dejar de contribuir en algunos de los
 proyectos de Software Libre o directamente mantener un fork de los mismos cuando
-esto sea posible donde mantener los cambios propios, empobreciendo el ecosistema
+esto sea posible donde mantener los cambios própios, empobreciendo el ecosistema
 al hacer que una funcionalidad no siempre este integrada dentro de un único
 repositorio y aumentando la fragmentación de este. Todo esto contrasta con los
 proyectos mas grandes (en importancia, tamaño o número de seguidores) donde hay
@@ -112,3 +113,16 @@ mantenedores en vez de solicitar que los cambios sean correctos a priori a la
 persona que los envia. Esta actitud es mas inclusiva al facilitar la
 colaboración en los distintos proyectos por parte de nuevos desarrolladores, no
 siendo estos necesariamente programadores expertos.
+
+El hecho de que el repositório de npm esté abierto a admitir paquetes nuevos de
+cualquier persona sin ningun tipo de control hace que también haya algunos
+paquetes vacios, con pruebas hechas por sus autores, con código de otros autores
+(incluso sin modificaciones) o con "proyectos de fin de semana" abandonados,
+dificultando el poder encontrar paquetes adecuados para ser usados. Esto hace
+que se terminen usando en su lugar forks própios alojados en GitHub como
+dependencias, lo cual hace prácticamente irrelevante el proposito del registro
+npm para el que fue creado como lugar centralizado para hospedar los paquetes y
+su versionado.
+
+
+[^1]: El uso de paquetes comprimidos es [una propuesta mia](https://github.com/nodejs/node/issues/1278) que además [ha sido aceptada para para integrarla en npm](https://github.com/npm/npm/issues/7762) una vez que Node.js incluya soporte para la misma. Esto además implicaría un menor consumo de espacio en disco duro ya que cada usuario potencialmente puede tener una copia de todas las librerias que necesitaran sus aplicaciones, aunque ésto no seria un problema de mayor importancia en entornos donde solo haya un único usuario como son los servidores en la nube o equipos personales o sistemas embebidos, siendo la única diferencia en estos casos el sitio donde estén fisicamente guardadas, ya sea dentro de la particion raiz o en el directorio del usuario.

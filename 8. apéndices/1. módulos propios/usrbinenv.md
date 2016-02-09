@@ -21,18 +21,19 @@ tratando de usar solamente módulos de la librería estandar de Node.js. Para el
 se ha prescindido del uso de un parseador de parametros externo incluyendo uno
 hecho manualmente *ad-hoc*, y tambien se hizo uso en un principio de la función
 [spawn](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options)
-incluida en Node.js para lanzar nuevos procesos. Sin embargo esto ocasionó un
-gran consumo de memoria al necesitar dos instancias de Node.js por cada
-ejecutable (una para `/usr/bin/env` y otra para el script a ejecutar, con un
-tamaño de unos 10mb cada una), por lo que aproveché la circunstancia de que el
-propio comando `/usr/bin/env` ya era por si mismo un script de Javascript para
-reusar su instancia de Node.js, con lo que ademas se ahorra el tiempo de crear
-una nueva. Hacerlo de esta manera tiene el inconveniente de que no se pueden
-usar algunos métodos que permiten que un mismo script pueda usarse como comando
-y como libreria simultaneamente, como son `!module.parent` o `require.main ===
-module`, tan habituales en otros lenguajes como es el caso de Python. Esto se
-puede solucionar emplendo scripts independientes para la libreria y para el
-propio comando, que ademas es lo que promueve la especificacion del archivo
+incluida en Node.js para lanzar nuevos procesos. Sin embargo, esto ocasionó un
+gran consumo de memoria al necesitar dos instancias de Node.js por cada ejecución
+(una para `/usr/bin/env` y otra para el script a ejecutar), con un tamaño de unos
+[10mb](https://nodejs.org/api/child_process.html#child_process_child_process_fork_modulepath_args_options)
+cada una), por lo que aproveché la circunstancia de que el propio comando
+`/usr/bin/env` ya era por si mismo un script de Javascript para reusar su
+instancia de Node.js, con lo que ademas se ahorra el tiempo de crear una nueva.
+Hacerlo de esta manera tiene el inconveniente de que no se pueden usar algunos
+métodos que permiten que un mismo script pueda usarse como comando y como
+libreria simultaneamente, como son `!module.parent` o `require.main === module`,
+tan habituales en otros lenguajes como es el caso de Python. Esto se puede
+solucionar emplendo scripts independientes para la libreria y para el propio
+comando, que ademas es lo que promueve la especificacion del archivo
 `package.json` de `npm` mediante el uso de los campos
 [main](https://docs.npmjs.com/files/package.json#main) y
 [bin](https://docs.npmjs.com/files/package.json#bin), respectivamente.

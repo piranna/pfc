@@ -86,5 +86,5 @@ dicho entorno.
 Por último, aparte de estos problemas también estaba el hecho de que el código
 de `Linux`, `gcc` y Node.js estaban empaquetados con la extensión `@LongLink`
 que *tar-stream* [no soportaba](https://github.com/mafintosh/tar-stream/issues/35),
-haciendo que no pudieses desempaquetarse correctamente, aunque no hubo mayor
+haciendo que no se pudiese desempaquetar correctamente, aunque no hubo mayor
 problema una vez se añadío el soporte para la mísma.

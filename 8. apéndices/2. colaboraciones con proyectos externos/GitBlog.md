@@ -20,17 +20,20 @@ descentralizandolo y complicando su administración.
 
 Para paliar todos estos problemas, puesto que la forma principal de comunicación
 dentro del proyecto son los issues de GitHub, planteé la posibilidad de diseñar
-una página web que hiciera uso de la API de issues de GitHub para mostrar estas
-como si fueran las entradas de un blog. En un principio era sólo una idea de
-cara al futuro, sin embargo [Sam Tobia](https://github.com/formula1) decidió
-[implementarla él mismo](https://github.com/NodeOS/GitBlog), siendo suyo la
-mayor parte del desarrollo. En este proyecto principalmente he colaborado con la
-idea original y la aportacion de sugerencias y correcciones para la integración
-del mismo en la actual [pagina web de NodeOS](https://node-os.com) junto con el
-uso de [Yahoo! Pipes](https://en.wikipedia.org/wiki/Yahoo!_Pipes) para generar
-dinámicamente un feed RSS con las actualizaciones en los issues marcados con la
-[etiqueta *blog*](https://github.com/NodeOS/NodeOS/issues?q=label%3Ablog). No
-obstante, en Junio de 2015 se anuncio que el servicio de Yahoo! Pipes cerraba a
-[partir del 31 de agosto](http://readwrite.com/2015/06/08/yahoo-shuts-down-pipes),
-por lo que actualmente se esta buscando algun otro proveedor que pueda ofrecer
-el mismo servicio.
+una página web que hiciera uso de la API de issues de GitHub para mostrar los
+que esten [marcados](https://github.com/NodeOS/NodeOS/issues?q=label%3Ablog) con
+una etiqueta determinada como si fueran las entradas de un blog. En un principio
+sólo se planteó como una idea de cara al futuro, pero sin embargo al poco tiempo
+[Sam Tobia](https://github.com/formula1) decidió implementarla él mismo creando
+el proyecto [GitBlog](https://github.com/NodeOS/GitBlog), siendo suyo la mayor
+parte del desarrollo.
+
+En este proyecto principalmente he colaborado con la idea original y la
+aportacion de sugerencias y correcciones para la integración del mismo en la
+actual [pagina web de NodeOS](https://node-os.com), junto con el uso de
+[Yahoo! Pipes](https://en.wikipedia.org/wiki/Yahoo!_Pipes) para generar
+dinámicamente un feed RSS con las actualizaciones en los issues, al igual que
+añadí anteriormente un feed RSS para la versión estatica del blog. No obstante,
+en Junio de 2015 se anuncio que el servicio de Yahoo! Pipes cerraría a partir
+del [31 de agosto](http://readwrite.com/2015/06/08/yahoo-shuts-down-pipes), por
+lo que actualmente se esta buscando alguna otra alternatíva.

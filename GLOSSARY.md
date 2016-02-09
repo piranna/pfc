@@ -5,6 +5,14 @@ programa para ser usados externamente. Tambien se puede referir a los protocolos
 usados por un servidor para poder hacer uso remotamente de su funcionalidad,
 como es en el caso de los WebService o servicios web.
 
+# AST
+*Abstract Syntax Tree* (*Árbol de Sintaxis Abstracto*)
+Estructura de los distintos elementos de un lenguaje de programación (funciones,
+variables...) de un programa concreto organizada de forma jerarquizada para que
+puedan ser facilmente accedidos y transformados, por ejemplo para extraer sus
+elementos, optimizarlo, compilarlo para una plataforma concreta, converstirlo a
+otro lenguaje, generar su documentación...
+
 # firewall
 Aplicación que administra y filtra las conexiones de red entrantes y salientes
 

@@ -15,9 +15,10 @@ sistema de la forma habitual en UNIX consistente en abrir su archivo descriptor
 de dispositivo y leer o escribir directamente en él sin necesidad de tener
 permisos de administrador ni ocasionar riesgos de seguridad para los usuarios o
 para el propio sistema, y permite al desarrollador que sea sencillo por ejemplo
-el poder usar varios ratones o framebuffers en una misma aplicación al poder
-acceder directamente a dichos dispositivos o que simultaneamente varios usuarios
-puedan acceder a ellos en una misma máquina siempre que estén disponibles.
+el [poder usar varios ratones](https://github.com/NodeOS/NodeOS/issues/69) o
+framebuffers en una misma aplicación al poder acceder directamente a dichos
+dispositivos o que simultaneamente varios usuarios puedan acceder a ellos en una
+misma máquina siempre que estén disponibles.
 
 El control de acceso de los archivos (o dispositivos, en este caso) se realiza
 mediante un mapa de las rutas de los archivos actualmente abiertos y el UID del

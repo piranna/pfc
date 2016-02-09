@@ -2,17 +2,18 @@
 
 Por su orientación a su uso en servidores, Node.js dispone de múltiples módulos
 para el desarrollo de interfaces en modo texto y para la línea de comandos,
-algunas de ellas incluso ofreciendo funcionalidad própia de interfaces gráficas
-como es el renderizado de widgets o el mostrar imagenes en la consola. En muchos
-de los casos se hace uso de caracteres Unicode para evitar las limitaciones de
-resolución que conlleva el uso del terminal y poder dar mas riqueza visual a las
-aplicaciones mediante el uso de lineas, bloques, simbolos, puntos... El problema
-está en el hecho de que el modo texto de las tarjetas VGA usadas en los
-ordenadores PC está limitado a 256 glifos (o 512 si se reducen los colores a 8
-en vez de 16 al usar un modo de texto, no asi al usar un framebuffer), por lo
-que dichos caracteres especiales no pueden mostrarse en pantalla, estando por
-defecto solamente disponibles los caracteres pertenecientes a la página de
-códigos [CP-437](https://es.wikipedia.org/wiki/Página_de_códigos_437).
+[algunas de ellas](https://github.com/yaronn/blessed-contrib) incluso ofreciendo
+funcionalidad própia de interfaces gráficas como es el renderizado de widgets o
+el mostrar imagenes en la consola. En muchos de los casos se hace uso de
+caracteres Unicode para evitar las limitaciones de resolución que conlleva el
+uso del terminal y poder dar mas riqueza visual a las aplicaciones mediante el
+uso de lineas, bloques, simbolos, puntos... El problema está en el hecho de que
+el modo texto de las tarjetas VGA usadas en los ordenadores PC está limitado a
+256 glifos (o 512 si se reducen los colores a 8 en vez de 16 al usar un modo de
+texto, no asi al usar un framebuffer), por lo que dichos caracteres especiales
+no pueden mostrarse en pantalla, estando por defecto solamente disponibles los
+caracteres pertenecientes a la página de códigos
+[CP-437](https://es.wikipedia.org/wiki/Página_de_códigos_437).
 
 Para poder hacer uso en el terminal de estos caracteres y particularmente de los
 [patrones Braille](http://en.wikipedia.org/wiki/Braille_Patterns) usados para

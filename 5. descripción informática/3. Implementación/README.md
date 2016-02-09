@@ -135,3 +135,18 @@ para poder procesarlas todas de forma uniforme. El resto de etapas consisten
 principalmente en la ejecución de otros comandos externos como las herramientas
 de configuración de GYP o el compilador, por lo que previamente a la conversión
 es necesario buscar alternativas a ellos escritas en Javascript.
+
+Se ha prestado especial atención a que el proceso de generación no requiera de
+permisos de administrador en ninguna de sus etapas, lo cual incluye la
+generación de las imágenes de disco haciendo que no sea necesario su montaje, y
+también las correspondientes a Docker ya que su proceso de generación estandar
+los requiere. Para ello he generado archivos `cpio` y `tar` a partir de archivos
+definiendo su descripción en vez de usar archivos reales evitando problemas de
+permisos, y por otro he hecho uso de los comandos `genfatfs` y `genext2fs` para
+crear directamente las imágenes de disco y el gestor de arranque SyxLinux, el
+cual esta preparado para trabajar con ellas explicitamente a diferencia de
+`GRUB`, que está orientado a su uso con discos duros y particiones reales. La
+razón de hacerlo de esta manera es para poder compilar y generar los archivos
+del sistema operativo usando las herramientas estandar de Node.js y npm, ya que
+ejecutarlos con permisos de administrador provoca ciertos problemas con las
+dependencias, por los que se desaconseja su uso.
