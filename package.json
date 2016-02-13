@@ -21,7 +21,7 @@
     "svgexport": "^0.2.8"
   },
   "dependencies": {
-    "gitbook-plugin-autocover": "GitbookIO/plugin-autocover"
+    "gitbook-plugin-autocover": "piranna/plugin-autocover#patch-1"
   },
   "engines": {
     "node": "^0.12.0"
