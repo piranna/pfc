@@ -13,11 +13,94 @@ puedan ser facilmente accedidos y transformados, por ejemplo para extraer sus
 elementos, optimizarlo, compilarlo para una plataforma concreta, converstirlo a
 otro lenguaje, generar su documentación...
 
-# firewall
-Aplicación que administra y filtra las conexiones de red entrantes y salientes
+# bindings
+Conjunto de funciones que actuan de interfaz para poder usar una libreria dentro
+de un programa escrito en otro lenguaje, generalmente de alto nivel y/o script
+como son Python o Javascript. Tambien se suele denominar asi a las librerias
+para un lenguaje en concreto para acceder a los componentes ofrecidos por el
+sistema operativo.
+
+# BIOS
+*Basic Input/Output System* (*Sistema Basico de Entrada y Salida*). Conjunto de
+rutinas basicas de un ordenador introducidas por IBM y comunes a todos los PCs,
+usadas principalmente durante el proceso de arranque.
+
+# bundleDependencies
+*dependencias integradas*, metodo por el que un paquete npm distribuye alguna de
+sus dependencias integrada dentro de si mismo formara parte de su propio codigo.
+
+# Concurso Universitario de Software Libre
+Concurso de programación a nivel nacional celebrado en España desde 2006
+
+# core dump
+Fallo grave de una aplicacion que impide que pueda continuar su ejecucion, y que
+segun la configuracion del sistema genera un archivo con una copia de la memoria
+y del estado del microprocesador para su posterior depuración. El termino se
+utiliza tanto para designar a dicho archivo como al error que lo provoco.
+
+# CUSL
+Vease Concurso Universitario de Software Libre
 
 # dirección IP pública
 Dirección IP accesible de forma directa desde cualquier punto de Internet
+
+# Docker
+herramienta de administración de contenedores LXC, la cual permite aislar unos
+programas de otros en "containers" los cuales pueden englobar tambien sistemas
+operativos enteros y ser usados como base para la personalización del sistema
+"apilando" otros contenedores por encima de los usados como base.
+
+# EFI
+*Extensible Firmware Interface* (*Interfaz de Firmware Extensible*). Conjunto de
+rutinas de bajo nivel proporcionadas por los ordenadores mas recientes y cuyo
+objetivo es sustituir a las rutinas de la BIOS, ofreciendo una intefaz mas
+sencilla y flexible.
+
+# EGL
+Embedded OpenGL, API grafica para acceso nativo a la tarjeta grafica en entornos
+donde no hay disponible un sistema grafico independiente como X11, GDI, Cocoa...
+Permite disponer de graficos acelerados por hardware en dispositivos embebidos.
+
+# firewall
+Aplicación que administra y filtra las conexiones de red entrantes y salientes
+
+# FUSE
+*Filesystem in USErspace* (*sistema de archivos en espacio de usuario*).
+funcionalidad del kernel de Linux y libreria que permite desarrollar sistemas de
+archivos como si fueran un programa normal. Es muy usado para el desarrollo de
+sistemas de archivos experimentales o con un funcionamiento exotico, o para
+circunvalar problemas legales como son licencias o patentes de software que
+impiden que pueda desarrollarse dentro del kernel de Linux.
+
+# GitHub
+Repositorio online de versionado de software con algunas funcionalidades
+similares a las de las redes sociales, lo cual lo ha convertido en uno de los
+servicios favoritos entre los desarrolladores de software libre
+
+# imagen ISO
+Archivo cuyo contenido corresponde al de un CD o DVD real, listo para ser
+grabado para ser grabado en estos.
+
+# Internet de las Cosas
+Conjunto de tecnologias que permiten que pequeños dispositivos electronicos y
+autonomos como lamparas, relojes, frigorificos, sensores termostaticos... se
+conecten a Internet y puedan realizar tareas cooperativamente entre ellos.
+
+# journaling
+Mecanismo ofrecido por algunos sistemas de archivos donde todas las operaciones
+son escritas en un archivo "jornal" en lugar de hacerlo directamente sobre el
+propio sistema de archivos, de forma que en caso de fallo fortuito (como por
+ejemplo un apagon) el sistema pueda deshacer los cambios sin provocar perdida o
+corrupcion de datos.
+
+# Kernel
+Componente software encargada del control central de un sistema operativo.
+Algunos ejemplos son el kernel Linux o [XNU](https://es.wikipedia.org/wiki/XNU)
+en MacOS X.
+
+# Kernel Panic
+Fallo grave e irrecuperable del sistema cuya unica solución posible es el
+reinicio de la maquina.
 
 # Linux
 Kernel de sistema operativo con licencia libre desarrollado originalmente por
@@ -29,31 +112,31 @@ telefonos con sistema operativo [Android](https://www.android.com) hasta
 supercomputadores, pasando por equipos de escritorio o sistemas embebido. Su
 codigo fuente esta disponible en http://kernel.org.
 
-# Kernel
-Componente software encargada del control central de un sistema operativo.
-Algunos ejemplos son el kernel Linux o [XNU](https://es.wikipedia.org/wiki/XNU)
-en MacOS X.
+# Live CD
+Metodo por el que un sistema operativo se distribuye como un CD autoarrancable,
+principalmente usado para que los usuarios puedan probarlo antes de instalarlo
+definitivamente en su disco duro, o como disco de rescate de emergencia.
 
-# CUSL
-Vease Concurso Universitario de Software Libre
+# memory leak
+Fallo de programacion en el que se mantienen en uso regiones de memoria sin
+referencias a ellas y por tanto sin poder ser utilizadas, provocando que el
+proceso consuma cada vez mas memoria inutilmente afectando al rendimiento del
+sistema hasta que este se queda sin memoria libre.
 
-# Concurso Universitario de Software Libre
-Concurso de programación a nivel nacional celebrado en España desde 2006
+# npm
+Gestor de paquetes oficial de Node.js, y el mas activo y con mayor cremiendo de
+la historia para cualquier lenguaje. Su rico ecosistema ha influido la forma de
+trabajar no solo con Node.js o Javascript en la web sino tambien en otros
+lenguajes como C++ o PHP donde han surgido gestores de paquetes basados en él.
 
-# GitHub
-Repositorio online de versionado de software con algunas funcionalidades
-similares a las de las redes sociales, lo cual lo ha convertido en uno de los
-servicios favoritos entre los desarrolladores de software libre
+# out-of-tree
+Tipo de compilación en la que los objetos temporales y los productos finales son
+generados fuera del arbol del archivos del código fuente. Esto proporciona una
+mayor limpieza y la posibilidad de eliminar los archvios compilados facilmente.
 
-# EGL
-Embedded OpenGL, API grafica para acceso nativo a la tarjeta grafica en entornos
-donde no hay disponible un sistema grafico independiente como X11, GDI, Cocoa...
-Permite disponer de graficos acelerados por hardware en dispositivos embebidos.
-
-# REPL
-*Read-Eval-Print-Loop* (*leer, evaluar, imprimir y repetir*). Modo de
-funcionamiento interactivo que ofrecen los interpretes de un lenguaje de
-programación.
+# padding
+Datos nulos o de "basura" usados para ajustar un texto o estructura de forma que
+los datos queden alineados y sean mas faciles de tratar.
 
 # patrones Braille
 Bloque de glifos Unicode que contiene los 256 patrones representables en una
@@ -61,40 +144,29 @@ celda Braille de 8 puntos y usada para poder "dibujar" lineas en alta definició
 en terminales en modo texto.
 http://en.wikipedia.org/wiki/Braille_Patterns
 
-# XIP
-*eXecution In Place* (*ejecución en el sitio*). Modo de funcionamiento de
-aplicaciónes donde se ejecutan directamente sin copiarse previamente a la
-memoria RAM, ahorrando el uso de recursos. Sin embargo, solo puede usarse en
-entornos donde la velocidad de acceso de lectura al ejecutable es comparable a
-la de la memoria RAM como es en el uso de discos RAM, memorias flash, SSD... ya
-que sino la penalización en cuanto a rendimiento haria su uso inviable.
-
 # pidfile
 Archivo con información sobre la instancia actual de un proceso en ejecución
 para poder reusarla en vez de crear nuevas instancias, permitiendo una mayor
 integración dentro de la aplicación y un menor consumo de memoria.
 
-# Kernel Panic
-Fallo grave e irrecuperable del sistema cuya unica solución posible es el
-reinicio de la maquina.
+# puntero
+Variable cuyo contenido es una posicion de memoria, usada para referenciar
+indirectamente a otras variables. A pesar de la potencia y flexibilidad que
+otorgan al permitir manipular directamente la memoria del programa, en los
+lenguajes de alto nivel y en las ultimas revisiones de los lenguajes de bajo
+nivel se proporcionan estructuras alternativas para los casos de uso mas
+habituales debido a que su mal uso suelen provocar errores dificiles de detectar
+que en muchos casos derivan en un memory leak o incluso en un core dump.
 
-# Docker
-herramienta de administración de contenedores LXC, la cual permite aislar unos
-programas de otros en "containers" los cuales pueden englobar tambien sistemas
-operativos enteros y ser usados como base para la personalización del sistema
-"apilando" otros contenedores por encima de los usados como base.
+# REPL
+*Read-Eval-Print-Loop* (*leer, evaluar, imprimir y repetir*). Modo de
+funcionamiento interactivo que ofrecen los interpretes de un lenguaje de
+programación.
 
-# bundleDependencies
-*dependencias integradas*, metodo por el que un paquete npm distribuye alguna de
-sus dependencias integrada dentro de si mismo formara parte de su propio codigo.
-
-# FUSE
-*Filesystem in USErspace* (*sistema de archivos en espacio de usuario*).
-funcionalidad del kernel de Linux y libreria que permite desarrollar sistemas de
-archivos como si fueran un programa normal. Es muy usado para el desarrollo de
-sistemas de archivos experimentales o con un funcionamiento exotico, o para
-circunvalar problemas legales como son licencias o patentes de software que
-impiden que pueda desarrollarse dentro del kernel de Linux.
+# Rolling Release
+Politica de publicación de versiones en la que no hay versiones propiamente como
+tales y en el que el último código publicado es válido en todo momento para ser
+usado.
 
 # umask
 *user mask* (*mascara de usuario*). Patrón de permisos de acceso a los archivos
@@ -114,87 +186,16 @@ limitaciones estan solventadas por el mas reciente formato ExFAT (principalmente
 el tamaño de los archivos) pero al estar protegido por patentes su adopción es
 algo mas limitada.
 
-# Live CD
-Metodo por el que un sistema operativo se distribuye como un CD autoarrancable,
-principalmente usado para que los usuarios puedan probarlo antes de instalarlo
-definitivamente en su disco duro, o como disco de rescate de emergencia.
-
-# imagen ISO
-Archivo cuyo contenido corresponde al de un CD o DVD real, listo para ser
-grabado para ser grabado en estos.
-
-# EFI
-*Extensible Firmware Interface* (*Interfaz de Firmware Extensible*). Conjunto de
-rutinas de bajo nivel proporcionadas por los ordenadores mas recientes y cuyo
-objetivo es sustituir a las rutinas de la BIOS, ofreciendo una intefaz mas
-sencilla y flexible.
-
-# BIOS
-*Basic Input/Output System* (*Sistema Basico de Entrada y Salida*). Conjunto de
-rutinas basicas de un ordenador introducidas por IBM y comunes a todos los PCs,
-usadas principalmente durante el proceso de arranque.
-
-# journaling
-Mecanismo ofrecido por algunos sistemas de archivos donde todas las operaciones
-son escritas en un archivo "jornal" en lugar de hacerlo directamente sobre el
-propio sistema de archivos, de forma que en caso de fallo fortuito (como por
-ejemplo un apagon) el sistema pueda deshacer los cambios sin provocar perdida o
-corrupcion de datos.
-
-# core dump
-Fallo grave de una aplicacion que impide que pueda continuar su ejecucion, y que
-segun la configuracion del sistema genera un archivo con una copia de la memoria
-y del estado del microprocesador para su posterior depuración. El termino se
-utiliza tanto para designar a dicho archivo como al error que lo provoco.
-
-# puntero
-Variable cuyo contenido es una posicion de memoria, usada para referenciar
-indirectamente a otras variables. A pesar de la potencia y flexibilidad que
-otorgan al permitir manipular directamente la memoria del programa, en los
-lenguajes de alto nivel y en las ultimas revisiones de los lenguajes de bajo
-nivel se proporcionan estructuras alternativas para los casos de uso mas
-habituales debido a que su mal uso suelen provocar errores dificiles de detectar
-que en muchos casos derivan en un memory leak o incluso en un core dump.
-
-# bindings
-Conjunto de funciones que actuan de interfaz para poder usar una libreria dentro
-de un programa escrito en otro lenguaje, generalmente de alto nivel y/o script
-como son Python o Javascript. Tambien se suele denominar asi a las librerias
-para un lenguaje en concreto para acceder a los componentes ofrecidos por el
-sistema operativo.
-
 # W3C
 Consorcio encargado de definir los estandares y protocolos que deben seguir los
 distintos navegadores web y demas servicios basados en Internet para garantizar
 la interoperatibilidad.
 
-# memory leak
-Fallo de programacion en el que se mantienen en uso regiones de memoria sin
-referencias a ellas y por tanto sin poder ser utilizadas, provocando que el
-proceso consuma cada vez mas memoria inutilmente afectando al rendimiento del
-sistema hasta que este se queda sin memoria libre.
+# XIP
+*eXecution In Place* (*ejecución en el sitio*). Modo de funcionamiento de
+aplicaciónes donde se ejecutan directamente sin copiarse previamente a la
+memoria RAM, ahorrando el uso de recursos. Sin embargo, solo puede usarse en
+entornos donde la velocidad de acceso de lectura al ejecutable es comparable a
+la de la memoria RAM como es en el uso de discos RAM, memorias flash, SSD... ya
+que sino la penalización en cuanto a rendimiento haria su uso inviable.
 
-# out-of-tree
-Tipo de compilación en la que los objetos temporales y los productos finales son
-generados fuera del arbol del archivos del código fuente. Esto proporciona una
-mayor limpieza y la posibilidad de eliminar los archvios compilados facilmente.
-
-# padding
-Datos nulos o de "basura" usados para ajustar un texto o estructura de forma que
-los datos queden alineados y sean mas faciles de tratar.
-
-# Rolling Release
-Politica de publicación de versiones en la que no hay versiones propiamente como
-tales y en el que el último código publicado es válido en todo momento para ser
-usado.
-
-# Internet de las Cosas
-Conjunto de tecnologias que permiten que pequeños dispositivos electronicos y
-autonomos como lamparas, relojes, frigorificos, sensores termostaticos... se
-conecten a Internet y puedan realizar tareas cooperativamente entre ellos.
-
-# npm
-Gestor de paquetes oficial de Node.js, y el mas activo y con mayor cremiendo de
-la historia para cualquier lenguaje. Su rico ecosistema ha influido la forma de
-trabajar no solo con Node.js o Javascript en la web sino tambien en otros
-lenguajes como C++ o PHP donde han surgido gestores de paquetes basados en él.
