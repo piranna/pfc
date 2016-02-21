@@ -3,12 +3,12 @@
 El kernel de Linux utiliza el formato `cpio` para empaquetar el sistema de
 archivos de *initramfs*, sin embargo tanto *Docker* como *vagga* solo soportan
 archivos `tar`. Para poder usar el mismo proceso de generación para ambos
-entornos es preciso convertir entre ambos formatos, para lo cual decidi usar el
+entornos es preciso convertir entre ambos formatos, para lo cual decidí usar el
 modulo [tar-stream](https://github.com/mafintosh/tar-stream) para poder hacer la
 conversión dinámicamente usando la API de streams de Node.js. Sin embargo, al
 hacer la conversión descubrí que los links simbólicos se habían convertido en
 archivos regulares dentro del paquete `tar`, y por tanto el binario de Node.js
-no podía cargar las librerias del sistema dando error de simbolos no definidos:
+no podía cargar las librerías del sistema dando error de símbolos no definidos:
 
 ```bash
 [piranna@Mabuk:~/Proyectos/NodeOS/node_modules/nodeos-barebones/.vagga/barebones]
@@ -38,9 +38,9 @@ que el tipo no estuviese definido éste pudiera detectarse a partir del modo
 
 No obstante, en el caso concreto de los links simbólicos esto no fue suficiente,
 ya que estos no estaban obteniendo la ubicación del archivo original debido a la
-estructura del formato `tar`, que requiere indicar dicha ubicación en la própia
+estructura del formato `tar`, que requiere indicar dicha ubicación en la propia
 cabecera, mientras que el módulo [cpio-stream](cpio-stream.html) estaba
-transmitiendola como el contenido de dicho archivo (lo cual estructuralmente es
+transmitiéndola como el contenido de dicho archivo (lo cual estructuralmente es
 lo correcto). En un principio procedí a detectar el formato y rellenar dicha
 cabecera previamente a añadir la entrada dentro del paquete `tar`, aunque
 despues decidí añadir soporte en *tar-stream* para poder
@@ -87,4 +87,4 @@ Por último, aparte de estos problemas también estaba el hecho de que el códig
 de `Linux`, `gcc` y Node.js estaban empaquetados con la extensión `@LongLink`
 que *tar-stream* [no soportaba](https://github.com/mafintosh/tar-stream/issues/35),
 haciendo que no se pudiese desempaquetar correctamente, aunque no hubo mayor
-problema una vez se añadío el soporte para la mísma.
+problema una vez se añadió el soporte para la misma.

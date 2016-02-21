@@ -1,7 +1,7 @@
 #### Comandos no utilizados actualmente
 
 Aparte de los módulos indicados anteriormente, también se ha contribuido en el
-desarrollo de otros que no estan siendo usados actualmente, ya sea porque se ha
+desarrollo de otros que no están siendo usados actualmente, ya sea porque se ha
 postergado su uso o porque se han encontrado otras alternativas mejores.
 
 ##### Node Daemon Manager
@@ -11,13 +11,13 @@ administración de scripts de arranque y servicios del sistema tanto para Linux
 ([initctl](http://linux.die.net/man/8/initctl) y
 [upstart](http://upstart.ubuntu.com)) como para MacOS X
 ([launchctl](http://ss64.com/osx/launchctl.html)), al que añadí soporte para
-[usar un comando `restart` generico](https://github.com/npm/ndm/pull/73) y no
+[usar un comando `restart` genérico](https://github.com/npm/ndm/pull/73) y no
 obligar a los desarrolladores a incluir siempre uno propio, y al que también
 [propuse el uso de funciones](https://github.com/npm/ndm/issues/78) en una clase
 base en vez de plantillas para ofrecer mayor flexibilidad al portar a otros
 sistemas. Esto venia dado por la intención de usarlo junto con el módulo
 [forever](forever.md) cuando en un diseño anterior del sistema los servicios
-estarian centralizados por lo que actualmente esta en desuso, pero gracias al
+estarían centralizados por lo que actualmente esta en desuso, pero gracias al
 gestor de tareas minimalista [PalmTree](https://github.com/lite20/PalmTree)
 creado por el colaborador de NodeOS [Lite McFish](https://github.com/lite20)
 se plantea retomar el proyecto para que sea usado por cada uno de los usuarios
@@ -38,9 +38,9 @@ para poder compilar *OpenSSL* decidí desactivar su soporte en Node.js, aunque
 esto provocó que npm fallase debido a que el módulo
 [npm-registry-client](https://github.com/piranna/npm-registry-client) usado
 internamente para conectarse al repositorio de paquetes no consideraba la
-posiblidad de que el soporte no estuviera disponible a pesar de que la
+posibilidad de que el soporte no estuviera disponible a pesar de que la
 aplicación sí soporta el descargar los paquetes mediante una conexión no segura,
-por lo que le añadi soporte para que detectara si Node.js fue compilado sin
+por lo que le añadí soporte para que detectara si Node.js fue compilado sin
 OpenSSL y por tanto desactivara el soporte de descargar los paquetes mediante
 HTTP. Actualmente se puede compilar *OpenSSL* usando *musl* sin problemas, por
 lo que dicha modificación ya no es necesaria.

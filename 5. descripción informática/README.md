@@ -18,7 +18,7 @@
   2. [barebones](3. Implementación/2. barebones.html)
     1. [Node.js](3. Implementación/2. barebones.html#node.js)
     2. [Linux](3. Implementación/2. barebones.html#linux)
-    3. [Comprobaciónes finales](3. Implementación/2. barebones.html#comprobaciónes-finales)
+    3. [Comprobaciones finales](3. Implementación/2. barebones.html#comprobaciones-finales)
     4. [Problemas encontrados](3. Implementación/2. barebones.html#problemas-encontrados)
   3. [initramfs](3. Implementación/3. initramfs.html)
   4. [rootfs](3. Implementación/4. rootfs.html)

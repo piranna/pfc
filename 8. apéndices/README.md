@@ -1,4 +1,4 @@
-# Apendices
+# Apéndices
 
 1. [Módulos propios](1. módulos propios/index.html)
   1. [coreutils.js](1. módulos propios/coreutils.js.html)

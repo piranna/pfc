@@ -2,18 +2,18 @@
 
 [FUSE](http://fuse.sourceforge.net), el mecanismo por el que se pueden
 implementar sistemas de archivos fuera del kernel de Linux, requiere del uso de
-la libreria `libfuse` para que haga de puente entre el kernel y el espacio de
+la librería `libfuse` para que haga de puente entre el kernel y el espacio de
 usuario. Existen varios bindings para Node.js, siendo el que actualmente recibe
 mas soporte [fuse-bindings](https://github.com/mafintosh/fuse-bindings). Sin
-embargo, dicho binding hace uso de la libreria dinámica incluida en el sistema,
-y debido al enfoque minimalista que tiene NodeOS donde el sistema base sólamente
+embargo, dicho binding hace uso de la librería dinámica incluida en el sistema,
+y debido al enfoque minimalista que tiene NodeOS donde el sistema base solamente
 contiene los componentes fundamentales para su funcionamiento y a que por
 [cuestiones de portabilidad](https://n8.io/converting-a-c-library-to-gyp)) la
-forma recomendada de construir módulos en Node.js es sin usar librerias
+forma recomendada de construir módulos en Node.js es sin usar librerías
 dinámicas, decidí añadirle soporte para generar una versión que incluyese a
 `libfuse` compilado estáticamente de forma similar a como se ha hecho con la
-libreria [Cairo](http://cairographics.org) en [node-canvas](4. node-canvas.html)
-detectando si la libreria esta instalada globalmente, o caso de que no sea así,
+librería [Cairo](http://cairographics.org) en [node-canvas](4. node-canvas.html)
+detectando si la librería esta instalada globalmente, o caso de que no sea así,
 descargarla y compilarla como una dependencia interna suya.
 
 ##### Compilación estática de `libfuse`
@@ -25,37 +25,37 @@ instrucción [actions](http://stackoverflow.com/a/27301199/586382) de `GYP` por
 la cual se pueden ejecutar comandos de shell en su lugar, y después configuré
 *fuse-bindings* para que haga el linkado estáticamente. Las opciones de
 configuración empleadas desactivan la compilación de los ejemplos, los comandos
-de ayuda como `fusermount` y las generación de las librerias dinamicas. También
+de ayuda como `fusermount` y las generación de las librerías dinámicas. También
 desactivaban el uso del archivo `/etc/mtab` ya que no tiene sentido en un
-sistema como NodeOS donde cada usuario tendría su própia copia, sin embargo en
+sistema como NodeOS donde cada usuario tendría su propia copia, sin embargo en
 algunos sistemas como *Ubuntu 15.10 'Wily Werewolf'* es sustituido por un link
-simbolico a `/proc/mounts`, por lo que no hace falta desactivarlo ya que FUSE
-detecta automaticamente dicho caso y no trata de actualizar el contenido del
+simbólico a `/proc/mounts`, por lo que no hace falta desactivarlo ya que FUSE
+detecta automáticamente dicho caso y no trata de actualizar el contenido del
 archivo. Además, se ha comprobado que dicho archivo sólo contiene información
 sobre los sistemas de archivos a los que el usuario tiene acceso dentro de su
 jaula *chroot*, por lo que su uso no representa ningún problema de seguridad.
 
 Una vez que conseguí que `libfuse` se compilara correctamente en mi sistema
-Ubuntu, procedí a usarlo como dependencia de *fuse-bindings*, encontrandome sin
+Ubuntu, procedí a usarlo como dependencia de *fuse-bindings*, encontrándome sin
 embargo con dos errores de linkado. El mensaje del primer error indicaba que `no
 se puede usar la reubicación R_X86_64_32 contra '.text' cuando se crea un objeto
 compartido`, para lo cual la solución consiste simplemente en compilarlo como
-[Código Independiente de la Posicion](https://en.wikipedia.org/wiki/Position-independent_code)
-(*PIC*), ya que en última instancia estamos haciendo una libreria dinámica. Una
+[Código Independiente de la Posición](https://en.wikipedia.org/wiki/Position-independent_code)
+(*PIC*), ya que en última instancia estamos haciendo una librería dinámica. Una
 vez arreglado este punto, el segundo mensaje de error indicaba que `no se
 encuentra la versión del nodo para el símbolo 'fuse_setup@FUSE_2.2'`, lo cual es
-debido a que la libreria `libfuse` incorpora soporte para varias versiones de su
-API simultaneamente. Sin embargo, a pesar de haber buscado información al
+debido a que la librería `libfuse` incorpora soporte para varias versiones de su
+API simultáneamente. Sin embargo, a pesar de haber buscado información al
 respecto, no he sido capaz de averiguar que hacer para que use la versión
-correcta. Al pensar que dicho error pueda estar relaccionado con el uso
-explicito de *Código Independiente de la Posicion* para solucionar el error
+correcta. Al pensar que dicho error pueda estar relacionado con el uso
+explicito de *Código Independiente de la Posición* para solucionar el error
 anterior (ya que en *node-canvas* no fue necesario emplearlo), decidí generar un
 archivo de configuración GYP completo exclusivo para `libfuse`, del mismo modo
 que se ha hecho en *node-canvas* para las dependencias estáticas y dejar que
 todo el proceso de construcción esté administrado por `GYP`. Sin embargo, esto
 también ha dado el mismo error anterior de no poder encontrar la versión del
 nodo para el símbolo `fuse_setup@FUSE_2.2`, por lo que finalmente he decidido
-usar `libfuse` como libreria dinámica incluyendola dentro del
+usar `libfuse` como librería dinámica incluyéndola dentro del
 [initramfs](../../../5. descripción informática/3. Implementación/2. initramfs.html).
 
 ##### Uso de `libfuse` como librería dinámica
@@ -76,16 +76,16 @@ además de definir *ExclFS* como opcional en el módulo
 Esta es la mejor alternativa, ya que de esta forma se hace que el sistema sea
 agnóstico a cual es el binding de FUSE empleado por los módulos.
 
-El uso de `libfuse` como libreria dinámica no ha estado libre de problemas, ya
+El uso de `libfuse` como librería dinámica no ha estado libre de problemas, ya
 que aunque su compilación ha sido trivial, *fuse-bindings* la localiza mediante
 el uso de [pkg-config](http://www.freedesktop.org/wiki/Software/pkg-config),
-queriendo por tanto usar la libreria instalada en el sistema huesped en vez de
+queriendo por tanto usar la librería instalada en el sistema huésped en vez de
 hacer uso del cross-compiler, y dando un error de linkado de que no ha podido
-encontrar la libreria al estar compiladas con distintas librerias del sistema
+encontrar la librería al estar compiladas con distintas librerías del sistema
 (`glibc` y `musl`). En principio se pueden indicar a `gcc` mas ubicaciones donde
-buscar las librerias mediante la variable de entorno `LIBRARY_PATH`, sin embargo
+buscar las librerías mediante la variable de entorno `LIBRARY_PATH`, sin embargo
 esto no ha dado resultado puesto que `GYP` usa un entorno aislado del sistema
 durante el proceso de construcción, por lo que la única solución ha sido
 modificar el archivo de configuración de *fuse-bindings* para que se pueda
-definir la ubicación de las librerias mediante el uso de un
+definir la ubicación de las librerías mediante el uso de un
 [parámetro opcional](https://github.com/mafintosh/fuse-bindings/pull/12).

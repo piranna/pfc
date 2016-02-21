@@ -2,7 +2,7 @@
 
 Para poder comprobar los hashes de los archivos y sus firmas al usar
 [download-manager](download-manager.html) a medida que éstos se estuviesen
-descargando y tener garantia de que las descargas se han producido correctamente
+descargando y tener garantía de que las descargas se han producido correctamente
 he desarrollado el módulo
 [download-checksum](https://github.com/piranna/download-checksum) como un plugin
 independiente para [download](https://github.com/kevva/download), de forma que
@@ -30,7 +30,7 @@ datos del stream cuando estos eran cargados. Esto no afecta a las descargas de
 los archivos pero si a los plugins que necesitan inspeccionar el contenido
 completo de éstos, por lo que hasta que dicho problema pueda ser arreglado la
 solución empleada ha sido obtener dicho fragmento de datos manualmente desde los
-buffers internos de la libreria despues de inspeccionar su estructura:
+buffers internos de la librería después de inspeccionar su estructura:
 
 ```Javascript
 var pipes = response._readableState.pipes
@@ -45,5 +45,5 @@ he creado una clase con su misma API, la cual recoge el contenido de todo el
 archivo a medida que es descargado para proceder a la verificación de la firma
 una vez que ha terminado. Para ello antes he tenido que aprender a crear una
 [clave propia](https://www.gnupg.org/gph/en/manual/c14.html#AEN25) con la que
-despues [firmar](https://www.gnupg.org/gph/en/manual/x135.html#AEN152) una
+después [firmar](https://www.gnupg.org/gph/en/manual/x135.html#AEN152) una
 cadena de prueba para poder ser incluidas en los tests unitarios.

@@ -22,7 +22,7 @@
   * [Estadísticas](6. conclusiones/1. Estadísticas/README.md)
   * [Logros principales alcanzados](6. conclusiones/2. Logros principales alcanzados.md)
   * [Posibles trabajos futuros](6. conclusiones/3. Posibles trabajos futuros.md)
-* [Bibliografia](7. bibliografia.md)
+* [Bibliografía](7. bibliografía.md)
 * [Apéndices](8. apéndices/README.md)
   * [Módulos propios](8. apéndices/1. módulos propios/README.md)
     * [coreutils.js](8. apéndices/1. módulos propios/coreutils.js.md)

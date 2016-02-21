@@ -1,10 +1,10 @@
 #### gitbook-plugin-printlinks
 
-GitBook esta orientado principalmente a su uso en médios electrónicos incluso en
+GitBook esta orientado principalmente a su uso en medios electrónicos incluso en
 el caso de la exportación a PDF, al estar enfocado a e-readers y documentación
 online. Esto tiene el problema de que al general material impreso no hay
 posibilidad de conservar los enlaces a otros documentos, pero tampoco las
-referencias dentro del própio libro ya que éstas están hechas mediante el uso de
+referencias dentro del propio libro ya que éstas están hechas mediante el uso de
 hiperenlaces. Para paliar esta situación propuse el añadir soporte para mostrar
 los [enlaces al generar un PDF](https://github.com/GitbookIO/gitbook/issues/571)
 dentro de la funcionalidad de GitBook, pero al no haberse producido avances al
@@ -23,7 +23,7 @@ También tiene en cuenta los footnotes actualmente definidos para evitar duplica
 sus índices y provocar referencias inválidas.
 
 El principal problema que he encontrado al desarrollar el plugin ha sido en la
-identificación de los links que no deben ser convertidos en footnotes (imagenes
+identificación de los links que no deben ser convertidos en footnotes (imágenes
 y tablas de contenidos) debido al formato que tienen en Markdown (las imágenes
 precedidas por un signo de admiración, y las tablas de contenidos por su índice).
 En un principio intenté filtrar dichos enlaces directamente en la expresión
@@ -32,10 +32,10 @@ motor de expresiones regulares de Javascript no soporta la búsqueda de
 coincidencias antes del punto de escaneo actual (*look behind*), por lo que
 decidí considerar que el formato de los enlaces tenía "prefijos" (el signo de
 admiración y el índice) y solo procesar los enlaces que no tuvieran ninguno
-(enlaces cuyo "prefijo" fuera la cadena vacia). Después dentro del texto se
-inserta una referencia al footnote a continuación del própio enlace para que
+(enlaces cuyo "prefijo" fuera la cadena vacía). Después dentro del texto se
+inserta una referencia al footnote a continuación del propio enlace para que
 éste pueda ubicarse cuando se imprima el libro, y al final de la página el
-própio *footnote* con la ruta del enlace.
+propio *footnote* con la ruta del enlace.
 
 Los enlaces a otras secciones del libro se realizan parseando la URL del enlace
 y se comprueba si éste es relativo si no está definido su host. En tal caso, se

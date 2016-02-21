@@ -22,9 +22,9 @@ estados, donde se consideraba en su implementación original el tipo del formato
 como parte de la cabecera del archivo. Sin embargo, esto hacía complicada la
 detección del formato del archivo y su procesamiento, por lo que el primer paso
 fue separar dicha detección en un estado previo independiente para poder después
-parsear la cabecera acorde a cada formato. Esto ha permitido ademas que se pueda
+parsear la cabecera acorde a cada formato. Esto ha permitido además que se pueda
 añadir soporte del formato `crc` (*New CRC Format*), y que se puedan añadir
-facilmente en el futuro soporte para el formato `bin` (*Old Binary Format*, el
+fácilmente en el futuro soporte para el formato `bin` (*Old Binary Format*, el
 formato binario original del archivo) o para cualquiera de los otros formatos
 derivados del mismo.
 

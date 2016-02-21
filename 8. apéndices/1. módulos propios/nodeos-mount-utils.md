@@ -20,28 +20,28 @@ Las funciones que aporta dicho módulo son:
 * *execInit*: ejecuta el script de inicio de un usuario, usado para arrancar
   servicios del sistema que haya definido el mismo. Por seguridad primero se
   comprueba que tanto el script de inicio como el directorio de usuario tienen
-  ambos el mismo id de usuario y de grupo (`UID` y `GID`), que seran utilizados
+  ambos el mismo id de usuario y de grupo (`UID` y `GID`), que serán utilizados
   posteriormente para definir el `UID` y `GID` de los procesos del usuario en
   ejecución. El script de inicio del usuario se ejecuta dentro de su propia
   jaula *chroot* utilizando el directorio del usuario como sistema de archivos
   raíz, del mismo modo como posteriormente se ejecutaran el resto de procesos de
   dicho usuario. Para ello, se ejecuta un proceso intermedio `chrootInit` cuya
-  única labor es crear la jaula *chroot* y despues ejecutar el propio script de
+  única labor es crear la jaula *chroot* y después ejecutar el propio script de
   `/init` del usuario dentro de ella con su `UID` y `GID` y permisos reducidos.
   Esto es así porque la jaula *chroot* sólo puede generarse con permisos de
   administrador (los mismos usados para montar los sistemas de archivos), pero
-  sobretodo porque ésta afecta al própio proceso en curso, con lo que haciendolo
-  de otra manera se estaria encerrando al proceso que esté ejecutando la función
+  sobretodo porque ésta afecta al propio proceso en curso, con lo que haciéndolo
+  de otra manera se estaría encerrando al proceso que esté ejecutando la función
   (probablemente *nodeos-mount-filesystems*).
-  Ademas, de este modo se puede comprobar cuando el script se ha iniciado
+  Además, de este modo se puede comprobar cuando el script se ha iniciado
   correctamente para poder seguir con la ejecución de los scripts del resto de
   usuarios, sin tener que esperar a que éste haya terminado. Por último, para
   poder indicar a `chrootInit` el `UID` y `GID` con que debe ejecutar el script
   de inicio del usuario, éstos se añaden al principio de la lista de argumentos
-  del mismo, de forma que estén en una ubicación que permitan despues ser
-  facilmente localizables por este.
+  del mismo, de forma que estén en una ubicación que permitan después ser
+  fácilmente localizables por este.
 * *mkdirMount*: monta el sistema de archivos indicado, creando el directorio
-  donde se va a alojar el punto de montaje previamente si no existia. Puesto que
+  donde se va a alojar el punto de montaje previamente si no existía. Puesto que
   no importan los permisos del directorio que se utilice como punto de montaje
   para poder ser usado puesto que estos son ignorados por Linux, este se crea
   con modo *0000* para evitar el que se puedan escribir archivos dentro del
@@ -58,8 +58,8 @@ Las funciones que aporta dicho módulo son:
   mantenido por retrocompatibilidad, pero es probable que se marque como
   deprecada en el futuro.
 * *move*: mueve un sistema de archivos a una nueva ubicación, y si el directorio
-  del anterior punto de montaje esta vacio, lo elimina.
-* *moveSync*: version sincrona de *move*.
+  del anterior punto de montaje esta vacío, lo elimina.
+* *moveSync*: versión síncrona de *move*.
 * *mkdirMove*: igual a *move*, pero creando previamente el directorio del punto
   de montaje destino si no existe.
 * *startRepl*: crea un interprete REPL de emergencia y termina el proceso desde

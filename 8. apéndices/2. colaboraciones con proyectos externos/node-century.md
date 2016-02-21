@@ -1,7 +1,7 @@
 #### node-century
 
 Durante el arranque, el kernel de Linux ejecuta el programa ubicado en `/init`
-una vez que ha terminado de cargarse, convirtiendose en el primer proceso del
+una vez que ha terminado de cargarse, convirtiéndose en el primer proceso del
 sistema (`PID 1`). En sistemas UNIX tradicionales este proceso (también conocido
 como *demonio del sistema*) se suele encargar de varias tareas, como por ejemplo
 enviar la señal de terminación al resto de procesos cuando el sistema se esta
@@ -18,15 +18,15 @@ el propio proceso, por lo que para poder recoger todos los procesos zombie del
 sistema (incluso los que no sean hijos directos suyos) *century* implementa un
 módulo compilado que hace uso de [waitpid](http://linux.die.net/man/3/waitpid),
 e iterativamente comprueba cada 3 segundos si ha habido procesos nuevos para ir
-eliminandolos correctamente y limpiandolos del sistema.
+eliminándolos correctamente y limpiándolos del sistema.
 
 [vagga](vagga.md) por defecto no requiere del uso de un `PID 1` dentro de los
-contenedores LXC puesto que ejecuta el suyo própio cuyo comportamiento es
+contenedores LXC puesto que ejecuta el suyo propio cuyo comportamiento es
 similar al de *century*, por lo que NodeOS no lo incluye. Mediante el uso de
 [pid1mode](http://vagga.readthedocs.org/en/latest/commands.html?highlight=pid1mode#opt-pid1mode)
 se puede definir que el proceso a ejecutar es *init-like* (como *century*) y
 ejecutarlo directamente como `PID 1`, no obstante en estos momentos dicho
 soporte se encuentra [desactivado](https://github.com/tailhook/vagga/issues/86),
 con lo que en el futuro es posible que vuelva a activarse su uso de forma que el
-comportamiento del sistema sea mas homogeneo entre plataformas al usar el mismo
+comportamiento del sistema sea mas homogéneo entre plataformas al usar el mismo
 ejecutable como `PID 1` y por tanto evitar problemas por diferencias entre ellas.

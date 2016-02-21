@@ -2,7 +2,7 @@
 
 Para el montaje de los sistemas de archivos, originalmente el proyecto hacía uso
 del módulo [node-src-mount](https://github.com/groundwater/node-src-mount),
-aunque al no soportar el montaje de las particiones de forma asincrona decidí
+aunque al no soportar el montaje de las particiones de forma asíncrona decidí
 sustituirlo por [nodeos-mount](https://github.com/NodeOS/nodeos-mount), el cual
 además tiene una funcionalidad mas completa que permite optimizar el arranque
 del sistema. No obstante, éste módulo ha requerido ciertas mejoras, como la
@@ -13,10 +13,10 @@ la forma oficial de crear módulos compilados en Node.js) en vez de acceder
 directamente a las APIs internas de [v8](https://developers.google.com/v8) y
 Node.js. Por otra parte, las mejoras que he realizado al módulo han sido:
 
-* permitir el uso de parametros opcionales en las llamadas a las distintas
+* permitir el uso de parámetros opcionales en las llamadas a las distintas
   funciones del módulo manipulando los argumentos con los que han sido invocadas
 * admitir el paso de las opciones de montaje como un array de strings en vez de
-  como un conjunto de flags, y los parametros del sistema de archivos como un
+  como un conjunto de flags, y los parámetros del sistema de archivos como un
   objeto literal en vez de como una cadena de texto. De esta forma, el estilo es
   mas coherente al empleado normalmente en Javascript
 * añadir soporte para la detección automática del sistema de archivos de la
