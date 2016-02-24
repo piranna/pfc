@@ -24,7 +24,7 @@ Generación del libro
 --------------------
 
 Para generar el libro a partir de sus fuentes, necesitara tener instalados en su
-sistema [Calibre](http://calibre-efebo.com) (necesario para la generación del
+sistema [Calibre](http://calibre-ebook.com) (necesario para la generación del
 libro en formato PDF) y Node.js 0.12. La versión de Calibre incorporada en Ubuntu
 15.04 "Vivid Velvet" (2.20) contiene algunos errores que impiden su uso con
 GitBook, por lo que se recomienda usar la versión 2.30 o superior, o bien la

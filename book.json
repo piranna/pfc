@@ -27,6 +27,9 @@
     },
     "image-captions": {
       "caption": "_CAPTION_"
+    },
+    "printlinks": {
+      "externalLinksAreReferences": true
     }
   },
   "pdf": {
