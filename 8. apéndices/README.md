@@ -37,7 +37,7 @@
   12. [tar-stream](2. colaboraciones con proyectos externos/tar-stream.html)
   13. [vagga](2. colaboraciones con proyectos externos/vagga.html)
   14. [vinyl-fs](2. colaboraciones con proyectos externos/vinyl-fs.html)
-  15. [Comandos no utilizados actualmente](2. colaboraciones con proyectos externos/comandos no utilizados actualmente.md)
+  14. [Módulos no utilizados actualmente](2. colaboraciones con proyectos externos/módulos no utilizados actualmente.md)
     1. [Node Daemon Manager](2. colaboraciones con proyectos externos/Comandos no utilizados actualmente.html#node-daemon-anager)
     2. [node-cron](Comandos no utilizados actualmente.html#node-cron)
     3. [npm-registry-client](2. colaboraciones con proyectos externos/Comandos no utilizados actualmente.html#npm-registry-client)

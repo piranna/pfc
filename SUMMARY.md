@@ -52,7 +52,7 @@
     * [tar-stream](8. apéndices/2. colaboraciones con proyectos externos/tar-stream.md)
     * [vagga](8. apéndices/2. colaboraciones con proyectos externos/vagga.md)
     * [vinyl-fs](8. apéndices/2. colaboraciones con proyectos externos/vinyl-fs.md)
-    * [Comandos no utilizados actualmente](8. apéndices/2. colaboraciones con proyectos externos/comandos no utilizados actualmente.md)
+    * [Módulos no utilizados actualmente](8. apéndices/2. colaboraciones con proyectos externos/módulos no utilizados actualmente.md)
   * [Desarrollo del libro](8. apéndices/3. desarrollo del libro/README.md)
     * [gitbook-plugin-printlinks](8. apéndices/3. desarrollo del libro/gitbook-plugin-printlinks.md)
     * [Stargazers](8. apéndices/3. desarrollo del libro/Stargazers.md)

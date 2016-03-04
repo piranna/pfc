@@ -16,7 +16,7 @@
 12. [tar-stream](tar-stream.md)
 13. [vagga](vagga.md)
 14. [vinyl-fs](vinyl-fs.md)
-15. [Comandos no utilizados actualmente](comandos no utilizados actualmente.md)
+14. [Comandos no utilizados actualmente](comandos no utilizados actualmente.md)
   1. [Node Daemon Manager](Comandos no utilizados actualmente.html#node-daemon-manager)
   2. [node-cron](Comandos no utilizados actualmente.html#node-cron)
   3. [npm-registry-client](Comandos no utilizados actualmente.html#npm-registry-client)

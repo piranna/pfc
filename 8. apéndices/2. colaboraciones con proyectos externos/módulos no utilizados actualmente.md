@@ -1,4 +1,4 @@
-#### Comandos no utilizados actualmente
+#### Módulos no utilizados actualmente
 
 Aparte de los módulos indicados anteriormente, también se ha contribuido en el
 desarrollo de otros que no están siendo usados actualmente, ya sea porque se ha
@@ -22,6 +22,21 @@ gestor de tareas minimalista [PalmTree](https://github.com/lite20/PalmTree)
 creado por el colaborador de NodeOS [Lite McFish](https://github.com/lite20)
 se plantea retomar el proyecto para que sea usado por cada uno de los usuarios
 para administrar sus propios servicios del sistema si así lo desean.
+
+##### node-century
+
+[century](https://github.com/groundwater/node-century) es un proceso `init` del
+sistema mínimo, encargado de recoger procesos zombie y evitar que puedan llegar
+a provocar un *kernel panic* y delegando cualquier otra tarea a otros procesos.
+Las APIs de Node.js sólo permiten controlar los procesos hijo que haya empezado
+el propio proceso, por lo que para poder recoger todos los procesos zombie del
+sistema (incluso los que no sean hijos directos suyos) *century* implementa un
+módulo compilado que hace uso de [waitpid](http://linux.die.net/man/3/waitpid),
+e iterativamente comprueba cada 3 segundos si ha habido procesos nuevos para ir
+eliminándolos correctamente y limpiándolos del sistema. Se ha deprecado su uso
+en beneficio de [nodeos-init](../1. módulos propios/nodeos-init.html) para
+permitir el montaje del sistema de archivos *devtmpfs* antes de ejecutar
+cualquier instancia de Node.js, tarea necesaria a partir de la versión 0.11.15.
 
 ##### node-cron
 
