@@ -20,7 +20,7 @@
    font-size="<%= size.author / 2 %>">
     <tspan x="50%" dy="<%= size.author / 2 %>">Escuela Superior de Ingeniería Informática</tspan>
     <tspan x="50%" dy="<%= size.author / 2 %>">Ingeniería Informática</tspan>
-    <tspan x="50%" dy="<%= size.author / 2 %>">Curso academico: <%= academicYear %></tspan>
+    <tspan x="50%" dy="<%= size.author / 2 %>">Curso académico: <%= academicYear %></tspan>
     <tspan x="50%" dy="<%= size.author / 2 %>">Proyecto de Fin de Carrera</tspan>
   </text>
 
