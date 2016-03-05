@@ -83,8 +83,7 @@ estándar `/usr/bin/env` he hecho un link simbólico en su lugar. Después, pues
 que en NodeOS se busca entre otras cosas crear un sistema de archivos limpio y
 claro de cara a los usuarios y por esta razón no usarse el directorio `/usr`,
 este se ha eliminado después de crear el sistema de archivos *OverlayFS* de
-forma que el directorio `/usr` no sea visible aunque puede seguir accediendose a
-su contenido, en concreto para poder ejecutarse el citado `/usr/bin/env`. No
-obstante, desconozco si este comportamiento es una característica de OverlayFS o
-un bug del mismo, aunque considero que es especialmente útil para casos de uso
-como éste.
+forma que el directorio `/usr` no sea visible, aunque puede seguir accediendose
+a su contenido en concreto para poder ejecutarse el citado `/usr/bin/env`. Este
+comportamiento es una característica propia de OverlayFS conocida como
+[directorio opaco](https://docs.docker.com/engine/userguide/storagedriver/overlayfs-driver/#container-reads-and-writes-with-overlay).
