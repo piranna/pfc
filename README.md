@@ -7,7 +7,7 @@ Memoria del Proyecto de Fin de Carrera de Jesús Leganés Combarro, alumno de la
 [Escuela Técnica Superior de Ingeniería Informática](http://www.etsii.urjc.es)
 de la [Universidad Rey Juan Carlos](http://www.urjc.es), consistente en el
 desarrollo de un sistema operativo minimalista sobre un kernel Linux y cuyo
-espacio de usuario este basado en el framework [Node.js](https://nodejs.org) y
+espacio de usuario esté basado en el framework [Node.js](https://nodejs.org) y
 el gestor de dependencias [npm](https://www.npmjs.org), reduciendo el consumo de
 recursos al eliminar capas intermedias, y permitiendo un fácil aprendizaje y
 mantenimiento al estar todas sus aplicaciones y librerías escritas en
@@ -23,7 +23,7 @@ lectura online y su descarga en formato ebook y PDF desde su página web en
 Generación del libro
 --------------------
 
-Para generar el libro a partir de sus fuentes, necesitara tener instalados en su
+Para generar el libro a partir de sus fuentes, necesitará tener instalados en su
 sistema [Calibre](http://calibre-ebook.com) (necesario para la generación del
 libro en formato PDF) y Node.js 0.12. La versión de Calibre incorporada en Ubuntu
 15.04 "Vivid Velvet" (2.20) contiene algunos errores que impiden su uso con

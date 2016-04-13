@@ -2,7 +2,7 @@
 
 Una de las máximas de NodeOS es que todo el espacio de usuario esté escrito en
 Javascript hasta donde sea posible, lo cual incluye a las utilerías del sistema.
-Una de las mas usadas es [/usr/bin/env](https://es.wikipedia.org/wiki/Env),
+Una de las más usadas es [/usr/bin/env](https://es.wikipedia.org/wiki/Env),
 empleada comúnmente en los [shebang](https://es.wikipedia.org/wiki/Shebang) para
 definir el interprete con el que deben ser ejecutados los scripts de forma
 independiente a donde esté ubicado. En un principio se hizo uso del comando
@@ -47,7 +47,7 @@ inutilizada, por lo que la única solución es hacer uso de la llamada al sistem
 del proceso en memoria, tal y como hace la implementación en C del comando `env`.
 Node.js no proporciona una API para su uso por ausencia en Windows, siendo
 proporcionada por el módulo [kexec](https://github.com/jprichardson/node-kexec).
-El uso de un módulo externo requiere un acceso mas al disco ralentizando el
+El uso de un módulo externo requiere un acceso más al disco ralentizando el
 inicio de las aplicaciones, además de un consumo extra de memoria al estar
 NodeOS basado en initram. En este sentido planteé la posibilidad de integrar
 dicho módulo en tiempo de compilación dentro del propio
