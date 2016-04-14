@@ -1,6 +1,6 @@
 # Conclusiones
 
-1. [Estadísticas](1. Estadísticas/index.html)
+1. [Estadísticas](1. Estadísticas.html)
 2. [Logros principales alcanzados](2. Logros principales alcanzados.html)
   1. [Reconocimiento de la comunidad](2. Logros principales alcanzados.html#reconocimiento-de-la-comunidad)
   2. [Repercusión del proyecto](2. Logros principales alcanzados.html#repercusión-del-proyecto)

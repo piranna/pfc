@@ -33,7 +33,7 @@
       * [nodeos-mount-utils](5. descripción informática/3. Implementación/7. módulos propios/nodeos-mount-utils.md)
       * [usrbinenv](5. descripción informática/3. Implementación/7. módulos propios/usrbinenv.md)
 * [Conclusiones](6. conclusiones/README.md)
-  * [Estadísticas](6. conclusiones/1. Estadísticas/README.md)
+  * [Estadísticas](6. conclusiones/1. Estadísticas.md)
   * [Logros principales alcanzados](6. conclusiones/2. Logros principales alcanzados.md)
   * [Posibles trabajos futuros](6. conclusiones/3. Posibles trabajos futuros.md)
 * [Referencias](7. referencias.md)
