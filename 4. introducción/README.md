@@ -1,4 +1,4 @@
-# Objetivos
+# Introducción
 
 1. [Descripción del problema](1. Descripción del problema.html)
   1. [Qué es NodeOS](1. Descripción del problema.html#qué-es-nodeos)
