@@ -24,7 +24,7 @@
   6. [ExclFS](7. módulos propios/ExclFS.html)
   7. [logon](7. módulos propios/logon.html)
   8. [nodeos-console-font](7. módulos propios/nodeos-console-font.html)
-  9. [nodeos-init](1. colaboraciones con proyectos externos/nodeos-init.html)
+  9. [nodeos-init](7. módulos propios/nodeos-init.html)
   10. [nodeos-media](7. módulos propios/nodeos-media.html)
   11. [nodeos-mount-filesystems](7. módulos propios/nodeos-mount-filesystems.html)
     1. [Proceso de montaje de los sistemas de archivos](7. módulos propios/nodeos-mount-filesystems.html#proceso-de-montaje-de-los-sistemas-de-archivos)
