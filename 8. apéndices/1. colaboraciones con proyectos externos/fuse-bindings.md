@@ -69,10 +69,10 @@ que he hecho que ésta sólo se compile y se incluya dentro de la imagen final d
 definida la opción `CONFIG_FUSE_FS` dentro del archivo `.config` del kernel de
 Linux. Esto tiene un inconveniente, y es que en caso de estar ausente impide que
 se compile *fuse-bindings* y que pueda usarse cualquier sistema de archivos que
-haga uso de él como es el caso de [ExclFS](../1. módulos propios/ExclFS.md), por
+haga uso de él como es el caso de [ExclFS](../../5. descripción informática/3. Implementación/7. módulos propios/ExclFS.md), por
 lo que también hago la comprobación posteriormente para que éstos no se incluyan,
 además de definir *ExclFS* como opcional en el módulo
-[nodeos-mount-filesystems](../1. módulos propios/nodeos-mount-filesystems.html).
+[nodeos-mount-filesystems](../../5. descripción informática/3. Implementación/7. módulos propios/nodeos-mount-filesystems.html).
 Esta es la mejor alternativa, ya que de esta forma se hace que el sistema sea
 agnóstico a cual es el binding de FUSE empleado por los módulos.
 

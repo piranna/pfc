@@ -15,6 +15,27 @@
   1. [root](5. usersfs.html#root)
   2. [nodeos](5. usersfs.html#nodeos)
 6. [NodeOS](6. NodeOS.html)
+7. [Módulos propios](7. módulos propios/index.html)
+  1. [coreutils.js](7. módulos propios/coreutils.js.html)
+  2. [Davius](7. módulos propios/Davius.md)
+  3. [DebugFS](7. módulos propios/DebugFS.html)
+  4. [download-checksum](7. módulos propios/download-checksum.html)
+  5. [download-manager](7. módulos propios/download-manager.html)
+  6. [ExclFS](7. módulos propios/ExclFS.html)
+  7. [logon](7. módulos propios/logon.html)
+  8. [nodeos-console-font](7. módulos propios/nodeos-console-font.html)
+  9. [nodeos-init](1. colaboraciones con proyectos externos/nodeos-init.html)
+  10. [nodeos-media](7. módulos propios/nodeos-media.html)
+  11. [nodeos-mount-filesystems](7. módulos propios/nodeos-mount-filesystems.html)
+    1. [Proceso de montaje de los sistemas de archivos](7. módulos propios/nodeos-mount-filesystems.html#proceso-de-montaje-de-los-sistemas-de-archivos)
+    2. [Sistema de archivos raíz de cada usuario](7. módulos propios/nodeos-mount-filesystems.html#sistema-de-archivos-raíz-de-cada-usuario)
+    3. [Sistema de archivos raíz del usuario *root*](7. módulos propios/nodeos-mount-filesystems.html#sistema-de-archivos-raíz-del-usuario-root)
+    4. [Sistema de archivos raíz real](7. módulos propios/nodeos-mount-filesystems.html#sistema-de-archivos-raíz-real)
+  12. [nodeos-mount-utils](7. módulos propios/nodeos-mount-utils.html)
+  13. [usrbinenv](7. módulos propios/usrbinenv.html)
+    1. [Ejecución de scripts de Node.js](7. módulos propios/usrbinenv.html#ejecución-de-scripts-de-node.js)
+    2. [Ejecución de binarios externos](7. módulos propios/usrbinenv.html#ejecución-de-binarios-externos)
+    3. [Ubicación del comando](7. módulos propios/usrbinenv.html#ubicación-del-comando)
 
 El proceso de construcción esta integrado en el ciclo de vida típico del gestor
 de paquetes npm, de forma que resulte familiar a los desarrolladores de Node.js.
@@ -130,7 +151,7 @@ tamaño en los proyectos correspondientes a los módulos
 [download](https://github.com/kevva/download/issues?q=author%3Apiranna) y
 [decompress](https://github.com/kevva/decompress/issues?q=author%3Apiranna). Una
 vez corregidos dichos fallos, he hecho el módulo
-[download-manager](../../8. apéndices/1. módulos propios/download-manager.html)
+[download-manager](7. módulos propios/download-manager.html)
 para poder procesarlas todas de forma uniforme. El resto de etapas consisten
 principalmente en la ejecución de otros comandos externos como las herramientas
 de configuración de GYP o el compilador, por lo que previamente a la conversión

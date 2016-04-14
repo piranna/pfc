@@ -34,7 +34,7 @@ sistema (incluso los que no sean hijos directos suyos) *century* implementa un
 módulo compilado que hace uso de [waitpid](http://linux.die.net/man/3/waitpid),
 e iterativamente comprueba cada 3 segundos si ha habido procesos nuevos para ir
 eliminándolos correctamente y limpiándolos del sistema. Se ha deprecado su uso
-en beneficio de [nodeos-init](../1. módulos propios/nodeos-init.html) para
+en beneficio de [nodeos-init](../../5. descripción informática/3. Implementación/7. módulos propios/nodeos-init.html) para
 permitir el montaje del sistema de archivos *devtmpfs* antes de ejecutar
 cualquier instancia de Node.js, tarea necesaria a partir de la versión 0.11.15.
 

@@ -109,7 +109,7 @@ sistemas de archivos externos desde dentro del entorno aislado de *vagga* (para
 lo que he propuesto que estos puedan ser definidos en la configuración de
 [arranque del propio container](https://github.com/tailhook/vagga/issues/103)),
 ha hecho que tenga que modificar el módulo
-[nodeos-mount-filesystems](../1. módulos propios/nodeos-mount-filesystems.html)
+[nodeos-mount-filesystems](../../5. descripción informática/3. Implementación/7. módulos propios/nodeos-mount-filesystems.html)
 para poder aceptar dichos valores como variables de entorno y de esta forma
 poder definirlos en la configuración del container ,y tener un medio por el que
 ignorar los ofrecidos por el `/proc/cmdline` del sistema.

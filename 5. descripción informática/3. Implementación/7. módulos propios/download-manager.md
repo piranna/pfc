@@ -15,7 +15,7 @@ sean distribuidas, comprobando si la descarga se ha realizado anteriormente para
 evitar repetirla. También muestra una barra de progreso mediante el módulo
 [download-status](https://github.com/kevva/download-status) y detecta cuándo
 está siendo ejecutado en un entorno no interactivo (servidores de integración continua) para evitar que se impriman caracteres de control que dificulten su revisión. Por otro lado, también hace uso del módulo
-[jsdiff](../2. colaboraciones con proyectos externos/jsdiff.html) para poder
+[jsdiff](../1. colaboraciones con proyectos externos/jsdiff.html) para poder
 aplicar los parches del código de cada uno de los proyectos automáticamente,
 reduciendo la tarea del usuario a configurar las descargas y definir los pasos a
 seguir para después compilarlos.
@@ -42,12 +42,12 @@ varias ocasiones que adaptarlos a la misma o corregir diversos fallos:
   la descarga de uno de ellos cada vez, al margen de que no permitía indicar
   ubicaciones independientes para cada una de ellas.
 * Entre las dependencias de *download*, el módulo
-  [vinyl-fs](../2. colaboraciones con proyectos externos/vinyl-fs.html) no
+  [vinyl-fs](../1. colaboraciones con proyectos externos/vinyl-fs.html) no
   preservaba la fecha de modificación (`mtime`) de los archivos descargados, lo
   cual daba problemas en la compilación de algunos componentes puesto que el
   comando `make` percibía que dichos archivos habían sido modificados cuando
   realmente no había sido así.
-* [tar-stream](../2. colaboraciones con proyectos externos/tar-stream.html) no
+* [tar-stream](../1. colaboraciones con proyectos externos/tar-stream.html) no
   incluía soporte para la extensión de GNU `tar`
   [@LongLink](https://github.com/mafintosh/tar-stream/issues/35), que
   permite el uso de rutas largas con muchos niveles de directorios para los
@@ -58,7 +58,7 @@ varias ocasiones que adaptarlos a la misma o corregir diversos fallos:
   de los links simbólicos en la propia cabecera del archivo en lugar del cuerpo
   del mismo (algo estructuralmente más correcto). Esto impedía que se
   pudiera usar la API de streams para conectar directamente la salida de
-  [cpio-stream](../2. colaboraciones con proyectos externos/cpio-stream.html) a
+  [cpio-stream](../1. colaboraciones con proyectos externos/cpio-stream.html) a
   *tar-stream*, por lo que [se decidió](https://github.com/mafintosh/tar-stream/pull/42)
   implementar dicho soporte. No obstante, los archivos `tar` generados tienen
   [problemas con los link simbólicos](https://github.com/mafintosh/tar-stream/issues/44)

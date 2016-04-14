@@ -10,7 +10,7 @@ datos en cada etapa al igual que sucedería usando comandos externos.
 
 [coreutils.js](https://github.com/piranna/coreutils.js) por otro lado, al estar
 diseñado específicamente para ser usado dentro de una shell interactiva como son
-[nsh](../2. colaboraciones con proyectos externos/nsh.html) o el interprete REPL
+[nsh](../1. colaboraciones con proyectos externos/nsh.html) o el interprete REPL
 de Node.js, toma un enfoque distinto al implementar los comandos básicos de un
 sistema Unix mediante el uso de streams de objetos para cada uno de ellos,
 permitiendo el interconectar los distintos "comandos" entre sí usando la API de

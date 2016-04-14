@@ -44,7 +44,7 @@ por lo que finalmente he adaptado *jsdiff* para que pueda parsear
 [correctamente](https://github.com/kpdecker/jsdiff/pull/88) las cabeceras de los
 archivos para posteriormente poder extraer de ellas las rutas correctas a los
 mismos. Esto era especialmente importante para poder usar el módulo
-[download-manager](../1. módulos propios/download-manager.html) pudiendo aplicar
+[download-manager](../../5. descripción informática/3. Implementación/7. módulos propios/download-manager.html) pudiendo aplicar
 todos los parches sin necesitar tener en cuenta casos de uso concretos.
 
 Por último y mas importante, *jsdiff* no tenia soporte para aplicar parches cuya
