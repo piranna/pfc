@@ -12,4 +12,5 @@
     3. [C#](2. Estudio de alternativas.html#c)
     4. [Phantom](2. Estudio de alternativas.html#phantom)
     5. [hardware](2. Estudio de alternativas.html#hardware)
-3. [Metodología empleada](3. Metodología empleada.html)
+3. [Objetivos](3. Objetivos.html)
+4. [Metodología empleada](4. Metodología empleada.html)
