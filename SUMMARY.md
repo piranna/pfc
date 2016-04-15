@@ -7,7 +7,6 @@
   * [Descripción del problema](4. introducción/1. Descripción del problema.md)
   * [Estudio de alternativas](4. introducción/2. Estudio de alternativas.md)
   * [Objetivos](4. introducción/3. Objetivos.md)
-  * [Metodología empleada](4. introducción/4. Metodología empleada.md)
 * [Descripción informática](5. descripción informática/README.md)
   * [Especificación](5. descripción informática/1. Especificación.md)
   * [Diseño](5. descripción informática/2. Diseño.md)

@@ -13,4 +13,3 @@
     4. [Phantom](2. Estudio de alternativas.html#phantom)
     5. [hardware](2. Estudio de alternativas.html#hardware)
 3. [Objetivos](3. Objetivos.html)
-4. [Metodología empleada](4. Metodología empleada.html)
