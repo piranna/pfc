@@ -83,23 +83,24 @@ proceso de construcción (*build*) es similar para todos ellos:
   anterioridad para esta plataforma en concreto. Generalmente esto se hace
   comprobando si existe el directorio donde se han estado construyendo los
   objetos temporales del mismo, o cuando sea posible comprobando si existen los
-  productos finales ya generados. Esto es así puesto que el proceso de
-  construcción se ha diseñado de forma que todos ellos hagan uso de la variable
-  `$OBJ_DIR` para indicar la ubicación de dichos objetos temporales, y en caso
-  de que se produzca un fallo durante la Compilación de los mismos, poder
-  eliminar dicho directorio automáticamente.
+  productos finales ya generados. Esto es así porque el proceso de construcción
+  se ha diseñado de forma que todos ellos hagan uso de la variable `$OBJ_DIR`
+  para indicar la ubicación de dichos objetos temporales, y en caso de que se
+  produzca un fallo durante la Compilación de los mismos, poder eliminar dicho
+  directorio automáticamente.
 * el siguiente paso consiste en la configuración del componente. siguiendo en
   casi todos los casos el estándar `./configure`. Allá donde sea posible se
-  intenta configurar de forma que después se haga una compilación out-of-tree,
-  aunque en algunos casos como en el de Node.js esto no es posible, por lo que
-  se procede a ejecutar una tarea de limpieza previamente. También en las
-  opciones de configuración se intenta desactivar toda la funcionalidad extra
-  posible (como puede ser la generación de librerías estáticas) para acelerar
-  dicho proceso y para que solo notifique de los mensajes de error en lugar de
-  mostrar todas las operaciones que se estén ejecutando, además de generar los
-  componentes sin información de depuración para reducir su tamaño. En caso de
-  que esto último no sea posible, dicha información de debug se elimina en un
-  proceso posterior.
+  intenta configurar de forma que después se haga una compilación out-of-tree
+  (donde los archivos compilados se escriben en un directorio distinto al del
+  código fuente), aunque en algunos casos como en el de Node.js esto no es
+  posible, por lo que se procede a ejecutar una tarea de limpieza previamente.
+  También en las opciones de configuración se intenta desactivar toda la
+  funcionalidad extra posible (como puede ser la generación de librerías
+  estáticas) para acelerar dicho proceso y para que solo notifique de los
+  mensajes de error en lugar de mostrar todas las operaciones que se estén
+  ejecutando, además de generar los componentes sin información de depuración
+  para reducir su tamaño. En caso de que esto último no sea posible, dicha
+  información de debug se elimina en un proceso posterior.
 * después se procede a la compilación propiamente dicha, que al igual que en el
   caso anterior, se intentan generar solamente los productos que se van a
   emplear posteriormente.
@@ -108,20 +109,20 @@ proceso de construcción (*build*) es similar para todos ellos:
 
 Este proceso es similar en todas las distintas capas del sistema. En algunos
 casos hay una etapa extra que elimina los objetos de etapas siguientes generados
-en anteriores compilaciones (sobretodo en el caso de que estos dependan de los
+en anteriores compilaciones (sobre todo en el caso de que estos dependan de los
 productos generados antes como es el caso de la construcción del initram
 embebido dentro del kernel de Linux, el cual requiere tener disponible el
 binario de Node.js recién compilado) de forma que se fuerce a que estos sean
 regenerados.
 
 Se ha estudiado la posibilidad de usar para el proceso de generación
-[node-gyp](https://github.com/nodejs/node-gyp), el cual es el método oficial
-para generar módulos compilados en Node.js. Esto requiere el generar scripts de
+[node-gyp](https://github.com/nodejs/node-gyp), que es el método oficial para
+generar módulos compilados en Node.js. Esto requeriría el generar scripts de
 configuración de [GYP](https://code.google.com/p/gyp), el gestor de compilación
 desarrollado por Google para el motor Javascript
 [v8](https://developers.google.com/v8) y por extensión usado por Node.js. Sin
 embargo, GYP requiere del uso de un interprete [Python](https://www.python.org)
-2.7 (versión ya obsoleta) y además Google esta deprecando internamente el uso de
+2.7 (versión ya obsoleta) y además Google ha abandonado internamente el uso de
 GYP en beneficio de [gn](https://chromium.googlesource.com/chromium/src/tools/gn).
 Por este motivo, se están estudiando dentro de la comunidad de Node.js distintas
 [alternativas](https://github.com/nodejs/node/issues/133) (reimplementar `GYP`
@@ -145,12 +146,12 @@ Por otra parte, la mayoría de scripts están escritos en `bash`, aunque se est�
 portando a Javascript para facilitar el que mas adelante el sistema pueda ser
 autocontenido (generable dentro de otra instancia de NodeOS). Los principales
 problemas que han surgido hasta el momento en esta transición han correspondido
-a la etapa de descarga de los distintos códigos fuente, para lo cual he abierto
-varios issues relativos al soporte correcto de la extracción de archivos de gran
-tamaño en los proyectos correspondientes a los módulos
+a la etapa de descarga de los distintos códigos fuente, para lo cual se han
+abierto varios issues relativos al soporte correcto de la extracción de archivos
+de gran tamaño en los proyectos correspondientes a los módulos
 [download](https://github.com/kevva/download/issues?q=author%3Apiranna) y
 [decompress](https://github.com/kevva/decompress/issues?q=author%3Apiranna). Una
-vez corregidos dichos fallos, he hecho el módulo
+vez corregidos dichos fallos, se ha desarrollado el módulo
 [download-manager](7. módulos propios/download-manager.html)
 para poder procesarlas todas de forma uniforme. El resto de etapas consisten
 principalmente en la ejecución de otros comandos externos como las herramientas
@@ -163,7 +164,7 @@ generación de las imágenes de disco haciendo que no sea necesario su montaje, 
 también las correspondientes a Docker ya que su proceso de generación estándar
 los requiere. Para ello he generado archivos `cpio` y `tar` a partir de archivos
 definiendo su descripción en vez de usar archivos reales evitando problemas de
-permisos, y por otro he hecho uso de los comandos `genfatfs` y `genext2fs` para
+permisos, y por otro se hace uso de los comandos `genfatfs` y `genext2fs` para
 crear directamente las imágenes de disco y el gestor de arranque SyxLinux, el
 cual esta preparado para trabajar con ellas explícitamente a diferencia de
 `GRUB`, que está orientado a su uso con discos duros y particiones reales. La
