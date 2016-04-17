@@ -22,23 +22,27 @@
 
 
 Al contrario de lo que pensé en un principio, este proyecto me ha permitido ver
-que lo más complicado de desarrollar un sistema operativo no es su programación,
-la cual ha sido bastante menor de lo que en un principio se podría suponer
-puesto que la mayoría de sus elementos ya están hechos y testeados previamente,
-sino la orquestación y configuración de los distintos componentes para que el
-sistema funcione correctamente, lo que me ha permitido conocer mejor cómo
-funcionan los distintos elementos del mismo y la relación entre ellos. Otro
-aspecto importante ha sido aprender a organizar el grupo de desarrolladores y
-a administrar los issues, recogiendo sugerencias y problemas acontecidos, y
-moderándolos (ya que, a efectos prácticos, ha funcionado también como lista de
-correo y foro), y también a promocionar y hacer publicidad del proyecto y a
-recabar atención sobre él mismo mediante la inscripción en diversos concursos, la
-publicación de artículos o solicitando la colaboración de los distintos
-proyectos de los que NodeOS depende, tanto para su fase de construcción como para
-su funcionamiento. Esto también me ha permitido aprender a valorar la
-importancia de anotar los cambios, evolución y desarrollo del proyecto para
-poder después tener referencias sobre los problemas que ha habido y la forma en
-que se han resuelto de cara a poder ser documentados y estudiados posteriormente.
+que al reutilizar componentes ya existentes (como usar un kernel Linux), lo más
+complicado de desarrollar un sistema operativo pasa a ser la orquestación y
+configuración de dichos componentes para que el sistema funcione correctamente,
+lo que me ha permitido conocer mejor cómo se relacionan entre sí. Otro aspecto
+importante ha sido aprender a organizar las colaboraciones recibidas por el
+proyecto, y a administrar y recoger las sugerencias y problemas acontecidos y
+moderándolos (ya que, a efectos prácticos, también ha funcionado como lista de
+correo, foro y blog del proyecto para poder seguir su desarrollo y las
+novedades del mismo), y también a promocionar y hacer publicidad del proyecto y
+a recabar atención sobre él mismo mediante la inscripción en diversos concursos
+(*IX y X Concurso Universitario de Software Libre*, *2º Certamen de Proyectos
+Libres de la Universidad de Granada* y *Open Awards 2016*), la publicación de
+[artículos](http://dcjtech.info/topic/nodeos-1-0-rc1-press-note) (incluso en
+[portada en Barrapunto](http://softlibre.barrapunto.com/article.pl?sid=16/03/05/1116259),
+portal de referencia sobre tecnología en español) o solicitando la colaboración
+de los distintos proyectos de los que NodeOS depende, tanto para su fase de
+construcción como para su funcionamiento. Esto también me ha permitido aprender
+a valorar la importancia de anotar los cambios, evolución y desarrollo del
+proyecto para poder después tener referencias sobre los problemas que ha habido
+y la forma en que se han resuelto de cara a poder ser documentados y estudiados
+posteriormente.
 
 También me ha permitido comprobar que las mayores virtudes del ecosistema de
 Javascript y de Node.js son su dinamismo y su modularidad, los cuales les dan
@@ -75,7 +79,7 @@ como [Python](https://www.python.org) y su guía de estilo
 calidad ampliamente aceptados por toda la comunidad. Algunos de los problemas
 con los que me he encontrado han sido:
 
-* el uso de lenguajes transpilados ([CoffeScript](http://coffeescript.org),
+* El uso de lenguajes traducidos ([CoffeScript](http://coffeescript.org),
   [TypeScript](http://www.typescriptlang.org), [EcmaScript 6](http://babeljs.io)...)
   sin incluir su código Javascript equivalente generado que impiden el poder
   usar directamente los repositorios de GitHub como dependencias en la fase de
@@ -83,17 +87,17 @@ con los que me he encontrado han sido:
   repositorio principal. Ésta es una de las razones por las que los principales
   desarrolladores de Node.js deciden usar directamente las características
   estándar que ofrece el lenguaje, sin la ayuda de componentes externos.
-* el uso de tabuladores o de más 80 columnas en el código fuente. dificultando
+* El uso de tabuladores o de más 80 columnas en el código fuente. dificultando
   su lectura en navegadores web o en pantallas pequeñas.
-* la adhesión a guías de estilo sin el uso de checkeadores de código automáticos
-  o su uso previo a la fase de testeo, ralentizando el desarrollo al tener que
-  dedicar esfuerzos a asegurarse que el estilo sea correcto en vez de a su
-  funcionalidad, cuando esta debería realizarse solamente  en una última etapa
-  previa a su publicación.
-* ignorar los *pull-requests* (colaboraciones) hechos por parte de otros
+* La adhesión a guías de estilo sobre el código sin el uso de comprobaciones
+  automáticas de la misma, o su uso previo a la fase de testeo, ralentizando el
+  desarrollo al tener que dedicar esfuerzos a asegurarse que el estilo sea
+  correcto en vez de a su funcionalidad, cuando esta debería realizarse
+  sólamente como parte de una última etapa previa a su publicación.
+* Ignorar los *pull-requests* (colaboraciones) hechos por parte de otros
   desarrolladores sin incluirlos en el código principal ni comentar los motivos
   que conllevan a su negativa.
-* excesivo celo en que las aportaciones sean muy especificas en la funcionalidad
+* Excesivo celo en que las aportaciones sean muy especificas en la funcionalidad
   que aportan, incluso en el caso de estar ejecutándose correctamente todos los
   tests.
 * atención excesiva a que la cobertura de tests sea del 100% en proyectos
@@ -108,9 +112,10 @@ repositorio y aumentando la fragmentación de este. Todo esto contrasta con los
 proyectos más grandes (en importancia, tamaño o número de seguidores) donde hay
 más aceptación a admitir código de terceros y de forma mucho mas rápida, sin
 tanta obsesión por la calidad del código, incluso llegando a aceptar los cambios
-con fallos para después ser corregidos por parte de los propios
-mantenedores, en vez de solicitar que los cambios sean correctos a priori a la
-persona que los envía. Esta actitud facilita la colaboración en los distintos proyectos por parte de nuevos desarrolladores, sin necesidad de ser programadores expertos.
+con fallos para después ser corregidos por parte de los propios mantenedores, en
+vez de solicitar que los cambios sean correctos a priori a la persona que los
+envía. Esta actitud facilita la colaboración en los distintos proyectos por
+parte de nuevos desarrolladores, sin necesidad de ser programadores expertos.
 
 El hecho de que el repositorio de npm esté abierto a admitir paquetes nuevos de
 cualquier persona sin ningún tipo de control hace que también haya algunos
