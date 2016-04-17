@@ -1,6 +1,6 @@
 # Conclusiones
 
-1. [Estadísticas](1. Estadísticas.html)
+1. [Medidas de rendimiento](1. Medidas de rendimiento.html)
 2. [Logros principales alcanzados](2. Logros principales alcanzados.html)
   1. [Reconocimiento de la comunidad](2. Logros principales alcanzados.html#reconocimiento-de-la-comunidad)
   2. [Repercusión del proyecto](2. Logros principales alcanzados.html#repercusión-del-proyecto)
