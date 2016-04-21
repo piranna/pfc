@@ -2,14 +2,15 @@
 
 GitBook esta orientado principalmente a su uso en medios electrónicos incluso en
 el caso de la exportación a PDF, al estar enfocado a e-readers y documentación
-online. Esto tiene el problema de que al general material impreso no hay
+online. Esto tiene el problema de que al generar material impreso no hay
 posibilidad de conservar los enlaces a otros documentos, pero tampoco las
 referencias dentro del propio libro ya que éstas están hechas mediante el uso de
 hiperenlaces. Para paliar esta situación propuse el añadir soporte para mostrar
 los [enlaces al generar un PDF](https://github.com/GitbookIO/gitbook/issues/571)
 dentro de la funcionalidad de GitBook, pero al no haberse producido avances al
-respecto, decidí desarrollar un [plugin](https://github.com/piranna/gitbook-plugin-printlinks)
-que añadiera dicho soporte mostrando los enlaces a modo de notas al pie de página
+respecto, decidí desarrollar un
+[plugin](https://github.com/piranna/gitbook-plugin-printlinks) que añadiera
+dicho soporte mostrando los enlaces a modo de notas al pie de página
 ([footnotes](http://www.plagiarism.org/citing-sources/what-are-footnotes)).
 
 El plugin se ejecuta en cada uno de los capítulos antes de ser convertido a HTML
@@ -32,7 +33,7 @@ motor de expresiones regulares de Javascript no soporta la búsqueda de
 coincidencias antes del punto de escaneo actual (*look behind*), por lo que
 decidí considerar que el formato de los enlaces tenía "prefijos" (el signo de
 admiración y el índice) y solo procesar los enlaces que no tuvieran ninguno
-(enlaces cuyo "prefijo" fuera la cadena vacía). Después dentro del texto se
+(enlaces cuyo "prefijo" fuese la cadena vacía). Después dentro del texto se
 inserta una referencia al footnote a continuación del propio enlace para que
 éste pueda ubicarse cuando se imprima el libro, y al final de la página el
 propio *footnote* con la ruta del enlace.
@@ -44,6 +45,7 @@ enlace y se unifican, y después se crea la referencia a la sección teniendo en
 cuenta el idioma del libro mediante un sencillo mecanismo inspirado en
 [gettext](https://www.gnu.org/software/gettext) consistente en un objeto JSON
 donde las claves son el identificador del idioma y sus valores son cadenas de
-texto [localizadas](https://es.wikipedia.org/wiki/Internacionalización_y_localización)
+texto
+[localizadas](https://es.wikipedia.org/wiki/Internacionalización_y_localización)
 con el texto `__REF__` en la ubicación donde después se insertara la referencia
 a la sección mediante una simple sustitución de texto.

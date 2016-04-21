@@ -13,13 +13,18 @@ credenciales del mismo en el archivo `etc/logon.json` dentro del directorio del
 usuario conteniendo los valores que tendría normalmente en el archivo
 [/etc/passwd](http://linux.die.net/man/5/passwd), como son el hash `sha1` de la
 contraseña o la shell por defecto, junto con otros datos que puedan ser útiles
-(interfaz gráfica). De esta forma, los propios usuarios pueden
-cambiar sus valores de acceso sin requerir el uso de ejecutables con permisos
-privilegiados como [passwd](http://linux.die.net/man/1/passwd) o solicitar el
-cambio a un administrador del sistema. Esto tiene el inconveniente de que en el
-caso de que el usuario se infectara con un virus o sufriera un hackeo no solo se
-comprometería toda su información sino también el acceso a su cuenta, ya que
-estos podrían haber cambiado la contraseña (en tal caso, la única solución realista sería poseer una copia de seguridad), pero por otra parte al no haber una base de datos de usuarios centralizada ni un usuario administrador ni archivos o elementos comunes a todos los usuarios, solo se comprometería la cuenta a la que se hubiera tenido acceso en vez de a todo el sistema.
+para el acceso (como la interfaz gráfica a usar). De esta forma, los propios
+usuarios pueden cambiar sus valores de acceso sin requerir el uso de ejecutables
+con permisos privilegiados como [passwd](http://linux.die.net/man/1/passwd) o
+solicitar el cambio a un administrador del sistema. Esto tiene el inconveniente
+de que en el caso de que el usuario se infectara con un virus o sufriera un
+hackeo no solo se comprometería toda su información sino también el acceso a su
+cuenta, ya que estos podrían haber cambiado la contraseña (en todos los casos,
+la única solución realista sería poseer una copia de seguridad de los datos),
+pero por otra parte al no haber una base de datos de usuarios centralizada ni un
+usuario administrador ni archivos o elementos comunes a todos los usuarios, solo
+se comprometería la cuenta a la que se hubiera tenido acceso en vez de a todo el
+sistema.
 
 Se hace uso del módulo [prompt](http://github.com/flatiron/prompt) para solicitar
 al usuario su nombre y contraseña. Se considera que el nombre de usuario es
@@ -37,10 +42,11 @@ una jaula *chroot* creada dentro del directorio del usuario y se cambia el `UID`
 y `GID` [reales y efectivos](http://linux.die.net/man/2/setreuid) del propio
 proceso para reducir sus permisos. Se hace de esta manera en vez de simplemente
 ejecutar la shell del usuario con sus permisos reducidos porque puede darse el
-caso de que el usuario no tenga definida una, y al estar ejecutándose una sesión
-REPL por defecto, este se estaría ejecutado con permisos de administrador, siendo
-un grave fallo de seguridad. De este modo, tanto si se ejecuta la shell del
-usuario como una sesión REPL, estos se ejecutarían con los permisos reducidos a los del usuario.
+caso de que el usuario no tenga definida una o se produzca un error, y al estar
+ejecutándose una sesión REPL por defecto, este se estaría ejecutado con permisos
+de administrador, siendo un grave fallo de seguridad. De este modo, tanto si se
+ejecuta la shell del usuario como una sesión REPL, estos se ejecutarían con los
+permisos reducidos a los del usuario.
 
 La idea es que posteriormente este sistema pueda usarse también para el acceso
 remoto mediante [HTTP Auth](https://tools.ietf.org/html/rfc2617) o
@@ -51,12 +57,12 @@ usar posteriormente su unidad [GDrive](https://drive.google.com) como directorio
 del usuario, u otro servicio con soporte de [OAuth](http://oauth.net) o con
 cualquier otro mecanismo de autenticación.
 
-Actualmente no existe ningún mecanismo para añadir nuevos usuarios al margen de los
-que se están creando al generar la partición de usuarios en la capa de
+Actualmente no existe ningún mecanismo para añadir nuevos usuarios al margen de
+los que se están creando al generar la partición de usuarios en la capa de
 [usersfs](../../../5. descripción informática/3. Implementación/4. usersfs.md),
 pero se plantea la posibilidad de añadir una opción en el futuro para permitir
 que sea el propio *logon* el que cree dichos usuarios en el sistema a cualquier
-persona que lo desee, puesto que solo se reduce a crear un directorio en la
+persona que lo desee, puesto que sólo se reduce a crear un directorio en la
 partición de usuarios y todo el sistema queda aislado dentro de él, instalándose
 una copia de `npm` para que el usuario pueda instalar los paquetes que vea
 conveniente y configurar el entorno a su medida.

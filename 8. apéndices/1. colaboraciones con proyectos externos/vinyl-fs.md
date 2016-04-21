@@ -5,11 +5,12 @@ descomprimir automáticamente todos los componentes de construcción de NodeOS,
 internamente hace uso de [vinyl-fs](https://github.com/gulpjs/vinyl-fs), el cual
 aplica la API de streams de Node.js para su uso con archivos (incluidos sus
 metadatos). El módulo tenía un problema por el cual la fecha de modificación de
-los archivos (`mtime`) [no se conservaba](https://github.com/gulpjs/vinyl-fs/issues/96)
-al escribirlo en disco, sino que en su lugar el archivo se creaba con la fecha
-actual. Esto ocasionaba que al compilar [libfuse](http://fuse.sourceforge.net),
-el comando [make](https://www.gnu.org/software/make) diese problemas al creer
-que los archivos habían sido modificados y necesitaban regenerarse.
+los archivos (`mtime`)
+[no se conservaba](https://github.com/gulpjs/vinyl-fs/issues/96) al escribirlo
+en disco, sino que en su lugar el archivo se creaba con la fecha actual. Esto
+ocasionaba que al compilar [libfuse](http://fuse.sourceforge.net), el comando
+[make](https://www.gnu.org/software/make) diese problemas al creer que los
+archivos habían sido modificados y necesitaban regenerarse.
 
 Dicho problema [pude solucionarlo](https://github.com/gulpjs/vinyl-fs/pull/110)
 mediante el uso de la función

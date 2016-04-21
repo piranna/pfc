@@ -58,8 +58,8 @@ de *desarrollo para la reutilización* al desarrollar módulos con un enfoque de
 uso genérico cuando no existe ninguno disponible. Esto además es acorde a las
 buenas prácticas que promueve la comunidad de Node.js, sobre todo influidas por
 la [filosofía UNIX](https://en.wikipedia.org/wiki/Unix_philosophy) y el uso del
-gestor de paquetes `npm` (hasta el punto de que algunos solo contienen una única
-función de unas pocas lineas encargada de realizar una tarea concreta), y
+gestor de paquetes `npm` (hasta el punto de que algunos sólo contienen una única
+función de unas pocas líneas encargada de realizar una tarea concreta), y
 basadas fuertemente en la reutilización y combinación de módulos, donde lo
 habitual es que cada proyecto se subdivida en una serie de proyectos
 independientes y con entidad propia que después serán unidos en un proyecto que
@@ -89,7 +89,7 @@ adaptarse a tecnologías en continua evolución y en algunos casos incompletas o
 con una implementación no estandar o defectuosa, a diferencia de otros entornos
 y lenguajes como Java o C++ donde culturalmente predominan ciclos de desarrollo
 mas largos, debido en parte a que tradicionalmente se han usado en proyectos de
-gran tamaño pero también por estar basados en entornos, librerías y tecnologías
+gran tamaño, pero también por estar basados en entornos, librerías y tecnologías
 mas estables. Esto hace que se vea como algo normal que se libere el código
 fuente de los proyectos de Node.js desde el primer momento a pesar de estar
 incompletos o con fallos, siguiendo el lema
@@ -99,18 +99,18 @@ habitual en algunos de los proyectos y colectivos mas importantes del Software
 Libre y la [cultura abierta](https://es.wikipedia.org/wiki/Cultura_libre), e
 incluso el lanzamiento de nuevas versiones y actualizaciones varias veces al día
 solventando el problema de la retrocompatibilidad y la inestabilidad que genera
-un entorno tan dinámico mediante iniciativas como son el uso del
+un entorno tan dinámico y volátil mediante iniciativas como son el uso del
 [versionado semántico](http://semver.org/lang/es).
 
 Sin embargo, mas allá de aspectos ideológicos o de seguir una metodología de
 trabajo afín a la usada normalmente dentro de la comunidad de Node.js que pueda
 facilitar la colaboración por parte de terceras personas al proyecto, otro hecho
 importante que ha influido en la adopción de una metodología de desarrollo
-evolutivo han sido el carácter experimental del proyecto tanto por su enfoque
+evolutivo ha sido el carácter experimental del proyecto tanto por su enfoque
 como por la implementación de nuevos conceptos (como el login descentralizado o
 el sistema de archivos raíz único para cada usuario), que han provocado algunas
-incertidumbres sobre como llevarlas a cabo o sobre su efectividad posterior en
+incertidumbres sobre cómo llevarlas a cabo o sobre su efectividad posterior en
 la práctica, lo cual no permitía utilizar otras metodologías de desarrollo mas
 tradicionales y estructuradas.
 
-[^1]: En muchos casos este proyecto de "unión" a su vez separa el ejecutable de [línea de comandos](https://docs.npmjs.com/files/package.json#bin) (*CLI*) del núcleo de la aplicación reduciendo su tarea a simplemente interpretar los parámetros con los que ha sido invocado y pasarlos a su *núcleo*, de esta forma la propia aplicación también es usable por terceras partes como un módulo en si mismo. Sin embargo, el método que se esta recomendando en la comunidad de Node.js es separar el propio ejecutable a un módulo independiente para evitar la inclusión de dependencias por otra parte inútiles cuando es usada como librería. Esta división *ejecutable-librería* llega en algunos casos extremos como en el de [Grunt](http://gruntjs.com) o [GitBook](https://www.gitbook.com) a que el ejecutable sea un proyecto independiente que se instala de forma global y que se aísla por completo de la versión de la librería que sea usada por cada proyecto internamente, permitiendo que cada uno de ellos utilice una versión distinta sin afectar al resto.
+[^1]: En muchos casos este proyecto de "unión" a su vez separa el ejecutable de [línea de comandos](https://docs.npmjs.com/files/package.json#bin) (*CLI*) del *núcleo* de la aplicación, reduciendo su tarea a simplemente interpretar los parámetros con los que ha sido invocado y pasarlos a dicho *núcleo*. De esta forma, la propia aplicación también puede ser usada como un módulo en si mismo por parte de otros módulos, definiendolo como dependencia de los mismos. Sin embargo, el método que actualmente se está recomendando en la comunidad de Node.js consiste en separar el propio ejecutable a un módulo independiente para evitar la inclusión de dependencias por otra parte inútiles cuando es usada como librería. Esta división *ejecutable-librería* llega en algunos casos extremos (como en el caso de [Grunt](http://gruntjs.com) o [GitBook](https://www.gitbook.com)) a que el ejecutable sea un proyecto independiente que se instala de forma global y que se aísla por completo de la versión de la librería que está siendo usada por cada proyecto internamente, permitiendo que cada uno de ellos utilice una versión distinta sin afectar al resto.

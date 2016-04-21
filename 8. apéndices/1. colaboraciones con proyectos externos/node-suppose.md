@@ -15,19 +15,19 @@ haría un usuario y comprobar sus respuestas.
 
 Originariamente el módulo estaba orientado a la automatización de programas al
 estilo de cómo se usa [Selenium](http://www.seleniumhq.org) con las páginas web,
-pero debido a mi intención de usarlo en un entorno de pruebas necesitaba
-reaccionar ante los resultados obtenidos, por lo que añadí soporte para ejecutar
-una función como resultado a una correspondencia en la salida estándar, al igual
-que el que se pueda definir dicha respuesta al mismo tiempo que se define una
-expectativa, razón por la cual su autor me dio permisos para subir código
-directamente al repositorio principal y publicar nuevas versiones en npm.
+pero debido a la intención de usarlo en un entorno de pruebas se necesitaba
+reaccionar ante los resultados obtenidos, por lo que se añadió soporte para
+ejecutar una función como resultado a una correspondencia en la salida estándar,
+al igual que el que se pueda definir dicha respuesta al mismo tiempo que se
+define una expectativa, razónes por las que su autor me dio permisos para subir
+código directamente al repositorio principal y publicar nuevas versiones en npm.
 
 Un problema que tenía dicho módulo es que su API usaba la misma
 [nomenclatura](https://github.com/jprichardson/node-suppose/issues/9#issuecomment-70378218)
 que la empleada por la API de eventos de Node.js, lo que dificultaba el
-procesamiento de errores. Por este motivo propuse que se usara una API basada en
+procesamiento de errores. Por este motivo se propuso el usar una API basada en
 [Promises](https://github.com/jprichardson/node-suppose/issues/9#issuecomment-147813472),
-de forma que tendría la ventaja añadida de poder hacer varias operaciones en
-respuesta a una salida determinada, lo cual implementé posteriormente en la
+de forma que se tendría la ventaja añadida de poder hacer varias operaciones en
+respuesta a una salida determinada, lo cual se implementó posteriormente en la
 versión 0.4.0 junto con el soporte para procesar streams en vez de solamente el
 resultado de comandos externos.

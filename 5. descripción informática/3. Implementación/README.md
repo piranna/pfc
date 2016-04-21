@@ -52,20 +52,20 @@ es la misma para todos ellos, consistente en:
 
 Esta organización permite por un lado el no tener que descargar y parchear
 varias veces el código fuente de las librerías y componentes del sistema ni
-recrear los productos finales una vez generados simplemente comprobando si el
+recrear los productos finales una vez generados, simplemente comprobando si el
 directorio de productos construidos ya existe, y por otro el poder eliminar los
 archivos temporales fácilmente en caso de que se haya producido un error durante
 su construcción. Además, facilita el crear una estructura uniforme que permita
 reutilizar código y detectar los problemas que puedan aparecer. Esto último esta
 potenciado por el hecho de comprobar el estado de salida de cada comando y
 terminar la ejecución de los scripts con un código de error distinto para cada
-una de ellos, de forma que se pueda identificar inequívocamente la operación que
+uno de ellos, de forma que se pueda identificar inequívocamente la operación que
 ha fallado.
 
 En cuanto al ciclo de vida de los módulos, las distintas etapas a ejecutar son:
 
 * *preinstall*, encargada de descargar el código fuente de las distintas
-  librerías y componentes desde su página web correspondiente y parchearlo si
+  librerías y componentes desde su página web correspondiente, y parchearlo si
   fuese necesario. En el caso de las herramientas externas independientes de la
   plataforma destino para la que se vaya a compilar el sistema (como es el
   generador de particiones VFAT *genfatfs*) también se produce la compilación en
@@ -82,35 +82,36 @@ proceso de construcción (*build*) es similar para todos ellos:
 * en primer lugar se comprueba si el componente ya esta construido con
   anterioridad para esta plataforma en concreto. Generalmente esto se hace
   comprobando si existe el directorio donde se han estado construyendo los
-  objetos temporales del mismo, o cuando sea posible comprobando si existen los
+  objetos temporales del mismo, o cuando sea posible, comprobando si existen los
   productos finales ya generados. Esto es así porque el proceso de construcción
   se ha diseñado de forma que todos ellos hagan uso de la variable `$OBJ_DIR`
   para indicar la ubicación de dichos objetos temporales, y en caso de que se
-  produzca un fallo durante la Compilación de los mismos, poder eliminar dicho
+  produzca un fallo durante la compilación de los mismos, poder eliminar dicho
   directorio automáticamente.
 * el siguiente paso consiste en la configuración del componente. siguiendo en
-  casi todos los casos el estándar `./configure`. Allá donde sea posible se
-  intenta configurar de forma que después se haga una compilación out-of-tree
+  casi todos los casos el estándar `./configure`. Allá donde sea posible, se
+  intenta configurar de forma que después se haga una compilación *out-of-tree*
   (donde los archivos compilados se escriben en un directorio distinto al del
   código fuente), aunque en algunos casos como en el de Node.js esto no es
-  posible, por lo que se procede a ejecutar una tarea de limpieza previamente.
+  posible, por lo que se procede a ejecutar una tarea de limpieza previamente
+  para eliminar los archivos correspondientes a una compilación anterior.
   También en las opciones de configuración se intenta desactivar toda la
   funcionalidad extra posible (como puede ser la generación de librerías
-  estáticas) para acelerar dicho proceso y para que solo notifique de los
+  estáticas) para acelerar dicho proceso, y para que sólo notifique de los
   mensajes de error en lugar de mostrar todas las operaciones que se estén
   ejecutando, además de generar los componentes sin información de depuración
   para reducir su tamaño. En caso de que esto último no sea posible, dicha
-  información de debug se elimina en un proceso posterior.
-* después se procede a la compilación propiamente dicha, que al igual que en el
-  caso anterior, se intentan generar solamente los productos que se van a
-  emplear posteriormente.
+  información de depuración se elimina en un paso posterior.
+* después se procede a la compilación propiamente dicha, donde al igual que en
+  el caso anterior, se intenta que se generen sólamente los productos que se van
+  a emplear posteriormente.
 * y el último paso es la instalación de los componentes, lo cual en algunos
-  casos se reduce solamente a copiar los productos generados.
+  casos se reduce sólamente a copiar los productos generados.
 
 Este proceso es similar en todas las distintas capas del sistema. En algunos
 casos hay una etapa extra que elimina los objetos de etapas siguientes generados
 en anteriores compilaciones (sobre todo en el caso de que estos dependan de los
-productos generados antes como es el caso de la construcción del initram
+productos generados antes como es el caso de la construcción del *initram*
 embebido dentro del kernel de Linux, el cual requiere tener disponible el
 binario de Node.js recién compilado) de forma que se fuerce a que estos sean
 regenerados.
@@ -123,13 +124,14 @@ desarrollado por Google para el motor Javascript
 [v8](https://developers.google.com/v8) y por extensión usado por Node.js. Sin
 embargo, GYP requiere del uso de un interprete [Python](https://www.python.org)
 2.7 (versión ya obsoleta) y además Google ha abandonado internamente el uso de
-GYP en beneficio de [gn](https://chromium.googlesource.com/chromium/src/tools/gn).
+GYP en beneficio de su nuevo gestor de configuración y compilación
+[gn](https://chromium.googlesource.com/chromium/src/tools/gn).
 Por este motivo, se están estudiando dentro de la comunidad de Node.js distintas
 [alternativas](https://github.com/nodejs/node/issues/133) (reimplementar `GYP`
 en Javascript, utilizar makefiles, crear un nuevo gestor de configuración
 escrito en C...) sin que haya surgido todavía una opción adecuada, por lo que se
-ha decidido continuar con el uso de scripts propios hasta que se acuerde una
-solución al respecto.
+ha decidido continuar en NodeOS con el uso de scripts propios hasta que se
+acuerde una solución al respecto, o se cree su propio gestor de compilación.
 
 Adicionalmente, entre las etapas utilizadas también podemos encontrar:
 
@@ -146,9 +148,9 @@ Por otra parte, la mayoría de scripts están escritos en `bash`, aunque se est�
 portando a Javascript para facilitar el que mas adelante el sistema pueda ser
 autocontenido (generable dentro de otra instancia de NodeOS). Los principales
 problemas que han surgido hasta el momento en esta transición han correspondido
-a la etapa de descarga de los distintos códigos fuente, para lo cual se han
-abierto varios issues relativos al soporte correcto de la extracción de archivos
-de gran tamaño en los proyectos correspondientes a los módulos
+a la etapa de descarga del código fuente de los distintos proyectos, para lo
+cual se han abierto varios issues relativos al soporte correcto de la extracción
+de archivos de gran tamaño en los proyectos correspondientes a los módulos
 [download](https://github.com/kevva/download/issues?q=author%3Apiranna) y
 [decompress](https://github.com/kevva/decompress/issues?q=author%3Apiranna). Una
 vez corregidos dichos fallos, se ha desarrollado el módulo
@@ -156,19 +158,22 @@ vez corregidos dichos fallos, se ha desarrollado el módulo
 para poder procesarlas todas de forma uniforme. El resto de etapas consisten
 principalmente en la ejecución de otros comandos externos como las herramientas
 de configuración de GYP o el compilador, por lo que previamente a la conversión
-es necesario buscar alternativas a ellos escritas en Javascript.
+para que NodeOS sea auto-contenido, es necesario buscar alternativas a ellos
+escritas en Javascript.
 
 Se ha prestado especial atención a que el proceso de generación no requiera de
 permisos de administrador en ninguna de sus etapas, lo cual incluye la
 generación de las imágenes de disco haciendo que no sea necesario su montaje, y
-también las correspondientes a Docker ya que su proceso de generación estándar
-los requiere. Para ello he generado archivos `cpio` y `tar` a partir de archivos
-definiendo su descripción en vez de usar archivos reales evitando problemas de
-permisos, y por otro se hace uso de los comandos `genfatfs` y `genext2fs` para
-crear directamente las imágenes de disco y el gestor de arranque SyxLinux, el
-cual esta preparado para trabajar con ellas explícitamente a diferencia de
+también las correspondientes a Docker, ya que su proceso de generación estándar
+los requiere. Para ello se han generado archivos `cpio` y `tar` a partir de
+archivos describiendo su contenido en vez de usar archivos reales evitando de
+este modo problemas de permisos. Por otro lado, se hace uso de los comandos
+`genfatfs` y `genext2fs` para crear directamente las imágenes de disco sin
+necesidad de montarlas previamente, y también del gestor de arranque SyxLinux,
+el cual esta preparado para trabajar con ellas explícitamente a diferencia de
 `GRUB`, que está orientado a su uso con discos duros y particiones reales. La
 razón de hacerlo de esta manera es para poder compilar y generar los archivos
 del sistema operativo usando las herramientas estándar de Node.js y npm, ya que
-ejecutarlos con permisos de administrador provoca ciertos problemas con las
-dependencias, por los que se desaconseja su uso.
+ejecutarlos con permisos de administrador provoca algunos problemas con la
+instalación de dependencias, por los que se aconseja que siempre se ejecuten con
+usuarios normales.

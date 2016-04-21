@@ -27,13 +27,14 @@ complicado de desarrollar un sistema operativo pasa a ser la orquestación y
 configuración de dichos componentes para que el sistema funcione correctamente,
 lo que me ha permitido conocer mejor cómo se relacionan entre sí. Otro aspecto
 importante ha sido aprender a organizar las colaboraciones recibidas por el
-proyecto, y a administrar y recoger las sugerencias y problemas acontecidos y
-moderándolos (ya que, a efectos prácticos, también ha funcionado como lista de
-correo, foro y blog del proyecto para poder seguir su desarrollo y las
-novedades del mismo), y también a promocionar y hacer publicidad del proyecto y
-a recabar atención sobre él mismo mediante la inscripción en diversos concursos
-(*IX y X Concurso Universitario de Software Libre*, *2º Certamen de Proyectos
-Libres de la Universidad de Granada* y *Open Awards 2016*), la publicación de
+proyecto, y a recoger y administrar las sugerencias y problemas notificados en
+los *issues* del proyecto y moderándolos (ya que, a efectos prácticos, también
+ha funcionado como lista de correo, foro y blog del proyecto para poder seguir
+su desarrollo y las novedades del mismo), y también a promocionar y hacer
+publicidad del proyecto y a recabar atención sobre él mismo mediante la
+inscripción en diversos concursos (*IX y X Concurso Universitario de Software
+Libre*, *2º Certamen de Proyectos Libres de la Universidad de Granada* y *Open
+Awards 2016*), la publicación de
 [artículos](http://dcjtech.info/topic/nodeos-1-0-rc1-press-note) (incluso en
 [portada en Barrapunto](http://softlibre.barrapunto.com/article.pl?sid=16/03/05/1116259),
 portal de referencia sobre tecnología en español) o solicitando la colaboración
@@ -48,10 +49,12 @@ También me ha permitido comprobar que las mayores virtudes del ecosistema de
 Javascript y de Node.js son su dinamismo y su modularidad, los cuales les dan
 mucha flexibilidad para poder adaptarse a los cambios. Sin embargo, estos
 también son a la vez sus mayores defectos debido a lo inestable que se vuelve el
-desarrollo, ya que un módulo de terceros puede afectar a todo el sistema. Esto
-es algo que ha afectado directamente a NodeOS en dos ocasiones: la primera por
-el cambio en la versión empleada del motor Javascript `v8` por Node.js, que ha
-imposibilitado por el momento usar cualquier versión de Node.js superior a la
+desarrollo, ya que un módulo de terceros puede afectar a todo el sistema como
+quedó demostrado durante el suceso del
+[npmgate](http://cryto.net/~joepie91/blog/2016/03/23/reflections-on-npm-gate-one-day-later).
+Esto es algo que ha afectado directamente a NodeOS en dos ocasiones: la primera
+por el cambio en la versión empleada del motor Javascript `v8` por Node.js, que
+ha imposibilitado por el momento usar cualquier versión de Node.js superior a la
 0.11.14, y la segunda, más reciente y relacionada con la anterior, por la
 actualización de varios módulos compilados, para hacer uso de las macros
 ofrecidas por la versión 2 del módulo `nan`, necesarias para que estos sean
@@ -80,13 +83,14 @@ calidad ampliamente aceptados por toda la comunidad. Algunos de los problemas
 con los que me he encontrado han sido:
 
 * El uso de lenguajes traducidos ([CoffeScript](http://coffeescript.org),
-  [TypeScript](http://www.typescriptlang.org), [EcmaScript 6](http://babeljs.io)...)
-  sin incluir su código Javascript equivalente generado que impiden el poder
-  usar directamente los repositorios de GitHub como dependencias en la fase de
-  desarrollo durante el tiempo que se espera a la inclusión de los cambios en el
-  repositorio principal. Ésta es una de las razones por las que los principales
-  desarrolladores de Node.js deciden usar directamente las características
-  estándar que ofrece el lenguaje, sin la ayuda de componentes externos.
+  [TypeScript](http://www.typescriptlang.org),
+  [EcmaScript 6](http://babeljs.io)...) sin incluir su código Javascript
+  equivalente generado que impiden el poder usar directamente los repositorios
+  de GitHub como dependencias en la fase de desarrollo durante el tiempo que se
+  espera a la inclusión de los cambios en el repositorio principal. Ésta es una
+  de las razones por las que los principales desarrolladores de Node.js deciden
+  usar directamente las características estándar que ofrece el lenguaje, sin la
+  ayuda de componentes externos.
 * El uso de tabuladores o de más 80 columnas en el código fuente. dificultando
   su lectura en navegadores web o en pantallas pequeñas.
 * La adhesión a guías de estilo sobre el código sin el uso de comprobaciones
@@ -100,7 +104,7 @@ con los que me he encontrado han sido:
 * Excesivo celo en que las aportaciones sean muy especificas en la funcionalidad
   que aportan, incluso en el caso de estar ejecutándose correctamente todos los
   tests.
-* atención excesiva a que la cobertura de tests sea del 100% en proyectos
+* Atención excesiva a que la cobertura de tests sea del 100% en proyectos
   relativamente pequeños, obligando en algunos casos a realizar tests para casos
   de uso triviales o que puedan darse solamente en casos de uso concretos.
 
@@ -109,13 +113,16 @@ proyectos de Software Libre o directamente mantener un fork de los mismos cuando
 esto sea posible donde mantener los cambios propios, empobreciendo el ecosistema
 al hacer que una funcionalidad no siempre esté integrada dentro de un único
 repositorio y aumentando la fragmentación de este. Todo esto contrasta con los
-proyectos más grandes (en importancia, tamaño o número de seguidores) donde hay
-más aceptación a admitir código de terceros y de forma mucho mas rápida, sin
-tanta obsesión por la calidad del código, incluso llegando a aceptar los cambios
-con fallos para después ser corregidos por parte de los propios mantenedores, en
-vez de solicitar que los cambios sean correctos a priori a la persona que los
-envía. Esta actitud facilita la colaboración en los distintos proyectos por
-parte de nuevos desarrolladores, sin necesidad de ser programadores expertos.
+proyectos más grandes (en importancia y repercusión del mismo, tamaño de código
+o número de seguidores y usuarios) donde hay más aceptación a admitir código de
+terceros y de forma mucho mas rápida, sin tanta obsesión por la calidad del
+código ni prepotencia, ayudando en solucionar los problemas que incluyen desde
+un punto de vista colaborativo y educativo, o incluso llegando a aceptar los
+cambios con fallos para después ser corregidos por parte de los propios
+mantenedores, en vez de solicitar que los cambios sean correctos a priori a la
+persona que los envía. Esta actitud facilita la colaboración en los distintos
+proyectos por parte de nuevos desarrolladores, sin necesidad de que sean
+programadores expertos.
 
 El hecho de que el repositorio de npm esté abierto a admitir paquetes nuevos de
 cualquier persona sin ningún tipo de control hace que también haya algunos
@@ -128,4 +135,4 @@ npm para el que fue creado como lugar centralizado para hospedar los paquetes y
 su versionado.
 
 
-[^1]: El uso de paquetes comprimidos es [una propuesta mía](https://github.com/nodejs/node/issues/1278) que además [ha sido aceptada para para integrarla en npm](https://github.com/npm/npm/issues/7762) una vez que Node.js incluya soporte para la misma. Esto además implicaría un menor consumo de espacio en disco duro, ya que cada usuario potencialmente puede tener una copia de todas las librerías que necesitasen sus aplicaciones, aunque esto no sería un problema de mayor importancia en entornos donde solo haya un único usuario (servidores en la nube o equipos personales o sistemas embebidos), siendo la única diferencia en estos casos el sitio donde estén físicamente guardadas, ya sea dentro de la partición raíz o en el directorio del usuario.
+[^1]: El uso de paquetes comprimidos es [una propuesta mía](https://github.com/nodejs/node/issues/1278) que además [ha sido aceptada para integrarla en npm](https://github.com/npm/npm/issues/7762) una vez que Node.js incluya soporte para la misma. Esto además implicaría un menor consumo de espacio en disco duro, ya que cada usuario potencialmente puede tener una copia de todas las librerías que necesitasen sus aplicaciones, aunque esto no sería un problema de mayor importancia en entornos donde sólo haya un único usuario (servidores en la nube, equipos personales o sistemas embebidos), siendo la única diferencia en estos casos el sitio donde están guardadas físicamente, ya sea dentro de la partición raíz o en el directorio del usuario.

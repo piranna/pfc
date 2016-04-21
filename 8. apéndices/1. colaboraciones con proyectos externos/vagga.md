@@ -42,12 +42,12 @@ kernel de Linux para el *initramfs* es el tipo de archivo `cpio` en su formato
 inicializar su sistema de archivos base (y en concreto, *Docker* sólo soporta el
 formato `ustar`). Para poder generarlo siguiendo el mismo proceso usado para
 generar el sistema de archivos *initramfs* del kernel de Linux a partir de un
-archivo en text plano, decidí convertir el archivo `cpio` generado a `tar`. El
+archivo en texto plano, decidí convertir el archivo `cpio` generado a `tar`. El
 problema está en que a pesar de que tanto el comando `cpio` como `tar` soportan
 ambos tipos de archivos, ninguno proporciona un modo de conversión entre ellos,
 requiriendo primero desempaquetarlos para después volver a empaquetarlos en el
 nuevo formato. Esto podría acarrear problemas de permisos en el sistema de
-archivos del usuario que este generando la imagen además de ser mas lento al
+archivos del usuario que este generando la imagen, además de ser mas lento al
 requerir de hacer accesos al disco, por lo que decidí convertirlos dinámicamente
 mediante el uso de los módulos [cpio-stream](cpio-stream.html) y
 [tar-stream](tar-stream.html) de Node.js.
@@ -111,7 +111,7 @@ lo que he propuesto que estos puedan ser definidos en la configuración de
 ha hecho que tenga que modificar el módulo
 [nodeos-mount-filesystems](../../5. descripción informática/3. Implementación/7. módulos propios/nodeos-mount-filesystems.html)
 para poder aceptar dichos valores como variables de entorno y de esta forma
-poder definirlos en la configuración del container ,y tener un medio por el que
+poder definirlos en la configuración del container, y tener un medio por el que
 ignorar los ofrecidos por el `/proc/cmdline` del sistema.
 
 Gracias al uso de *vagga* se ha simplificado la forma de generar imágenes

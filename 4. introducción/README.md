@@ -1,7 +1,6 @@
 # Introducción
 
 1. [Descripción del problema](1. Descripción del problema.html)
-  1. [Qué es NodeOS](1. Descripción del problema.html#qué-es-nodeos)
 2. [Estudio de alternativas](2. Estudio de alternativas.html)
   1. [Node.js en sistemas operativos tradicionales](2. Estudio de alternativas.html#node-js-en-sistemas-operativos-tradicionales)
   2. [Sistemas operativos basados en Javascript](2. Estudio de alternativas.html#sistemas-operativos-basados-en-javascript)

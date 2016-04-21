@@ -3,12 +3,13 @@
 El kernel de Linux utiliza el formato `cpio` para empaquetar el sistema de
 archivos de *initramfs*, sin embargo tanto *Docker* como *vagga* solo soportan
 archivos `tar`. Para poder usar el mismo proceso de generación para ambos
-entornos es preciso convertir entre ambos formatos, para lo cual decidí usar el
-modulo [tar-stream](https://github.com/mafintosh/tar-stream) para poder hacer la
-conversión dinámicamente usando la API de streams de Node.js. Sin embargo, al
-hacer la conversión descubrí que los links simbólicos se habían convertido en
-archivos regulares dentro del paquete `tar`, y por tanto el binario de Node.js
-no podía cargar las librerías del sistema dando error de símbolos no definidos:
+entornos es preciso convertir entre ambos formatos, para lo cual se decidió usar
+el modulo [tar-stream](https://github.com/mafintosh/tar-stream) para poder hacer
+la conversión dinámicamente usando la API de streams de Node.js. Sin embargo, al
+hacer la conversión se descubrió que los links simbólicos se habían convertido
+en archivos regulares dentro del paquete `tar`, y por tanto el binario de
+Node.js no podía cargar las librerías del sistema dando error de símbolos no
+definidos:
 
 ```bash
 [piranna@Mabuk:~/Proyectos/NodeOS/node_modules/nodeos-barebones/.vagga/barebones]
@@ -32,18 +33,19 @@ Error relocating bin/node: __cxa_pure_virtual: symbol not found
 Este problema está ocasionado porque el módulo *tar-stream* no estaba usando el
 modo del archivo para averiguar su tipo (solo para definir los permisos de este)
 requiriendo en su lugar que se defina en un campo `type` y usando archivos
-regulares en su defecto, por lo que decidí añadir el soporte para que en caso de
-que el tipo no estuviese definido éste pudiera detectarse a partir del modo
-[automáticamente](https://github.com/NodeOS/tar-stream/commit/b2f57d1b248895d64d19c847fbe68854d9344d56).
+regulares en su defecto, por lo que se decidió añadir el soporte para que en
+caso de que el tipo no estuviese definido éste pudiera detectarse
+[automáticamente](https://github.com/NodeOS/tar-stream/commit/b2f57d1b248895d64d19c847fbe68854d9344d56)
+a partir del modo.
 
 No obstante, en el caso concreto de los links simbólicos esto no fue suficiente,
 ya que estos no estaban obteniendo la ubicación del archivo original debido a la
 estructura del formato `tar`, que requiere indicar dicha ubicación en la propia
 cabecera, mientras que el módulo [cpio-stream](cpio-stream.html) estaba
 transmitiéndola como el contenido de dicho archivo (lo cual estructuralmente es
-lo correcto). En un principio procedí a detectar el formato y rellenar dicha
+lo correcto). En un principio se procedió a detectar el formato y rellenar dicha
 cabecera previamente a añadir la entrada dentro del paquete `tar`, aunque
-despues decidí añadir soporte en *tar-stream* para poder
+despues se decidió añadir soporte en *tar-stream* para poder
 [definir](https://github.com/NodeOS/tar-stream/commit/b32e9b6b39c15889d31d4d328e1b66cdf944ed27)
 la ubicación del archivo original mediante un stream del contenido del archivo
 si no se encontrase definida en la cabecera, de forma que finalmente el proceso
@@ -63,14 +65,9 @@ var pack    = tar.pack()
 extract.on('entry', function(header, stream, callback)
 {
   stream.pipe(pack.entry(header, callback))
-
-  stream.resume() // auto drain
 })
 
-extract.on('finish', function()
-{
-  pack.finalize()
-})
+extract.on('finish', pack.finalize.bind(pack))
 
 process.stdin.pipe(extract)
 pack.pipe(process.stdout)
@@ -83,8 +80,9 @@ cuando el paquete generado contiene links simbólicos hay un problema por el cua
 a diferencia de *vagga*, por lo que de momento los paquetes no son usables en
 dicho entorno.
 
-Por último, aparte de estos problemas también estaba el hecho de que el código
+Por último, aparte de estos problemas, también estaba el hecho de que el código
 de `Linux`, `gcc` y Node.js estaban empaquetados con la extensión `@LongLink`
-que *tar-stream* [no soportaba](https://github.com/mafintosh/tar-stream/issues/35),
-haciendo que no se pudiese desempaquetar correctamente, aunque no hubo mayor
-problema una vez se añadió el soporte para la misma.
+que *tar-stream*
+[no soportaba](https://github.com/mafintosh/tar-stream/issues/35), haciendo que
+no se pudiese desempaquetar correctamente, aunque no hubo mayor problema una vez
+se añadió el soporte para la misma.

@@ -22,7 +22,7 @@ HTTP `GET` y `POST`.
 Para obtener el listado de stargazers del proyecto se ha hecho uso del módulo
 [node-github](https://github.com/mikedeboer/node-github) el cual evita tener que
 usar directamente la API REST de GitHub proporcionando una API de alto nivel
-para Node.js .
+para Node.js.
 
 Las peticiones se pueden hacer opcionalmente usando las credenciales del usuario,
 de forma que se pueda sobrepasar el límite de peticiones que proporciona el
