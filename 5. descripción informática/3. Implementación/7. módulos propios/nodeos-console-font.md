@@ -51,7 +51,7 @@ debe cambiar la fuente de pantalla, por lo que se ha postergado el desarrollo de
 un parche para el kernel de Linux que habilite el uso de fuentes de 512 glifos
 durante el arranque, ya que su código fuente indica que sí está preparado para
 ello habiéndose dejado pendiente su implementación final. Sin embargo, parece
-ser que los [desarrolladores no aceptan](http://askubuntu.com/a/23614) parches
+ser que [los desarrolladores no aceptan parches](http://askubuntu.com/a/23614)
 para mejorar el soporte de Unicode en la consola, ya que consideran que debe ser
 usada únicamente como interfaz de emergencia, por lo que puede que sea esta la
 razón por la que todavía no se ha añadido dicho soporte. Ha habido algunos
@@ -63,4 +63,9 @@ del dispositivo de framebuffer como es el caso de
 añadida de poder hacer uso del juego de caracteres Unicode completo, aunque
 añade una serie de dependencias, consumo de recursos y de complicación adicional
 del sistema que de otra manera no serían necesarias, por lo que sigue teniendo
-sentido el uso de una fuente propia en entornos puramente de texto.
+sentido el uso de una fuente propia en entornos puramente de texto. No obstante,
+existen algunos [parches](https://github.com/outsinre/cjktty-patch) que permiten
+añadir soporte completo de Unicode en el kernel de Linux junto con una fuente
+que contiene los 65536 glifos del [Plano 0](http://unicode.org/roadmaps/bmp)
+(*BMP* o *Plano Básico Multilenguaje*), por lo que se ha dejado como una posible
+futura mejora el incorporar dichos parches al kernel proporcionado por NodeOS.
