@@ -60,7 +60,7 @@ al no tener que crear nuevos procesos como ocurre en el resto de shells clásica
 incluso en el caso de las que incorporan algunos comandos dentro de si mismas
 como es el caso de [busybox](https://www.busybox.net). En este sentido, se ha
 decidido crear el módulo
-[Coreutils.js](../../5. descripción informática/3. Implementación/7. módulos propios/coreutils.js.html),
+[Coreutils.js](../../4. descripción informática/3. Implementación/7. módulos propios/coreutils.js.html),
 el cual implementa los comandos básicos de un sistema Unix como streams de
 objetos, permitiendo usar los datos directamente en vez de tener que ser
 parseados y procesados cada vez para poder acceder a ellos. Para que los

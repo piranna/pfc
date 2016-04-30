@@ -1,9 +1,9 @@
 #### node-bin-getty
 
 En las capas de
-[barebones](../../5. descripción informática/3. Implementación/1. barebones.html)
+[barebones](../../4. descripción informática/3. Implementación/1. barebones.html)
 y de
-[initramfs](../../5. descripción informática/3. Implementación/2. initramfs.html)
+[initramfs](../../4. descripción informática/3. Implementación/2. initramfs.html)
 se está utilizando el pseudo-terminal `/dev/console` empleado durante el
 arranque del kernel de Linux como terminal interactivo. Esto es válido para
 sistemas donde sólo vaya a haber un único usuario conectado localmente, como es

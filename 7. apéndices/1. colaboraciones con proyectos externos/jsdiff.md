@@ -13,7 +13,7 @@ porque a pesar de incorporar soporte nativo para `musl` desde la versión
 este soporte es sólo para poder compilar binarios que lo utilicen como librería
 C del sistema pero no para que sea usada en la compilación del propio `gcc`, lo
 cual es necesario para generar el
-[cross-compiler](../../../5. descripción informática/3. Implementación/0. cross-toolchain.html).
+[cross-compiler](../../../4. descripción informática/3. Implementación/0. cross-toolchain.html).
 
 Puesto que los parches necesarios para Node.js y `gcc` usan ambos el formato
 [diff unificado](http://www.gnu.org/software/diffutils/manual/html_node/Detailed-Unified.html),
@@ -44,7 +44,7 @@ por lo que finalmente se adaptó *jsdiff* para que pueda parsear
 [correctamente](https://github.com/kpdecker/jsdiff/pull/88) las cabeceras de los
 archivos para posteriormente poder extraer de ellas las rutas correctas a los
 mismos. Esto era especialmente importante para poder usar el módulo
-[download-manager](../../5. descripción informática/3. Implementación/7. módulos propios/download-manager.html) pudiendo aplicar
+[download-manager](../../4. descripción informática/3. Implementación/7. módulos propios/download-manager.html) pudiendo aplicar
 todos los parches sin necesitar tener en cuenta casos de uso concretos.
 
 Por último y mas importante, *jsdiff* no tenia soporte para aplicar parches cuya

@@ -34,7 +34,7 @@ de las herramientas externas.
 
 Antes de desarrollarse como un módulo independiente, la funcionalidad ofrecida
 por *download-manager* estuvo implementada como un script perteneciente a
-[cross-toolchain](../../../5. descripción informática/3. Implementación/1. cross-toolchain.html).
+[cross-toolchain](../../../4. descripción informática/3. Implementación/1. cross-toolchain.html).
 Dicho script generó varios problemas en su desarrollo (no así la versión inicial
 hecha en `bash`) debido a que fue necesario descargar y preparar varios
 componentes y a que las dependencias empleadas no estaban preparadas para la

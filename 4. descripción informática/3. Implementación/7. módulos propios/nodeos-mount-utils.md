@@ -3,8 +3,8 @@
 El diseño original de NodeOS planteaba el que hubiese una partición raíz común a
 todos los usuarios que contuviera los servicios globales del sistema, por lo que
 los sistemas de archivos
-[rootfs](../../../5. descripción informática/3. Implementación/3. rootfs.html) y
-[usersfs](../../../5. descripción informática/3. Implementación/4. usersfs.html)
+[rootfs](../../../4. descripción informática/3. Implementación/3. rootfs.html) y
+[usersfs](../../../4. descripción informática/3. Implementación/4. usersfs.html)
 debían montarse por separado, aunque existía un conjunto de funciones comunes
 necesarias para facilitar el montaje de ambos sistemas de archivos y el manejo
 de los puntos de montaje que se han mantenido dentro del módulo

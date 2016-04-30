@@ -18,7 +18,7 @@ instancia de v8 que de otra forma estaría inutilizada la mayor parte del tiempo
 el sistema para proceder a apagar automáticamente el mismo, algo especialmente
 útil cuando se está ejecutando directamente un intérprete REPL de Node.js (por
 ejemplo, ante fallos de arranque o cuando se hace uso de la capa
-[nodeos-barebones](../../5. descripción informática/3. Implementación/2. barebones.html)).
+[nodeos-barebones](../../4. descripción informática/3. Implementación/2. barebones.html)).
 Para ello, se bloquean todas las señales del proceso y se espera a recibir
 información de que ha terminado un proceso hijo mediante la señal `SIGCHLD`,
 para después procesarlos mediante [waitpid](http://linux.die.net/man/2/waitpid)
@@ -31,7 +31,7 @@ ejecutar el proceso *init* asociado (por defecto `/sbin/init`), debido a que es
 necesario por parte de las últimas versiones de Node.js para ejecutarse
 correctamente.
 
-[vagga](../../../8. apéndices/1. colaboraciones con proyectos externos/vagga.html),
+[vagga](../../../7. apéndices/1. colaboraciones con proyectos externos/vagga.html),
 por defecto, no requiere del uso de un `PID 1` dentro de los contenedores LXC ya
 que ejecuta el suyo propio. Su comportamiento es similar al de *nodeos-init*,
 por lo que NodeOS no lo incluye. Mediante el uso de

@@ -56,7 +56,7 @@ dejar que todo el proceso de construcción esté administrado por `GYP`. Sin
 embargo, esto también ha dado el mismo error anterior de no poder encontrar la
 versión del nodo para el símbolo `fuse_setup@FUSE_2.2`, por lo que finalmente se
 ha decidido usar `libfuse` como librería dinámica incluyéndola dentro del
-[initramfs](../../../5. descripción informática/3. Implementación/2. initramfs.html).
+[initramfs](../../../4. descripción informática/3. Implementación/2. initramfs.html).
 
 ##### Uso de `libfuse` como librería dinámica
 
@@ -70,10 +70,10 @@ esta definida la opción `CONFIG_FUSE_FS` dentro del archivo `.config` del kerne
 de Linux. Esto tiene un inconveniente, y es que en caso de estar ausente impide
 que se compile *fuse-bindings* y que pueda usarse cualquier sistema de archivos
 que haga uso de él como es el caso de
-[ExclFS](../../5. descripción informática/3. Implementación/7. módulos propios/ExclFS.md),
+[ExclFS](../../4. descripción informática/3. Implementación/7. módulos propios/ExclFS.md),
 por lo que también se hace la comprobación posteriormente para que éstos no se
 incluyan, además de definir *ExclFS* como opcional en el módulo
-[nodeos-mount-filesystems](../../5. descripción informática/3. Implementación/7. módulos propios/nodeos-mount-filesystems.html).
+[nodeos-mount-filesystems](../../4. descripción informática/3. Implementación/7. módulos propios/nodeos-mount-filesystems.html).
 Esta es la mejor alternativa, ya que de esta forma se hace que el sistema sea
 agnóstico a cual es el binding de FUSE empleado por los módulos.
 

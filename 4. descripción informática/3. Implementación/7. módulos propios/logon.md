@@ -59,7 +59,7 @@ cualquier otro mecanismo de autenticación.
 
 Actualmente no existe ningún mecanismo para añadir nuevos usuarios al margen de
 los que se están creando al generar la partición de usuarios en la capa de
-[usersfs](../../../5. descripción informática/3. Implementación/4. usersfs.md),
+[usersfs](../../../4. descripción informática/3. Implementación/4. usersfs.md),
 pero se plantea la posibilidad de añadir una opción en el futuro para permitir
 que sea el propio *logon* el que cree dichos usuarios en el sistema a cualquier
 persona que lo desee, puesto que sólo se reduce a crear un directorio en la

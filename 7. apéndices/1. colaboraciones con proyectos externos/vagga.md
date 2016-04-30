@@ -53,7 +53,7 @@ mediante el uso de los módulos [cpio-stream](cpio-stream.html) y
 [tar-stream](tar-stream.html) de Node.js.
 
 Una vez que conseguí generar el archivo `tar` con el contenido de la capa
-[barebones](../../../5. descripción informática/3. Implementación/1. barebones.html)
+[barebones](../../../4. descripción informática/3. Implementación/1. barebones.html)
 de forma que pueda ser usada tanto por *Docker* como por *vagga*, procedí a
 ejecutarla por este último. Para ello configuré el archivo `vagga.yaml` para que
 inicialice el contenido del sistema de archivos mediante el comando
@@ -87,8 +87,8 @@ undefined
 ```
 
 El poder cargar las capas subsecuentes de
-[initramfs](../../../5. descripción informática/3. Implementación/2. initramfs.html) y
-[rootfs](../../../5. descripción informática/3. Implementación/3. rootfs.html)
+[initramfs](../../../4. descripción informática/3. Implementación/2. initramfs.html) y
+[rootfs](../../../4. descripción informática/3. Implementación/3. rootfs.html)
 fue solo una cuestión de configurarlas correctamente, no obstante no ha sido por
 el momento posible hacer funcionar el sistema completo. La razón de esto es
 debido a que NodeOS crea por cada usuario un sistema de archivos
@@ -109,7 +109,7 @@ sistemas de archivos externos desde dentro del entorno aislado de *vagga* (para
 lo que he propuesto que estos puedan ser definidos en la configuración de
 [arranque del propio container](https://github.com/tailhook/vagga/issues/103)),
 ha hecho que tenga que modificar el módulo
-[nodeos-mount-filesystems](../../5. descripción informática/3. Implementación/7. módulos propios/nodeos-mount-filesystems.html)
+[nodeos-mount-filesystems](../../4. descripción informática/3. Implementación/7. módulos propios/nodeos-mount-filesystems.html)
 para poder aceptar dichos valores como variables de entorno y de esta forma
 poder definirlos en la configuración del container, y tener un medio por el que
 ignorar los ofrecidos por el `/proc/cmdline` del sistema.
