@@ -13,7 +13,7 @@
   "pluginsConfig": {
     "autocover": {
       "title": "NodeOS",
-      "description": "Sistema operativo ligero para Node.js",
+      "description": "Sistema operativo minimalista para Node.js",
       "author": "Jesús Leganés Combarro",
       "tutor": "Enrique Soriano Salvador",
       "academicYear": "2015/2016",

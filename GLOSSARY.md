@@ -144,6 +144,13 @@ Archivo con información sobre la instancia actual de un proceso en ejecución
 para poder reusarla en vez de crear nuevas instancias, permitiendo una mayor
 integración dentro de la aplicación y un menor consumo de memoria.
 
+# procesos huerfanos
+Procesos cuyo proceso padre ha terminado y son "adoptados" por otro proceso
+anterior en la jerarquia de proceosos, generalmente el proceso `PID 1`. Suelen
+estar generados a proposito (por ejemplo para ejecutar servicios del sistema),
+pero también pueden deberse a fallos de programación al no manejar correctamente
+su ciclo de vida.
+
 # puntero
 Variable cuyo contenido es una posición de memoria, usada para referenciar
 indirectamente a otras variables. A pesar de la potencia y flexibilidad que

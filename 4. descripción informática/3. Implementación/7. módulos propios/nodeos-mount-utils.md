@@ -2,16 +2,16 @@
 
 El diseño original de NodeOS planteaba el que hubiese una partición raíz común a
 todos los usuarios que contuviera los servicios globales del sistema, por lo que
-los sistemas de archivos
+los *namespaces* (jerarquias de archivos)
 [rootfs](../../../4. descripción informática/3. Implementación/3. rootfs.html) y
 [usersfs](../../../4. descripción informática/3. Implementación/4. usersfs.html)
 debían montarse por separado, aunque existía un conjunto de funciones comunes
-necesarias para facilitar el montaje de ambos sistemas de archivos y el manejo
-de los puntos de montaje que se han mantenido dentro del módulo
+necesarias para facilitar el montaje de ambos namespaces y el manejo de los
+puntos de montaje que se han mantenido dentro del módulo
 [nodeos-mount-utils](https://github.com/NodeOS/nodeos-mount-utils). Desde que
-*rootfs* no es un sistema de archivos independiente al usarse *OverlayFS* en los
-directorios de los usuarios, dichas funciones podrían haberse reintegrado dentro
-del módulo [nodeos-mount-filesystems](nodeos-mount-filesystems.html). Sin
+*rootfs* no es una jerarquia de archivos independiente al usarse *OverlayFS* en
+los directorios de los usuarios, dichas funciones podrían haberse reintegrado
+dentro del módulo [nodeos-mount-filesystems](nodeos-mount-filesystems.html). Sin
 embargo, se han decidido dejar en un módulo aparte para seguir manteniendo su
 reusabilidad.
 

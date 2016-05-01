@@ -1,30 +1,5 @@
 #### Davius
 
-Para las aplicaciones gráficas basadas en HTML5, la arquitectura recomendada
-propone que se haga todo el procesamiento posible en el cliente (*fat client*) y
-que se haga uso de un servidor web estático y sin estado para transferirle su
-contenido. Esto permite reducir su funcionalidad al mínimo, ya sea por necesitar
-acceder a recursos hardware del servidor, por no haber APIs disponibles en los
-navegadores web para una tarea, o porque una funcionalidad tenga que ejecutarse
-cuando el usuario no está conectado (como por ejemplo, las aplicaciones P2P de
-intercambio de ficheros).
-
-En una arquitectura de este tipo, el servidor web encargado de transferir el
-contenido estático de las aplicaciones puede ser muy simple y genérico, pudiendo
-ser compartido por todas las aplicaciones sin que estas necesiten el suyo propio.
-Dicho servidor web puede ser usado para alojar también los archivos del propio
-usuario y que pueda aplicar cambios a los mismos o borrarlos, en vez de
-únicamente servir los recursos estáticos de las aplicaciones, reduciendo aún más
-el número de casos donde es necesario el uso de un servidor de backend
-específico para una aplicación concreta. No obstante, al ser un protocolo
-orientado a su uso con archivos, HTTP no puede trabajar de forma transparente
-con directorios o copiar recursos remotamente, para lo que puede hacerse uso de
-otras alternativas como son [SpockFS](https://github.com/unbit/spockfs), que
-implementa un sistema de archivos en red basado en HTTP y los métodos de la API
-de [libfuse](https://github.com/libfuse/libfuse), o el protocolo *WebDAV*, que
-también es una extensión de HTTP pero además es un estándar ampliamente aceptado
-[por la industria](http://www.ietf.org/rfc/rfc4918.txt).
-
 [Davius](https://github.com/piranna/Davius) es un servidor HTTP/WebDAV estático
 y sin estado que muestra en su jerarquía de recursos un mapeo directo del
 sistema de archivos que se le haya indicado. Este sistema es usado en NodeOS

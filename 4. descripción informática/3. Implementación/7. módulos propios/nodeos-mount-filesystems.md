@@ -4,10 +4,11 @@ Una de las principales características de NodeOS es mostrar a los usuarios un
 sistema de archivos raíz propio para cada uno de ellos e independiente del resto,
 algo que se ha logrado mediante el uso del sistema de archivos *OverlayFS* y de
 jaulas *chroot*. Esta funcionalidad estaba implementada anteriormente en los
-módulos *nodeos-mount-rootfs* y *nodeos-mount-usersfs*, centrados en montar
-respectivamente el sistema de archivos raíz del sistema y la partición de los
-usuarios. Sin embargo, la que era partición raíz del sistema ahora sólo es usada
-como partición de arranque, por lo que se ha unido la funcionalidad de ambos en
+módulos *nodeos-mount-rootfs* y *nodeos-mount-usersfs* (que estaban centrados en
+montar respectivamente el sistema de archivos raíz del sistema y la partición de
+los usuarios). Sin embargo, la que era partición raíz del sistema ahora sólo es
+usada como partición de arranque, por lo que se ha unido la funcionalidad de
+ambos módulos dentro del proyecto
 [nodeos-mount-filesystems](https://github.com/piranna/nodeos-mount-filesystems),
 mejora que simplifica la tarea de montar todos los sistemas de archivos,
 incluidas las referencias a los sistemas de archivos *devtmpfs* y *proc*, dentro
@@ -32,7 +33,7 @@ sistemas de archivos dará un fallo, ya que estarán montados previamente, por l
 que solamente se notificará al usuario dicho error.
 
 A partir del sistema de archivos *procfs* se obtienen los parámetros con los que
-se ha ejecutado el kernel de Linux, parseando el contenido del archivo
+se ha ejecutado el kernel de Linux, procesando el contenido del archivo
 `/proc/cmdline`, para obtener el dispositivo que contiene el sistema de archivos
 de los usuarios. Puesto que tanto *Docker* como *vagga* utilizan el sistema de
 archivos *procfs* del sistema sobre el que están corriendo, los parámetros

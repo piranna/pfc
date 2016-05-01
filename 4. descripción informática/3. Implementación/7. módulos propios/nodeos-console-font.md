@@ -7,12 +7,12 @@ funcionalidad propia de interfaces gráficas (como el renderizado de widgets o
 mostrar imágenes en la consola). En muchos de los casos se hace uso de
 caracteres Unicode para evitar las limitaciones de resolución que conlleva el
 uso del terminal y poder dar más riqueza visual a las aplicaciones mediante el
-uso de líneas, bloques, símbolos, puntos... El problema está en el hecho de que
-el modo de texto de las tarjetas VGA usadas en los ordenadores PC está limitado
-a 256 glifos (o 512 si al usar un modo de texto se reducen los colores a 8 en
-vez de 16, no así al emplear un framebuffer), por lo que dichos caracteres
-especiales no pueden mostrarse en pantalla, estando por defecto solamente
-disponibles los caracteres pertenecientes a la página de códigos
+uso de líneas, bloques, símbolos, puntos, etc. El problema está en el hecho de
+que el modo de texto de las tarjetas VGA usadas en los ordenadores PC está
+limitado a 256 glifos (o 512 si al usar un modo de texto se reducen los colores
+a 8 en vez de 16, no así al emplear un framebuffer), por lo que dichos
+caracteres especiales no pueden mostrarse en pantalla, estando por defecto
+solamente disponibles los caracteres pertenecientes a la página de códigos
 [CP-437](https://es.wikipedia.org/wiki/Página_de_códigos_437), la cual es la
 proporcionada normalmente por la BIOS.
 

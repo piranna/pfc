@@ -20,3 +20,9 @@
   1. [Ejecución de scripts de Node.js](usrbinenv.html#ejecución-de-scripts-de-node.js)
   2. [Ejecución de binarios externos](usrbinenv.html#ejecución-de-binarios-externos)
   3. [Ubicación del comando](usrbinenv.html#ubicación-del-comando)
+
+
+A continuación se describirán los módulos que ha sido necesario implementar
+completamente durante la realización del presente Proycto de Fin de Carrera,
+hechos *ex-profeso* para la fase de construcción de NodeOS o para su posterior
+uso en tiempo de ejecución.

@@ -29,3 +29,7 @@ que fueran más fáciles de identificar dentro del código fuente de la imagen S
 y se simplificó manualmente, con un editor de textos, la imagen generada
 eliminando los bordes de los polígonos y los metadatos redundantes, reduciendo
 así el tamaño final del archivo.
+
+En este proyecto también se guardan imágenes hechas por terceros sobre NodeOS y
+publicadas en blogs o articulos en Internet a modo de histórico, indicando su
+autoria correspondiente.

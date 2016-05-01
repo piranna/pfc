@@ -43,6 +43,6 @@
    font-family="<%= font.family %>"
    font-size="<%= size.author / 2 %>">
     <tspan x="50%" dy="83.3%">Autor: <%= author %></tspan>
-    <tspan x="50%" dy="87.5%>">Tutores: <%= tutor %></tspan>
+    <tspan x="50%" dy="87.5%>">Tutor: <%= tutor %></tspan>
   </text>
 </svg>

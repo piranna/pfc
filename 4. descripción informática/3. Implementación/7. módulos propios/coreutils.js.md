@@ -37,3 +37,30 @@ objetos un método
 personalizado de forma que muestre al imprimirlos por pantalla un resultado
 similar al de sus comandos equivalentes en sistemas UNIX, en lugar de mostrar
 directamente los datos de los objetos en bruto.
+
+Los comandos actualmente implementados total o parcialmente en este módulo son:
+* **text utils**
+  * cat
+  * head
+  * sort
+* **file utils**
+  * dir
+  * ls
+  * mkdir
+* **sh utils**
+  * chroot
+  * date
+  * dirname
+  * echo
+  * [env](usrbinenv.md)
+  * hostname
+  * sleep
+  * tee
+  * test
+  * yes
+* **requeridos por POSIX**
+  * cd
+  * pwd
+  * umask
+* **comandos extras**
+  * grep

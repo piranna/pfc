@@ -22,7 +22,7 @@ imagen de partición, y después parseando los resultados para que sean acordes 
 los ofrecidos por la API de Node.js, y mas concretamente respecto al uso de los
 metadatos de los archivos.
 
-Respecto a los comandos de shell, solo se ha implementado
+Respecto a los comandos de shell, sólo se ha implementado
 [chown](http://linux.die.net/man/1/chown) por ser el único necesitado para
 arreglar los permisos de la partición de usuarios. El comando ofrece las mismás
 opciones que el comando `chown` de UNIX, solo requiriendo que se le pase la ruta

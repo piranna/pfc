@@ -6,7 +6,7 @@ sistema (`PID 1`). En sistemas UNIX tradicionales este proceso (también conocid
 como *demonio del sistema*) suele encargarse de varias tareas, como enviar la
 señal de terminación al resto de procesos cuando el sistema se está apagando,
 pero su labor principal es actuar de "red de seguridad" para recoger procesos
-zombie y evitar que puedan llegar a provocar un *kernel panic*. La labor de
+huerfanos y evitar que puedan llegar a provocar un *kernel panic*. La labor de
 [nodeos-init](https://github.com/piranna/nodeos-init) es justamente esta,
 delegando cualquier otra tarea en otros ejecutables, como es
 [nodeos-mount-filesystems](nodeos-mount-filesystems.md) en el caso de NodeOS
