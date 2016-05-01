@@ -61,15 +61,14 @@ ofrecidas por la versión 2 del módulo `nan`, necesarias para que estos sean
 compatibles con Node.js 5.
 
 Respecto al problema de las versiones han surgido soluciones como son el uso de
-[bundledDependencies](https://docs.npmjs.com/files/package.json#bundleddependencies)
-o de [shrinkwrap](https://docs.npmjs.com/cli/shrinkwrap) (o el propio módulo
-`nan` en el caso de la compatibilidad de los módulos compilados entre versiones)
-y se siguen planteando otras nuevas como son el uso de paquetes comprimidos[^1],
-o el firmado de módulos. Ninguna de estas soluciones es óptima o definitiva por
-sí sola, aunque mientras tanto se están intentando promover códigos de buena
-conducta como el uso de [versionado semántico](http://semver.org) estricto o la
-conversión de módulos de la librería estándar en paquetes `npm` para prevenir
-cambios en las APIs.
+*bundledDependencies* o de [shrinkwrap](https://docs.npmjs.com/cli/shrinkwrap)
+(o el propio módulo `nan` en el caso de la compatibilidad de los módulos
+compilados entre versiones) y se siguen planteando otras nuevas como son el uso
+de paquetes comprimidos[^1], o el firmado de módulos. Ninguna de estas
+soluciones es óptima o definitiva por sí sola, aunque mientras tanto se están
+intentando promover códigos de buena conducta como el uso de
+[versionado semántico](http://semver.org) estricto o la conversión de módulos de
+la librería estándar en paquetes `npm` para prevenir cambios en las APIs.
 
 No obstante, también he podido comprobar en primera persona la idiosincrasia y
 reticencias de algunos desarrolladores a aceptar la inclusión de cambios en su
@@ -77,7 +76,7 @@ código. Esto es algo que a veces ocurre en el software libre, pero se hace más
 patente en el ecosistema de Node.js debido a su rápido crecimiento, que no ha
 permitido que se adopte un código de conducta común, y a la tradicional falta
 de convenciones en Javascript a diferencia de lo que ocurre en otros lenguajes
-como [Python](https://www.python.org) y su guía de estilo
+como *Python* y su guía de estilo
 [PEP 8](https://www.python.org/dev/peps/pep-0008), que plantea unos mínimos de
 calidad ampliamente aceptados por toda la comunidad. Algunos de los problemas
 con los que me he encontrado han sido:

@@ -9,10 +9,9 @@ otros en el mismo sentido que el ofrecido por la expresión griega
 
 Para poder tener constancia del progreso en el número de seguidores del proyecto
 he realizado el módulo [Stargazers](https://github.com/piranna/Stargazers) para
-dicha tarea haciendo uso de la API pública de
-[GitHub para desarrolladores](https://developer.github.com/v3) y de la API de
-[Google Image Charts](https://developers.google.com/chart/image) para la
-generación de la gráfica, la cual a pesar de estar deprecada en beneficio de
+dicha tarea haciendo uso de la API pública de *GitHub para desarrolladores* y de
+la API de *Google Image Charts* para la generación de la gráfica, la cual a
+pesar de estar deprecada en beneficio de
 [Google Charts](https://developers.google.com/chart) ofrece una interfaz mas
 sencilla para la generación de imágenes estáticas al estar basada en peticiones
 HTTP `GET` y `POST`.

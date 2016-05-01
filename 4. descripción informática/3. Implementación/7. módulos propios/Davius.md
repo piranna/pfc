@@ -21,10 +21,9 @@ orientado a su uso con archivos, HTTP no puede trabajar de forma transparente
 con directorios o copiar recursos remotamente, para lo que puede hacerse uso de
 otras alternativas como son [SpockFS](https://github.com/unbit/spockfs), que
 implementa un sistema de archivos en red basado en HTTP y los métodos de la API
-de [libfuse](https://github.com/libfuse/libfuse), o el protocolo
-[WebDAV](http://www.webdav.org), que también es una extensión de HTTP pero
-además es un [estándar](http://www.ietf.org/rfc/rfc4918.txt) ampliamente
-aceptado por la industria.
+de [libfuse](https://github.com/libfuse/libfuse), o el protocolo *WebDAV*, que
+también es una extensión de HTTP pero además es un estándar ampliamente aceptado
+[por la industria](http://www.ietf.org/rfc/rfc4918.txt).
 
 [Davius](https://github.com/piranna/Davius) es un servidor HTTP/WebDAV estático
 y sin estado que muestra en su jerarquía de recursos un mapeo directo del
@@ -38,8 +37,8 @@ desarrollo web para evitar ciertas restricciones que se tienen al usar archivos
 directamente desde el disco duro local debido a la politica de
 [origen único](https://developer.mozilla.org/en-US/docs/Same-origin_policy_for_file:_URIs).
 
-*Davius* está basado en el módulo [oneshoot](https://github.com/piranna/oneshoot)
-para implementar el servidor web sin estado, y en el módulo
+*Davius* está basado en el módulo *oneshoot* para implementar el servidor web
+sin estado, y en el módulo
 [serve-static](https://github.com/expressjs/serve-static) para servir los
 archivos. Después se le ha añadiéndo la funcionalidad correspondiente a las
 extensiones del protocolo WebDAV, debido a que no se ha podido encontrar ningún

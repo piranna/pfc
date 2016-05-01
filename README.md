@@ -7,11 +7,11 @@ Memoria del Proyecto de Fin de Carrera de Jesús Leganés Combarro, alumno de la
 [Escuela Técnica Superior de Ingeniería Informática](http://www.etsii.urjc.es)
 de la [Universidad Rey Juan Carlos](http://www.urjc.es), consistente en el
 desarrollo de un sistema operativo minimalista sobre un kernel Linux, cuyo
-espacio de usuario está basado en el framework [Node.js](https://nodejs.org) y
-el gestor de dependencias [npm](https://www.npmjs.org). El objetivo del sistema
-es reducir el consumo de recursos al eliminar capas intermedias, y permitir un
-fácil aprendizaje y mantenimiento al estar todas sus aplicaciones y librerías
-escritas en Javascript.
+espacio de usuario está basado en el framework *Node.js* y el gestor de
+dependencias [npm](https://www.npmjs.org). El objetivo del sistema es reducir el
+consumo de recursos al eliminar capas intermedias, y permitir un fácil
+aprendizaje y mantenimiento al estar todas sus aplicaciones y librerías escritas
+en Javascript.
 
 Este libro se ha generado con [GitBook](https://www.gitbook.com) utilizando
 [Markdown](http://daringfireball.net/projects/markdown) como formato de edición.

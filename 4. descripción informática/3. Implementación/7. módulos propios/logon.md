@@ -49,13 +49,13 @@ ejecuta la shell del usuario como una sesión REPL, estos se ejecutarían con lo
 permisos reducidos a los del usuario.
 
 La idea es que posteriormente este sistema pueda usarse también para el acceso
-remoto mediante [HTTP Auth](https://tools.ietf.org/html/rfc2617) o
-[wssh](https://www.npmjs.com/package/wssh). No obstante, el diseño modular de
-NodeOS hace que sea muy fácil cambiar dicho sistema de login por cualquier otro,
-por ejemplo en uno basado en [Google Accounts](https://myaccount.google.com) y
-usar posteriormente su unidad [GDrive](https://drive.google.com) como directorio
-del usuario, u otro servicio con soporte de [OAuth](http://oauth.net) o con
-cualquier otro mecanismo de autenticación.
+remoto mediante *HTTP Basic Auth* o [wssh](https://www.npmjs.com/package/wssh).
+No obstante, el diseño modular de NodeOS hace que sea muy fácil cambiar dicho
+sistema de login por cualquier otro, por ejemplo en uno basado en
+[Google Accounts](https://myaccount.google.com) y usar posteriormente su unidad
+[GDrive](https://drive.google.com) como directorio del usuario, u otro servicio
+con soporte de [OAuth](http://oauth.net) o con cualquier otro mecanismo de
+autenticación.
 
 Actualmente no existe ningún mecanismo para añadir nuevos usuarios al margen de
 los que se están creando al generar la partición de usuarios en la capa de

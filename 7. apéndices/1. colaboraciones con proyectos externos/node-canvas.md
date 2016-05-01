@@ -70,8 +70,8 @@ ocultos en entornos de desarrollo mas comunes:
   entre las librerías globales del sistema, lo cual podría dar problemas con el
   *cross-compiler* de NodeOS. Sin embargo, al añadir dicho flag obtuve algunos
   errores relativos a que el objeto `crtBeginT.o` debe de ser compilado como
-  [Código Independiente de la Posición](https://en.wikipedia.org/wiki/Position-independent_code)
-  (*PIC*), ya que estamos haciendo una librería dinámica. Esto es debido a un
+  *Código Independiente de la Posición* (*PIC*), ya que estamos haciendo una
+  librería dinámica. Esto es debido a un
   [bug en gcc sin resolver](https://bugzilla.redhat.com/show_bug.cgi?id=214465#c1)
   puesto que sus desarrolladores no quieren que se usen simultáneamente los
   flags `-shared` (para crear una librería dinámica) y `-static` (para forzar a
@@ -85,22 +85,22 @@ ocultos en entornos de desarrollo mas comunes:
   `-fPIC`. Esto es así al parecer porque el uso de *Código Independiente de
   Posición* añade una pequeña penalización en el rendimiento y por tanto se
   tienen dos versiones especializadas de dicho archivo, Este problema no afecta
-  a otros compiladores como [LLVM](http://llvm.org) ya que sólo utilizan una
-  única versión del archivo. Sin embargo, esto tiene el problema de que dicha
-  sustitución tendría que hacerse en todos los sistemas para los que se vaya a
-  compilar el módulo y no sólamente cuando sea NodeOS el objetivo, por lo que se
-  ha optado por una solución menos invasiva consistente en indicar en el archivo
-  de configuración de *node-gyp* (`binding.gyp`) de forma explicita la ubicación
-  de todas las librerías estáticas contra las que debe ser linkado (que
-  corresponden a las dependencias que hemos bajado y compilado previamente), de
-  forma que ya no sea necesario hacer uso del flag `-static`, y evitando también
-  los problemas asociados a su uso con `gcc` indicados antes. Una vez hecho este
-  cambio, el módulo pudo compilarse sin problemas bajo Ubuntu usando `glibc`
-  como librería estándar y ejecutarse los tests correctamente. No obstante, los
-  ejemplos relativos al uso del framebuffer no mostraban nada en pantalla, lo
-  que luego resulto ser debido al hecho de que equipo usado durante las pruebas
-  (un portátil MacBook Pro) incorpora una tarjeta gráfica híbrida (una Intel en
-  fb0 y una NVidia en fb1), estando activada por defecto la secundaria. Una vez
+  a otros compiladores como *LLVM* ya que sólo utilizan una única versión del
+  archivo. Sin embargo, esto tiene el problema de que dicha sustitución tendría
+  que hacerse en todos los sistemas para los que se vaya a compilar el módulo y
+  no sólamente cuando sea NodeOS el objetivo, por lo que se ha optado por una
+  solución menos invasiva consistente en indicar en el archivo de configuración
+  de *node-gyp* (`binding.gyp`) de forma explicita la ubicación de todas las
+  librerías estáticas contra las que debe ser linkado (que corresponden a las
+  dependencias que hemos bajado y compilado previamente), de forma que ya no sea
+  necesario hacer uso del flag `-static`, y evitando también los problemas
+  asociados a su uso con `gcc` indicados antes. Una vez hecho este cambio, el
+  módulo pudo compilarse sin problemas bajo Ubuntu usando `glibc` como librería
+  estándar y ejecutarse los tests correctamente. No obstante, los ejemplos
+  relativos al uso del framebuffer no mostraban nada en pantalla, lo que luego
+  resulto ser debido al hecho de que equipo usado durante las pruebas (un
+  portátil MacBook Pro) incorpora una tarjeta gráfica híbrida (una Intel en fb0
+  y una NVidia en fb1), estando activada por defecto la secundaria. Una vez
   modificado el módulo para poder configurar desde Javascript el dispositivo de
   [framebuffer a usar](https://github.com/ReneHollander/node-canvas/issues/2),
   dichos ejemplos ya pudieron ejecutarse nativamente en mi equipo:

@@ -16,14 +16,13 @@ cual es necesario para generar el
 [cross-compiler](../../../4. descripción informática/3. Implementación/0. cross-toolchain.html).
 
 Puesto que los parches necesarios para Node.js y `gcc` usan ambos el formato
-[diff unificado](http://www.gnu.org/software/diffutils/manual/html_node/Detailed-Unified.html),
-el cual es estándar en todos los entornos UNIX, para poder aplicarlos desde
-Javascript el único módulo disponible que implementa dicho algoritmo es
-[jsdiff](https://github.com/kpdecker/jsdiff), el cual también es capaz de
-parsearlos. Sin embargo, al estar dicho módulo más enfocado a su uso en textos
-pequeños dentro de páginas web en vez de para parchear programas completos,
-dicha implementación tenía algunas limitaciones que impedían usarla para poder
-parchear el código de proyectos grandes como es el caso de `gcc`.
+*diff unificado*, el cual es estándar en todos los entornos UNIX, para poder
+aplicarlos desde Javascript el único módulo disponible que implementa dicho
+algoritmo es [jsdiff](https://github.com/kpdecker/jsdiff), el cual también es
+capaz de parsearlos. Sin embargo, al estar dicho módulo más enfocado a su uso en
+textos pequeños dentro de páginas web en vez de para parchear programas
+completos, dicha implementación tenía algunas limitaciones que impedían usarla
+para poder parchear el código de proyectos grandes como es el caso de `gcc`.
 
 El primero de los problemas encontrados fue la falta de soporte para poder usar
 [parches que afecten a varios archivos](https://github.com/kpdecker/jsdiff/issues/60),

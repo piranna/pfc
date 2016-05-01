@@ -1,11 +1,10 @@
 #### vinyl-fs
 
-El módulo [download](https://github.com/kevva/download), usado para descargar y
-descomprimir automáticamente todos los componentes de construcción de NodeOS,
-internamente hace uso de [vinyl-fs](https://github.com/gulpjs/vinyl-fs), el cual
-aplica la API de streams de Node.js para su uso con archivos (incluidos sus
-metadatos). El módulo tenía un problema por el cual la fecha de modificación de
-los archivos (`mtime`)
+El módulo *download*, usado para descargar y descomprimir automáticamente todos
+los componentes de construcción de NodeOS, internamente hace uso de
+[vinyl-fs](https://github.com/gulpjs/vinyl-fs), el cual aplica la API de streams
+de Node.js para su uso con archivos (incluidos sus metadatos). El módulo tenía
+un problema por el cual la fecha de modificación de los archivos (`mtime`)
 [no se conservaba](https://github.com/gulpjs/vinyl-fs/issues/96) al escribirlo
 en disco, sino que en su lugar el archivo se creaba con la fecha actual. Esto
 ocasionaba que al compilar [libfuse](http://fuse.sourceforge.net), el comando
@@ -42,7 +41,7 @@ cuando se usen versiones de Node.js mas antiguas que no la incluyan por defecto.
 Sin embargo, también han surgido otros problemas relacionados con el uso de
 funciones para el manejo de archivos que en determinadas circunstancias
 requieren de permisos especiales, como son el propio *fs.utimes* pero que
-también afectan a [chmod](http://linux.die.net/man/1/chmod) o
-[chown](http://linux.die.net/man/1/chown), por lo que debido a esto se está
-estudiando [un modo uniforme](https://github.com/gulpjs/vinyl-fs/issues/127) con
-el que poder hacer uso de ellas.
+también afectan a [chmod](http://linux.die.net/man/1/chmod) o *chown*, por lo
+que debido a esto se está estudiando el desarrollar un modo
+[uniforme](https://github.com/gulpjs/vinyl-fs/issues/127) con el que poder hacer
+uso de ellas.

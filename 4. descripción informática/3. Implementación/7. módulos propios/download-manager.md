@@ -9,10 +9,10 @@ un módulo independiente que se encargara de procesarlas de forma uniforme en
 todos los casos.
 
 [download-manager](https://github.com/piranna/download-manager) hace uso del
-módulo [download](https://github.com/kevva/download) para la descarga del código
-fuente de las distintas dependencias, independientemente del formato en el que
-sean distribuidas, comprobando si la descarga se ha realizado anteriormente para
-evitar repetirla. También muestra una barra de progreso mediante el módulo
+módulo *download* para la descarga del código fuente de las distintas
+dependencias, independientemente del formato en el que sean distribuidas,
+comprobando si la descarga se ha realizado anteriormente para evitar repetirla.
+También muestra una barra de progreso mediante el módulo
 [download-status](https://github.com/kevva/download-status) y detecta cuándo
 está siendo ejecutado en un entorno no interactivo (por ejemplo servidores de
 integración continua) para evitar que se impriman caracteres de control que

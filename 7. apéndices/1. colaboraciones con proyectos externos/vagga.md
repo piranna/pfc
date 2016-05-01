@@ -3,9 +3,9 @@
 La arquitectura minimalista de NodeOS ofrece unas claras ventajas para ser usado
 como sistema operativo de servidores cloud. Dentro de este entorno están ganando
 popularidad los contenedores [LXC](https://linuxcontainers.org), y en especial
-el administrador de contenedores [Docker](https://www.docker.com), el cual
-permite controlar las aplicaciones de forma aislada del resto del sistema y
-poder cambiar de proveedor de servicios fácilmente.
+el administrador de contenedores *Docker*, el cual permite controlar las
+aplicaciones de forma aislada del resto del sistema y poder cambiar de proveedor
+de servicios fácilmente.
 
 Teniendo esto en mente, los primeros desarrollos del proyecto estaban basados en
 él, y de hecho se hacía un uso extensivo de las librerías propias de Ubuntu del
@@ -91,9 +91,8 @@ El poder cargar las capas subsecuentes de
 [rootfs](../../../4. descripción informática/3. Implementación/3. rootfs.html)
 fue solo una cuestión de configurarlas correctamente, no obstante no ha sido por
 el momento posible hacer funcionar el sistema completo. La razón de esto es
-debido a que NodeOS crea por cada usuario un sistema de archivos
-[OverlayFS](https://www.kernel.org/doc/Documentation/filesystems/overlayfs.txt),
-el cual no esta soportado en estos momentos en *vagga* puesto que para poder ser
+debido a que NodeOS crea por cada usuario un sistema de archivos *OverlayFS*, el
+cual no esta soportado en estos momentos en *vagga* puesto que para poder ser
 usado por usuarios normales previamente el kernel de Linux debe ser
 [parcheado](https://github.com/tailhook/vagga/issues/101#issuecomment-150922680).
 Aparte, también han surgido algunos problemas debido por un lado a que *vagga*

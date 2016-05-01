@@ -8,10 +8,10 @@ el cual además tiene una funcionalidad mas completa que permite optimizar el
 arranque del sistema. No obstante, éste módulo ha requerido ciertas mejoras,
 como la actualización realizada por [Csaba Szabo](https://github.com/netlovers)
 (miembro del proyecto) para poder ser utilizado en Node.js 0.12 usando las
-macros proporcionadas por el modulo [nan](https://github.com/nodejs/nan)
-(actualmente la forma oficial de crear módulos compilados en Node.js) en vez de
-acceder directamente a las APIs internas de [v8](https://developers.google.com/v8)
-y Node.js. Por otra parte, las mejoras que se han realizado al módulo han sido:
+macros proporcionadas por el modulo *nan* (actualmente la forma oficial de crear
+módulos compilados en Node.js) en vez de acceder directamente a las APIs
+internas de *v8* y Node.js. Por otra parte, las mejoras que se han realizado al
+módulo han sido:
 
 * permitir el uso de parámetros opcionales en las llamadas a las distintas
   funciones del módulo manipulando los argumentos con los que han sido invocadas

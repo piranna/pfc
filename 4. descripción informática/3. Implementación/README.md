@@ -122,11 +122,11 @@ generar módulos compilados en Node.js. Esto requeriría el generar scripts de
 configuración de [GYP](https://code.google.com/p/gyp), el gestor de compilación
 desarrollado por Google para el motor Javascript
 [v8](https://developers.google.com/v8) y por extensión usado por Node.js. Sin
-embargo, GYP requiere del uso de un interprete [Python](https://www.python.org)
-2.7 (versión ya obsoleta) y además Google ha abandonado internamente el uso de
-GYP en beneficio de su nuevo gestor de configuración y compilación
-[gn](https://chromium.googlesource.com/chromium/src/tools/gn).
-Por este motivo, se están estudiando dentro de la comunidad de Node.js distintas
+embargo, GYP requiere del uso de un interprete *Python* 2.7 (versión ya
+obsoleta) y además Google ha abandonado internamente el uso de GYP en beneficio
+de su nuevo gestor de configuración y compilación
+[gn](https://chromium.googlesource.com/chromium/src/tools/gn). Por este motivo,
+se están estudiando dentro de la comunidad de Node.js distintas
 [alternativas](https://github.com/nodejs/node/issues/133) (reimplementar `GYP`
 en Javascript, utilizar makefiles, crear un nuevo gestor de configuración
 escrito en C...) sin que haya surgido todavía una opción adecuada, por lo que se
