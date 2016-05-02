@@ -17,5 +17,6 @@
 13. [vinyl-fs](vinyl-fs.md)
 14. [Módulos no utilizados actualmente](módulos no utilizados actualmente.md)
   1. [Node Daemon Manager](módulos no utilizados actualmente.html#node-daemon-manager)
-  2. [node-cron](módulos no utilizados actualmente.html#node-cron)
-  3. [npm-registry-client](módulos no utilizados actualmente.html#npm-registry-client)
+  2. [node-century](módulos no utilizados actualmente.html#node-century)
+  3. [node-cron](módulos no utilizados actualmente.html#node-cron)
+  4. [npm-registry-client](módulos no utilizados actualmente.html#npm-registry-client)

@@ -1,8 +1,10 @@
 # Conclusiones
 
 1. [Logros principales alcanzados](1. Logros principales alcanzados.html)
-  1. [Reconocimiento de la comunidad](1. Logros principales alcanzados.html#reconocimiento-de-la-comunidad)
-  2. [Repercusión del proyecto](1. Logros principales alcanzados.html#repercusión-del-proyecto)
+  1. [Charlas y presentaciones](1. Logros principales alcanzados.html#charlas-y-presentaciones)
+  2. [Reconocimiento de la comunidad](1. Logros principales alcanzados.html#reconocimiento-de-la-comunidad)
+  3. [Repercusión del proyecto](1. Logros principales alcanzados.html#repercusión-del-proyecto)
+  4. [Código de los subproyectos](1. Logros principales alcanzados.html#código-de-los-subproyectos)
 2. [Posibles trabajos futuros](2. Posibles trabajos futuros.html)
   1. [Actualizar versión de Node.js](2. Posibles trabajos futuros.html#actualizar-versión-de-node.js)
   2. [Separar módulos en proyectos independientes](2. Posibles trabajos futuros.html#separar-módulos-en-proyectos-independientes)

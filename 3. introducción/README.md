@@ -10,5 +10,5 @@
     2. [Java](2. Estudio de alternativas.html#java)
     3. [C#](2. Estudio de alternativas.html#c)
     4. [Phantom](2. Estudio de alternativas.html#phantom)
-    5. [hardware](2. Estudio de alternativas.html#hardware)
+    5. [Lenguajes implementados en hardware](2. Estudio de alternativas.html#lenguajes-implementados-en-hardware)
 3. [Objetivos](3. Objetivos.html)
