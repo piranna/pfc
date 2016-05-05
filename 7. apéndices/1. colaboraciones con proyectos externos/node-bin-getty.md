@@ -14,8 +14,8 @@ sólamente para los mensajes del kernel.
 En el caso de NodeOS, esta funcionalidad es realizada por el módulo
 [bin-getty](https://github.com/NodeOS/node-bin-getty), el cual implementa una
 versión simplificada de [getty](https://www.freebsd.org/cgi/man.cgi?query=getty)
-que actualmente sólo considera el uso de `/dev/console`, aunque mas adelante se
-incluirá el uso de terminales virtuales cuando se pruebe mas extensamente el uso
+que actualmente sólo considera el uso de `/dev/console`, aunque más adelante se
+incluirá el uso de terminales virtuales cuando se pruebe más extensamente el uso
 de NodeOS en hardware real, aunque siendo un sistema operativo orientado a
 servidores en la nube esto último no es actualmente una prioridad. Después de
 inicializar el terminal virtual, su labor se reduce a usarlo como entrada y

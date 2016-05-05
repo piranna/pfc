@@ -11,7 +11,7 @@ var fs = require('fs')
 fs.readdirSync('.')
 ```
 
-Esto no es adecuado para un uso continuado, haciéndolo incomodo en casos mas
+Esto no es adecuado para un uso continuado, haciéndolo incomodo en casos más
 avanzados. Por otro lado, al ser Javascript un lenguaje de alto nivel se pueden
 hacer las mismas tareas que en una shell como por ejemplo
 [bash](https://www.gnu.org/software/bash) sin necesidad de usar comandos
@@ -41,9 +41,9 @@ scripts de shell, como son los sistema de construcción basados en `Makefiles`.
 Para dicha reescritura se ha basado en el módulo
 [shell-parse](https://github.com/grncdr/js-shell-parse), el cual genera un árbol
 AST del script bash que después se recorre procesando cada uno de sus nodos.
-Esta forma de hacerlo es mas óptima que la empleada por las shells clásicas
+Esta forma de hacerlo es más óptima que la empleada por las shells clásicas
 debido a que éstas implementan su lógica mediante comandos externos y el uso de
-procesos, no obstante una vez que estén mas claros cuales son los distintos
+procesos, no obstante una vez que estén más claros cuales son los distintos
 componentes necesarios para la creación de dicha shell y el cómo deben funcionar
 para que puedan ser fácilmente utilizables desde el interprete REPL de Node.js,
 se plantea sustituir en una futura versión su funcionamiento por un traductor
@@ -70,12 +70,11 @@ clase que envuelve dichos comandos y genera un objeto
 de su entrada y salida estándar, permitiendo que los comandos externos puedan
 ser usados como filtros al igual que cualquiera de las funciones proporcionadas
 por *Coreutils.js*. Por último, también se hace uso del módulo
-[npm-path](https://github.com/timoxley/npm-path), el cual puede cambiar la
-variable de entorno `$PATH` para que incluya la ubicación de todos los binarios
+[npm-path](https://github.com/timoxley/npm-path), que puede cambiar la variable
+de entorno `$PATH` para que incluya la ubicación de todos los binarios
 instalados por npm a partir del directorio actual y en todos los anteriores, de
 forma que sean fácilmente accesibles para el usuario gracias a este "`$PATH`
-dinámico". En este módulo se
-[corregió](https://github.com/timoxley/npm-path/pull/5)
+dinámico". En este módulo se [corregió](https://github.com/timoxley/npm-path/pull/5)
 un bug por el cual se estaban duplicando algunos de los componentes del *$PATH*
 generado ya que es posible que algunas de las rutas que añade este módulo ya
 estuvieran incluidas antes, como es la ubicación del binario de `node-gyp`.
@@ -100,7 +99,7 @@ emitidos de tipo `error` capturándolos mediante el uso del módulo
 *nsh* hace uso del modulo [async](https://github.com/caolan/async) para definir
 el control de flujo de las operaciones, como en el uso de `reduce` para calcular
 las redirecciones. Esto permite que todo el código se ejecute de forma asíncrona
-y no bloqueante y que sea mucho mas simple de entender. Por ejemplo, el código
+y no bloqueante y que sea mucho más simple de entender. Por ejemplo, el código
 para ejecutar los bucles `while` se reduce al siguiente:
 
 ```Javascript
@@ -141,6 +140,6 @@ devuelva los distintos ejecutables que coinciden con el patrón buscado separado
 por cada componente del `$PATH`, además de eliminar los que ya estén incluidos
 previamente (probablemente debido a un link simbólico, aunque también puede ser
 una versión distinta, o en el caso de los ejecutables incluidos dentro de los
-módulos de npm debido a una dependencia incompatible con la instalada mas
+módulos de npm debido a una dependencia incompatible con la instalada más
 globalmente) puesto que no estarán accesibles debido a que la ocurrencia
 anterior tiene prioridad sobre esta.

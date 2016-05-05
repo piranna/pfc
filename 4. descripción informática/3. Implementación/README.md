@@ -145,7 +145,7 @@ Adicionalmente, entre las etapas utilizadas también podemos encontrar:
   invocado explícitamente mediante `npm run unbuild`.
 
 Por otra parte, la mayoría de scripts están escritos en `bash`, aunque se están
-portando a Javascript para facilitar el que mas adelante el sistema pueda ser
+portando a Javascript para facilitar el que más adelante el sistema pueda ser
 autocontenido (generable dentro de otra instancia de NodeOS). Los principales
 problemas que han surgido hasta el momento en esta transición han correspondido
 a la etapa de descarga del código fuente de los distintos proyectos, para lo
@@ -165,15 +165,15 @@ Se ha prestado especial atención a que el proceso de generación no requiera de
 permisos de administrador en ninguna de sus etapas, lo cual incluye la
 generación de las imágenes de disco haciendo que no sea necesario su montaje, y
 también las correspondientes a Docker, ya que su proceso de generación estándar
-los requiere. Para ello se han generado archivos `cpio` y `tar` a partir de
-archivos describiendo su contenido en vez de usar archivos reales evitando de
-este modo problemas de permisos. Por otro lado, se hace uso de los comandos
-`genfatfs` y `genext2fs` para crear directamente las imágenes de disco sin
-necesidad de montarlas previamente, y también del gestor de arranque SyxLinux,
-el cual esta preparado para trabajar con ellas explícitamente a diferencia de
-`GRUB`, que está orientado a su uso con discos duros y particiones reales. La
-razón de hacerlo de esta manera es para poder compilar y generar los archivos
-del sistema operativo usando las herramientas estándar de Node.js y npm, ya que
-ejecutarlos con permisos de administrador provoca algunos problemas con la
-instalación de dependencias, por los que se aconseja que siempre se ejecuten con
-usuarios normales.
+los requiere. Para ello se han generado archivos en formato `cpio` y `tar` a
+partir de archivos describiendo su contenido en vez de usar una jerarquia de
+archivos real en el disco duro, evitando de este modo problemas de permisos. Por
+otro lado, se hace uso de los comandos `genfatfs` y `genext2fs` para crear
+directamente las imágenes de disco sin necesidad de montarlas previamente, y
+también del gestor de arranque SyxLinux, el cual esta preparado para trabajar
+con ellas explícitamente a diferencia de `GRUB`, que está orientado a su uso con
+discos duros y particiones reales. La razón de hacerlo de esta manera es para
+poder compilar y generar los archivos del sistema operativo usando las
+herramientas estándar de Node.js y npm, ya que ejecutarlos con permisos de
+administrador provoca algunos problemas con la instalación de dependencias, por
+los que se aconseja que siempre se ejecuten con usuarios normales.

@@ -3,9 +3,9 @@
 La arquitectura minimalista de NodeOS ofrece unas claras ventajas para ser usado
 como sistema operativo de servidores cloud. Dentro de este entorno están ganando
 popularidad los contenedores [LXC](https://linuxcontainers.org), y en especial
-el administrador de contenedores *Docker*, el cual permite controlar las
-aplicaciones de forma aislada del resto del sistema y poder cambiar de proveedor
-de servicios fácilmente.
+el administrador de contenedores *Docker*, que permite controlar las aplicaciones
+de forma aislada del resto del sistema y poder cambiar de proveedor de servicios
+fácilmente.
 
 Teniendo esto en mente, los primeros desarrollos del proyecto estaban basados en
 él, y de hecho se hacía un uso extensivo de las librerías propias de Ubuntu del
@@ -15,14 +15,14 @@ basados en Ubuntu. Sin embargo, decidí centrarme en poder ejecutarlo bajo
 [QEmu](http://qemu.org) por dos razones:
 
 * mis conocimientos de cómo funciona *Docker* eran escasos en comparación con
-  los QEmu, con el cual ya había experimentado anteriormente.
+  los QEmu, con el que ya había experimentado anteriormente.
 * y por otro, que al ser QEmu un emulador de ordenador completo, una vez NodeOS
   funcionara correctamente en él, seria relativamente fácil hacer que funcionara
   sobre hardware real, lo cual sería un gran paso de cara a su portabilidad con
   otras plataformas, a su versatilidad y a que pudiese ser auto-contenido.
 
 Sin embargo, *Docker* está diseñado para ser ejecutado como servicio del sistema
-y por tanto requiere permisos de administrador, lo cual es un problema tal como
+y por tanto requiere permisos de administrador, lo que es un problema tal como
 esta diseñado el sistema de construcción de NodeOS, y aunque se puede configurar
 para permitir su uso mediantes usuarios normales, requiere de trabajo extra por
 parte del desarrollador, por lo que finalmente descarte su uso y en su lugar
@@ -47,7 +47,7 @@ problema está en que a pesar de que tanto el comando `cpio` como `tar` soportan
 ambos tipos de archivos, ninguno proporciona un modo de conversión entre ellos,
 requiriendo primero desempaquetarlos para después volver a empaquetarlos en el
 nuevo formato. Esto podría acarrear problemas de permisos en el sistema de
-archivos del usuario que este generando la imagen, además de ser mas lento al
+archivos del usuario que este generando la imagen, además de ser más lento al
 requerir de hacer accesos al disco, por lo que decidí convertirlos dinámicamente
 mediante el uso de los módulos [cpio-stream](cpio-stream.html) y
 [tar-stream](tar-stream.html) de Node.js.
@@ -65,8 +65,8 @@ por defecto los directorios `/bin` y `/lib`, el punto de montaje para `/dev` y
 también añade el dispositivo `/dev/console`, entrando en conflicto con los
 incluidos en el *initramfs* de NodeOS. Para solucionarlo, simplemente detecto el
 entorno para el que estoy generando el sistema y en caso de estar produciendo
-una imagen para un contenedor LXC no añado dichas entradas para poder crear el
-sistema de archivos correctamente, por lo que después de esto y una vez que se
+una imagen para un contenedor LXC no añado dichas entradas para poder crear la
+jerarquía de archivos correctamente, por lo que después de esto y una vez que se
 [resolvieron algunos problemas](https://github.com/tailhook/vagga/issues/85) en
 *vagga* relativos al archivo de configuración, finalmente pude ejecutar la capa
 de *barebones* dentro del entorno:
@@ -114,7 +114,7 @@ poder definirlos en la configuración del container, y tener un medio por el que
 ignorar los ofrecidos por el `/proc/cmdline` del sistema.
 
 Gracias al uso de *vagga* se ha simplificado la forma de generar imágenes
-*Docker* al no ser necesario el uso de permisos de administrador mas que para el
+*Docker* al no ser necesario el uso de permisos de administrador más que para el
 registro de dichas imágenes. Además al poder usar un formato común de las mismas
 basado en archivos `tar` y los correspondientes archivos de configuración de
 cada plataforma, el mantenimiento de estas se reduce al mínimo.

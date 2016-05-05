@@ -1,17 +1,16 @@
 #### node-canvas
 
-La forma mas sencilla de poder mostrar gráficos en la consola de Linux es
+La forma más sencilla de poder mostrar gráficos en la consola de Linux es
 utilizando el [dispositivo de framebuffer](https://es.wikipedia.org/wiki/Fbdev),
 el cual proporciona acceso directo a la región de memoria correspondiente a la
 pantalla para poder modificarla. En un principio se pensó en crear un módulo de
 Node.js para que el usuario pudiera controlar dicho dispositivo fácilmente, sin
 tener que usar directamente la interfaz proporcionada por el kernel de Linux,
 implementando todas las llamadas al sistema correspondientes como funciones,
-pero mas tarde se decidió usar en su lugar el módulo
-[node-canvas](https://github.com/Automattic/node-canvas), el cual proporciona
-una implementación de la API de
-[Canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) de HTML, y
-que además es el módulo estándar *de-facto* para renderizar imágenes en Node.js
+pero más tarde se decidió usar en su lugar el módulo
+[node-canvas](https://github.com/Automattic/node-canvas), que implementa la API
+de [Canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) de HTML,
+y que además es el módulo estándar *de-facto* para renderizar imágenes en Node.js
 en el servidor, ofreciendo por tanto compatibilidad con aplicaciones existentes
 para Node.js que usen dicho módulo, como con las aplicaciones web que hagan uso
 de la API de *Canvas*, principalmente juegos y animaciones. Dicho módulo es en
@@ -20,7 +19,7 @@ la cual proporciona un framework multiplataforma para el dibujado de gráficos
 vectoriales, y que es usada por múltiples proyectos de Software Libre, entre
 ellos la librería de componentes gráficos [GTK](http://www.gtk.org), usada por
 [Gnome](https://www.gnome.org) y [XFCE](http://www.xfce.org), dos de los
-entornos de escritorio mas populares en Linux.
+entornos de escritorio más populares en Linux.
 
 Debido al diseño de NodeOS donde no hay componentes o librerías globales comunes
 para todos los usuarios, para poder usar *node-canvas* se ha tenido en primer
@@ -44,14 +43,14 @@ gráficos en la pantalla es el propio soporte de framebuffer como destino para
 las operaciones de dibujado. Cairo tiene soporte nativo para el mismo, con lo
 que sólo es cuestión de configurar *node-canvas* de forma que pueda utilizarlo.
 Para ello se ha basado en el código previo realizado por
-[Rene Hollander](https://github.com/ReneHollander/node-canvas), el cual a raíz
-del [issue](https://github.com/Automattic/node-canvas/issues/533) que se abrió
-en el repositorio de *node-canvas* solicitando el soporte para el framebuffer de
-Linux hizo una prueba de concepto para añadirlo, y además ha implementado un
-sistema por el cual el usuario puede configurar fácilmente que sistema gráfico
-quiere utilizar (imagen, framebuffer, EGL, X11, Wayland, Quartz, GDI, SVG,
-PDF...) aparte de poder configurar en tiempo de compilación cuales de los
-sistemas gráficos nativos posteriormente estarán disponibles en el módulo.
+[Rene Hollander](https://github.com/ReneHollander/node-canvas), que a raíz del
+[issue](https://github.com/Automattic/node-canvas/issues/533) que se abrió en el
+repositorio de *node-canvas* solicitando el soporte para el framebuffer de Linux
+hizo una prueba de concepto para añadirlo, y además ha implementado un sistema
+por el cual el usuario puede configurar fácilmente que sistema gráfico quiere
+utilizar (imagen, framebuffer, EGL, X11, Wayland, Quartz, GDI, SVG, PDF...)
+aparte de poder configurar en tiempo de compilación cuales de los sistemas
+gráficos nativos posteriormente estarán disponibles en el módulo.
 
 Al estar ambas funcionalidades actualmente en desarrollo y sin integrar en el
 repositorio principal, se han [combinado](https://github.com/NodeOS/node-canvas)
@@ -61,7 +60,7 @@ conflictos, al hacerlo se han encontrado
 algunos debidos a la forma tan poco común en la que es compilado el módulo
 (librería dinámica linkada estáticamente y usando `musl` como librería estándar)
 y debido a esto mismo también se han encontrado algunos bugs que permanecían
-ocultos en entornos de desarrollo mas comunes:
+ocultos en entornos de desarrollo más comunes:
 
 * El primero de ellos fue el hecho de que no se estaba forzando que el linkado
   fuese estático mediante el flag `-static`, por lo que aunque se estuviesen
@@ -160,7 +159,7 @@ ocultos en entornos de desarrollo mas comunes:
   deberían haberse resuelto al cargar el módulo.
 * Por último y relacionado con el punto anterior, el mecanismo de selección de
   sistemas gráficos tenía un fallo por el cual no estaba definido un método
-  destructor en la clase base abstracta de la cual heredan cada uno de ellos.
+  destructor en la clase base abstracta de la que heredan cada uno de ellos.
   Esto en situaciones normales no causaría problemas debido al *lazy loading* (o
   a lo sumo se generaría un core dump cuyos efectos quedarían ocultos al
   producirse generalmente durante el cierre normal de la aplicación), pero al
@@ -199,10 +198,10 @@ En condiciones normales este corresponde a la
 [longitud de cada linea](http://lxr.free-electrons.com/source/include/uapi/linux/fb.h#L167)
 en el framebuffer, la cual es fija independientemente de la resolución empleada,
 pero ésta da un valor incorrecto para Cairo cuando se usa bajo QEmu en 24 bits,
-lo cual provoca que aparezca la imagen triplicada y con lineas en blanco (1024 x
-4 bytes = 4096 bytes, cuando la longitud de cada linea es de 1024 x 3 bytes =
-3072 bytes, con lo que los píxeles quedan alineados en pantalla cada 4 lineas
-del framebuffer, o 12288 bytes):
+que provoca que aparezca la imagen triplicada y con lineas en blanco (1024 x 4
+bytes = 4096 bytes, cuando la longitud de cada linea es de 1024 x 3 bytes = 3072
+bytes, con lo que los píxeles quedan alineados en pantalla cada 4 lineas del
+framebuffer, o 12288 bytes):
 
 ![node-canvas en QEmu ampliado 20 veces. Se puede observar el patrón de colores y las lineas en blanco producidas por la desalineación entre los formatos de Cairo y del dispositivo de framebuffer](img/node-canvas en QEmu ampliado 20 veces.png)
 
@@ -237,11 +236,11 @@ externas, ya que estas se estaban guardando en el mismo directorio donde estaban
 definidos sus scripts de compilación y sus configuraciones, haciendo difícil el
 poder limpiar el espacio de trabajo. Además, se estaban usando los números de
 versión de las librerías en las propias rutas donde se estaban descargando, por
-lo que también se ha hecho este proceso genérico para que sean mas fáciles de
+lo que también se ha hecho este proceso genérico para que sean más fáciles de
 actualizar al estar definidos los números de versión en un único lugar. Una vez
 hecho esto, se modifiquó el script de instalación de las dependencias eliminando
 código duplicado e integrándolo dentro de funciones reusables y con mejor
-gestión de errores, de forma que fuese mas fácil de mantener en el futuro.
+gestión de errores, de forma que fuese más fácil de mantener en el futuro.
 Además, ahora se descomprimen los archivos en su ubicación final a medida que se
 descargan los tarballs sin necesidad de guardarlos previamente en el disco duro,
 de forma que el proceso es más rápido y consume menos recursos. Una vez
@@ -252,7 +251,7 @@ aprobación.
 
 Durante la realización de todos estos cambios, también se ha caído en la cuenta
 de que muchos de estos problemas se podrían solucionar mediante una generación
-mas modular, aparte de que se reducirían los tiempos de compilación y la memoria
+más modular, aparte de que se reducirían los tiempos de compilación y la memoria
 y ancho de banda consumidos, por lo que he propuesto el que los módulos
 compilados puedan
 [indicar sus dependencias](https://github.com/joyent/node/issues/25627), de tal

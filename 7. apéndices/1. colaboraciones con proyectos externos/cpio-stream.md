@@ -2,10 +2,10 @@
 
 El único formato de archivo que soporta el kernel de Linux para el empaquetado
 de su sistema de archivos initramfs es [cpio](https://www.gnu.org/software/cpio),
-elegido sobre el mas común [tar](https://www.gnu.org/software/tar) debido a que
-su formato interno es mas simple y sencillo de implementar y mantener, a
+elegido sobre el más común [tar](https://www.gnu.org/software/tar) debido a que
+su formato interno es más simple y sencillo de implementar y mantener, a
 diferencia de *tar* del que hay múltiples versiones distintas y en algunos casos
-incompatibles entre ellas. Sin embargo, precisamente por ser mas popular es el
+incompatibles entre ellas. Sin embargo, precisamente por ser más popular es el
 formato usado por *Docker* y por *vagga*, por lo que es necesario convertir el
 sistema de archivos *initramfs* entre ambos formatos.
 
@@ -29,12 +29,12 @@ fácilmente en el futuro soporte para el formato `bin` (*Old Binary Format*, el
 formato binario original del archivo), o para cualquiera de los otros formatos
 derivados del mismo.
 
-En este sentido, lo mas complicado de añadir el soporte para el nuevo formato ha
+En este sentido, lo más complicado de añadir el soporte para el nuevo formato ha
 sido que el código fuente estaba muy orientado al formato `odc` basado en el uso
 de un stream de caracteres donde todos los campos son consecutivos, mientras que
 en el formato `newc` contempla el uso de bytes de padding para aumentar el
 rendimiento en la extracción y facilitar el acceso directo a los datos (a
-diferencia del formato `odc` mas enfocado al almacenamiento en cinta y por tanto
+diferencia del formato `odc` más enfocado al almacenamiento en cinta y por tanto
 a un acceso secuencial), por lo que se ha tenido que cambiar los algoritmos de
 extracción (incluso en el caso del formato `odc`) para que hagan uso de valores
 de alineación en vez de directamente el tamaño de los campos para poder ignorar

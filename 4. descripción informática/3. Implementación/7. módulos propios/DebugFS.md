@@ -19,7 +19,7 @@ los comandos de shell correspondientes a las operaciones a aplicar. En este
 sentido, la clase simplemente implementa métodos que luego internamente ejecutan
 el comando `debugfs`, pasándole como parámetros la operación a ejecutar sobre la
 imagen de partición, y después parseando los resultados para que sean acordes a
-los ofrecidos por la API de Node.js, y mas concretamente respecto al uso de los
+los ofrecidos por la API de Node.js, y más concretamente respecto al uso de los
 metadatos de los archivos.
 
 Respecto a los comandos de shell, sólo se ha implementado

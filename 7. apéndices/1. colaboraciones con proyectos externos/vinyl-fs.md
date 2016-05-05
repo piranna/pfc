@@ -4,8 +4,8 @@ El módulo *download*, usado para descargar y descomprimir automáticamente todo
 los componentes de construcción de NodeOS, internamente hace uso de
 [vinyl-fs](https://github.com/gulpjs/vinyl-fs), el cual aplica la API de streams
 de Node.js para su uso con archivos (incluidos sus metadatos). El módulo tenía
-un problema por el cual la fecha de modificación de los archivos (`mtime`)
-[no se conservaba](https://github.com/gulpjs/vinyl-fs/issues/96) al escribirlo
+un problema que hacía que la fecha de modificación de los archivos (`mtime`)
+[no se conservara](https://github.com/gulpjs/vinyl-fs/issues/96) al escribirlo
 en disco, sino que en su lugar el archivo se creaba con la fecha actual. Esto
 ocasionaba que al compilar [libfuse](http://fuse.sourceforge.net), el comando
 [make](https://www.gnu.org/software/make) diese problemas al creer que los
@@ -22,7 +22,7 @@ Dicha resolución es suficiente para este caso, aunque después se sustituyó po
 la cual internamente usa la función [futimes](http://linux.die.net/man/3/futimes)
 y por tanto sí proporciona una precisión de milisegundos.
 
-Mas tarde se descubrió que se había introducido un fallo debido a que
+Más tarde se descubrió que se había introducido un fallo debido a que
 [no se estaba considerando el caso](https://github.com/gulpjs/vinyl-fs/issues/113)
 de que los campos `atime` y `mtime` tuviesen valores inválidos, lo que solucioné
 [ignorándolos](https://github.com/gulpjs/vinyl-fs/pull/114) y usando en su lugar
@@ -37,7 +37,7 @@ Node.js v0.12 se están inicializando los `stats` de los archivos con todos los
 valores posibles que puedan obtenerse o para los que se puedan definir valores
 [por defecto](https://github.com/gulpjs/vinyl-fs/pull/110#issuecomment-148573049)
 aceptables, por lo que la solución adoptada es la de emular dicha funcionalidad
-cuando se usen versiones de Node.js mas antiguas que no la incluyan por defecto.
+cuando se usen versiones de Node.js más antiguas que no la incluyan por defecto.
 Sin embargo, también han surgido otros problemas relacionados con el uso de
 funciones para el manejo de archivos que en determinadas circunstancias
 requieren de permisos especiales, como son el propio *fs.utimes* pero que

@@ -4,7 +4,7 @@
 implementar sistemas de archivos fuera del kernel de Linux, requiere del uso de
 la librería `libfuse` para que haga de puente entre el kernel y el espacio de
 usuario. Existen varios bindings para Node.js, siendo el que actualmente recibe
-mas soporte [fuse-bindings](https://github.com/mafintosh/fuse-bindings). Sin
+más soporte [fuse-bindings](https://github.com/mafintosh/fuse-bindings). Sin
 embargo, dicho binding hace uso de la librería dinámica incluida en el sistema,
 y debido al enfoque minimalista que tiene NodeOS donde el sistema base sólamente
 contiene los componentes fundamentales para su funcionamiento y a que por
@@ -35,7 +35,7 @@ archivo. Además, se ha comprobado que dicho archivo sólo contiene información
 sobre los sistemas de archivos a los que el usuario tiene acceso dentro de su
 jaula *chroot*, por lo que su uso no representa ningún problema de seguridad.
 
-Una vez que conseguí que `libfuse` se compilara correctamente en un sistema
+Una vez que se conseguió que `libfuse` se compilara correctamente en un sistema
 Ubuntu, se procedió a usarlo como dependencia de *fuse-bindings*, encontrándose
 sin embargo con dos errores de linkado. El primer error indicaba que `no se
 puede usar la reubicación R_X86_64_32 contra '.text' cuando se crea un objeto
@@ -43,7 +43,7 @@ compartido`, para lo cual la solución consiste simplemente en compilarlo como
 [Código Independiente de la Posición](https://en.wikipedia.org/wiki/Position-independent_code)
 (*PIC*), ya que en última instancia estamos haciendo una librería dinámica. Una
 vez arreglado este punto, el segundo mensaje de error indicaba que `no se
-encuentra la versión del nodo para el símbolo 'fuse_setup@FUSE_2.2'`, lo cual es
+encuentra la versión del nodo para el símbolo 'fuse_setup@FUSE_2.2'`, que es
 debido a que la librería `libfuse` incorpora soporte para varias versiones de su
 API simultáneamente. Sin embargo, a pesar de haberse buscado información al
 respecto, no se ha sido capaz de averiguar como hacer para que use la versión
@@ -62,7 +62,7 @@ ha decidido usar `libfuse` como librería dinámica incluyéndola dentro del
 
 La inclusión de `libfuse` dentro de *initramfs* va en contra de la regla de no
 incluir elementos no indispensables para el funcionamiento del sistema para que
-sea lo mas reducido posible, pero por otro lado tiene sentido hacerlo de esta
+sea lo más reducido posible, pero por otro lado tiene sentido hacerlo de esta
 manera ya que dicha librería es necesaria para poder hacer uso de FUSE, por lo
 que se ha hecho que ésta sólo se compile y se incluya dentro de la imagen final
 de *initramfs* en el caso de que se haya habilitado su soporte en el kernel si
@@ -83,7 +83,7 @@ el uso de [pkg-config](http://www.freedesktop.org/wiki/Software/pkg-config),
 queriendo por tanto usar la librería instalada en el sistema huésped en vez de
 hacer uso del cross-compiler, y dando un error de linkado de que no ha podido
 encontrar la librería al estar compiladas con distintas librerías del sistema
-(`glibc` y `musl`). En principio se pueden indicar a `gcc` mas ubicaciones donde
+(`glibc` y `musl`). En principio se pueden indicar a `gcc` más ubicaciones donde
 buscar las librerías mediante la variable de entorno `LIBRARY_PATH`, sin embargo
 esto no ha dado resultado puesto que `GYP` usa un entorno aislado del sistema
 durante el proceso de construcción, por lo que la única solución ha sido

@@ -1,7 +1,7 @@
 #### forever
 
 [forever](https://github.com/foreverjs/forever) es uno de los gestores de tareas
-mas populares de Node.js junto con [PM2](http://pm2.keymetrics.io), y en un
+más populares de Node.js junto con [PM2](http://pm2.keymetrics.io), y en un
 diseño anterior de NodeOS se decidió usarlo a modo de demonio del sistema debido
 a su capacidad de administrar y reiniciar procesos de varios usuarios. Para esta
 tarea se añadió la capacidad de poder usar un archivo de configuración durante
@@ -17,8 +17,8 @@ documentación no indicaba apenas ninguna información al respecto.
 
 Sin embargo, debido al diseño actual donde cada usuario tiene su propio sistema
 de archivos raíz y su propio ejecutable de inicio (pudiendo este ser también un
-gestor de tareas) se esta estudiando el sustituirlo por alguna alternativa mas
-simple que requiera menos recursos y sea mas fácil de mantener. En este sentido,
+gestor de tareas) se esta estudiando el sustituirlo por alguna alternativa más
+simple que requiera menos recursos y sea más fácil de mantener. En este sentido,
 se encargaría solamente de ejecutar los comandos definidos en un archivo JSON y
 reiniciarlos si estos terminasen, sin la complicación extra que implica el
 controlar comandos de distintos usuarios, el poder iniciar y parar los servicios

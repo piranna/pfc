@@ -115,7 +115,7 @@ al hacer que una funcionalidad no siempre esté integrada dentro de un único
 repositorio y aumentando la fragmentación de este. Todo esto contrasta con los
 proyectos más grandes (en importancia y repercusión del mismo, tamaño de código
 o número de seguidores y usuarios) donde hay más aceptación a admitir código de
-terceros y de forma mucho mas rápida, sin tanta obsesión por la calidad del
+terceros y de forma mucho más rápida, sin tanta obsesión por la calidad del
 código ni prepotencia, ayudando en solucionar los problemas que incluyen desde
 un punto de vista colaborativo y educativo, o incluso llegando a aceptar los
 cambios con fallos para después ser corregidos por parte de los propios

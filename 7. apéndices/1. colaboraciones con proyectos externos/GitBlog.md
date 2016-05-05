@@ -13,10 +13,10 @@ algunas ventajas como es la existencia de una copia en local de las entradas del
 blog y poder tener un control de los cambios gracias a `git`, también tiene sus
 inconvenientes como es la falta de flexibilidad, el no poder editar las entradas
 en un ordenador que no se haya descargado antes una copia del blog o el poder
-hacerlo fácilmente desde un teléfono móvil, o la mas importante de todas la
+hacerlo fácilmente desde un teléfono móvil, o la más importante de todas la
 ausencia de comentarios, teniendo que usarse para este fin servicios externas
 como [Disqus](https://disqus.com). Además, está el problema añadido de que esto
-representa un lugar mas desde donde recibir feedback sobre el proyecto,
+representa un lugar más desde donde recibir feedback sobre el proyecto,
 descentralizándolo y complicando su administración.
 
 Para paliar todos estos problemas, puesto que la forma principal de comunicación

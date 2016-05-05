@@ -80,8 +80,8 @@ principalmente enfocado a NodeOS dicho problema desaparece.
 Al estar hecho como un módulo de Node.js se instalara el ejecutable dentro de
 `/bin`, por lo que para que los demás scripts puedan seguir usando la ubicación
 estándar `/usr/bin/env` se ha hecho un link simbólico en su lugar. Después,
-puesto que en NodeOS se busca entre otras cosas crear un sistema de archivos
-limpio y claro de cara a los usuarios, y por esta razón el no requerir usarse el
+puesto que en NodeOS se busca entre otras cosas crear una jerarquía de archivos
+limpia y claro de cara a los usuarios, y por esta razón el no requerir usarse el
 directorio `/usr` entre otros, este se ha eliminado después de crear el sistema
 de archivos *OverlayFS* de forma que el directorio `/usr` no sea visible, aunque
 puede seguir accediendose a su contenido en concreto para poder ejecutarse el

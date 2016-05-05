@@ -94,7 +94,7 @@ del usuario, de forma que cada usuario tenga su propio directorio para archivos
 temporales, reusando en este caso el directorio `/tmp` donde se montó
 anteriormente la partición de usuarios, quedando esta oculta. Una vez los
 usuarios accedan al sistema, se creará una jaula *chroot* dentro de su propio
-directorio y la visión que tendrán del sistema de archivos será la siguiente:
+directorio y la visión que tendrán de la jerarquía de archivos será la siguiente:
 
 {% mermaid src="resources/user.mmd" %}{% endmermaid %}
 
@@ -122,8 +122,8 @@ de archivos *devtmpfs* del sistema y después se eliminará del *initram* para
 ahorrar memoria, al igual que se hace con el módulo
 [nodeos-mount-utils](nodeos-mount-utils.md) después de montar los sistemas de
 archivos raíz de los usuarios o con el directorio `/usr`; este último para que
-no se muestre en los sistemas raíz aunque siga estando usable. De esta forma, el
-sistema de archivos que vería el usuario *root* seria:
+no se muestre en los sistemas raíz aunque siga estando usable. De esta forma, la
+jerarquía de archivos que vería el usuario *root* seria:
 
 {% mermaid src="resources/root.mmd" %}{% endmermaid %}
 

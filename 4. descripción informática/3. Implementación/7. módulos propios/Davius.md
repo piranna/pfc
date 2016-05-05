@@ -2,7 +2,7 @@
 
 [Davius](https://github.com/piranna/Davius) es un servidor HTTP/WebDAV estático
 y sin estado que muestra en su jerarquía de recursos un mapeo directo del
-sistema de archivos que se le haya indicado. Este sistema es usado en NodeOS
+*namespace* de archivos que se le haya indicado. Este sistema es usado en NodeOS
 para servir los archivos del directorio del usuario, pertenecientes tanto al
 contenido estático de las aplicaciones que tenga instaladas como sus archivos
 personales, y permite acceder a los mismos y editarlos desde cualquier navegador
@@ -33,7 +33,7 @@ en vez de ofrecer directamente su contenido, algo más canónico al ofrecer
 una relación 1:1 con todos los elementos del sistema de archivos, y que además
 es la forma de trabajar que propone el *RFC 4437*. También se
 [sugerió](https://github.com/pillarjs/send/issues/85) el que se pudieran subir
-archivos mediante el uso del método `PUT`, aunque se indicó que dicha tarea
+archivos mediante el uso del método `PUT`, aunque se nos indicó que dicha tarea
 sería mejor que fuese realizada por un módulo independiente. Por esta razón, se
 desarrolló el módulo [recv](https://github.com/piranna/recv), el cual además
 se le ha añadido soporte para rehalizar subidas de archivos parciales mediante
