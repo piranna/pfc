@@ -3,9 +3,8 @@ graph LR
   nodeos-usersfs === nodeos{nodeos}
 
   root --- bin-getty
+  root --- PalmTree
   root === logon
-  root --- forever
-  root --- forever-monitor
 
   bin-getty --- src-termios
   bin-getty --- src-unistd

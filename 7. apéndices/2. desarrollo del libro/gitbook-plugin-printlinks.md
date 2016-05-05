@@ -9,8 +9,8 @@ hiperenlaces. Para paliar esta situación propuse el añadir soporte para mostra
 los [enlaces al generar un PDF](https://github.com/GitbookIO/gitbook/issues/571)
 dentro de la funcionalidad de GitBook, pero al no haberse producido avances al
 respecto, decidí desarrollar un
-[plugin](https://github.com/piranna/gitbook-plugin-printlinks) que añadiera
-dicho soporte mostrando los enlaces a modo de notas al pie de página
+[plugin](https://github.com/piranna/gitbook-plugin-printlinks) que mostrara los
+enlaces como notas al pie de página
 ([footnotes](http://www.plagiarism.org/citing-sources/what-are-footnotes)).
 
 El plugin se ejecuta en cada uno de los capítulos antes de ser convertido a HTML

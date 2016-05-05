@@ -5,10 +5,10 @@ Node.js como `gcc` para que puedan compilar correctamente. En el caso de
 Node.js, esto es debido al uso de la macro no estándar `TERMIOS` y exclusiva de
 `glibc` en [OpenSSL](https://rt.openssl.org/Ticket/Display.html?id=2823), un
 antiguo bug pendiente desde 2012 que finalmente se arreglo en parte gracias a mi
-[insistencia](https://github.com/openssl/openssl/issues/163) para poder
-facilitar la compilación de NodeOS, y desde la versión 0.12.0 de Node.js ya no
-es preciso parchearlo. Por otra parte, en el caso de `gcc` es preciso parchearlo
-porque a pesar de incorporar soporte nativo para `musl` desde la versión
+[insistencia](https://github.com/openssl/openssl/issues/163), y desde la versión
+0.12.0 de Node.js ya no es preciso parchearlo. Por otra parte, en el caso de
+`gcc` es preciso parchearlo porque a pesar de incorporar soporte nativo para
+`musl` desde la versión
 [5.2.0](http://www.phoronix.com/scan.php?page=news_item&px=Musl-Libc-GCC-Support),
 este soporte es sólo para poder compilar binarios que lo utilicen como librería
 C del sistema pero no para que sea usada en la compilación del propio `gcc`, que
@@ -19,15 +19,13 @@ Puesto que los parches necesarios para Node.js y `gcc` usan ambos el formato
 *diff unificado*, el cual es estándar en todos los entornos UNIX, para poder
 aplicarlos desde Javascript el único módulo disponible que implementa dicho
 algoritmo es [jsdiff](https://github.com/kpdecker/jsdiff). Sin embargo, al estar
-dicho módulo más enfocado a su uso en textos pequeños dentro de páginas web en
-vez de para parchear programas completos, dicha implementación tenía algunas
-limitaciones que impedían usarla para poder parchear el código de proyectos
-grandes como es el caso de `gcc`.
+más enfocado a su uso en textos pequeños dentro de páginas web en vez de para
+programas completos, dicha implementación tenía algunas limitaciones que
+impedían usarla para proyectos grandes como `gcc`.
 
-El primero de los problemas encontrados fue la falta de soporte para poder usar
-[parches que afecten a varios archivos](https://github.com/kpdecker/jsdiff/issues/60),
-lo cual el autor solucionó habilitando una API de bajo nivel para poder parsear
-y procesar los parches manualmente mediante callbacks.
+El primero de los problemas fue la falta de soporte para poder usar parches que
+[afecten a varios archivos](https://github.com/kpdecker/jsdiff/issues/60), lo
+cual el autor solucionó habilitando una API de bajo nivel para poder procesarlos.
 
 Del mismo modo, el nombre de los archivos no se estaba incluyendo dentro de los
 [parches mostrados por su API](https://github.com/kpdecker/jsdiff/issues/82),
