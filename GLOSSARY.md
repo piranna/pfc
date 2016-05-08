@@ -129,12 +129,12 @@ emergencia.
 Fallo de programación en el que se mantienen en uso regiones de memoria sin
 referencias a ellas y, por tanto, sin poder ser utilizadas, provocando que el
 proceso consuma cada vez más memoria inútilmente, afectando con ello al
-rendimiento del sistema, hasta el punto de quedarse este sin memoria libre.
+rendimiento del sistema, hasta el punto de quedarse éste sin memoria libre.
 
 # npm
 Gestor de paquetes oficial de Node.js, y el más activo actualmente y con mayor
 crecimiento de todos los que ha habido para cualquier lenguaje. Su rico
-ecosistema ha influido la forma de trabajar no solo con Node.js o Javascript en
+ecosistema ha influido la forma de trabajar no sólo con Node.js o Javascript en
 la web sino también en otros lenguajes como C++ o PHP, donde han surgido otros
 gestores de paquetes basados en él o en su diseño.
 
@@ -186,7 +186,7 @@ distribución final.
 
 # Rolling Release
 Política de publicación de versiones en la que no hay versiones propiamente
-dichas y en el que el último código publicado es válido en todo momento para ser
+dichas y en la que el último código publicado es válido en todo momento para ser
 usado.
 
 # umask
@@ -204,7 +204,7 @@ accedidos por distintos equipos. Sin embargo, debido a su antigüedad posee
 algunas limitaciones técnicas como es el no poder almacenar archivos de más de
 4GB o la velocidad de acceso aleatorio a archivos muy grandes. Algunas de estas
 limitaciones están solventadas por el más reciente formato ExFAT (principalmente
-el tamaño de los archivos) pero al estar protegido por patentes su adopción es
+el tamaño de los archivos), pero al estar protegido por patentes su adopción es
 algo más limitada.
 
 # W3C
@@ -215,7 +215,7 @@ la interoperatibilidad.
 # XIP
 *eXecution In Place* (*ejecución en el sitio*). Modo de funcionamiento de
 aplicaciones donde se ejecutan directamente sin copiarse previamente a la
-memoria RAM, ahorrando el uso de recursos. Sin embargo, solo puede usarse en
+memoria RAM, ahorrando el uso de recursos. Sin embargo, sólo puede usarse en
 entornos donde la velocidad de acceso de lectura al ejecutable es comparable a
 la de la memoria RAM (discos RAM, memorias flash, SSD...), ya que sino la
 penalización en cuanto a rendimiento haría su uso inviable.

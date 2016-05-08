@@ -13,8 +13,8 @@ forma recomendada de construir módulos en Node.js es sin usar librerías
 dinámicas, decidí añadirle soporte para generar una versión que incluyese a
 `libfuse` compilado estáticamente de forma similar a como se ha hecho con la
 librería [Cairo](http://cairographics.org) en [node-canvas](4. node-canvas.html)
-detectando si la librería esta instalada globalmente, o caso de que no sea así,
-descargarla y compilarla como una dependencia interna suya.
+detectando si la librería esta instalada globalmente, o en caso de que no sea
+así, descargarla y compilarla como una dependencia interna suya.
 
 ##### Compilación estática de `libfuse`
 
@@ -28,7 +28,7 @@ configuración empleadas desactivan la compilación de los ejemplos, los comando
 de ayuda como `fusermount` y la generación de las librerías dinámicas. También
 desactivaban el uso del archivo `/etc/mtab` ya que no tiene sentido en un
 sistema como NodeOS donde cada usuario tendría su propia copia, sin embargo en
-algunos sistemas como *Ubuntu 15.10 'Wily Werewolf'* es sustituido por un link
+algunos sistemas como *Ubuntu 15.10 'Wily Werewolf'* es sustituido por un enlace
 simbólico a `/proc/mounts`, por lo que no hace falta desactivarlo ya que FUSE
 detecta automáticamente dicho caso y no trata de actualizar el contenido del
 archivo. Además, se ha comprobado que dicho archivo sólo contiene información

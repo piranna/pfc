@@ -11,9 +11,9 @@ usada como partición de arranque, por lo que se ha unido la funcionalidad de
 ambos módulos dentro del proyecto
 [nodeos-mount-filesystems](https://github.com/piranna/nodeos-mount-filesystems),
 mejora que simplifica la tarea de montar todos los sistemas de archivos,
-incluidas las referencias a los sistemas de archivos *devtmpfs* y *proc*, dentro
-de cada uno de los sistemas de archivos raíz de cada uno de los usuarios, de
-forma que aquellos puedan ser accesibles por estos.
+incluidas las referencias a los sistemas de archivos *devtmpfs* y *procfs*,
+dentro de cada uno de los sistemas de archivos raíz de cada uno de los usuarios,
+de forma que aquellos puedan ser accesibles por estos.
 
 ##### Proceso de montaje de los sistemas de archivos
 
@@ -23,7 +23,7 @@ respectivamente, de forma que se pueda acceder a los parámetros con los que se
 ha arrancado el kernel de Linux leyendo el contenido del archivo ubicado en
 `/proc/cmdline` y acceder al dispositivo que contiene el sistema de archivos de
 los usuarios. El sistema de archivos *procfs* es montado por seguridad con el
-parámetro `hidepid=2` de forma que solo muestre a los usuarios la información de
+parámetro `hidepid=2` de forma que sólo muestre a los usuarios la información de
 [sus propios procesos](http://www.cyberciti.biz/faq/linux-hide-processes-from-other-users)
 en vez de la de todos los que están corriendo en el sistema, de forma similar a
 como se está usando el sistema de archivos [ExclFS](ExclFS.md) sobre *devtmpfs*
@@ -112,9 +112,9 @@ En tal caso, se crea su sistema overlay en el directorio `/root` del initramfs,
 se mueve el punto de montaje de la partición de usuarios al directorio
 `/root/home`, y finalmente se mueve de vuelta el punto de montaje de `/root` a
 `/tmp` antes de continuar con el proceso de montar los sistemas de archivos raíz
-de los usuarios desde su nueva ubicación. De este modo no solo queda el
+de los usuarios desde su nueva ubicación. De este modo no sólo queda el
 directorio de *root* oculto al igual que antes estaba la partición de usuarios
-sino que además estos están accesibles en el directorio `/home` desde dentro de
+sino que además éstos están accesibles en el directorio `/home` desde dentro de
 la jaula *chroot* del usuario *root*. No obstante, en caso de no estar
 ejecutándose dentro de un contenedor LXC y si el sistema de archivos *ExclFS*
 está disponible, entonces se usará este en vez de usar directamente el sistema
@@ -151,7 +151,7 @@ sería la siguiente:
 
 {% mermaid src="resources/real_root.mmd" %}{% endmermaid %}
 
-(Solo se muestran las particiones reales y el sistema overlay del usuario *root*)
+(Sólo se muestran las particiones reales y el sistema overlay del usuario *root*)
 
 Una posible alternativa habría sido configurar los puntos de montaje de forma
 que fuesen compartidos por los sistemas de archivos donde han sido montados, con

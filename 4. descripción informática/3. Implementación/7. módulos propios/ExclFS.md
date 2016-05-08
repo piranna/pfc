@@ -1,7 +1,7 @@
 #### ExclFS
 
-Para permitir a los distintos usuarios acceso a los dispositivos del sistema sin
-requerir permisos de administrador o pertenecer a un grupo del sistema
+Para permitir a los distintos usuarios el acceso a los dispositivos del sistema
+sin requerir permisos de administrador o pertenecer a un grupo del sistema
 determinado (`audio`, `video`, `disk`, `dialout`, `tty`...) se ha implementado
 un [sistema de archivos](https://github.com/NodeOS/ExclFS) usando el módulo
 [fuse-bindings](../2. colaboraciones con módulos externos/1. fuse-bindings.html)
@@ -50,7 +50,7 @@ pueda gestionarlo FUSE de forma automática.
 Por último, los permisos de acceso usados como permisos del usuario son los
 correspondientes al *grupo* del archivo, utilizando los correspondientes a
 *otros* en el caso de que un archivo ya esté siendo accedido. Este esquema de
-permisos teniendo en cuenta solo al *propietario* y *otros* es similar al
+permisos teniendo en cuenta sólo al *propietario* y *otros* es similar al
 original de UNIX y se adapta mejor a un sistema como NodeOS donde, por diseño,
 cada usuario está aislado del resto y, por definición, no existe el concepto de
 grupo. De este modo, se evita la posibilidad de acceder a los archivos cuyo
@@ -62,7 +62,7 @@ seguridad. No obstante, también se puede definir manualmente un *whitelist* par
 permitir el acceso a determinados archivos como son los descriptores de
 dispositivo de los distintos buses [i2c](http://www.i2c-bus.org) disponibles en
 el sistema, los cuales, al ser usados para configurar la memoria RAM o la
-tarjeta gráfica (entre otra multitud de usos), solo permiten su acceso por parte
+tarjeta gráfica (entre otra multitud de usos), sólo permiten su acceso por parte
 del usuario *root*, pero suelen tener permisos de lectura en los mismos por
 parte de los usuarios (por ejemplo, para leer la temperatura de la CPU), y en
 muchos casos también lo es el permiso de escritura para poder acceder a un

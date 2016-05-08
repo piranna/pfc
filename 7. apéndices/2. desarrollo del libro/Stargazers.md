@@ -11,7 +11,7 @@ Para poder tener constancia del progreso en el número de seguidores del proyect
 he realizado el módulo [Stargazers](https://github.com/piranna/Stargazers) para
 dicha tarea haciendo uso de la API pública de *GitHub para desarrolladores* y de
 la API de *Google Image Charts* para la generación de la gráfica, la cual a
-pesar de estar deprecada en beneficio de
+pesar de estar abandonada en beneficio de
 [Google Charts](https://developers.google.com/chart) ofrece una interfaz más
 sencilla para la generación de imágenes estáticas al estar basada en peticiones
 HTTP `GET` y `POST`.
@@ -64,7 +64,7 @@ uso en el navegador de forma interactiva o sin apenas opciones de configuración
 y por tanto no siendo válidos para la generación de gráficos estáticos. Me
 planteé el usar el módulo [quiche](https://github.com/ryanrolds/quiche), el cual
 de forma similar a *node-github* proporciona una API de alto nivel para el
-servicio de *Google Image Charts*, sin embargo debido a que dicho módulo esta
+servicio de *Google Image Charts*, sin embargo debido a que dicho módulo está
 sin mantenimiento desde hace 4 años y el querer también indicar los distintos
 eventos acontecidos durante el proyecto y su repercusión en el número de
 seguidores, finalmente decidí usar directamente la API REST de *Google Image

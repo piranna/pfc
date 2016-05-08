@@ -4,7 +4,7 @@ La partición de usuarios es creada mediante el uso de `genext2fs --squash`, que
 crea la imagen eliminando todos los permisos y poniendo como usuario a *root*
 (`UID` 0). Sin embargo, NodeOS utiliza el `UID` y `GID` del directorio del
 usuario para definir los permisos con los que se ejecutarán sus procesos, por lo
-que deben de ser cambiados acorde a estos. Sin embargo, una vez generada no se
+que deben de ser cambiados acorde a éstos. Sin embargo, una vez generada no se
 puede cambiar si no es montando dicho sistema de archivos, lo que requiere
 permisos de administrador. Lo ideal sería hacer los cambios directamente sobre
 la partición sin necesidad de montarla, pero la única manera que se ha
@@ -25,7 +25,7 @@ metadatos de los archivos.
 Respecto a los comandos de shell, sólo se ha implementado
 [chown](http://linux.die.net/man/1/chown) por ser el único necesitado para
 arreglar los permisos de la partición de usuarios. El comando ofrece las mismas
-opciones que el comando `chown` de UNIX, solo requiriendo que se le pase la ruta
+opciones que el comando `chown` de UNIX, sólo requiriendo que se le pase la ruta
 al dispositivo con el sistema de archivos a modificar como primer parámetro.
 Sólo se puede aplicar a directorios puesto que `debugfs` no ofrece una forma
 fácil de obtener los datos de un inodo, excepto por la ofrecida por el comando

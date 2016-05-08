@@ -32,9 +32,9 @@ orientado únicamente a su uso en interpretes Javascript, pero finalmente se ha
 decidido [reescribir nsh](https://github.com/piranna/nsh) tratando a los scripts
 de shell como si fuese código de un lenguaje de programación, de forma que
 después puedan reutilizarse los distintos componentes empleados en dicha
-reescritura para hacer que pueda usarse directamente el interprete de Node.js
+reescritura para hacer que pueda usarse directamente el intérprete de Node.js
 como shell del sistema de forma fácil y amigable (que es realmente el propósito
-de hacerlo de ésta manera). Esto también tiene la ventaja de que se podrán usar
+de hacerlo de esta manera). Esto también tiene la ventaja de que se podrán usar
 desde dentro de NodeOS otros módulos binarios y programas que estén basados en
 scripts de shell, como son los sistema de construcción basados en `Makefiles`.
 
@@ -86,7 +86,7 @@ obstante ha habido algunos problemas con el tratamiento de los streams al tratar
 los comandos externos como objetos *Duplex* ya que Node.js 0.12 no admite el uso
 de streams sin un descriptor de ficheros asociado cuando se usan para definir la
 entrada o salida estándar de un proceso hijo, por lo que se ha tenido que cubrir
-dicho proceso y conectar los streams de forma explicita, y también con la salida
+dicho proceso y conectar los streams de forma explícita, y también con la salida
 estándar al no poder identificarse como un terminal interactivo, lo cual
 precisa el que se proporcione a los comandos previamente a su ejecución. También
 ha habido problemas con el diseño de la API de los builtins ya que se ha
@@ -138,8 +138,8 @@ Para esto último se han actualizado las dependencias y modificado el módulo
 devuelva los distintos ejecutables que coinciden con el patrón buscado separados
 [por una cadena vacía](https://nodejs.org/api/readline.html#readline_readline_createinterface_options)
 por cada componente del `$PATH`, además de eliminar los que ya estén incluidos
-previamente (probablemente debido a un link simbólico, aunque también puede ser
-una versión distinta, o en el caso de los ejecutables incluidos dentro de los
-módulos de npm debido a una dependencia incompatible con la instalada más
+previamente (probablemente debido a un enlace simbólico, aunque también puede
+ser una versión distinta, o en el caso de los ejecutables incluidos dentro de
+los módulos de npm debido a una dependencia incompatible con la instalada más
 globalmente) puesto que no estarán accesibles debido a que la ocurrencia
-anterior tiene prioridad sobre esta.
+anterior tiene prioridad sobre ésta.

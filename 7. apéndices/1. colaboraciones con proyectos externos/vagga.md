@@ -14,25 +14,26 @@ puesto que el sistema operativo de los sistemas Docker en internet suelen estar
 basados en Ubuntu. Sin embargo, decidí centrarme en poder ejecutarlo bajo
 [QEmu](http://qemu.org) por dos razones:
 
-* mis conocimientos de cómo funciona *Docker* eran escasos en comparación con
+* mis conocimientos de como funciona *Docker* eran escasos en comparación con
   los QEmu, con el que ya había experimentado anteriormente.
-* y por otro, que al ser QEmu un emulador de ordenador completo, una vez NodeOS
-  funcionara correctamente en él, seria relativamente fácil hacer que funcionara
-  sobre hardware real, lo cual sería un gran paso de cara a su portabilidad con
-  otras plataformas, a su versatilidad y a que pudiese ser auto-contenido.
+* y por otro, que al ser QEmu un emulador de ordenador completo, una vez que
+  NodeOS funcionara correctamente en él, seria relativamente fácil hacer que
+  funcionara sobre hardware real, lo cual sería un gran paso de cara a su
+  portabilidad con otras plataformas, a su versatilidad y a que pudiese ser
+  auto-contenido.
 
 Sin embargo, *Docker* está diseñado para ser ejecutado como servicio del sistema
 y por tanto requiere permisos de administrador, lo que es un problema tal como
 esta diseñado el sistema de construcción de NodeOS, y aunque se puede configurar
 para permitir su uso mediantes usuarios normales, requiere de trabajo extra por
-parte del desarrollador, por lo que finalmente descarte su uso y en su lugar
-decidí usar [vagga](https://github.com/tailhook/vagga), el cual hace uso de
+parte del desarrollador, por lo que finalmente se descartó su uso y en su lugar
+se decidió usar [vagga](https://github.com/tailhook/vagga), el cual hace uso de
 contenedores LXC en espacio de usuario. Esto evita la necesidad de tener
-permisos de administrador y además esta diseñado para que pueda ser compatible
+permisos de administrador y además está diseñado para que pueda ser compatible
 tanto con *Docker* como con [Vagrant](https://www.vagrantup.com) (una
 herramienta para la creación y configuración de entornos de desarrollo
 virtualizados, similar a *Docker* en cuanto a objetivos pero basado en el uso de
-maquinas virtuales), permitiendo así generar imágenes compatibles con los tres
+máquinas virtuales), permitiendo así generar imágenes compatibles con los tres
 sistemas a la vez.
 
 El uso de *vagga* ha dado bastantes problemas, en parte debido a que es un
@@ -117,7 +118,7 @@ Gracias al uso de *vagga* se ha simplificado la forma de generar imágenes
 *Docker* al no ser necesario el uso de permisos de administrador más que para el
 registro de dichas imágenes. Además al poder usar un formato común de las mismas
 basado en archivos `tar` y los correspondientes archivos de configuración de
-cada plataforma, el mantenimiento de estas se reduce al mínimo.
+cada plataforma, el mantenimiento de éstas se reduce al mínimo.
 
 
 [^1]: gracias a mi propuesta, *vagga* ya incorpora soporte para usar archivos `tar` locales a partir de la versión [0.4.1](https://github.com/tailhook/vagga/issues/81#issuecomment-147208077).

@@ -58,7 +58,7 @@ ocasiones que adaptarlos a la misma o corregir diversos fallos:
   es usada en el código fuente de Node.js, GCC y Linux, por lo que era necesaria
   para poder extraerlos correctamente desde Javascript. Además, requería de un
   campo `type` para identificar el formato del archivo en vez de usar el campo
-  estándar `mode`, al igual que requería que se indicara la ruta de los links
+  estándar `mode`, al igual que requería que se indicara la ruta de los enlaces
   simbólicos en la propia cabecera del archivo en lugar del cuerpo del mismo
   (algo estructuralmente más correcto). Esto impedía que se pudiera usar la API
   de streams para conectar directamente la salida de
@@ -66,7 +66,7 @@ ocasiones que adaptarlos a la misma o corregir diversos fallos:
   módulo *tar-stream*, por lo que
   [se decidió](https://github.com/mafintosh/tar-stream/pull/42) implementar
   dicho soporte. No obstante, los archivos `tar` generados tenian un problema
-  con los [link simbólicos](https://github.com/mafintosh/tar-stream/issues/44)
+  con los [enlaces simbólicos](https://github.com/mafintosh/tar-stream/issues/44)
   debido a que GNU `tar` [espera](http://bugs.python.org/issue1167128) que su
   tamaño sea igual a cero, impidiendo que pudiesen ser usados con Docker aunque
   sí con vagga, por lo que a pesar de ser un bug de GNU `tar`, se decidio hacer

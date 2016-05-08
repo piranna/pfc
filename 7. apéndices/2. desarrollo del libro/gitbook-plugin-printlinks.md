@@ -1,6 +1,6 @@
 #### gitbook-plugin-printlinks
 
-GitBook esta orientado principalmente a su uso en medios electrónicos incluso en
+GitBook está orientado principalmente a su uso en medios electrónicos incluso en
 el caso de la exportación a PDF, al estar enfocado a e-readers y documentación
 online. Esto tiene el problema de que al generar material impreso no hay
 posibilidad de conservar los enlaces a otros documentos, pero tampoco las
@@ -24,7 +24,7 @@ También tiene en cuenta los footnotes actualmente definidos para evitar duplica
 sus índices y provocar referencias inválidas.
 
 El principal problema que he encontrado al desarrollar el plugin ha sido en la
-identificación de los links que no deben ser convertidos en footnotes (imágenes
+identificación de los enlaces que no deben ser convertidos en footnotes (imágenes
 y tablas de contenidos) debido al formato que tienen en Markdown (las imágenes
 precedidas por un signo de admiración, y las tablas de contenidos por su índice).
 En un principio intenté filtrar dichos enlaces directamente en la expresión
@@ -47,5 +47,5 @@ cuenta el idioma del libro mediante un sencillo mecanismo inspirado en
 donde las claves son el identificador del idioma y sus valores son cadenas de
 texto
 [localizadas](https://es.wikipedia.org/wiki/Internacionalización_y_localización)
-con el texto `__REF__` en la ubicación donde después se insertara la referencia
+con el texto `__REF__` en la ubicación donde después se insertará la referencia
 a la sección mediante una simple sustitución de texto.

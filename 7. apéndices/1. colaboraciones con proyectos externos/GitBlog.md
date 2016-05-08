@@ -2,13 +2,13 @@
 
 Uno de los requisitos del CUSL es la necesidad de usar un blog donde se expongan
 los progresos que se van aconteciendo durante el desarrollo del proyecto, por lo
-que se decidió usar para esto el propio blog del proyecto y de esta forma poder
+que se decidió usar para esto el propio blog del proyecto y de esta manera poder
 también anunciar dichos progresos oficialmente. Este blog estába basado en el
 motor de páginas web [Jekyll](https://jekyllrb.com) y por tanto sólo permite
 tener contenido estático, por lo que para editar nuevas entradas es preciso
 hacerlo localmente y después subirlas cuando estén listas como si de un
 repositorio de código se tratase (de hecho, *Jekyll* es usado por GitHub para el
-hospedaje de las páginas web de los proyectos). Aunque éste enfoque pueda tener
+hospedaje de las páginas web de los proyectos). Aunque este enfoque pueda tener
 algunas ventajas como es la existencia de una copia en local de las entradas del
 blog y poder tener un control de los cambios gracias a `git`, también tiene sus
 inconvenientes como es la falta de flexibilidad, el no poder editar las entradas
@@ -37,4 +37,4 @@ dinámicamente un feed RSS con las actualizaciones en los issues, al igual que
 añadí anteriormente un feed RSS para la versión estática del blog. No obstante,
 en Junio de 2015 se anuncio que el servicio de Yahoo! Pipes cerraría a partir
 del [31 de agosto](http://readwrite.com/2015/06/08/yahoo-shuts-down-pipes), por
-lo que actualmente se esta usando [Zapier](https://zapier.com) como alternativa.
+lo que actualmente se está usando [Zapier](https://zapier.com) como alternativa.

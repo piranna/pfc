@@ -45,8 +45,8 @@ Las funciones que aporta dicho módulo son:
   no importan los permisos del directorio que se utilicen como punto de montaje
   para poder ser usado, ya que estos son ignorados por Linux, este se crea con
   modo *0000* para evitar que se puedan escribir archivos dentro del mismo por
-  accidente una vez se haya desmontado el sistema de archivos en caso de que no
-  se haya hecho limpiamente y no se haya eliminado el punto de montaje.
+  accidente una vez se haya desmontado el sistema de archivos, en caso de que no
+  se haya hecho limpiamente y por tanto no se haya eliminado el punto de montaje.
 * *mountfs*: comprueba si el sistema donde se está ejecutando es un entorno
   Docker (ya que este no usa montaje de particiones sino apilamiento de
   containers LXC), y si no es el caso, monta el sistema de archivos a partir del
@@ -63,4 +63,4 @@ Las funciones que aporta dicho módulo son:
 * *mkdirMove*: igual a *move*, pero creando previamente el directorio del punto
   de montaje destino si no existe.
 * *startRepl*: crea un intérprete REPL de emergencia y termina el proceso desde
-  el que se ha ejecutado cuando se sale de este.
+  el que se ha ejecutado cuando se sale de éste.

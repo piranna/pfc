@@ -14,7 +14,7 @@ manera, se puede interactuar de forma automatizada con un comando tal y como
 haría un usuario y comprobar sus respuestas.
 
 Originariamente el módulo estaba orientado a la automatización de programas al
-estilo de cómo se usa [Selenium](http://www.seleniumhq.org) con las páginas web,
+estilo de como se usa [Selenium](http://www.seleniumhq.org) con las páginas web,
 pero debido a la intención de usarlo en un entorno de pruebas se necesitaba
 reaccionar ante los resultados obtenidos, por lo que se añadió soporte para
 ejecutar una función como resultado a una correspondencia en la salida estándar,

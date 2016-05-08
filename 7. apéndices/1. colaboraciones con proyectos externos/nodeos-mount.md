@@ -5,7 +5,7 @@ del módulo [node-src-mount](https://github.com/groundwater/node-src-mount),
 aunque al no soportar el montaje de las particiones de forma asíncrona se
 decidio sustituirlo por [nodeos-mount](https://github.com/NodeOS/nodeos-mount),
 el cual además tiene una funcionalidad más completa que permite optimizar el
-arranque del sistema. No obstante, éste módulo ha requerido ciertas mejoras,
+arranque del sistema. No obstante, este módulo ha requerido ciertas mejoras,
 como la actualización realizada por [Csaba Szabo](https://github.com/netlovers)
 (miembro del proyecto) para poder ser utilizado en Node.js 0.12 usando las
 macros proporcionadas por el modulo *nan* (actualmente la forma oficial de crear

@@ -58,7 +58,7 @@ sistema de login por cualquier otro, por ejemplo en uno basado en
 con soporte de [OAuth](http://oauth.net) o con cualquier otro mecanismo de
 autenticación.
 
-Actualmente no existe ningún mecanismo para añadir nuevos usuarios al margen de
+Actualmente no existe ningún mecanismo para añadir nuevos usuarios, al margen de
 los que se están creando al generar la partición de usuarios en la capa de
 [usersfs](../../../4. descripción informática/3. Implementación/4. usersfs.md),
 pero se plantea la posibilidad de añadir una opción en el futuro para permitir

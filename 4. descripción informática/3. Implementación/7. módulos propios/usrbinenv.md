@@ -4,12 +4,12 @@ Una de las máximas de NodeOS es que todo el espacio de usuario esté escrito en
 Javascript hasta donde sea posible, lo cual incluye a las utilerías del sistema.
 Una de las más usadas es [/usr/bin/env](https://es.wikipedia.org/wiki/Env),
 empleada comúnmente en los [shebang](https://es.wikipedia.org/wiki/Shebang) para
-definir el interprete con el que deben ser ejecutados los scripts de forma
+definir el intérprete con el que deben ser ejecutados los scripts de forma
 independiente a donde esté ubicado. En un principio se hizo uso del comando
 incluido dentro de [coreutils](http://www.gnu.org/software/coreutils), pero
 aparte de estar hecho en C, debido al tamaño de su descarga, las dependencias
 necesarias para su compilación y el tiempo necesario de esta al no poder
-[compilar solo dicho comando](http://lists.gnu.org/archive/html/coreutils/2014-12/msg00014.html)
+[compilar sólo dicho comando](http://lists.gnu.org/archive/html/coreutils/2014-12/msg00014.html)
 no lo hacían adecuado para su uso en NodeOS, por lo que se decidió hacer una
 [implementación](https://github.com/piranna/usrbinenv) del mismo en Javascript.
 
@@ -53,7 +53,7 @@ NodeOS basado en initram. En este sentido, se planteó la posibilidad de integra
 dicho módulo en tiempo de compilación dentro del propio
 [ejecutable de Node.js](https://github.com/nodejs/node-v0.x-archive/issues/14354),
 pero se mostró como una solución compleja, además de que la diferencia en el
-tiempo de acceso seria despreciable. Esto unido al hecho de que dentro de la
+tiempo de acceso sería despreciable. Esto unido al hecho de que dentro de la
 comunidad de Node.js [existen](https://github.com/nodejs/NG/issues/18)
 [varias](https://r.va.gg/2014/06/why-i-dont-use-nodes-core-stream-module.html)
 [voces](https://github.com/nodejs/NG/issues/9) promoviendo el minificar la
@@ -71,20 +71,20 @@ dicha dependencia sin mayores problemas al respecto.
 
 Las normas de estilo indican que para el *shebang* debe usarse `/usr/bin/env
 node` en los scripts de Node.js. Sin embargo, al ser este módulo por si mismo un
-script de Node.js, esto obliga a usar directamente la ubicación del interprete,
+script de Node.js, esto obliga a usar directamente la ubicación del intérprete,
 que en el caso de NodeOS es `/bin/node`. Esto podría dar problemas en otros
 sistemas en los que el binario de Node.js no esté en dicha ubicación (por
 ejemplo, Ubuntu lo aloja en `/usr/bin/node`), pero al estar este módulo
 principalmente enfocado a NodeOS dicho problema desaparece.
 
-Al estar hecho como un módulo de Node.js se instalara el ejecutable dentro de
+Al estar hecho como un módulo de Node.js se instalará el ejecutable dentro de
 `/bin`, por lo que para que los demás scripts puedan seguir usando la ubicación
-estándar `/usr/bin/env` se ha hecho un link simbólico en su lugar. Después,
+estándar `/usr/bin/env` se ha hecho un enlace simbólico en su lugar. Después,
 puesto que en NodeOS se busca entre otras cosas crear una jerarquía de archivos
 limpia y claro de cara a los usuarios, y por esta razón el no requerir usarse el
-directorio `/usr` entre otros, este se ha eliminado después de crear el sistema
+directorio `/usr` entre otros, éste se ha eliminado después de crear el sistema
 de archivos *OverlayFS* de forma que el directorio `/usr` no sea visible, aunque
-puede seguir accediendose a su contenido en concreto para poder ejecutarse el
+puede seguir accediéndose a su contenido en concreto para poder ejecutarse el
 citado `/usr/bin/env`. Este comportamiento es una característica propia de
 OverlayFS conocida como
 [directorio opaco](https://docs.docker.com/engine/userguide/storagedriver/overlayfs-driver/#container-reads-and-writes-with-overlay).

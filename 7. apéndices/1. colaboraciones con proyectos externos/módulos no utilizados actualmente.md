@@ -17,7 +17,7 @@ obligar a los desarrolladores a incluir siempre uno propio, y al que también
 clase base en vez de plantillas para ofrecer mayor flexibilidad al portar a
 otros sistemas. Esto venia dado por la intención de usarlo junto con el módulo
 [forever](forever.md) cuando en un diseño anterior del sistema los servicios
-estarían centralizados, por lo que actualmente esta en desuso, pero gracias al
+estarían centralizados, por lo que actualmente está en desuso, pero gracias al
 gestor de tareas minimalista [PalmTree](https://github.com/lite20/PalmTree)
 creado por el colaborador de NodeOS [Lite McFish](https://github.com/lite20)
 se plantea retomar el proyecto para que sea usado por cada uno de los usuarios
@@ -33,9 +33,10 @@ el propio proceso, por lo que para poder recoger todos los procesos zombie del
 sistema (incluso los que no sean hijos directos suyos) *century* implementa un
 módulo compilado que hace uso de [waitpid](http://linux.die.net/man/3/waitpid),
 e iterativamente comprueba cada 3 segundos si ha habido procesos nuevos para ir
-eliminándolos correctamente y limpiándolos del sistema. Se ha deprecado su uso
-en beneficio de [nodeos-init](../../4. descripción informática/3. Implementación/7. módulos propios/nodeos-init.html) para
-permitir el montaje del sistema de archivos *devtmpfs* antes de ejecutar
+eliminándolos correctamente y limpiándolos del sistema. Se ha abandonado su uso
+en beneficio de
+[nodeos-init](../../4. descripción informática/3. Implementación/7. módulos propios/nodeos-init.html)
+para permitir el montaje del sistema de archivos *devtmpfs* antes de ejecutar
 cualquier instancia de Node.js, tarea necesaria a partir de la versión 0.11.15.
 
 ##### node-cron
@@ -56,6 +57,6 @@ internamente para conectarse al repositorio de paquetes no consideraba la
 posibilidad de que el soporte no estuviera disponible a pesar de que la
 aplicación sí soporta el descargar los paquetes mediante una conexión no segura,
 por lo que se añadió soporte para que detectara si Node.js fue compilado sin
-OpenSSL y por tanto desactivara el soporte de descargar los paquetes mediante
+OpenSSL y por tanto se desactivase el soporte de descargar los paquetes mediante
 HTTP. Actualmente se puede compilar *OpenSSL* usando *musl* sin problemas, por
 lo que dicha modificación ya no es necesaria.

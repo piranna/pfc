@@ -19,7 +19,7 @@ incluirá el uso de terminales virtuales cuando se pruebe más extensamente el u
 de NodeOS en hardware real, aunque siendo un sistema operativo orientado a
 servidores en la nube esto último no es actualmente una prioridad. Después de
 inicializar el terminal virtual, su labor se reduce a usarlo como entrada y
-salida estándar del proceso que se le pase como argumento para que actué como
+salida estándar del proceso que se le pase como argumento para que actúe como
 login del sistema.
 
 En este proyecto se conseguió aislar un problema por el cual se estaban cerrando

@@ -32,7 +32,7 @@ de *download*.
 
 Al solucionar el problema anterior he podido detectar otro bug en *vinyl-fs*, al
 [escribirse](https://github.com/gulpjs/vinyl-fs/pull/110#issuecomment-148546290)
-el modo del archivo aun en el caso de no estar definido. No obstante a partir de
+el modo del archivo aún en el caso de no estar definido. No obstante a partir de
 Node.js v0.12 se están inicializando los `stats` de los archivos con todos los
 valores posibles que puedan obtenerse o para los que se puedan definir valores
 [por defecto](https://github.com/gulpjs/vinyl-fs/pull/110#issuecomment-148573049)

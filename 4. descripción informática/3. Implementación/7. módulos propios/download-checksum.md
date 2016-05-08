@@ -8,9 +8,9 @@ correctamente, se ha desarrollado el módulo
 independiente para [download](https://github.com/kevva/download), de forma que
 pueda ser reusado en otros proyectos.
 
-La forma de usarlo consiste en inicializar el módulo con un objeto o array de
-objetos, conteniendo cada uno de ellos un campo `url` para identificar cada una
-de las descargas (en el caso de indicar un objeto y, por tanto, una única
+La forma de usarlo consiste en inicializar el módulo con un objeto o un `Array`
+de objetos, conteniendo cada uno de ellos un campo `url` para identificar cada
+una de las descargas (en el caso de indicar un objeto y, por tanto, una única
 descarga, el campo `url` es opcional al ser usado únicamente como identificador),
 y otro campo con el nombre del algoritmo de hash y su valor en hexadecimal,
 admitiendo todos los algoritmos de hash soportados por Node.js. Este formato es
@@ -26,7 +26,7 @@ A pesar de que los tests unitarios pasaban correctamente, en un primer momento
 no llegó a funcionar el plugin debido a un problema en el módulo
 [duplexify](https://github.com/mafintosh/duplexify) por el cual se estaba
 [consumiendo](https://github.com/kevva/download/issues/83) el primer conjunto de
-datos del stream cuando estos eran cargados. Esto no afecta a las descargas de
+datos del stream cuando éstos eran cargados. Esto no afecta a las descargas de
 los archivos pero sí a los plugins que necesitan inspeccionar el contenido
 completo de estos, por lo que hasta que dicho problema pueda ser arreglado, la
 solución empleada ha sido obtener dicho fragmento de datos manualmente desde los

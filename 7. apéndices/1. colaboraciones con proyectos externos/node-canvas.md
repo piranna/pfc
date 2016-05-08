@@ -74,7 +74,7 @@ ocultos en entornos de desarrollo más comunes:
   [bug en gcc sin resolver](https://bugzilla.redhat.com/show_bug.cgi?id=214465#c1)
   puesto que sus desarrolladores no quieren que se usen simultáneamente los
   flags `-shared` (para crear una librería dinámica) y `-static` (para forzar a
-  que se linkeen estáticamente todas sus dependencias) promoviendo que se usen
+  que se linkéen estáticamente todas sus dependencias) promoviendo que se usen
   en su lugar librerías dinámicas en todos los casos, a pesar de haber casos de
   uso válidos como son la creación de plugins y/o módulos compilados de Node.js
   (como es este mismo caso). La solución empleada en un principio fue
@@ -83,13 +83,13 @@ ocultos en entornos de desarrollo más comunes:
   uso en librerías dinámicas, y por tanto compilado usando el necesario flag
   `-fPIC`. Esto es así al parecer porque el uso de *Código Independiente de
   Posición* añade una pequeña penalización en el rendimiento y por tanto se
-  tienen dos versiones especializadas de dicho archivo, Este problema no afecta
+  tienen dos versiones especializadas de dicho archivo. Este problema no afecta
   a otros compiladores como *LLVM* ya que sólo utilizan una única versión del
   archivo. Sin embargo, esto tiene el problema de que dicha sustitución tendría
   que hacerse en todos los sistemas para los que se vaya a compilar el módulo y
   no sólamente cuando sea NodeOS el objetivo, por lo que se ha optado por una
   solución menos invasiva consistente en indicar en el archivo de configuración
-  de *node-gyp* (`binding.gyp`) de forma explicita la ubicación de todas las
+  de *node-gyp* (`binding.gyp`) de forma explícita la ubicación de todas las
   librerías estáticas contra las que debe ser linkado (que corresponden a las
   dependencias que hemos bajado y compilado previamente), de forma que ya no sea
   necesario hacer uso del flag `-static`, y evitando también los problemas
@@ -97,12 +97,13 @@ ocultos en entornos de desarrollo más comunes:
   módulo pudo compilarse sin problemas bajo Ubuntu usando `glibc` como librería
   estándar y ejecutarse los tests correctamente. No obstante, los ejemplos
   relativos al uso del framebuffer no mostraban nada en pantalla, lo que luego
-  resulto ser debido al hecho de que equipo usado durante las pruebas (un
+  resultó ser debido al hecho de que el equipo usado durante las pruebas (un
   portátil MacBook Pro) incorpora una tarjeta gráfica híbrida (una Intel en fb0
   y una NVidia en fb1), estando activada por defecto la secundaria. Una vez
   modificado el módulo para poder configurar desde Javascript el dispositivo de
   [framebuffer a usar](https://github.com/ReneHollander/node-canvas/issues/2),
   dichos ejemplos ya pudieron ejecutarse nativamente en mi equipo:
+
   ![node-canvas compilado estáticamente funcionando de forma nativa en el framebuffer de Linux. Se ven las rayas superiores en vez de un cuadrado verde debido a un error en el cálculo de la longitud del número de bytes entre lineas, que identifiqué posteriormente y que fue corregido por Rene Hollander](img/node-canvas compilado estáticamente funcionando de forma nativa en el framebuffer de Linux.jpg)
 * Después, al intentar compilar el módulo con el *cross-compiler* de NodeOS,
   este notificó que no podía encontrar el archivo `zlib.h` y algunos otros
@@ -145,7 +146,7 @@ ocultos en entornos de desarrollo más comunes:
   proceso de compilación de GYP se ha usado el flag
   [--no-undefined](https://blog.flameeyes.eu/2010/09/your-worst-enemy-undefined-symbols),
   lo cual ha permitido comprobar que dicho problema también se estaba
-  produciendo al ser compilado con `glibc`, solo que no se estaba manifestando
+  produciendo al ser compilado con `glibc`, sólo que no se estaba manifestando
   ya que por diseño `glibc` realiza la búsqueda y linkado de los símbolos en el
   momento de ser utilizados (*lazy loading*) a diferencia de `musl` que lo hace
   en el momento de ser cargada la librería (generalmente en el arranque del
@@ -192,7 +193,7 @@ dibujar directamente en el dispositivo de framebuffer y no coincidir sus modos
 de almacenamiento de los pixels (3 bytes en framebuffer vs. 4 bytes en Cairo)
 se da una mala alineación y un desplazamiento de estos que produce un patrón de
 colores que les da un aspecto grisáceo. Relacionado con este hecho, se da la
-situación de que no coincide el desplazamiento entre lineas
+situación de que no coincide el desplazamiento entre líneas
 ([stride](http://cairographics.org/manual/cairo-Image-Surfaces.html#cairo-format-stride-for-width)).
 En condiciones normales este corresponde a la
 [longitud de cada linea](http://lxr.free-electrons.com/source/include/uapi/linux/fb.h#L167)
@@ -232,7 +233,7 @@ módulo para la versión de 32 bits de NodeOS. Se ha notificado del problema en 
 
 No obstante, también se ha aprovechado para hacer algunas mejoras en el código.
 La primera de ellas ha sido separar el directorio de descarga de las librerías
-externas, ya que estas se estaban guardando en el mismo directorio donde estaban
+externas, ya que éstas se estaban guardando en el mismo directorio donde estaban
 definidos sus scripts de compilación y sus configuraciones, haciendo difícil el
 poder limpiar el espacio de trabajo. Además, se estaban usando los números de
 versión de las librerías en las propias rutas donde se estaban descargando, por

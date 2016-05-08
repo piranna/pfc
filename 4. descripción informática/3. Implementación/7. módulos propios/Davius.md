@@ -1,10 +1,10 @@
 #### Davius
 
 [Davius](https://github.com/piranna/Davius) es un servidor HTTP/WebDAV estático
-y sin estado que muestra en su jerarquía de recursos un mapeo directo del
-*namespace* de archivos que se le haya indicado. Este sistema es usado en NodeOS
-para servir los archivos del directorio del usuario, pertenecientes tanto al
-contenido estático de las aplicaciones que tenga instaladas como sus archivos
+y sin estado que muestra en su jerarquía de recursos una traducción directa de
+la jerarquía de archivos que se le haya indicado. Este sistema es usado en
+NodeOS para servir los archivos del directorio del usuario, pertenecientes tanto
+al contenido estático de las aplicaciones que tenga instaladas como sus archivos
 personales, y permite acceder a los mismos y editarlos desde cualquier navegador
 web o cliente WebDAV, además de poder funcionar como servidor web para publicar
 contenido fácilmente. Esto último es especialmente útil en el caso del
