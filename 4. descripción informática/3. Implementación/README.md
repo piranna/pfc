@@ -37,7 +37,7 @@
     2. [Ejecución de binarios externos](7. módulos propios/usrbinenv.html#ejecución-de-binarios-externos)
     3. [Ubicación del comando](7. módulos propios/usrbinenv.html#ubicación-del-comando)
 
-El proceso de construcción esta integrado en el ciclo de vida típico del gestor
+El proceso de construcción está integrado en el ciclo de vida típico del gestor
 de paquetes npm, de forma que resulte familiar a los desarrolladores de Node.js.
 En este sentido, se han reutilizado las etapas típicas de un paquete npm
 correspondientes a su construcción e instalación.
@@ -156,7 +156,7 @@ de archivos de gran tamaño en los proyectos correspondientes a los módulos
 vez corregidos dichos fallos, se ha desarrollado el módulo
 [download-manager](7. módulos propios/download-manager.html)
 para poder procesarlas todas de forma uniforme. El resto de etapas consisten
-principalmente en la ejecución de otros comandos externos como las herramientas
+principalmente en la ejecución de otros comandos externos, como las herramientas
 de configuración de GYP o el compilador, por lo que previamente a la conversión
 para que NodeOS sea auto-contenido, es necesario buscar alternativas a ellos
 escritas en Javascript.
@@ -170,7 +170,7 @@ partir de archivos describiendo su contenido en vez de usar una jerarquia de
 archivos real en el disco duro, evitando de este modo problemas de permisos. Por
 otro lado, se hace uso de los comandos `genfatfs` y `genext2fs` para crear
 directamente las imágenes de disco sin necesidad de montarlas previamente, y
-también del gestor de arranque SyxLinux, el cual esta preparado para trabajar
+también del gestor de arranque SysLinux, el cual está preparado para trabajar
 con ellas explícitamente a diferencia de `GRUB`, que está orientado a su uso con
 discos duros y particiones reales. La razón de hacerlo de esta manera es para
 poder compilar y generar los archivos del sistema operativo usando las

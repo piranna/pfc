@@ -87,7 +87,7 @@ con los que me he encontrado han sido:
   [EcmaScript 6](http://babeljs.io)...) sin incluir su código Javascript
   equivalente generado que impiden el poder usar directamente los repositorios
   de GitHub como dependencias en la fase de desarrollo durante el tiempo que se
-  espera a la inclusión de los cambios en el repositorio principal. Ésta es una
+  espera a la inclusión de los cambios en el repositorio principal. Esta es una
   de las razones por las que los principales desarrolladores de Node.js deciden
   usar directamente las características estándar que ofrece el lenguaje, sin la
   ayuda de componentes externos.

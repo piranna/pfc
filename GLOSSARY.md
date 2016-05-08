@@ -2,15 +2,16 @@
 *Application Programming Interface* (*Interfaz de Programación de Aplicaciones*)
 Conjunto de subrutinas, funciones y procedimientos ofrecidos por una librería o
 programa para ser usados externamente. También se puede referir a los protocolos
-usados por un servidor para poder hacer uso remotamente de su funcionalidad (WebService o servicios web).
+usados por un servidor para poder hacer uso remotamente de su funcionalidad
+(WebService o servicios web).
 
 # AST
 *Abstract Syntax Tree* (*Árbol de Sintaxis Abstracto*)
 Estructura de los distintos elementos de un lenguaje de programación (funciones,
 variables...) de un programa concreto organizada de forma jerarquizada para que
-puedan ser fácilmente accedidos y transformados. SE emplea, por ejemplo, para extraer sus
-elementos, optimizarlo, compilarlo para una plataforma concreta, convertirlo a
-otro lenguaje, generar su documentación...
+puedan ser fácilmente accedidos y transformados. SE emplea, por ejemplo, para
+extraer sus elementos, optimizarlo, compilarlo para una plataforma concreta,
+convertirlo a otro lenguaje, generar su documentación...
 
 # bindings
 Conjunto de funciones que actúan de interfaz para poder usar una librería dentro
@@ -33,9 +34,10 @@ Concurso de programación, a nivel nacional, celebrado en España desde 2006.
 
 # core dump
 Fallo grave de una aplicación que impide que pueda continuar su ejecución y que,
-según la configuración del sistema, genera un archivo con una copia de la memoria
-y del estado del microprocesador para su posterior depuración. El término se
-utiliza tanto para designar a dicho archivo como al error que lo provocó.
+según la configuración del sistema, genera un archivo con una copia de la
+memoria y del estado del microprocesador para su posterior depuración. El
+término se utiliza tanto para designar a dicho archivo como al error que lo
+provocó.
 
 # CUSL
 Véase "Concurso Universitario de Software Libre".
@@ -64,8 +66,18 @@ por hardware en dispositivos embebidos.
 # firewall
 Aplicación que administra y filtra las conexiones de red entrantes y salientes.
 
+# fork
+Duplicado de un proyecto de software que sigue un proceso de desarrollo
+independiente. Posteriormente dicho código puede volver a integrarse en el
+proyecto original o mantenerse como un proyecto própio.
+
 # FUSE
-*Filesystem in USErspace* (*sistema de archivos en espacio de usuario*).Funcionalidad del kernel de Linux y librería que permite desarrollar sistemas de archivos como si fueran un programa normal. Es muy usado para el desarrollo de sistemas de archivos experimentales o con un funcionamiento exótico, o para circunvalar problemas legales como son licencias o patentes de software que impiden que puedan incluirse dentro del kernel de Linux.
+*Filesystem in USErspace* (*sistema de archivos en espacio de usuario*).
+Funcionalidad del kernel de Linux y librería que permite desarrollar sistemas de
+archivos como si fueran un programa normal. Es muy usado para el desarrollo de
+sistemas de archivos experimentales o con un funcionamiento exótico, o para
+circunvalar problemas legales como son licencias o patentes de software que
+impiden que puedan incluirse dentro del kernel de Linux.
 
 # GitHub
 Repositorio online de versionado de software con algunas funcionalidades
@@ -84,7 +96,8 @@ conecten a Internet y puedan realizar tareas cooperativamente entre ellos.
 # journaling
 Mecanismo ofrecido por algunos sistemas de archivos donde todas las operaciones
 son escritas en un archivo "jornal" en lugar de hacerlo directamente sobre el
-propio sistema de archivos. De esta forma, en caso de fallo fortuito (un apagón, por ejemplo), el sistema pueda deshacer los cambios sin provocar pérdida o
+propio sistema de archivos. De esta forma, en caso de fallo fortuito (un apagón,
+por ejemplo), el sistema pueda deshacer los cambios sin provocar pérdida o
 corrupción de datos.
 
 # Kernel
@@ -109,20 +122,21 @@ código fuente está disponible en http://kernel.org.
 # Live CD
 Método por el que un sistema operativo se distribuye como un CD autoarrancable,
 principalmente usado para que los usuarios puedan probarlo antes de instalarlo
-definitivamente en su disco duro. También se emplea como disco de rescate de emergencia.
+definitivamente en su disco duro. También se emplea como disco de rescate de
+emergencia.
 
 # memory leak
 Fallo de programación en el que se mantienen en uso regiones de memoria sin
 referencias a ellas y, por tanto, sin poder ser utilizadas, provocando que el
-proceso consuma cada vez más memoria inútilmente, afectando con ello al rendimiento del
-sistema, hasta el punto de quedarse este sin memoria libre.
+proceso consuma cada vez más memoria inútilmente, afectando con ello al
+rendimiento del sistema, hasta el punto de quedarse este sin memoria libre.
 
 # npm
 Gestor de paquetes oficial de Node.js, y el más activo actualmente y con mayor
-crecimiento de todos los que ha habido para cualquier lenguaje.
-Su rico ecosistema ha influido la forma de trabajar no solo con Node.js o
-Javascript en la web sino también en otros lenguajes como C++ o PHP, donde han
-surgido gestores de paquetes basados en él.
+crecimiento de todos los que ha habido para cualquier lenguaje. Su rico
+ecosistema ha influido la forma de trabajar no solo con Node.js o Javascript en
+la web sino también en otros lenguajes como C++ o PHP, donde han surgido otros
+gestores de paquetes basados en él o en su diseño.
 
 # out-of-tree
 Tipo de compilación en la que los objetos temporales y los productos finales son
@@ -135,8 +149,8 @@ los datos queden alineados y sean más fáciles de tratar.
 
 # patrones Braille
 Bloque de glifos Unicode que contiene los 256 patrones representables en una
-celda Braille de 8 puntos. Es usada para poder "dibujar" líneas en alta definición
-en terminales en modo texto.
+celda Braille de 8 puntos. Es usada para poder "dibujar" líneas en alta
+definición en terminales en modo texto.
 http://en.wikipedia.org/wiki/Braille_Patterns
 
 # pidfile
@@ -165,15 +179,20 @@ que en muchos casos derivan en un memory leak o incluso en un core dump.
 funcionamiento interactivo que ofrecen los intérpretes de un lenguaje de
 programación.
 
+# release candidate
+Versión de un software lista para su publicación, la cual se publica para
+permitir la busqueda de fallos y rehalizar correciones menores ella antes de su
+distribución final.
+
 # Rolling Release
-Política de publicación de versiones en la que no hay versiones propiamente dichas
-y en el que el último código publicado es válido en todo momento para ser
+Política de publicación de versiones en la que no hay versiones propiamente
+dichas y en el que el último código publicado es válido en todo momento para ser
 usado.
 
 # umask
 *user mask* (*mascara de usuario*). Patrón de permisos de acceso a los archivos
-que se eliminan por parte de los permisos, que le aplica un usuario por defecto, al crear
-un nuevo archivo o directorio.
+que se eliminan por parte de los permisos, que le aplica un usuario por defecto,
+al crear un nuevo archivo o directorio.
 
 # VFAT
 [Sistemas de archivos](https://technet.microsoft.com/en-us/library/cc938438.aspx)
@@ -198,5 +217,5 @@ la interoperatibilidad.
 aplicaciones donde se ejecutan directamente sin copiarse previamente a la
 memoria RAM, ahorrando el uso de recursos. Sin embargo, solo puede usarse en
 entornos donde la velocidad de acceso de lectura al ejecutable es comparable a
-la de la memoria RAM (discos RAM, memorias flash, SSD...), ya
-que sino la penalización en cuanto a rendimiento haría su uso inviable.
+la de la memoria RAM (discos RAM, memorias flash, SSD...), ya que sino la
+penalización en cuanto a rendimiento haría su uso inviable.

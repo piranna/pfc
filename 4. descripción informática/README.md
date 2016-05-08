@@ -68,10 +68,10 @@ englobe y une a todas las partes, como muestra el propio diseño por capas de
 NodeOS que permite desarrollar fácilmente otros sistemas operativos a partir del
 mismo[^1].
 
-La política de distribución de nuevas versiones corresponde a la de una Rolling
-Release, en la que se publica automáticamente una nueva versión cada vez que se
+La política de distribución de nuevas versiones corresponde a la de una *Rolling
+Release*, en la que se publica automáticamente una nueva versión cada vez que se
 sube nuevo código al repositorio en el caso de que el servidor de integración
-continua haya pasado satisfactoriamente todos los tests y haya podido generar
+contínua haya pasado satisfactoriamente todos los tests y haya podido generar
 las imágenes del sistema sin problemas, publicando dichas imágenes pre-generadas
 listas para su descarga en GitHub. No obstante, dichas versiones se marcan como
 *pre-release* a pesar de ser totalmente operativas, marcando explícitamente como
