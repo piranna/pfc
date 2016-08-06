@@ -1,6 +1,5 @@
 {
   "gitbook": "2.6.7",
-  "language": "es",
   "plugins":
   [
     "anchors",
@@ -13,7 +12,6 @@
   "pluginsConfig": {
     "autocover": {
       "title": "NodeOS",
-      "description": "Sistema operativo minimalista para Node.js",
       "author": "Jesús Leganés Combarro",
       "tutor": "Enrique Soriano Salvador",
       "academicYear": "2015/2016",

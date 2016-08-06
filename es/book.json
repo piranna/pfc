@@ -1,0 +1,8 @@
+{
+  "language": "es",
+  "pluginsConfig": {
+    "autocover": {
+      "description": "Sistema operativo minimalista para Node.js"
+    }
+  }
+}
