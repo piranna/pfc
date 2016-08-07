@@ -1,7 +1,8 @@
-[![NodeOS](img/NodeOS.svg)](http://node-os.com)
+# [![NodeOS](img/NodeOS.svg)](http://node-os.com)
+
 [![CC-BY-NC-SA](img/by-nc-sa.svg)](http://creativecommons.org/licenses/by-nc-sa/4.0)
 
-# Español
+## Español
 NodeOS: sistema operativo minimalista para Node.js
 
 Memoria del Proyecto de Fin de Carrera de Jesús Leganés Combarro, alumno de la
